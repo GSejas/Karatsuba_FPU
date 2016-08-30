@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/jsequeira/Karatsuba/Karatsuba.runs/synth_1'
+HD_PWD='C:/Users/jsequeira/Proyectos/Karatsuba.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Mon Aug 29 15:05:56 2016">
+<application name="pa" timeStamp="Mon Aug 29 20:21:49 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="a952a8f0ba72465fafffdbae00906e4c" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -24,14 +24,14 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="EditUndo" value="29" type="JavaHandler"/>
 <property name="FlipToViewTaskSynthesis" value="3" type="JavaHandler"/>
 <property name="MoveToSimSet" value="1" type="JavaHandler"/>
-<property name="ProjectSettingsCmdHandler" value="10" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="11" type="JavaHandler"/>
 <property name="RunImplementation" value="1" type="JavaHandler"/>
 <property name="RunSchematic" value="5" type="JavaHandler"/>
-<property name="RunSynthesis" value="34" type="JavaHandler"/>
+<property name="RunSynthesis" value="36" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="7" type="JavaHandler"/>
 <property name="SetTopNode" value="8" type="JavaHandler"/>
 <property name="ShowHierarchy" value="1" type="JavaHandler"/>
-<property name="ShowView" value="9" type="JavaHandler"/>
+<property name="ShowView" value="10" type="JavaHandler"/>
 <property name="SimulationClose" value="1" type="JavaHandler"/>
 <property name="SimulationRestart" value="23" type="JavaHandler"/>
 <property name="SimulationRun" value="38" type="JavaHandler"/>
@@ -46,123 +46,42 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="aO" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="KOA.v, 173, 419" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 1, 396, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 100, 144" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 101, 143" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 102, 130" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 104, 146" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 108, 487" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 110, 299" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 112, 289" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 114, 482" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 115, 265" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 119, 162" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 120, 281" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 120, 297" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 129, 162" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 129, 166" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 135, 175" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 141, 224" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 142, 262" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 145, 164" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 145, 180" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 145, 180, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 153, 185" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 158, 182" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 172, 470" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 178, 161" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 180, 298" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 189, 353" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 189, 353, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 191, 307" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 199, 274" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 20, 319" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 200, 349" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 201, 383" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 202, 471" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 203, 346" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 203, 402" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 203, 402, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 206, 387" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 206, 387, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 209, 350" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 21, 145" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 211, 362" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 224, 401" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 225, 368" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 229, 302" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 230, 468" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 231, 182" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 231, 305" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 240, 244" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 240, 244, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 240, 303" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 244, 369" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 245, 366" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 254, 183" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 254, 183, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 258, 393" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 258, 393, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 261, 378" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 268, 300" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 268, 357" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 274, 245" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 275, 366" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 276, 482" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 278, 364" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 279, 263" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 280, 366" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 280, 493" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 283, 126" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 283, 304" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 29, 191" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 290, 313" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 291, 394" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 293, 314" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 293, 320" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 294, 313" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 297, 178" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 298, 298" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 302, 468" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 303, 297" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 307, 335" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 309, 298" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 313, 293" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 320, 299" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 325, 267" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 328, 313" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 331, 262" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 352, 312" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 355, 267" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 36, 345" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 391, 216" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 395, 509" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 481, 417" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 5, 342" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 57, 307" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 58, 488" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 6, 318" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 63, 472" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 683, 142" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 7, 407" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 82, 143" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 83, 405" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 856, 194" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 89, 128" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 92, 149" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 93, 351" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 93, 408" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 97, 152" value="1" type="GuiResourceData"/>
-<property name="KOA_2.v, 99, 182" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Simulation, sim_1, [VRFC 10-278] actual bit length 11 differs from formal bit length 12 for port Data_B_i [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:176]. ], 11" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Synthesis, [Synth 8-689] width (15" value="1" type="GuiResourceData"/>
+<property name="Bitstream, Bitstream" value="3" type="GuiResourceData"/>
+<property name="CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="Elaboration, Elaboration" value="2" type="GuiResourceData"/>
+<property name="IP, IP" value="2" type="GuiResourceData"/>
+<property name="Implementation, Implementation" value="2" type="GuiResourceData"/>
+<property name="KOA.v (2" value="58" type="GuiResourceData"/>
+<property name="KOA.v, 66, 130" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 124, 264" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 124, 264, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 178, 314" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 182, 163" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 182, 163, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 184, 313" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 222, 278" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 241, 260" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 307, 280" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 332, 334" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 374, 332" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 389, 333" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 392, 331" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 392, 333" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 405, 328" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 450, 285" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 534, 328" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 580, 60" value="1" type="GuiResourceData"/>
+<property name="KOA_2.v, 589, 446" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_PROJECT_SETTINGS, project_settings" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Synthesis, [Synth 8-689] width (13" value="10" type="GuiResourceData"/>
 <property name="RDIResourceCommand.RDICommands_LINE_COMMENT, (String" value="1" type="GuiResourceData"/>
+<property name="Simulation, Simulation" value="1" type="GuiResourceData"/>
+<property name="Synthesis, Synthesis" value="3" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="14" type="GuiMode"/>
+<property name="GuiMode" value="16" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="1" type="TclMode"/>
+<property name="TclMode" value="2" type="TclMode"/>
 </item>
 </section>
 </application>

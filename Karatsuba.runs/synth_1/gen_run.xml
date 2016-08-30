@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1472504756">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1472523709">
   <File Type="RDS-PROPCONSTRS" Name="KOA_2_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="KOA_2.tcl"/>
   <File Type="RDS-RDS" Name="KOA_2.vds"/>

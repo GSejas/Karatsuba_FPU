@@ -54,14 +54,14 @@ module KOA_1
    assign zero2 =4'b0000;
    ///////////////////////////////////////////////////////////
    wire [SW/2-1:0] rightside1;
-   wire [SW/2-2:0] leftside1;
+   wire [SW/2-1:0] leftside1;
    
    wire [SW/2:0] rightside2;
    
    wire [4*(SW/2)-1:0] sgf_r; 
    
    assign rightside1 = (SW/2) *1'b0;
-   assign leftside1 = (SW/2-1) *1'b0;
+   assign leftside1 = (SW/2) *1'b0;
    
    assign rightside2 = (SW/2+1)*1'b0;
    
@@ -132,19 +132,21 @@ generate
 //       wire [2*(SW/2+2)-1:0] Q_middle;    
 
            substractor #(.W(SW+2)) Subtr_1 (
-               .Data_A_i(Q_middle[SW+1:0]),  //Port width is SW+2   result_middle_mult//*
-               .Data_B_i({zero1, Q_left}),    //Port width is SW+2  result_left_mult
+               .Data_A_i(Q_middle[SW+1:0]/*P=SW+2*/),  //Port width is SW+2   result_middle_mult//*
+               .Data_B_i({zero1/*P=2*/, Q_left/*P=SW*/}),    //Port width is SW+2  result_left_mult
                .Data_S_o(S_A[SW+1:0]) 
            );
            
-//       wire [SW-1:0] Q_left;
-//       wire [2*(SW/2+1)-1:0] Q_right;
-//       wire [2*(SW/2+2)-1:0] Q_middle;
+//        wire [2*(SW/2+1)-1:0] Q_right;
+    //    wire [1:0] zero1;
+    //    wire [3:0] zero2;
+    //    assign zero1 =2'b00;
+    //    assign zero2 =4'b0000;
 
            substractor #(.W(SW+2)) Subtr_2 (
-               .Data_A_i(S_A[SW+1:0]),
-               .Data_B_i({zero1,Q_right[SW-1:0]}), //result_right_mult
-               .Data_S_o(S_B[SW+1:0])
+               .Data_A_i(S_A[SW+1:0]/*P=SW+2*/),
+               .Data_B_i({zero1/*P=2*/,Q_right[SW-1:0]/*P=SW*/}), //result_right_mult
+               .Data_S_o(S_B[SW+1:0]/*P=2*/)
            );
 
 //

@@ -1,0 +1,327 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+Process ID: 63420
+
+Current time: 	8/29/16 8:03:36 PM CST
+Time zone: 	Central Standard Time (America/Regina)
+
+OS: Windows Server 2012 R2
+Version: 6.3
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.2/tps/win64/jre
+
+User name: 	jsequeira
+User home directory: C:/Users/jsequeira
+User working directory: C:/Users/jsequeira/Proyectos
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: C:/Xilinx/Vivado
+RDI Data directory: C:/Xilinx/Vivado/2016.2/data
+RDI Bin directory: C:/Xilinx/Vivado/2016.2/bin
+
+Vivado preferences path: C:/Users/jsequeira/AppData/Roaming/Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: C:/Users/jsequeira/AppData/Roaming/Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	227 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 459 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 35 MB (+34164kb) [00:00:05]
+// [Engine Memory]: 412 MB (+280029kb) [00:00:05]
+// bL:g (cv:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\jsequeira\Proyectos\Karatsuba.xpr. Version: Vivado v2016.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/jsequeira/Proyectos/Karatsuba.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/jsequeira/Proyectos/Karatsuba.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/jsequeira/Karatsuba' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 38 MB (+1259kb) [00:00:09]
+// [Engine Memory]: 508 MB (+80044kb) [00:00:09]
+// [GUI Memory]: 49 MB (+9997kb) [00:00:09]
+// [GUI Memory]: 54 MB (+2389kb) [00:00:11]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 522 MB. GUI used memory: 35 MB. Current time: 8/29/16 8:03:40 PM CST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: Karatsuba; location: C:/Users/jsequeira/Proyectos; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 793.543 ; gain = 127.293 
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceQtoS.RunGadget_SHOW_WARNING_AND_ERROR_MESSAGES_IN_MESSAGES, "2 warnings"); // i:l (JPanel:JComponent, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (15) of port connection 'Data_B_i' does not match port width (16) of module 'adder__parameterized5' [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:156]. ]", 1, true); // al:k (JViewport:JComponent, cv:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\jsequeira\Karatsuba\Karatsuba.srcs\sources_1\new\KOA.v;-;;-;16;-;line;-;156;-;;-;16;-;"); // al:k (JViewport:JComponent, cv:JFrame)
+// [Engine Memory]: 534 MB (+370kb) [00:00:20]
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (15) of port connection 'Data_B_i' does not match port width (16) of module 'adder__parameterized5' [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:156]. ]", 1, true, false, false, false, false, true); // al:k (JViewport:JComponent, cv:JFrame) - Double Click - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (15) of port connection 'Data_B_i' does not match port width (16) of module 'adder__parameterized5' [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:156]. ]", 1, true); // al:k (JViewport:JComponent, cv:JFrame) - Node
+// Elapsed time: 17 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, KOA_2 (KOA_2.v)]", 2); // z:k (G:JPanel, cv:JFrame)
+// PAPropertyPanels.initPanels (KOA_2.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, KOA_2 (KOA_2.v)]", 2, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, KOA_2 (KOA_2.v)]", 2, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// [GUI Memory]: 57 MB (+602kb) [00:00:41]
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "KOA_2.v", 2, true, false); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame) - Popup Trigger
+// HMemoryUtils.trashcanNow. Engine heap size: 561 MB. GUI used memory: 37 MB. Current time: 8/29/16 8:04:14 PM CST
+floatFrame(PAResourceOtoP.PAViews_CODE, "KOA_2.v"); // ao:DockableFrame (FrameContainer:JideTabbedPane, cv:JFrame)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+// [Engine Memory]: 562 MB (+684kb) [00:00:48]
+// [GUI Memory]: 65 MB (+5384kb) [00:00:49]
+// [GUI Memory]: 69 MB (+246kb) [00:00:52]
+// [GUI Memory]: 73 MB (+500kb) [00:00:54]
+// Elapsed time: 25 seconds
+selectCodeEditor("KOA_2.v", 310, 400); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 269, 304); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// [GUI Memory]: 78 MB (+1841kb) [00:01:20]
+// [GUI Memory]: 83 MB (+485kb) [00:01:30]
+// Elapsed time: 59 seconds
+selectCodeEditor("KOA.v", 170, 282); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v", 216, 413); // bH:N (JPanel:JComponent, cv:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (15) of port connection 'Data_B_i' does not match port width (16) of module 'adder__parameterized5' [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:156]. , [Synth 8-689] width (20) of port connection 'Data_B_i' does not match port width (24) of module 'adder__parameterized6' [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA_2.v:144]. ]", 2, false); // al:k (JViewport:JComponent, cv:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\jsequeira\Karatsuba\Karatsuba.srcs\sources_1\new\KOA_2.v;-;;-;16;-;line;-;144;-;;-;16;-;"); // al:k (JViewport:JComponent, cv:JFrame)
+// Elapsed time: 17 seconds
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "KOA_2.v (2)", 2, true, false); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame) - Popup Trigger
+selectMenuItem(RDIResource.BaseWorkspace_TILE_VERTICALLY, "Tile Vertically"); // af:JMenuItem (JidePopupMenu:JPopupMenu, cv:JFrame)
+// [GUI Memory]: 87 MB (+518kb) [00:02:43]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// PAResourceOtoP.PAViews_PROJECT_SUMMARY: Project Summary: close view
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // u:aK
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D:b
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, KOA_2 (KOA_2.v)]", 2, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, KOA_2 (KOA_2.v)]", 2, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+selectButton(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "run_synthesis"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Aug 29 20:06:45 2016] Launched synth_1... Run output will be captured here: C:/Users/jsequeira/Proyectos/Karatsuba.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+minimizeFrame(RDIResource.RDIViews_PROPERTIES, "Source File Properties"); // ao:DockableFrame (FrameContainer:JideTabbedPane, cv:JFrame)
+unMinimizeFrame(RDIResource.RDIViews_PROPERTIES, "Source File Properties"); // ao:DockableFrame
+minimizeFrame(RDIResource.RDIViews_PROPERTIES, "Source File Properties"); // ao:DockableFrame (FrameContainer:JideTabbedPane, cv:JFrame)
+selectButton(PAResourceCommand.PACommandNames_PROJECT_SETTINGS, "project_settings"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROJECT_SETTINGS
+// Project Settings: addNotify
+selectButton("Simulation", "Simulation"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+// TclEventType: FILE_SET_CHANGE
+selectButton("Elaboration", "Elaboration"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+selectButton("Synthesis", "Synthesis"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+selectButton("Elaboration", "Elaboration"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+// TclEventType: RUN_COMPLETED
+selectButton("Synthesis", "Synthesis"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+selectButton("Implementation", "Implementation"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+selectButton("Synthesis", "Synthesis"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+selectButton("Bitstream", "Bitstream"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+selectButton("Implementation", "Implementation"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+selectButton("Bitstream", "Bitstream"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+selectButton("Bitstream", "Bitstream"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+selectButton("IP", "IP"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+selectButton("IP", "IP"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+selectButton("CANCEL", "Cancel"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (13) of port connection 'Data_B_i' does not match port width (12) of module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:160]. ]", 1); // al:k (JViewport:JComponent, cv:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (13) of port connection 'Data_B_i' does not match port width (12) of module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:160]. ]", 1, true); // al:k (JViewport:JComponent, cv:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\jsequeira\Proyectos\Karatsuba.srcs\sources_1\new\KOA.v;-;;-;16;-;line;-;160;-;;-;16;-;"); // al:k (JViewport:JComponent, cv:JFrame)
+// [GUI Memory]: 94 MB (+2416kb) [00:04:02]
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (13) of port connection 'Data_B_i' does not match port width (12) of module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:160]. ]", 1, true); // al:k (JViewport:JComponent, cv:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\jsequeira\Proyectos\Karatsuba.srcs\sources_1\new\KOA.v;-;;-;16;-;line;-;160;-;;-;16;-;"); // al:k (JViewport:JComponent, cv:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (13) of port connection 'Data_B_i' does not match port width (12) of module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:160]. , [Synth 8-689] width (17) of port connection 'Data_B_i' does not match port width (16) of module 'adder__parameterized5' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:160]. ]", 2, false); // al:k (JViewport:JComponent, cv:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\jsequeira\Proyectos\Karatsuba.srcs\sources_1\new\KOA.v;-;;-;16;-;line;-;160;-;;-;16;-;"); // al:k (JViewport:JComponent, cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 587 MB. GUI used memory: 50 MB. Current time: 8/29/16 8:07:34 PM CST
+selectCodeEditor("KOA.v (2)", 127, 17); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "KOA.v", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectCodeEditor("KOA.v", 66, 130); // bH:N (JPanel:JComponent, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "KOA.v (2)", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (13) of port connection 'Data_B_i' does not match port width (12) of module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:160]. ]", 1, true); // al:k (JViewport:JComponent, cv:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\jsequeira\Proyectos\Karatsuba.srcs\sources_1\new\KOA.v;-;;-;16;-;line;-;160;-;;-;16;-;"); // al:k (JViewport:JComponent, cv:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (13) of port connection 'Data_B_i' does not match port width (12) of module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:160]. ]", 1, true); // al:k (JViewport:JComponent, cv:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\jsequeira\Proyectos\Karatsuba.srcs\sources_1\new\KOA.v;-;;-;16;-;line;-;160;-;;-;16;-;"); // al:k (JViewport:JComponent, cv:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (13) of port connection 'Data_B_i' does not match port width (12) of module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:160]. ]", 1, true, false, false, false, false, true); // al:k (JViewport:JComponent, cv:JFrame) - Double Click - Node
+selectCodeEditor("KOA.v (2)", 118, 143); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 233, 114); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA_2.v", 450, 285); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 241, 260); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 307, 280); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+typeControlKey((HResource) null, "KOA_2.v", 'c'); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA.v (2)", 248, 226); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 251, 229); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "KOA.v (2)", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 331, 245); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "KOA.v (2)", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 254, 265); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 191, 241); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 191, 241, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+selectCodeEditor("KOA.v (2)", 253, 260); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA_2.v", 580, 60); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 182, 163); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 182, 163, false, false, false, false, true); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame) - Double Click
+selectCodeEditor("KOA_2.v", 124, 264); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 124, 264, false, false, false, false, true); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame) - Double Click
+selectCodeEditor("KOA_2.v", 178, 314); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 184, 313); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+typeControlKey((HResource) null, "KOA_2.v", 'c'); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA.v (2)", 283, 180); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 3, 179); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 1, 146); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 6, 168); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "KOA.v (2)", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 167, 212); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 8, 162); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 2, 164); // bH:N (JPanel:JComponent, cv:JFrame)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 206, 222); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 213, 211); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 196, 205); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 107, 169); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 59, 143); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 291, 218); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 188, 231); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 188, 231, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+selectCodeEditor("KOA_2.v", 534, 328); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 222, 278); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+typeControlKey((HResource) null, "KOA_2.v", 'c'); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA.v (2)", 215, 227); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "KOA.v (2)", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 218, 130); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "KOA.v (2)", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 378, 332); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "KOA.v (2)", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 101, 25); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 374, 329); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "KOA.v (2)", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 319, 132); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 327, 129); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 331, 139); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 322, 130); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA_2.v", 332, 334); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 389, 333); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 392, 331); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 392, 333); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+typeControlKey((HResource) null, "KOA_2.v", 'c'); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA.v (2)", 321, 127); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "KOA.v (2)", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("KOA.v (2)", 324, 122); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "KOA.v (2)", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 279, 112); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 288, 112); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "KOA.v (2)", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 332, 111); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 339, 111); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 351, 153); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 14 seconds
+selectCodeEditor("KOA_2.v", 405, 328); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 374, 332); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("KOA.v (2)", 428, 330); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("KOA.v (2)", 439, 269); // bH:N (JPanel:JComponent, cv:JFrame)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (13) of port connection 'Data_B_i' does not match port width (12) of module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:160]. ]", 1); // al:k (JViewport:JComponent, cv:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("KOA.v (2)", 216, 173); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 254, 186); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 218, 178); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "KOA.v (2)", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 255, 196); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "KOA.v (2)", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 294, 194); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 20 seconds
+selectCodeEditor("KOA.v (2)", 218, 435); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 199, 386); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 193, 416); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 176, 421); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("KOA.v (2)", 98, 296); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 191, 421); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 15 seconds
+selectCodeEditor("KOA.v (2)", 281, 400); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 373 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (13) of port connection 'Data_B_i' does not match port width (12) of module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:160]. ]", 1, true); // al:k (JViewport:JComponent, cv:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\jsequeira\Proyectos\Karatsuba.srcs\sources_1\new\KOA.v;-;;-;16;-;line;-;160;-;;-;16;-;"); // al:k (JViewport:JComponent, cv:JFrame)
+// Elapsed time: 146 seconds
+selectCodeEditor("KOA_2.v", 589, 446); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 15 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (13) of port connection 'Data_B_i' does not match port width (12) of module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:160]. ]", 1, true); // al:k (JViewport:JComponent, cv:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\jsequeira\Proyectos\Karatsuba.srcs\sources_1\new\KOA.v;-;;-;16;-;line;-;160;-;;-;16;-;"); // al:k (JViewport:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 184, 213); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 191, 214); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 191, 214, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// [Engine Memory]: 591 MB (+1599kb) [00:18:20]
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Mon Aug 29 20:21:49 2016] Launched synth_1... Run output will be captured here: C:/Users/jsequeira/Proyectos/Karatsuba.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// [GUI Memory]: 103 MB (+4024kb) [00:18:30]
+// Elapsed time: 13 seconds
+selectCodeEditor("KOA_2.v", 422, 402); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 404, 490); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor("KOA_2.v", 400, 503); // bH:N (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 127 seconds
+selectCodeEditor("KOA.v (2)", 287, 377); // bH:N (JPanel:JComponent, cv:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (14) of port connection 'Data_B_i' does not match port width (12) of module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:162]. ]", 1, true); // al:k (JViewport:JComponent, cv:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\jsequeira\Proyectos\Karatsuba.srcs\sources_1\new\KOA.v;-;;-;16;-;line;-;162;-;;-;16;-;"); // al:k (JViewport:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 196, 175); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("KOA.v (2)", 196, 175, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click

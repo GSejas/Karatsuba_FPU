@@ -135,7 +135,7 @@ output wire [2*SW-1:0] sgf_result_o
         
             substractor #(.W(SW+2)) Subtr_2 (
                 .Data_A_i(S_A[2*(SW/2)+1:0] /*P=SW+2*/),
-                .Data_B_i({zero1 /*P=2*/, Q_right[2*(SW/2)-1:0] /*P=SW*/}),  /*result_right_mult//*/
+                .Data_B_i({zero1 /*P=2*/, Q_right[SW-1:0] /*P=SW*/}),  /*result_right_mult//*/
                 .Data_S_o(S_B[2*(SW/2)+1:0])  //Port width is SW+1  
             );
         
