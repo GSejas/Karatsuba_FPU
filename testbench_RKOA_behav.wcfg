@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_RKOA_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench_RKOA" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1690000001fs"></ZoomEndTime>
+      <Cursor1Time time="200000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/testbench_RKOA/uut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/load_b_i" type="logic">
+      <obj_property name="ElementShortName">load_b_i</obj_property>
+      <obj_property name="ObjectShortName">load_b_i</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/Data_A_i" type="array">
+      <obj_property name="ElementShortName">Data_A_i[11:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_A_i[11:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/Data_B_i" type="array">
+      <obj_property name="ElementShortName">Data_B_i[11:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_B_i[11:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/sgf_result_o" type="array">
+      <obj_property name="ElementShortName">sgf_result_o[23:0]</obj_property>
+      <obj_property name="ObjectShortName">sgf_result_o[23:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/result_A_adder" type="array">
+      <obj_property name="ElementShortName">result_A_adder[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result_A_adder[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/result_B_adder" type="array">
+      <obj_property name="ElementShortName">result_B_adder[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result_B_adder[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/Q_left" type="array">
+      <obj_property name="ElementShortName">Q_left[11:0]</obj_property>
+      <obj_property name="ObjectShortName">Q_left[11:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/Q_right" type="array">
+      <obj_property name="ElementShortName">Q_right[13:0]</obj_property>
+      <obj_property name="ObjectShortName">Q_right[13:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/Q_middle" type="array">
+      <obj_property name="ElementShortName">Q_middle[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q_middle[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/S_A" type="array">
+      <obj_property name="ElementShortName">S_A[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_A[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/S_B" type="array">
+      <obj_property name="ElementShortName">S_B[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_B[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/Result" type="array">
+      <obj_property name="ElementShortName">Result[26:0]</obj_property>
+      <obj_property name="ObjectShortName">Result[26:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/zero1" type="array">
+      <obj_property name="ElementShortName">zero1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">zero1[1:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/zero2" type="array">
+      <obj_property name="ElementShortName">zero2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">zero2[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/rightside1" type="array">
+      <obj_property name="ElementShortName">rightside1[5:0]</obj_property>
+      <obj_property name="ObjectShortName">rightside1[5:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/leftside1" type="array">
+      <obj_property name="ElementShortName">leftside1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">leftside1[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/rightside2" type="array">
+      <obj_property name="ElementShortName">rightside2[6:0]</obj_property>
+      <obj_property name="ObjectShortName">rightside2[6:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_RKOA/uut/sgf_r" type="array">
+      <obj_property name="ElementShortName">sgf_r[23:0]</obj_property>
+      <obj_property name="ObjectShortName">sgf_r[23:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+</wave_config>

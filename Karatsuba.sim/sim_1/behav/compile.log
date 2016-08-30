@@ -2,15 +2,15 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Documents/Floati
 INFO: [VRFC 10-311] analyzing module substractor
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/multiplier_combinational.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module multiplier_C
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Add-Subt/RegisterAdd.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RegisterAdd
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KOA_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA_2.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KOA_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sim_1/new/testbench_RKOA.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sim_1/new/testbench_RKOA.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module testbench_RKOA
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Karatsuba/Karatsuba.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karatsuba.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
