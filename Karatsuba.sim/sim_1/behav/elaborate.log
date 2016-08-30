@@ -1,0 +1,39 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 18d731859c97497dac15e6fc63958c7a --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_RKOA_behav xil_defaultlib.testbench_RKOA xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 11 differs from formal bit length 12 for port Data_B_i [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:176]
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port Data_A_i [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:188]
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port Data_B_i [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:189]
+WARNING: [VRFC 10-278] actual bit length 7 differs from formal bit length 6 for port Data_S_o [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:190]
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 4 for port Data_A_i [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:196]
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 4 for port Data_B_i [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:197]
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 4 for port Data_B_i [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:206]
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 4 for port Data_B_i [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:212]
+WARNING: [VRFC 10-278] actual bit length 11 differs from formal bit length 10 for port Data_B_i [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:257]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port Data_A_i [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA.v:270]
+WARNING: [VRFC 10-278] actual bit length 20 differs from formal bit length 24 for port Data_B_i [C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sources_1/new/KOA_2.v:174]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.multiplier_C(W=3)
+Compiling module xil_defaultlib.adder(W=3)
+Compiling module xil_defaultlib.multiplier_C(W=4)
+Compiling module xil_defaultlib.substractor(W=8)
+Compiling module xil_defaultlib.adder(W=12)
+Compiling module xil_defaultlib.KOA_1(SW=6)
+Compiling module xil_defaultlib.adder(W=6)
+Compiling module xil_defaultlib.adder(W=4)
+Compiling module xil_defaultlib.multiplier_C(W=5)
+Compiling module xil_defaultlib.substractor(W=10)
+Compiling module xil_defaultlib.adder(W=14)
+Compiling module xil_defaultlib.KOA_1(SW=7)
+Compiling module xil_defaultlib.substractor(W=14)
+Compiling module xil_defaultlib.adder(W=24)
+Compiling module xil_defaultlib.RegisterAdd(W=24)
+Compiling module xil_defaultlib.KOA_2(SW=12)
+Compiling module xil_defaultlib.testbench_RKOA
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_RKOA_behav

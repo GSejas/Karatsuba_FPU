@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Karatsuba/Karatsuba.sim/sim_1/synth/timing/testbench_mult_c_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplier_C
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sim_1/new/mult_c_testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_mult_c

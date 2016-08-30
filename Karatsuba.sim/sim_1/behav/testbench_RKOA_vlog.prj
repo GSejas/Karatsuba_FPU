@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../../Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v"
+verilog xil_defaultlib  "../../../../Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v"
+verilog xil_defaultlib  "../../../Karatsuba.srcs/sources_1/new/multiplier_combinational.v"
+verilog xil_defaultlib  "../../../../Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Add-Subt/RegisterAdd.v"
+verilog xil_defaultlib  "../../../Karatsuba.srcs/sources_1/new/KOA.v"
+verilog xil_defaultlib  "../../../Karatsuba.srcs/sources_1/new/KOA_2.v"
+verilog xil_defaultlib  "../../../Karatsuba.srcs/sim_1/new/testbench_RKOA.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
