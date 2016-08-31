@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log KOA_2.vds -m64 -mode batch -messageDb vivado.pb -notrace -source KOA_2.tcl
+EAStep vivado -log RecursiveKOA.vds -m64 -mode batch -messageDb vivado.pb -notrace -source RecursiveKOA.tcl

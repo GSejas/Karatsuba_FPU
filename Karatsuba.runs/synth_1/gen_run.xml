@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1472523709">
-  <File Type="RDS-PROPCONSTRS" Name="KOA_2_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="KOA_2.tcl"/>
-  <File Type="RDS-RDS" Name="KOA_2.vds"/>
-  <File Type="RDS-UTIL" Name="KOA_2_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="KOA_2_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="KOA_2.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="KOA_2_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="KOA_2_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1472685868">
+  <File Type="RDS-PROPCONSTRS" Name="RecursiveKOA_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="RecursiveKOA.tcl"/>
+  <File Type="RDS-RDS" Name="RecursiveKOA.vds"/>
+  <File Type="RDS-UTIL" Name="RecursiveKOA_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="RecursiveKOA_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="RecursiveKOA.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="RecursiveKOA_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="RecursiveKOA_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -31,6 +24,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Add-Subt/RegisterAdd.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -38,8 +38,31 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/KOA_c_v2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RecursiveKOA.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/KOA_c.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/KOA.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -47,6 +70,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/KOA_2.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -374,7 +398,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="KOA_2"/>
+      <Option Name="TopModule" Val="RecursiveKOA"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
