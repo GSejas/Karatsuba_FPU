@@ -34,7 +34,7 @@ module testbench_RKOA();
 //---------------------------------------------------------
  // instantiate the Device Under Test (DUT)
  // using named instantiation   
-    KOA_2 #(.SW(SW)) uut (
+    RecursiveKOA #(.SW(SW)) uut (
         .clk(clk),
         .rst(rst),
         .load_b_i(load_b_i),
