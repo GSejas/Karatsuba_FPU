@@ -1,5 +1,22 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Karatsuba/Karatsuba.sim/sim_1/synth/timing/testbench_mult_c_time_synth.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_C
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karatsuba.sim/sim_1/synth/timing/testbench_RKOA_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KOA_1
+INFO: [VRFC 10-311] analyzing module KOA_1_0
+INFO: [VRFC 10-311] analyzing module KOA_1__parameterized0
+INFO: [VRFC 10-311] analyzing module KOA_2
+INFO: [VRFC 10-311] analyzing module RegisterAdd
+INFO: [VRFC 10-311] analyzing module adder__parameterized0
+INFO: [VRFC 10-311] analyzing module adder__parameterized0_1
+INFO: [VRFC 10-311] analyzing module adder__parameterized1
+INFO: [VRFC 10-311] analyzing module adder__parameterized2
+INFO: [VRFC 10-311] analyzing module adder__parameterized6
+INFO: [VRFC 10-311] analyzing module multiplier_C__parameterized0
+INFO: [VRFC 10-311] analyzing module multiplier_C__parameterized0_3
+INFO: [VRFC 10-311] analyzing module multiplier_C__parameterized2
+INFO: [VRFC 10-311] analyzing module multiplier_C__parameterized3
+INFO: [VRFC 10-311] analyzing module substractor
+INFO: [VRFC 10-311] analyzing module substractor_2
+INFO: [VRFC 10-311] analyzing module substractor__parameterized1
+INFO: [VRFC 10-311] analyzing module substractor__parameterized3
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Karatsuba/Karatsuba.srcs/sim_1/new/mult_c_testbench.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module testbench_mult_c
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sim_1/new/testbench_RKOA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_RKOA

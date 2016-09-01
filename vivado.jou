@@ -28,3 +28,50 @@ run 920 ns
 restart
 run 920 ns
 save_wave_config {C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg}
+add_wave {{/testbench_RKOA/uut/clk}} {{/testbench_RKOA/uut/rst}} {{/testbench_RKOA/uut/load_b_i}} {{/testbench_RKOA/uut/Data_A_i}} {{/testbench_RKOA/uut/Data_B_i}} {{/testbench_RKOA/uut/sgf_result_o}} {{/testbench_RKOA/uut/result_A_adder}} {{/testbench_RKOA/uut/result_B_adder}} {{/testbench_RKOA/uut/Q_left}} {{/testbench_RKOA/uut/Q_right}} {{/testbench_RKOA/uut/Q_middle}} {{/testbench_RKOA/uut/S_A}} {{/testbench_RKOA/uut/S_B}} {{/testbench_RKOA/uut/Result}} {{/testbench_RKOA/uut/zero1}} {{/testbench_RKOA/uut/zero2}} {{/testbench_RKOA/uut/rightside1}} {{/testbench_RKOA/uut/leftside1}} {{/testbench_RKOA/uut/rightside2}} {{/testbench_RKOA/uut/sgf_r}} {{/testbench_RKOA/uut/SW}} {{/testbench_RKOA/uut/half}} {{/testbench_RKOA/uut/full_port}} 
+restart
+run 920 ns
+restart
+run 920 ns
+save_wave_config {C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg}
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+restart
+run 920 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+RESTART
+restart
+restart
+launch_simulation
+run 920 ns
+restart & run 920ns
+restart & run 920
+restart & run 920 ns
+restart && run 920 ns
+restart
+run 920 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+run 920 ns
+run 920 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl

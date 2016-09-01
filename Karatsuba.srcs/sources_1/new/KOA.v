@@ -55,7 +55,8 @@ module KOA_1
    ///////////////////////////////////////////////////////////
    wire [SW/2-1:0] rightside1;
    wire [SW/2-1:0] leftside1;
-   
+   wire fill;
+   assign fill = 1'b0;
    wire [SW/2:0] rightside2;
    
    wire [4*(SW/2)-1:0] sgf_r; 
@@ -188,13 +189,13 @@ generate
           //Adders for middle 
        
            adder #(.W(SW/2+1)) A_operation (
-               .Data_A_i({1'b0,Data_A_i[SW-1:SW-SW/2]}),
+               .Data_A_i({fill,Data_A_i[SW-1:SW-SW/2]}),
                .Data_B_i(Data_A_i[SW/2-1:0]),
                .Data_S_o(result_A_adder)
            );
        
            adder #(.W(SW/2+1)) B_operation (
-               .Data_A_i({1'b0,Data_B_i[SW-1:SW-SW/2]}),
+               .Data_A_i({fill,Data_B_i[SW-1:SW-SW/2]}),
                .Data_B_i(Data_B_i[SW/2-1:0]),
                .Data_S_o(result_B_adder)
            );
