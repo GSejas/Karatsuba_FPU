@@ -3,32 +3,26 @@
 // Company: 
 // Engineer: Jorge Sequeira
 // 
-// Create Date: 08/31/2016 03:34:58 PM
+// Create Date: 09/01/2016 06:29:42 PM
 // Design Name: 
-// Module Name: KOA_c
-// Project Name: 
+// Module Name: KOA_FPGA
+// Project Name: Recursive Karatsuba Offman Multiplication
 // Target Devices: 
 // Tool Versions: 
-// Description: Recursive Karasuba Parameterized Algorithm
+// Description: RKOA optimization for DSP
 // 
 // Dependencies: 
 // 
 // Revision:
-// Revision 0.03 - File Created
-// Additional Comments: La primera version de este modulo se puede encontrar en la misma carpeta madre.
-// The reason for a second version is the way the numbers with lenght lower than 8 are treated. Here, we change that
-// by using an at the start before the case, so a multiplier below l = 7 is never instatiated.
+// Revision 0.01 - File Created
+// Additional Comments:
 // 
-// Revision 0.03 
-//
-// 1. Width of KOA multipliers in the even case was fixed from the original version
-// 2. Zero padding in the adders was fixed.
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module KOA_c
-    //#(parameter SW = 24, parameter precision = 0)
-    #(parameter SW = 54, parameter precision = 1)
+module KOA_FPGA
+   //#(parameter SW = 24)
+    #(parameter SW = 54)
 	(
     input wire [SW-1:0] Data_A_i,
     input wire [SW-1:0] Data_B_i,
@@ -65,7 +59,7 @@ module KOA_c
     
     assign rightside1 = (SW/2) *1'b0;
     assign rightside2 = (SW/2+1)*1'b0;
-
+    
     assign leftside1 = (SW/2-2) *1'b0; //Se le quitan dos bits con respecto al right side, esto porque al sumar, se agregan bits, esos hacen que sea diferente
     assign leftside2 = (SW/2-3)*1'b0;
 
@@ -76,23 +70,13 @@ module KOA_c
     ////////////////////////////////////
 generate
     
-    if (SW<=3 && precision == 0) begin
-
+    if (SW<18) begin
         multiplier_C #(.W(SW)/*,.level(level1)*/) main(
             
             .Data_A_i(Data_A_i),
             .Data_B_i(Data_B_i),
             .Data_S_o(sgf_result_o)
         );
-
-    end if (SW<=7 && precision == 1) begin
-        
-        multiplier_C #(.W(SW)/*,.level(level1)*/) main(
-            
-            .Data_A_i(Data_A_i),
-            .Data_B_i(Data_B_i),
-            .Data_S_o(sgf_result_o)
-        ); 
 
     end else begin
         
@@ -101,14 +85,14 @@ generate
         //////////////////////////////////even//////////////////////////////////
        //Multiplier for left side and right side
 
-            KOA_c #(.SW(SW/2), .precision(precision) /*,.level(level1)*/) left(
+            KOA_c #(.SW(SW/2)/*,.level(level1)*/) left(
                 
                 .Data_A_i(Data_A_i[SW-1:SW-SW/2]),
                 .Data_B_i(Data_B_i[SW-1:SW-SW/2]),
                 .sgf_result_o(/*result_left_mult*/Q_left)
             );
 
-            KOA_c #(.SW(SW/2), .precision(precision)/*,.level(level1)*/) right(
+            KOA_c #(.SW(SW/2)/*,.level(level1)*/) right(
                 
                 .Data_A_i(Data_A_i[SW-SW/2-1:0]),
                 .Data_B_i(Data_B_i[SW-SW/2-1:0]),
@@ -147,7 +131,7 @@ generate
                         );//*/
            //multiplication for middle
 
-             KOA_c        #(.SW(SW/2+1), .precision(precision)/*,.level(level1)*/) middle (
+             KOA_c        #(.SW(SW/2+1)/*,.level(level1)*/) middle (
 
                 .Data_A_i(/*Q_result_A_adder[SW/2:0]*/result_A_adder[SW/2:0]),
                 .Data_B_i(/*Q_result_B_adder[SW/2:0]*/result_B_adder[SW/2:0]),
@@ -188,7 +172,7 @@ generate
         //////////////////////////////////odd//////////////////////////////////
         //Multiplier for left side and right side
            
-           KOA_c      #(.SW(SW/2), .precision(precision)/*,.level(level2)*/) left_high(
+           KOA_c      #(.SW(SW/2)/*,.level(level2)*/) left_high(
 
                         .Data_A_i(Data_A_i[SW-1:SW/2+1]),
                         .Data_B_i(Data_B_i[SW-1:SW/2+1]),
@@ -196,7 +180,7 @@ generate
             );
             
     
-            KOA_c #(.SW((SW/2)+1), .precision(precision)/*,.level(level2)*/) right_lower(
+            KOA_c #(.SW((SW/2)+1)/*,.level(level2)*/) right_lower(
             /// Modificacion: Tamaño de puerto cambia de SW/2+1 a SW/2+2. El compilador lo pide por alguna razon.
 
                 .Data_A_i(Data_A_i[SW/2:0]),
@@ -237,7 +221,7 @@ generate
                         );//*/
            //multiplication for middle
 
-            KOA_c #(.SW(SW/2+2), .precision(precision)/*,.level(level2)*/) middle (
+            KOA_c #(.SW(SW/2+2)/*,.level(level2)*/) middle (
 
                 .Data_A_i(/*Q_result_A_adder*/result_A_adder),
                 .Data_B_i(/*Q_result_B_adder*/result_B_adder),

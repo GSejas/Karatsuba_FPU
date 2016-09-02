@@ -42,10 +42,7 @@ module testbench_RKOA();
         .Data_B_i(Data_B_i),
         .sgf_result_o(sgf_result_o)
         );
-        
-    integer i = 0;
-    integer b = 0;
-    integer c = 0; 
+
            
     parameter cycles = 2**SW;
 
@@ -108,7 +105,7 @@ module testbench_RKOA();
 
 //------------------------OUTPUT MONITOR BLOCKS-----------------
      always @ (sgf_result_o )
-        if (sgf_result_o == Data_B_i * Data_A_i) begin
+        if ((sgf_result_o == Data_B_i * Data_A_i)&load_b_i&(~rst)) begin
             
             $monitor($time,"-> %h *  %h = %h",Data_A_i,Data_B_i,sgf_result_o);
 
