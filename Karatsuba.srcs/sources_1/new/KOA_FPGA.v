@@ -85,14 +85,14 @@ generate
         //////////////////////////////////even//////////////////////////////////
        //Multiplier for left side and right side
 
-            KOA_c #(.SW(SW/2)/*,.level(level1)*/) left(
+            KOA_FPGA #(.SW(SW/2)/*,.level(level1)*/) left(
                 
                 .Data_A_i(Data_A_i[SW-1:SW-SW/2]),
                 .Data_B_i(Data_B_i[SW-1:SW-SW/2]),
                 .sgf_result_o(/*result_left_mult*/Q_left)
             );
 
-            KOA_c #(.SW(SW/2)/*,.level(level1)*/) right(
+            KOA_FPGA #(.SW(SW/2)/*,.level(level1)*/) right(
                 
                 .Data_A_i(Data_A_i[SW-SW/2-1:0]),
                 .Data_B_i(Data_B_i[SW-SW/2-1:0]),
@@ -131,7 +131,7 @@ generate
                         );//*/
            //multiplication for middle
 
-             KOA_c        #(.SW(SW/2+1)/*,.level(level1)*/) middle (
+             KOA_FPGA        #(.SW(SW/2+1)/*,.level(level1)*/) middle (
 
                 .Data_A_i(/*Q_result_A_adder[SW/2:0]*/result_A_adder[SW/2:0]),
                 .Data_B_i(/*Q_result_B_adder[SW/2:0]*/result_B_adder[SW/2:0]),
@@ -172,7 +172,7 @@ generate
         //////////////////////////////////odd//////////////////////////////////
         //Multiplier for left side and right side
            
-           KOA_c      #(.SW(SW/2)/*,.level(level2)*/) left_high(
+           KOA_FPGA      #(.SW(SW/2)/*,.level(level2)*/) left_high(
 
                         .Data_A_i(Data_A_i[SW-1:SW/2+1]),
                         .Data_B_i(Data_B_i[SW-1:SW/2+1]),
@@ -180,7 +180,7 @@ generate
             );
             
     
-            KOA_c #(.SW((SW/2)+1)/*,.level(level2)*/) right_lower(
+            KOA_FPGA #(.SW((SW/2)+1)/*,.level(level2)*/) right_lower(
             /// Modificacion: Tamaño de puerto cambia de SW/2+1 a SW/2+2. El compilador lo pide por alguna razon.
 
                 .Data_A_i(Data_A_i[SW/2:0]),
@@ -221,7 +221,7 @@ generate
                         );//*/
            //multiplication for middle
 
-            KOA_c #(.SW(SW/2+2)/*,.level(level2)*/) middle (
+            KOA_FPGA #(.SW(SW/2+2)/*,.level(level2)*/) middle (
 
                 .Data_A_i(/*Q_result_A_adder*/result_A_adder),
                 .Data_B_i(/*Q_result_B_adder*/result_B_adder),
