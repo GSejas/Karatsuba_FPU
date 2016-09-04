@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Aug 31 17:24:28 2016">
+<application name="pa" timeStamp="Sun Sep  4 14:33:43 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="a952a8f0ba72465fafffdbae00906e4c" type="ProjectID"/>
 <property name="ProjectIteration" value="2" type="ProjectIteration"/>
@@ -18,52 +18,67 @@ This means code written to parse this file will need to be revisited each subseq
 </item>
 <item name="Java Command Handlers">
 <property name="AddDesignTools" value="1" type="JavaHandler"/>
-<property name="AddSources" value="20" type="JavaHandler"/>
-<property name="CustomizeMenusAndToolbars" value="2" type="JavaHandler"/>
-<property name="EditDelete" value="1" type="JavaHandler"/>
+<property name="AddSources" value="26" type="JavaHandler"/>
+<property name="CustomizeMenusAndToolbars" value="7" type="JavaHandler"/>
+<property name="EditDelete" value="2" type="JavaHandler"/>
 <property name="EditProperties" value="1" type="JavaHandler"/>
 <property name="EditUndo" value="29" type="JavaHandler"/>
+<property name="FedToggleRoutingResourcesCmdHandler" value="1" type="JavaHandler"/>
+<property name="FileExit" value="1" type="JavaHandler"/>
 <property name="FlipToViewTaskSynthesis" value="3" type="JavaHandler"/>
 <property name="MoveToSimSet" value="1" type="JavaHandler"/>
-<property name="OpenProject" value="1" type="JavaHandler"/>
+<property name="OpenProject" value="2" type="JavaHandler"/>
 <property name="ProjectSettingsCmdHandler" value="12" type="JavaHandler"/>
 <property name="RunImplementation" value="2" type="JavaHandler"/>
-<property name="RunSchematic" value="5" type="JavaHandler"/>
+<property name="RunSchematic" value="6" type="JavaHandler"/>
 <property name="RunScript" value="1" type="JavaHandler"/>
-<property name="RunSynthesis" value="45" type="JavaHandler"/>
+<property name="RunSynthesis" value="48" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="7" type="JavaHandler"/>
-<property name="SetTopNode" value="9" type="JavaHandler"/>
+<property name="SetTopNode" value="12" type="JavaHandler"/>
 <property name="ShowHierarchy" value="1" type="JavaHandler"/>
-<property name="ShowView" value="20" type="JavaHandler"/>
+<property name="ShowView" value="21" type="JavaHandler"/>
 <property name="SimulationClose" value="9" type="JavaHandler"/>
 <property name="SimulationRestart" value="25" type="JavaHandler"/>
 <property name="SimulationRun" value="58" type="JavaHandler"/>
 <property name="SimulationRunAll" value="8" type="JavaHandler"/>
 <property name="SimulationRunForTime" value="186" type="JavaHandler"/>
 <property name="SimulationStep" value="16" type="JavaHandler"/>
-<property name="TclStore" value="2" type="JavaHandler"/>
-<property name="ToggleViewNavigator" value="6" type="JavaHandler"/>
+<property name="TclStore" value="7" type="JavaHandler"/>
+<property name="ToggleViewNavigator" value="7" type="JavaHandler"/>
 <property name="ToolsTemplates" value="13" type="JavaHandler"/>
 <property name="ViewTaskSimulation" value="2" type="JavaHandler"/>
-<property name="ViewTaskSynthesis" value="7" type="JavaHandler"/>
+<property name="ViewTaskSynthesis" value="9" type="JavaHandler"/>
 <property name="WaveformSaveConfiguration" value="2" type="JavaHandler"/>
 <property name="aO" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="FINISH, Finish" value="1" type="GuiResourceData"/>
-<property name="NEXT, Next " value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_AND_NETLIST_FILES_OR_DIRECTORIES, Add or create design sources" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_ADD_SOURCES, Sources_add_sources" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, RecursiveKOA (RecursiveKOA.v" value="4" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_GRAPH, Graph, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_TABLE, Table, 1" value="2" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, Add Files" value="1" type="GuiResourceData"/>
-<property name="RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 449, 115" value="1" type="GuiResourceData"/>
-<property name="RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 649, 113" value="1" type="GuiResourceData"/>
-<property name="RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 649, 113, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CmdMsgDialog_OK, OK" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_TCL_STORE, Xilinx Tcl Store..." value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, /home/jorge/Karatsuba_FPU/Karatsuba.xpr, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, /home/jorge/Karatsuba_FPU/Karatsuba.xpr, 0, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="4" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_REPORT, Report" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_TOOLS, Tools" value="2" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TclAppDetailPanel_CREATE_CUSTOM_COMMAND, Create Custom Command..." value="2" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TclAppDetailPanel_HELP, Help..." value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TclStoreDialog_TCL_STORE_NAVIGATOR, designutils, 2" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_CANCEL, Cancel" value="2" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_CLOSE, Close" value="1" type="GuiResourceData"/>
+<property name="RDIResource.CmdLineArgsDialog_REFERENCE, Reference" value="1" type="GuiResourceData"/>
+<property name="RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, xilinx::designutils::prettyTable, true" value="2" type="GuiResourceData"/>
+<property name="RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, xilinx::designutils::write_template -help, true" value="1" type="GuiResourceData"/>
+<property name="RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, xilinx::designutils::write_template -template -verilog -file holi.v -return_string, true" value="1" type="GuiResourceData"/>
+<property name="RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, xilinx::designutils::write_template -template -verilog -file holi.v, true" value="1" type="GuiResourceData"/>
+<property name="RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, xilinx::designutils::write_template -template -verilog -file_name holi.v, true" value="1" type="GuiResourceData"/>
+<property name="RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, xilinx::designutils::write_template -template -verilog -return_string, true" value="1" type="GuiResourceData"/>
+<property name="RDIResource.CustomCommandsDialog_DEFINE_ARGS, Define Args..." value="1" type="GuiResourceData"/>
+<property name="RDIResource.CustomCommandsDialog_MENU_NAME, xilinx::designutils::prettyTable" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HPopupTitle_CLOSE, (String" value="1" type="GuiResourceData"/>
+<property name="RDIResource.QuickHelp_HELP, (String" value="1" type="GuiResourceData"/>
+<property name="RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, Customize Commands" value="2" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="19" type="GuiMode"/>
+<property name="GuiMode" value="4" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
 <property name="TclMode" value="2" type="TclMode"/>
 </item>

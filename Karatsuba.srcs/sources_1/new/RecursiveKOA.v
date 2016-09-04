@@ -1,13 +1,13 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Jorge Sequeira Rojas
 // 
 // Create Date: 08/31/2016 04:06:16 PM
-// Design Name: 
+// Design Name: Recursive Parameterized KOA
 // Module Name: RecursiveKOA
-// Project Name: 
-// Target Devices: 
+// Project Name: FPU
+// Target Devices: Artix 7
 // Tool Versions: 
 // Description: 
 // 
