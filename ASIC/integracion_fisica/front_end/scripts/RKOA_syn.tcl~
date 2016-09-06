@@ -26,7 +26,7 @@ analyze -library WORK -format verilog {RecursiveKOA.v}
 analyze -format verilog {KOA_c_v2.v KOA_c_v3.v KOA_FPGA.v multiplier_combinational.v }
 
 #Elaboramos el módulo principal
-elaborate RecursiveKOA -architecture verilog -library WORK
+elaborate RKOA_syn -architecture verilog -library WORK
 
 #Enlazar los demás módulos al módulo principal
 link
