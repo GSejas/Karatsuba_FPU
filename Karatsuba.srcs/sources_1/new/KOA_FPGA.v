@@ -70,7 +70,7 @@ module KOA_FPGA
     ////////////////////////////////////
 generate
     
-    if (SW<18) begin
+    if (SW<=18) begin
         multiplier_C #(.W(SW)/*,.level(level1)*/) main(
             
             .Data_A_i(Data_A_i),

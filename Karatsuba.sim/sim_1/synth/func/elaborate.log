@@ -1,0 +1,39 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 18d731859c97497dac15e6fc63958c7a --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot testbench_RKOA_func_synth xil_defaultlib.testbench_RKOA xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 26 differs from formal bit length 24 for port Data_A_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sim_1/new/testbench_RKOA.v:41]
+WARNING: [VRFC 10-278] actual bit length 26 differs from formal bit length 24 for port Data_B_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sim_1/new/testbench_RKOA.v:42]
+WARNING: [VRFC 10-278] actual bit length 52 differs from formal bit length 48 for port sgf_result_o [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sim_1/new/testbench_RKOA.v:43]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.ffsrce_fdce
+Compiling module unisims_ver.FDCE
+Compiling module xil_defaultlib.RegisterAdd
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.adder__parameterized0
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ADREG=0,ALUMO...
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module xil_defaultlib.substractor
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.substractor_0
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.multiplier_C_1
+Compiling module xil_defaultlib.KOA_FPGA__parameterized0
+Compiling module xil_defaultlib.multiplier_C
+Compiling module xil_defaultlib.KOA_FPGA__parameterized1
+Compiling module xil_defaultlib.KOA_FPGA
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.RecursiveKOA
+Compiling module xil_defaultlib.testbench_RKOA
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_RKOA_func_synth

@@ -3,49 +3,39 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 18d731859c97497dac15e6fc63958c7a --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot testbench_RKOA_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 xil_defaultlib.testbench_RKOA xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 54 differs from formal bit length 12 for port Data_A_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sim_1/new/testbench_RKOA.v:41]
-WARNING: [VRFC 10-278] actual bit length 54 differs from formal bit length 12 for port Data_B_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sim_1/new/testbench_RKOA.v:42]
-WARNING: [VRFC 10-278] actual bit length 108 differs from formal bit length 24 for port sgf_result_o [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sim_1/new/testbench_RKOA.v:43]
+WARNING: [VRFC 10-278] actual bit length 26 differs from formal bit length 24 for port Data_A_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sim_1/new/testbench_RKOA.v:41]
+WARNING: [VRFC 10-278] actual bit length 26 differs from formal bit length 24 for port Data_B_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sim_1/new/testbench_RKOA.v:42]
+WARNING: [VRFC 10-278] actual bit length 52 differs from formal bit length 48 for port sgf_result_o [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sim_1/new/testbench_RKOA.v:43]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "testbench_RKOA_time_synth.sdf", for root module "testbench_RKOA/uut".
 INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "testbench_RKOA_time_synth.sdf", for root module "testbench_RKOA/uut".
 Time Resolution for simulation is 1ps
-Compiling module simprims_ver.CARRY4
-Compiling module simprims_ver.x_lut2_mux4
-Compiling module simprims_ver.LUT2
-Compiling module xil_defaultlib.adder__parameterized1
-Compiling module xil_defaultlib.adder__parameterized2
 Compiling module simprims_ver.IBUF
-Compiling module simprims_ver.LUT6
-Compiling module simprims_ver.LUT5
-Compiling module xil_defaultlib.adder__parameterized6
-Compiling module simprims_ver.x_lut1_mux2
-Compiling module simprims_ver.LUT1
-Compiling module simprims_ver.x_lut3_mux4
-Compiling module simprims_ver.x_lut3_mux4_reduced_0
-Compiling module simprims_ver.LUT3
-Compiling module simprims_ver.LUT4
-Compiling module xil_defaultlib.substractor__parameterized3
 Compiling module simprims_ver.BUFG
 Compiling module simprims_ver.ffsrce_fdce
 Compiling module simprims_ver.FDCE
 Compiling module xil_defaultlib.RegisterAdd
-Compiling module xil_defaultlib.adder__parameterized0_1
-Compiling module xil_defaultlib.substractor_2
-Compiling module xil_defaultlib.multiplier_C__parameterized0_3
-Compiling module xil_defaultlib.KOA_1
-Compiling module xil_defaultlib.substractor__parameterized1
-Compiling module xil_defaultlib.multiplier_C__parameterized3
-Compiling module xil_defaultlib.multiplier_C__parameterized2
-Compiling module xil_defaultlib.KOA_1__parameterized0
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.adder
 Compiling module xil_defaultlib.adder__parameterized0
+Compiling module simprims_ver.DSP48E1(ACASCREG=0,ADREG=0,ALUMO...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
 Compiling module xil_defaultlib.substractor
-Compiling module xil_defaultlib.multiplier_C__parameterized0
-Compiling module xil_defaultlib.KOA_1_0
+Compiling module simprims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.substractor_0
+Compiling module simprims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.multiplier_C_1
+Compiling module xil_defaultlib.KOA_FPGA__parameterized0
+Compiling module xil_defaultlib.multiplier_C
+Compiling module xil_defaultlib.KOA_FPGA__parameterized1
+Compiling module xil_defaultlib.KOA_FPGA
 Compiling module simprims_ver.OBUF
-Compiling module xil_defaultlib.KOA_2
+Compiling module xil_defaultlib.RecursiveKOA
 Compiling module xil_defaultlib.testbench_RKOA
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot testbench_RKOA_time_synth

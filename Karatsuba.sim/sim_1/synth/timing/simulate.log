@@ -1,23 +1,22 @@
 Vivado Simulator 2016.2
 Time resolution is 1 ps
-                   0<< Starting the Simulation>>
-ERROR: Data A = 000000000000000000000000000000000000000000000000000001, Data B = 000000000000000000000000000000000000000000000000000001, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz000000000000000000000000
-ERROR: Data A = 000000000000000000000000010010000101010011010100100100, Data B = 111111111111111111111111000000100010010101111010000001, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz101000001110001100100100
-ERROR: Data A = 000000000000000000000000010010000101010011010100100100, Data B = 111111111111111111111111000000100010010101111010000001, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz010010101000111100100100
-ERROR: Data A = 111111111111111111111110000100100001001101011000001001, Data B = 111111111111111111111111000000100010010101111010000001, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz010101111000100010001001
-ERROR: Data A = 111111111111111111111110000100100001001101011000001001, Data B = 111111111111111111111110110001111100000101011001100011, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz010101111000100010001011
-ERROR: Data A = 111111111111111111111110000100100001001101011000001001, Data B = 111111111111111111111110110001111100000101011001100011, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz001001101000101101111011
-ERROR: Data A = 000000000000000000000000000110101110010111101100001101, Data B = 111111111111111111111110110001111100000101011001100011, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz010001101001010000000111
-ERROR: Data A = 000000000000000000000001000110110111111001100110001101, Data B = 111111111111111111111110110010110000101000010001100101, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz001010011111100010100001
-ERROR: Data A = 111111111111111111111110001001001101110101001000010010, Data B = 111111111111111111111110110010110000101000010001100101, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz000010010001100100011010
-ERROR: Data A = 111111111111111111111110001001001101110101001000010010, Data B = 000000000000000000000000000000111100111110001100000001, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz000011011000100000010010
-ERROR: Data A = 111111111111111111111110001001001101110101001000010010, Data B = 000000000000000000000000000000111100111110001100000001, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz000001100011100000010010
-ERROR: Data A = 000000000000000000000000000110110101111100110100001101, Data B = 000000000000000000000000000000111100111110001100000001, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz001001110011010000001101
-ERROR: Data A = 000000000000000000000000000110110101111100110100001101, Data B = 000000000000000000000000000000111100111110001100000001, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz000000000000000000000000
-ERROR: Data A = 111111111111111111111111100010111101111000010011000101, Data B = 111111111111111111111111100011001101110010010011000110, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz000111100101010001011110
-ERROR: Data A = 111111111111111111111111100010111101111000010011000101, Data B = 111111111111111111111111100011001101110010010011000110, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz000101101100010001011110
-ERROR: Data A = 000000000000000000000001110010101011111111011111100101, Data B = 111111111111111111111111010101000100111101001010101010, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz000101010000100000010010
-ERROR: Data A = 111111111111111111111110111011110100100111001001110111, Data B = 111111111111111111111111010101000100111101001010101010, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz000001101100000000000110
-ERROR: Data A = 111111111111111111111110111011110100100111001001110111, Data B = 111111111111111111111110001001001100101101011000010010, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz000001101001000100000110
-ERROR: Data A = 111111111111111111111110111011110100100111001001110111, Data B = 111111111111111111111110001001001100101101011000010010, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz000100110100111111111110
-ERROR: Data A = 111111111111111111111110111011110100100111001001110111, Data B = 111111111111111111111110001001001100101101011000010010, Result = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz000011101111011001011110
+                   4-> ERROR: Data A = 2153524, Data B = 0895e81, Result = z000000000000
+                  90<< Starting the Simulation>>
+                 106-> ERROR: Data A = 0000001, Data B = 1f05663, Result = z000000000001
+                 116-> ERROR: Data A = 0000001, Data B = 1f05663, Result = z0000017a6663
+                 126-> ERROR: Data A = 0000001, Data B = 1f05663, Result = z000000f05663
+                 186-> ERROR: Data A = 2b97b0d, Data B = 1f05663, Result = zae21f340f407
+                 216-> ERROR: Data A = 2b97b0d, Data B = 2df998d, Result = za21db33efb29
+                 226-> ERROR: Data A = 2b97b0d, Data B = 2df998d, Result = za20171068b29
+                 266-> ERROR: Data A = 2c28465, Data B = 2df998d, Result = za9e6003e48a1
+                 336-> ERROR: Data A = 1375212, Data B = 0f3e301, Result = z34b3f5134812
+                 416-> ERROR: Data A = 2d7cd0d, Data B = 0f3e301, Result = zcd96ff01540d
+                 436-> ERROR: Data A = 2d7cd0d, Data B = 323f176, Result = z1e4c9448c0fe
+                 486-> ERROR: Data A = 28dcd3d, Data B = 323f176, Result = z13e8ceea071e
+                 506-> ERROR: Data A = 28dcd3d, Data B = 323f176, Result = z000000000000
+                 786-> ERROR: Data A = 2aff7e5, Data B = 113d2aa, Result = z0da034337812
+                 866-> ERROR: Data A = 132d612, Data B = 3d27277, Result = z29ca55b9865e
+                 936-> ERROR: Data A = 3ecdb8f, Data B = 3d27277, Result = zc2afb5c70d79
+                 946-> ERROR: Data A = 3ecdb8f, Data B = 13069f2, Result = zc2b6032dbd79
+                 956-> ERROR: Data A = 3ecdb8f, Data B = 13069f2, Result = z2cc73989b42e
+                 966-> ERROR: Data A = 3ecdb8f, Data B = 13069f2, Result = z2ccb30c5342e
