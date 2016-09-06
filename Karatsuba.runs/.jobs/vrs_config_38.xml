@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+<<<<<<< HEAD
+	<Run Id="synth_1" LaunchDir="C:/Users/jsequeira/Proyectos/Karatsuba.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+=======
+	<Run Id="synth_1" LaunchDir="/home/jorge/Karatsuba_FPU/Karatsuba.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+>>>>>>> 4ca03c39fda0e427dea5ee21b3bd4754a294ae6c
+</Runs>
+

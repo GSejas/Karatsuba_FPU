@@ -3,37 +3,20 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 18d731859c97497dac15e6fc63958c7a --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_RKOA_behav xil_defaultlib.testbench_RKOA xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 7 differs from formal bit length 6 for port Data_A_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:177]
-WARNING: [VRFC 10-278] actual bit length 7 differs from formal bit length 6 for port Data_B_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:178]
-WARNING: [VRFC 10-278] actual bit length 13 differs from formal bit length 12 for port Data_S_o [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:179]
-WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 7 for port Data_A_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:183]
-WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 7 for port Data_B_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:184]
-WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 7 for port Data_B_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:193]
-WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 7 for port Data_B_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:199]
-WARNING: [VRFC 10-278] actual bit length 17 differs from formal bit length 16 for port Data_B_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:216]
-WARNING: [VRFC 10-278] actual bit length 27 differs from formal bit length 26 for port Data_A_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:229]
-WARNING: [VRFC 10-278] actual bit length 23 differs from formal bit length 26 for port Data_B_i [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA.v:230]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.multiplier_C(W=6)
-Compiling module xil_defaultlib.multiplier_C(W=7)
-Compiling module xil_defaultlib.adder(W=7)
-Compiling module xil_defaultlib.multiplier_C(W=8)
-Compiling module xil_defaultlib.substractor(W=16)
-Compiling module xil_defaultlib.adder(W=26)
-Compiling module xil_defaultlib.KOA_1(SW=13)
+Compiling module xil_defaultlib.multiplier_C(W=13)
+Compiling module xil_defaultlib.KOA_FPGA(SW=13)
 Compiling module xil_defaultlib.adder(W=13)
-Compiling module xil_defaultlib.adder(W=8)
-Compiling module xil_defaultlib.multiplier_C(W=9)
-Compiling module xil_defaultlib.substractor(W=18)
-Compiling module xil_defaultlib.adder(W=30)
-Compiling module xil_defaultlib.KOA_1(SW=15)
+Compiling module xil_defaultlib.multiplier_C(W=14)
+Compiling module xil_defaultlib.KOA_FPGA(SW=14)
 Compiling module xil_defaultlib.substractor(W=28)
 Compiling module xil_defaultlib.adder(W=52)
+Compiling module xil_defaultlib.KOA_FPGA(SW=26)
 Compiling module xil_defaultlib.RegisterAdd(W=52)
-Compiling module xil_defaultlib.KOA_2(SW=26)
+Compiling module xil_defaultlib.RecursiveKOA(SW=26)
 Compiling module xil_defaultlib.testbench_RKOA
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot testbench_RKOA_behav

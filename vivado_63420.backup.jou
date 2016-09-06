@@ -1,0 +1,77 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Aug 29 20:03:21 2016
+# Process ID: 63420
+# Current directory: C:/Users/jsequeira/Proyectos
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent43032 C:\Users\jsequeira\Proyectos\Karatsuba.xpr
+# Log file: C:/Users/jsequeira/Proyectos/vivado.log
+# Journal file: C:/Users/jsequeira/Proyectos\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jsequeira/Proyectos/Karatsuba.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source testbench_RKOA.tcl
+save_wave_config {C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+set_property xsim.view C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg [get_filesets sim_1]
+restart
+run 920 ns
+restart
+run 920 ns
+save_wave_config {C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg}
+add_wave {{/testbench_RKOA/uut/clk}} {{/testbench_RKOA/uut/rst}} {{/testbench_RKOA/uut/load_b_i}} {{/testbench_RKOA/uut/Data_A_i}} {{/testbench_RKOA/uut/Data_B_i}} {{/testbench_RKOA/uut/sgf_result_o}} {{/testbench_RKOA/uut/result_A_adder}} {{/testbench_RKOA/uut/result_B_adder}} {{/testbench_RKOA/uut/Q_left}} {{/testbench_RKOA/uut/Q_right}} {{/testbench_RKOA/uut/Q_middle}} {{/testbench_RKOA/uut/S_A}} {{/testbench_RKOA/uut/S_B}} {{/testbench_RKOA/uut/Result}} {{/testbench_RKOA/uut/zero1}} {{/testbench_RKOA/uut/zero2}} {{/testbench_RKOA/uut/rightside1}} {{/testbench_RKOA/uut/leftside1}} {{/testbench_RKOA/uut/rightside2}} {{/testbench_RKOA/uut/sgf_r}} {{/testbench_RKOA/uut/SW}} {{/testbench_RKOA/uut/half}} {{/testbench_RKOA/uut/full_port}} 
+restart
+run 920 ns
+restart
+run 920 ns
+save_wave_config {C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg}
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+restart
+run 920 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+RESTART
+restart
+restart
+launch_simulation
+run 920 ns
+restart & run 920ns
+restart & run 920
+restart & run 920 ns
+restart && run 920 ns
+restart
+run 920 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+run 920 ns
+run 920 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl

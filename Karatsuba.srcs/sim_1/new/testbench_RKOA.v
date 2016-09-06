@@ -34,13 +34,13 @@ module testbench_RKOA();
 //---------------------------------------------------------
  // instantiate the Device Under Test (DUT)
  // using named instantiation   
-    RecursiveKOA #(.SW(SW)) uut (
+    RecursiveKOA #(.SW(SW), .Opt_FPGA_ASIC(1)) uut (
         .clk(clk),
         .rst(rst),
         .load_b_i(load_b_i),
-        .Data_A_i(Data_A_i),
-        .Data_B_i(Data_B_i),
-        .sgf_result_o(sgf_result_o)
+        .Data_A_i(Data_A_i[SW-1:0]),
+        .Data_B_i(Data_B_i[SW-1:0]),
+        .sgf_result_o(sgf_result_o[2*SW-1:0])
         );
 
            

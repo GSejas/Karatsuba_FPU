@@ -2,15 +2,33 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Mon Aug 29 20:03:21 2016
-# Process ID: 63420
+# Start of session at: Mon Sep 05 15:23:03 2016
+# Process ID: 16356
 # Current directory: C:/Users/jsequeira/Proyectos
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent43032 C:\Users\jsequeira\Proyectos\Karatsuba.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6880 C:\Users\jsequeira\Proyectos\Karatsuba.xpr
 # Log file: C:/Users/jsequeira/Proyectos/vivado.log
 # Journal file: C:/Users/jsequeira/Proyectos\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/jsequeira/Proyectos/Karatsuba.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top RecursiveKOA [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close [ open C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/pipelined_multiplier.v w ]
+add_files C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/pipelined_multiplier.v
 update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs synth_1
@@ -19,59 +37,187 @@ reset_run synth_1
 launch_runs synth_1
 wait_on_run synth_1
 launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
 source testbench_RKOA.tcl
-save_wave_config {C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg}
-add_files -fileset sim_1 -norecurse C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
-set_property xsim.view C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg [get_filesets sim_1]
 restart
 run 920 ns
-restart
-run 920 ns
-save_wave_config {C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg}
-add_wave {{/testbench_RKOA/uut/clk}} {{/testbench_RKOA/uut/rst}} {{/testbench_RKOA/uut/load_b_i}} {{/testbench_RKOA/uut/Data_A_i}} {{/testbench_RKOA/uut/Data_B_i}} {{/testbench_RKOA/uut/sgf_result_o}} {{/testbench_RKOA/uut/result_A_adder}} {{/testbench_RKOA/uut/result_B_adder}} {{/testbench_RKOA/uut/Q_left}} {{/testbench_RKOA/uut/Q_right}} {{/testbench_RKOA/uut/Q_middle}} {{/testbench_RKOA/uut/S_A}} {{/testbench_RKOA/uut/S_B}} {{/testbench_RKOA/uut/Result}} {{/testbench_RKOA/uut/zero1}} {{/testbench_RKOA/uut/zero2}} {{/testbench_RKOA/uut/rightside1}} {{/testbench_RKOA/uut/leftside1}} {{/testbench_RKOA/uut/rightside2}} {{/testbench_RKOA/uut/sgf_r}} {{/testbench_RKOA/uut/SW}} {{/testbench_RKOA/uut/half}} {{/testbench_RKOA/uut/full_port}} 
-restart
-run 920 ns
-restart
-run 920 ns
-save_wave_config {C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg}
 close_sim
-launch_simulation
-launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top pipelined_multiplier [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
 launch_simulation
 open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
 source testbench_RKOA.tcl
-close_sim
-launch_simulation
-open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
-source testbench_RKOA.tcl
+restart
+run 920 ns
 restart
 run 920 ns
 close_sim
 launch_simulation
 open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
 source testbench_RKOA.tcl
-RESTART
 restart
+run 920 ns
+close_sim
+launch_simulation -mode post-synthesis -type timing
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
 restart
+run 920 ns
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
 launch_simulation
-run 920 ns
-restart & run 920ns
-restart & run 920
-restart & run 920 ns
-restart && run 920 ns
+launch_simulation
+launch_simulation -mode post-synthesis -type functional
+remove_files C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/RKOA.v
+file delete -force C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/RKOA.v
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
 restart
 run 920 ns
+launch_simulation -mode post-synthesis -type timing
+restart
+run all
 close_sim
 launch_simulation
 open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
 source testbench_RKOA.tcl
+restart
 run 920 ns
+launch_simulation -mode post-synthesis -type timing
+launch_simulation -mode post-synthesis -type timing
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+restart
 run 920 ns
 close_sim
+launch_simulation -mode post-synthesis -type timing
+launch_simulation -mode post-synthesis -type timing
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top RecursiveKOA [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close_sim
+refresh_design
 launch_simulation
+launch_simulation -mode post-synthesis -type timing
 open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
 source testbench_RKOA.tcl
 close_sim
+launch_simulation -mode post-synthesis -type timing
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
 launch_simulation
 open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
 source testbench_RKOA.tcl
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+close_sim
+current_sim simulation_10
+close_sim
+close_sim
+report_utilization -name utilization_1
+refresh_design
+report_utilization -name utilization_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Sgf_Multiplication [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+report_utilization -file {C:/Users/jsequeira/Proyectos/Reportes de Dise
+os/Francis/Utilizacion_KOA_Francis_54bits.tx} -name Utilizacion_KOA_francis_54bits
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -datasheet -name timing_1 -file {C:/Users/jsequeira/Proyectos/Reportes de Dise os/Francis/timing_report_KOA_francis_54bits.tx}
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -datasheet -name timing_2 -file {C:/Users/jsequeira/Proyectos/Reportes de Dise os/Francis/timing_report_KOA_francis_54bits.tx}
+report_power -file {C:/Users/jsequeira/Proyectos/Reportes/Francis/power_power_1power_1_KOA_54bits.pwr} -name {power_1_KOA_54bits}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top FPU_Multiplication_Function [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+report_power -file {C:/Users/jsequeira/Proyectos/Reportes/Francis/power_power_1power_1_KOA_54bits.pwr} -name {power_1}
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+report_utilization -file C:/Users/jsequeira/Proyectos/Reportes/Francis/64bits_mult.txt -name utilization_1
+report_power -file {C:/Users/jsequeira/Proyectos/Reportes/power_MULT_64bits_power_1.pwr} -name {power_1}
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_2 -file C:/Users/jsequeira/Proyectos/Reportes/Francis/timing_report_mult_64bits.txt
+close [ open C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/FPU_Multiplication_Function_v2.v w ]
+add_files C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/FPU_Multiplication_Function_v2.v
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top FPU_Multiplication_Function_v2 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+refresh_design
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+report_utilization -file C:/Users/jsequeira/Proyectos/Reportes/Solucion/util_mult_func_64bits.txt -name utilization_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+close_design
+open_run impl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top RecursiveKOA [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+add_files -norecurse -scan_for_includes C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v3.v
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close_design
+launch_simulation
+open_wave_config C:/Users/jsequeira/Proyectos/testbench_RKOA_behav.wcfg
+source testbench_RKOA.tcl
+restart
+run 920 ns
+open_run synth_1 -name synth_1
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+refresh_design
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close_design
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
