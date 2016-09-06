@@ -12684,3 +12684,4 @@ dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
 // TclEventType: RUN_COMPLETED
 // Elapsed time: 60 seconds
 selectTab(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_TABLE, "Table", 1); // g:g (f:JPanel, cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,936 MB. GUI used memory: 79 MB. Current time: 9/6/16 4:42:24 PM CST
