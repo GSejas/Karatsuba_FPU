@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1473130724">
-  <File Type="RDS-PROPCONSTRS" Name="FPU_Multiplication_Function_v2_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="FPU_Multiplication_Function_v2.tcl"/>
-  <File Type="RDS-RDS" Name="FPU_Multiplication_Function_v2.vds"/>
-  <File Type="RDS-UTIL" Name="FPU_Multiplication_Function_v2_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="FPU_Multiplication_Function_v2_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="FPU_Multiplication_Function_v2.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="FPU_Multiplication_Function_v2_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="FPU_Multiplication_Function_v2_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1473200066">
+  <File Type="RDS-PROPCONSTRS" Name="RecursiveKOA_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="RecursiveKOA.tcl"/>
+  <File Type="RDS-RDS" Name="RecursiveKOA.vds"/>
+  <File Type="RDS-UTIL" Name="RecursiveKOA_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="RecursiveKOA_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="RecursiveKOA.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="RecursiveKOA_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="RecursiveKOA_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Add-Subt/Multiplexer_AC.v">
@@ -367,9 +367,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/KOA_c_v3.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="FPU_Multiplication_Function_v2"/>
+      <Option Name="TopModule" Val="RecursiveKOA"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

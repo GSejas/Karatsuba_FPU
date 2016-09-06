@@ -1,0 +1,1739 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Sep 06 16:14:27 2016
+# Process ID: 51684
+# Current directory: C:/Users/jsequeira/Proyectos/Karatsuba.runs/synth_1
+# Command line: vivado.exe -log RecursiveKOA.vds -mode batch -messageDb vivado.pb -notrace -source RecursiveKOA.tcl
+# Log file: C:/Users/jsequeira/Proyectos/Karatsuba.runs/synth_1/RecursiveKOA.vds
+# Journal file: C:/Users/jsequeira/Proyectos/Karatsuba.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source RecursiveKOA.tcl -notrace
+Command: synth_design -top RecursiveKOA -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 43628 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 306.730 ; gain = 99.996
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'RecursiveKOA' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/RecursiveKOA.v:23]
+	Parameter SW bound to: 56 - type: integer 
+	Parameter Opt_FPGA_ASIC bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 56 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 28 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 28 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 14 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized1' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 14 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized2' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C' (1#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized2' (2#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized3' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized3' (2#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder' (3#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized4' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized5' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized0' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized0' (3#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized5' (3#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized6' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized1' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized1' (3#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized6' (3#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized0' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized0' (3#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized1' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized1' (3#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized7' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized2' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized2' (3#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized7' (3#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized2' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized2' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized4' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized0' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized0' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized1' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized1' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized3' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 28 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized3' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized1' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized8' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 14 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized9' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized9' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized10' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized10' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized11' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized12' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized3' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized3' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized12' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized13' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized4' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized4' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized13' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized4' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized4' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized5' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized5' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized14' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized5' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized5' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized14' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized6' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized6' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized11' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized2' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized2' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized3' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized3' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized7' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 28 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized7' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized8' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized8' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 14 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized8' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized9' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 14 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized9' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized15' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 15 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized16' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized16' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized17' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized18' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized6' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized6' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized18' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized19' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized7' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized7' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized19' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized10' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized10' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized11' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized11' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized20' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized8' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized8' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized20' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized12' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized12' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized17' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized13' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized13' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized14' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized14' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized21' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 9 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized22' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized9' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized9' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized22' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized23' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized10' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized10' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized23' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized15' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized15' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized16' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized16' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized24' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 6 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized11' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized11' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized24' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized4' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized4' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized5' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized5' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized17' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized17' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized21' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized6' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized6' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized7' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized7' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized18' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized18' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized15' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized8' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized8' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized9' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized9' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized19' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 56 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized19' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized0' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized25' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 28 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 14 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized26' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 14 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized27' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized27' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized28' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized28' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized29' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized30' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized12' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized12' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized30' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized31' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized13' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized13' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized31' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized20' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized20' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized21' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized21' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized32' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized14' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized14' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized32' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized22' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized22' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized29' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized10' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized10' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized11' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized11' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized23' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 28 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized23' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized26' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized33' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 14 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized34' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized34' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized35' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized35' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized36' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized37' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized15' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized15' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized37' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized38' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized16' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized16' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized38' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized24' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized24' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized25' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized25' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized39' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized17' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized17' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized39' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized26' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized26' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized36' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized12' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized12' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized13' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized13' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized27' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 28 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized27' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized33' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized28' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 14 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized28' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized29' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 14 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized29' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized40' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 15 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized41' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized41' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized42' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized43' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized18' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized18' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized43' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized44' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized19' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized19' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized44' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized30' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized30' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized31' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized31' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized45' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized20' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized20' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized45' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized32' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized32' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized42' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized33' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized33' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized34' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized34' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized46' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 9 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized47' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized21' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized21' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized47' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized48' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized22' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized22' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized48' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized35' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized35' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized36' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized36' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized49' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 6 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized23' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized23' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized49' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized14' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized14' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized15' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized15' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized37' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized37' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized46' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized16' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized16' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized17' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized17' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized38' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized38' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized40' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized18' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized18' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized19' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized19' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized39' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 56 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized39' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized25' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized40' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 28 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized40' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized41' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 28 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized41' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized50' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 29 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 14 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized51' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 14 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized52' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized52' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized53' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized53' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized54' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized55' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized24' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized24' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized55' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized56' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized25' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized25' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized56' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized42' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized42' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized43' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized43' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized57' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized26' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized26' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized57' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized44' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized44' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized54' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized20' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized20' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized21' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized21' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized45' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 28 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized45' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized51' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized58' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 15 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized59' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized59' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized60' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized61' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized27' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized27' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized61' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized62' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized28' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized28' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized62' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized46' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized46' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized47' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized47' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized63' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized29' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized29' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized63' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized48' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized48' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized60' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized49' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized49' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized50' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized50' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized64' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 9 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized65' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized30' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized30' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized65' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized66' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized31' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized31' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized66' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized51' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized51' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized52' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized52' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized67' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 6 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized32' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized32' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized67' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized22' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized22' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized23' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized23' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized53' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized53' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized64' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized24' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized24' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized25' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized25' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized54' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized54' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized58' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized55' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized55' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized56' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized56' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized68' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 16 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized69' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized70' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized33' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized33' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized70' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized71' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized34' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized34' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized71' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized57' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized57' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized58' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized58' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized72' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized35' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized35' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized72' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized59' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized59' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized69' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized73' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized74' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized36' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized36' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized74' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized75' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized37' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized37' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized75' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized60' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized60' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized61' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized61' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized76' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized38' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized38' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized76' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized62' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized62' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized73' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized63' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized63' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized64' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized64' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized77' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 9 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized78' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 4 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized39' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized39' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized78' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized79' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 5 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized40' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized40' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized79' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized65' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized65' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized66' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized66' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c__parameterized80' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+	Parameter SW bound to: 6 - type: integer 
+	Parameter precision bound to: 1 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized41' [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized41' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized80' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized26' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized26' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized27' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized27' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized67' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized67' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized77' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized28' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized28' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized29' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized29' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized68' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized68' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized68' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized30' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized30' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized31' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized31' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized69' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 58 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized69' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c__parameterized50' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized32' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 58 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized32' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor__parameterized33' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+	Parameter W bound to: 58 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor__parameterized33' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized70' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+	Parameter W bound to: 112 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized70' (4#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Mult/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c' (4#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/KOA_c_v2.v:29]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd' [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 112 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd' (5#1) [C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-256] done synthesizing module 'RecursiveKOA' (6#1) [C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/RecursiveKOA.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 344.102 ; gain = 137.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 344.102 ; gain = 137.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 344.102 ; gain = 137.367
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 437.695 ; gain = 230.961
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    113 Bit       Adders := 1     
+	   2 Input     59 Bit       Adders := 1     
+	   3 Input     58 Bit       Adders := 2     
+	   2 Input     57 Bit       Adders := 2     
+	   2 Input     33 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 3     
+	   3 Input     30 Bit       Adders := 4     
+	   2 Input     29 Bit       Adders := 7     
+	   2 Input     19 Bit       Adders := 4     
+	   3 Input     18 Bit       Adders := 8     
+	   2 Input     17 Bit       Adders := 10    
+	   3 Input     16 Bit       Adders := 10    
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     15 Bit       Adders := 4     
+	   3 Input     12 Bit       Adders := 8     
+	   3 Input     10 Bit       Adders := 20    
+	   2 Input      9 Bit       Adders := 8     
+	   2 Input      8 Bit       Adders := 10    
+	   2 Input      6 Bit       Adders := 8     
+	   2 Input      5 Bit       Adders := 20    
++---Registers : 
+	              112 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+Module adder__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module substractor 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     10 Bit       Adders := 1     
+Module adder__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+Module substractor__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+Module substractor__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+Module adder__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+Module adder__parameterized4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+Module substractor__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+Module substractor__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+Module adder__parameterized7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+Module adder__parameterized8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     15 Bit       Adders := 1     
+Module adder__parameterized9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     15 Bit       Adders := 1     
+Module adder__parameterized10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+Module adder__parameterized13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module adder__parameterized14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module adder__parameterized15 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+Module adder__parameterized16 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+Module substractor__parameterized4 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+Module substractor__parameterized5 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+Module adder__parameterized17 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+Module substractor__parameterized6 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     18 Bit       Adders := 1     
+Module substractor__parameterized7 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     18 Bit       Adders := 1     
+Module adder__parameterized18 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
+Module substractor__parameterized8 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     30 Bit       Adders := 1     
+Module substractor__parameterized9 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     30 Bit       Adders := 1     
+Module adder__parameterized19 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     57 Bit       Adders := 1     
+Module adder__parameterized20 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized21 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized22 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+Module substractor__parameterized10 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+Module substractor__parameterized11 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+Module adder__parameterized23 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+Module adder__parameterized24 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized25 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized26 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+Module substractor__parameterized12 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+Module substractor__parameterized13 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+Module adder__parameterized27 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+Module adder__parameterized28 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     15 Bit       Adders := 1     
+Module adder__parameterized29 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     15 Bit       Adders := 1     
+Module adder__parameterized30 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized31 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized32 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+Module adder__parameterized33 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module adder__parameterized34 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module adder__parameterized35 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+Module adder__parameterized36 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+Module substractor__parameterized14 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+Module substractor__parameterized15 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+Module adder__parameterized37 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+Module substractor__parameterized16 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     18 Bit       Adders := 1     
+Module substractor__parameterized17 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     18 Bit       Adders := 1     
+Module adder__parameterized38 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
+Module substractor__parameterized18 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     30 Bit       Adders := 1     
+Module substractor__parameterized19 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     30 Bit       Adders := 1     
+Module adder__parameterized39 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     57 Bit       Adders := 1     
+Module adder__parameterized40 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+Module adder__parameterized41 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+Module adder__parameterized42 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized43 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized44 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+Module substractor__parameterized20 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+Module substractor__parameterized21 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+Module adder__parameterized45 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+Module adder__parameterized46 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized47 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized48 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+Module adder__parameterized49 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module adder__parameterized50 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module adder__parameterized51 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+Module adder__parameterized52 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+Module substractor__parameterized22 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+Module substractor__parameterized23 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+Module adder__parameterized53 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+Module substractor__parameterized24 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     18 Bit       Adders := 1     
+Module substractor__parameterized25 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     18 Bit       Adders := 1     
+Module adder__parameterized54 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
+Module adder__parameterized55 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module adder__parameterized56 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module adder__parameterized57 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized58 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized59 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+Module adder__parameterized60 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized61 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+Module adder__parameterized62 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+Module adder__parameterized63 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module adder__parameterized64 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module adder__parameterized65 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+Module adder__parameterized66 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+Module substractor__parameterized26 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+Module substractor__parameterized27 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+Module adder__parameterized67 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+Module substractor__parameterized28 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     18 Bit       Adders := 1     
+Module substractor__parameterized29 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     18 Bit       Adders := 1     
+Module adder__parameterized68 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+Module substractor__parameterized30 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+Module substractor__parameterized31 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+Module adder__parameterized69 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     59 Bit       Adders := 1     
+Module substractor__parameterized32 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     58 Bit       Adders := 1     
+Module substractor__parameterized33 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     58 Bit       Adders := 1     
+Module adder__parameterized70 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    113 Bit       Adders := 1     
+Module RegisterAdd 
+Detailed RTL Component Info : 
++---Registers : 
+	              112 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 476.422 ; gain = 269.688
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 477.621 ; gain = 270.887
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 477.621 ; gain = 270.887
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 555.582 ; gain = 348.848
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 555.582 ; gain = 348.848
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 555.582 ; gain = 348.848
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 577.215 ; gain = 370.480
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 577.215 ; gain = 370.480
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 577.215 ; gain = 370.480
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 577.215 ; gain = 370.480
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 577.215 ; gain = 370.480
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 577.215 ; gain = 370.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 577.215 ; gain = 370.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 577.215 ; gain = 370.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 577.215 ; gain = 370.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   736|
+|3     |LUT1   |   304|
+|4     |LUT2   |  1839|
+|5     |LUT3   |   149|
+|6     |LUT4   |   389|
+|7     |LUT5   |   178|
+|8     |LUT6   |   918|
+|9     |FDCE   |   112|
+|10    |IBUF   |   115|
+|11    |OBUF   |   112|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------+------------------------------+------+
+|      |Instance              |Module                        |Cells |
++------+----------------------+------------------------------+------+
+|1     |top                   |                              |  4853|
+|2     |  finalreg            |RegisterAdd                   |   147|
+|3     |  main_KOA            |KOA_c                         |  4243|
+|4     |    A_operation       |adder__parameterized40        |   241|
+|5     |    B_operation       |adder__parameterized41        |   224|
+|6     |    Final             |adder__parameterized70        |   273|
+|7     |    left              |KOA_c__parameterized0         |  1210|
+|8     |      A_operation     |adder__parameterized8         |    76|
+|9     |      B_operation     |adder__parameterized9         |    36|
+|10    |      Final           |adder__parameterized19        |    32|
+|11    |      Subtr_2         |substractor__parameterized9   |   127|
+|12    |      left            |KOA_c__parameterized1         |   269|
+|13    |        Subtr_2       |substractor__parameterized1   |    63|
+|14    |        left          |KOA_c__parameterized2         |    71|
+|15    |          main        |multiplier_C_20               |    71|
+|16    |        middle        |KOA_c__parameterized4         |    65|
+|17    |          Subtr_2     |substractor_19                |    31|
+|18    |          left        |KOA_c__parameterized5         |     9|
+|19    |            main      |multiplier_C__parameterized0  |     9|
+|20    |          middle      |KOA_c__parameterized7         |    15|
+|21    |            main      |multiplier_C__parameterized2  |    15|
+|22    |          right       |KOA_c__parameterized6         |    10|
+|23    |            main      |multiplier_C__parameterized1  |    10|
+|24    |        right         |KOA_c__parameterized3         |    70|
+|25    |          main        |multiplier_C_18               |    70|
+|26    |      middle          |KOA_c__parameterized15        |   387|
+|27    |        Subtr_2       |substractor__parameterized7   |    87|
+|28    |        left_high     |KOA_c__parameterized16        |    78|
+|29    |          main        |multiplier_C_17               |    78|
+|30    |        middle        |KOA_c__parameterized21        |   137|
+|31    |          Subtr_2     |substractor__parameterized5   |    39|
+|32    |          left_high   |KOA_c__parameterized22        |    10|
+|33    |            main      |multiplier_C__parameterized9  |    10|
+|34    |          middle      |KOA_c__parameterized24        |    63|
+|35    |            main      |multiplier_C__parameterized11 |    63|
+|36    |          right_lower |KOA_c__parameterized23        |    25|
+|37    |            main      |multiplier_C__parameterized10 |    25|
+|38    |        right_lower   |KOA_c__parameterized17        |    85|
+|39    |          Subtr_2     |substractor_16                |    45|
+|40    |          left        |KOA_c__parameterized18        |     7|
+|41    |            main      |multiplier_C__parameterized6  |     7|
+|42    |          middle      |KOA_c__parameterized20        |    26|
+|43    |            main      |multiplier_C__parameterized8  |    26|
+|44    |          right       |KOA_c__parameterized19        |     7|
+|45    |            main      |multiplier_C__parameterized7  |     7|
+|46    |      right           |KOA_c__parameterized8         |   283|
+|47    |        Subtr_2       |substractor__parameterized3   |    63|
+|48    |        left          |KOA_c__parameterized9         |    71|
+|49    |          main        |multiplier_C_15               |    71|
+|50    |        middle        |KOA_c__parameterized11        |    65|
+|51    |          Subtr_2     |substractor_14                |    31|
+|52    |          left        |KOA_c__parameterized12        |     9|
+|53    |            main      |multiplier_C__parameterized3  |     9|
+|54    |          middle      |KOA_c__parameterized14        |    15|
+|55    |            main      |multiplier_C__parameterized5  |    15|
+|56    |          right       |KOA_c__parameterized13        |    10|
+|57    |            main      |multiplier_C__parameterized4  |    10|
+|58    |        right         |KOA_c__parameterized10        |    84|
+|59    |          main        |multiplier_C_13               |    84|
+|60    |    middle            |KOA_c__parameterized50        |  1081|
+|61    |      A_operation     |adder__parameterized55        |     1|
+|62    |      B_operation     |adder__parameterized56        |     1|
+|63    |      Subtr_2         |substractor__parameterized31  |   147|
+|64    |      left_high       |KOA_c__parameterized51        |   207|
+|65    |        Final         |adder__parameterized45        |    12|
+|66    |        Subtr_2       |substractor__parameterized21  |    63|
+|67    |        left          |KOA_c__parameterized52        |    34|
+|68    |          main        |multiplier_C_12               |    34|
+|69    |        middle        |KOA_c__parameterized54        |    65|
+|70    |          Subtr_2     |substractor_11                |    31|
+|71    |          left        |KOA_c__parameterized55        |     9|
+|72    |            main      |multiplier_C__parameterized24 |     9|
+|73    |          middle      |KOA_c__parameterized57        |    15|
+|74    |            main      |multiplier_C__parameterized26 |    15|
+|75    |          right       |KOA_c__parameterized56        |    10|
+|76    |            main      |multiplier_C__parameterized25 |    10|
+|77    |        right         |KOA_c__parameterized53        |    33|
+|78    |          main        |multiplier_C_10               |    33|
+|79    |      middle          |KOA_c__parameterized68        |   400|
+|80    |        Subtr_2       |substractor__parameterized29  |    98|
+|81    |        left          |KOA_c__parameterized69        |    69|
+|82    |          Final       |adder__parameterized59        |    10|
+|83    |          Subtr_2     |substractor_9                 |    31|
+|84    |          left        |KOA_c__parameterized70        |     6|
+|85    |            main      |multiplier_C__parameterized33 |     6|
+|86    |          middle      |KOA_c__parameterized72        |    15|
+|87    |            main      |multiplier_C__parameterized35 |    15|
+|88    |          right       |KOA_c__parameterized71        |     7|
+|89    |            main      |multiplier_C__parameterized34 |     7|
+|90    |        middle        |KOA_c__parameterized77        |   138|
+|91    |          Subtr_2     |substractor__parameterized27  |    39|
+|92    |          left_high   |KOA_c__parameterized78        |    10|
+|93    |            main      |multiplier_C__parameterized39 |    10|
+|94    |          middle      |KOA_c__parameterized80        |    63|
+|95    |            main      |multiplier_C__parameterized41 |    63|
+|96    |          right_lower |KOA_c__parameterized79        |    26|
+|97    |            main      |multiplier_C__parameterized40 |    26|
+|98    |        right         |KOA_c__parameterized73        |    95|
+|99    |          Final       |adder__parameterized62        |    10|
+|100   |          Subtr_2     |substractor_8                 |    45|
+|101   |          left        |KOA_c__parameterized74        |     7|
+|102   |            main      |multiplier_C__parameterized36 |     7|
+|103   |          middle      |KOA_c__parameterized76        |    26|
+|104   |            main      |multiplier_C__parameterized38 |    26|
+|105   |          right       |KOA_c__parameterized75        |     7|
+|106   |            main      |multiplier_C__parameterized37 |     7|
+|107   |      right_lower     |KOA_c__parameterized58        |   325|
+|108   |        Final         |adder__parameterized54        |    34|
+|109   |        Subtr_2       |substractor__parameterized25  |    81|
+|110   |        left_high     |KOA_c__parameterized59        |    33|
+|111   |          main        |multiplier_C_7                |    33|
+|112   |        middle        |KOA_c__parameterized64        |   137|
+|113   |          Subtr_2     |substractor__parameterized23  |    39|
+|114   |          left_high   |KOA_c__parameterized65        |    10|
+|115   |            main      |multiplier_C__parameterized30 |    10|
+|116   |          middle      |KOA_c__parameterized67        |    63|
+|117   |            main      |multiplier_C__parameterized32 |    63|
+|118   |          right_lower |KOA_c__parameterized66        |    25|
+|119   |            main      |multiplier_C__parameterized31 |    25|
+|120   |        right_lower   |KOA_c__parameterized60        |    40|
+|121   |          Subtr_2     |substractor_6                 |    16|
+|122   |          left        |KOA_c__parameterized61        |     3|
+|123   |            main      |multiplier_C__parameterized27 |     3|
+|124   |          middle      |KOA_c__parameterized63        |    14|
+|125   |            main      |multiplier_C__parameterized29 |    14|
+|126   |          right       |KOA_c__parameterized62        |     7|
+|127   |            main      |multiplier_C__parameterized28 |     7|
+|128   |    right             |KOA_c__parameterized25        |  1214|
+|129   |      A_operation     |adder__parameterized28        |    76|
+|130   |      B_operation     |adder__parameterized29        |    36|
+|131   |      Final           |adder__parameterized39        |    32|
+|132   |      Subtr_2         |substractor__parameterized19  |   127|
+|133   |      left            |KOA_c__parameterized26        |   269|
+|134   |        Subtr_2       |substractor__parameterized11  |    63|
+|135   |        left          |KOA_c__parameterized27        |    71|
+|136   |          main        |multiplier_C_5                |    71|
+|137   |        middle        |KOA_c__parameterized29        |    65|
+|138   |          Subtr_2     |substractor_4                 |    31|
+|139   |          left        |KOA_c__parameterized30        |     9|
+|140   |            main      |multiplier_C__parameterized12 |     9|
+|141   |          middle      |KOA_c__parameterized32        |    15|
+|142   |            main      |multiplier_C__parameterized14 |    15|
+|143   |          right       |KOA_c__parameterized31        |    10|
+|144   |            main      |multiplier_C__parameterized13 |    10|
+|145   |        right         |KOA_c__parameterized28        |    70|
+|146   |          main        |multiplier_C_3                |    70|
+|147   |      middle          |KOA_c__parameterized40        |   387|
+|148   |        Subtr_2       |substractor__parameterized17  |    87|
+|149   |        left_high     |KOA_c__parameterized41        |    78|
+|150   |          main        |multiplier_C_2                |    78|
+|151   |        middle        |KOA_c__parameterized46        |   137|
+|152   |          Subtr_2     |substractor__parameterized15  |    39|
+|153   |          left_high   |KOA_c__parameterized47        |    10|
+|154   |            main      |multiplier_C__parameterized21 |    10|
+|155   |          middle      |KOA_c__parameterized49        |    63|
+|156   |            main      |multiplier_C__parameterized23 |    63|
+|157   |          right_lower |KOA_c__parameterized48        |    25|
+|158   |            main      |multiplier_C__parameterized22 |    25|
+|159   |        right_lower   |KOA_c__parameterized42        |    85|
+|160   |          Subtr_2     |substractor_1                 |    45|
+|161   |          left        |KOA_c__parameterized43        |     7|
+|162   |            main      |multiplier_C__parameterized18 |     7|
+|163   |          middle      |KOA_c__parameterized45        |    26|
+|164   |            main      |multiplier_C__parameterized20 |    26|
+|165   |          right       |KOA_c__parameterized44        |     7|
+|166   |            main      |multiplier_C__parameterized19 |     7|
+|167   |      right           |KOA_c__parameterized33        |   287|
+|168   |        Subtr_2       |substractor__parameterized13  |    63|
+|169   |        left          |KOA_c__parameterized34        |    71|
+|170   |          main        |multiplier_C_0                |    71|
+|171   |        middle        |KOA_c__parameterized36        |    65|
+|172   |          Subtr_2     |substractor                   |    31|
+|173   |          left        |KOA_c__parameterized37        |     9|
+|174   |            main      |multiplier_C__parameterized15 |     9|
+|175   |          middle      |KOA_c__parameterized39        |    15|
+|176   |            main      |multiplier_C__parameterized17 |    15|
+|177   |          right       |KOA_c__parameterized38        |    10|
+|178   |            main      |multiplier_C__parameterized16 |    10|
+|179   |        right         |KOA_c__parameterized35        |    88|
+|180   |          main        |multiplier_C                  |    88|
++------+----------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 577.215 ; gain = 370.480
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 577.215 ; gain = 349.695
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 577.215 ; gain = 370.480
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 851 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+477 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 632.391 ; gain = 407.320
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 632.391 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 06 16:15:22 2016...

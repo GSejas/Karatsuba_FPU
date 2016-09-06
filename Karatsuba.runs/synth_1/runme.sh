@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log FPU_Multiplication_Function_v2.vds -m64 -mode batch -messageDb vivado.pb -notrace -source FPU_Multiplication_Function_v2.tcl
+EAStep vivado -log RecursiveKOA.vds -m64 -mode batch -messageDb vivado.pb -notrace -source RecursiveKOA.tcl

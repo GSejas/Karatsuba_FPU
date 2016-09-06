@@ -23,7 +23,7 @@
 module RecursiveKOA
    //#(parameter SW = 24,
     #(parameter SW = 56,
-      parameter Opt_FPGA_ASIC=1)  //Se está optimizando el modulo para FPGA o para un ASIC
+      parameter Opt_FPGA_ASIC=0)  //Se está optimizando el modulo para FPGA o para un ASIC
 	(
     input wire clk,
     input wire rst,
@@ -61,7 +61,11 @@ wire [2*SW-1:0] Result;
                 .Data_B_i(Data_B_i[SW-1:0]/*P=SW*/),
                 .sgf_result_o(Result[2*SW-1:0]) /*P=SW*/
             );	
-
+    		// KOA_c_2 #(.SW(SW), .precision(1)/*,.level(level1)*/) main_KOA(
+      //           .Data_A_i(Data_A_i[SW-1:0]/*P=SW*/),
+      //           .Data_B_i(Data_B_i[SW-1:0]/*P=SW*/),
+      //           .sgf_result_o(Result[2*SW-1:0]) /*P=SW*/
+      //       );
         	end
         	
         endgenerate
