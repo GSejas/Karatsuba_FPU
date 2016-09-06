@@ -23,7 +23,7 @@ remove_design -designs
 analyze -library WORK -format verilog {RecursiveKOA.v}
 
 #Luego se analiza los otros módulos
-analyze -format verilog {KOA_c_v2.v KOA_FPGA.v multiplier_combinational.v }
+analyze -format verilog {KOA_c_v2.v KOA_FPGA.v multiplier_combinational.v}
 
 #Elaboramos el módulo principal
 elaborate detector_secuencia -architecture verilog -library WORK
