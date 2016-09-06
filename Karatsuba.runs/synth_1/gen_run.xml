@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1473120446">
-  <File Type="RDS-PROPCONSTRS" Name="FPU_Multiplication_Function_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="FPU_Multiplication_Function.tcl"/>
-  <File Type="RDS-RDS" Name="FPU_Multiplication_Function.vds"/>
-  <File Type="RDS-UTIL" Name="FPU_Multiplication_Function_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="FPU_Multiplication_Function_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="FPU_Multiplication_Function.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="FPU_Multiplication_Function_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="FPU_Multiplication_Function_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1473130724">
+  <File Type="RDS-PROPCONSTRS" Name="FPU_Multiplication_Function_v2_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="FPU_Multiplication_Function_v2.tcl"/>
+  <File Type="RDS-RDS" Name="FPU_Multiplication_Function_v2.vds"/>
+  <File Type="RDS-UTIL" Name="FPU_Multiplication_Function_v2_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="FPU_Multiplication_Function_v2_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="FPU_Multiplication_Function_v2.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="FPU_Multiplication_Function_v2_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="FPU_Multiplication_Function_v2_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Add-Subt/Multiplexer_AC.v">
@@ -360,9 +360,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/FPU_Multiplication_Function_v2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="FPU_Multiplication_Function"/>
+      <Option Name="TopModule" Val="FPU_Multiplication_Function_v2"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

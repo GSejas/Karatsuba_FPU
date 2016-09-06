@@ -65,14 +65,15 @@ read_verilog -library xil_defaultlib {
   C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Add-Subt/Barrel_shifter.v
   C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/RTL/Add-Subt/Add_Subt.v
   C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/pipelined_multiplier.v
+  C:/Users/jsequeira/Proyectos/Karatsuba.srcs/sources_1/new/FPU_Multiplication_Function_v2.v
 }
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
 }
 
-synth_design -top FPU_Multiplication_Function -part xc7a100tcsg324-1
+synth_design -top FPU_Multiplication_Function_v2 -part xc7a100tcsg324-1
 
 
-write_checkpoint -force -noxdef FPU_Multiplication_Function.dcp
+write_checkpoint -force -noxdef FPU_Multiplication_Function_v2.dcp
 
-catch { report_utilization -file FPU_Multiplication_Function_utilization_synth.rpt -pb FPU_Multiplication_Function_utilization_synth.pb }
+catch { report_utilization -file FPU_Multiplication_Function_v2_utilization_synth.rpt -pb FPU_Multiplication_Function_v2_utilization_synth.pb }

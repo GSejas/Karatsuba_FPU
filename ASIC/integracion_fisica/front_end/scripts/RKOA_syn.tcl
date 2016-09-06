@@ -20,13 +20,13 @@
 remove_design -designs
 
 # Primero se analiza el módulo principal
-analyze -library WORK -format verilog {detector_secuencia.v}
+analyze -library WORK -format verilog {RecursiveKOA.v}
 
 #Luego se analiza los otros módulos
-analyze -format verilog {divisor_frecuencia.v secuenciaFSM.v}
+analyze -format verilog {KOA_c_v2.v KOA_FPGA.v multiplier_C.v adder.v substractor.v RegisterAdd.v}
 
 #Elaboramos el módulo principal
-elaborate detector_secuencia -architecture verilog -library WORK
+elaborate RKOA_syn -architecture verilog -library WORK
 
 #Enlazar los demás módulos al módulo principal
 link
@@ -35,7 +35,7 @@ link
 write -hierarchy -format ddc -output ./db/detector_syn_unmapped.ddc
 
 #Aplicar especificaciones de diseño (constraints)
-source detector_syn_constraints.tcl
+source RKOA_syn_constraints.tcl
 propagate_constraints
 
 #Revisar el diseño
@@ -61,11 +61,11 @@ report_timing > reports/detector_syn_timing.txt
 report_port > reports/detector_syn_port.txt
 
 #Escribir el archivo *.ddc (base de datos sintetizada)
-write -hierarchy -format ddc -output ./db/detector_syn_mapped.ddc
+write -hierarchy -format ddc -output ./db/RKOA_syn_mapped.ddc
 
 #Escribir el archivo *.sdc (Synopsys Design Constraints), utilizado como una de las entradas 
 #para el sintetizador físico (IC Compiler)
-write_sdc ./db/detector_syn.sdc
+write_sdc ./db/RKOA_syn.sdc
 
 #Revisar la configuración de temporizado
 check_timing

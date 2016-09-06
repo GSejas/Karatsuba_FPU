@@ -1,13 +1,13 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Jorge Sequeira Rojas
 // 
 // Create Date: 08/31/2016 04:06:16 PM
-// Design Name: 
+// Design Name: Recursive Parameterized KOA
 // Module Name: RecursiveKOA
-// Project Name: 
-// Target Devices: 
+// Project Name: FPU
+// Target Devices: Artix 7
 // Tool Versions: 
 // Description: 
 // 
@@ -51,7 +51,7 @@ wire [2*SW-1:0] Result;
     		KOA_FPGA #(.SW(SW)/*,.level(level1)*/) main_KOA(
                 .Data_A_i(Data_A_i[SW-1:0]/*P=SW*/),
                 .Data_B_i(Data_B_i[SW-1:0]/*P=SW*/),
-                .sgf_result_o(Result) /*P=SW*/
+                .sgf_result_o(Result[2*SW-1:0]) /*P=SW*/
             );	
 
         	end else begin    		  //Opt_FPGA_ASIC=1 Optimizations for FPGA
@@ -59,7 +59,7 @@ wire [2*SW-1:0] Result;
     		KOA_c #(.SW(SW), .precision(1)/*,.level(level1)*/) main_KOA(
                 .Data_A_i(Data_A_i[SW-1:0]/*P=SW*/),
                 .Data_B_i(Data_B_i[SW-1:0]/*P=SW*/),
-                .sgf_result_o(Result) /*P=SW*/
+                .sgf_result_o(Result[2*SW-1:0]) /*P=SW*/
             );	
 
         	end
@@ -69,12 +69,12 @@ wire [2*SW-1:0] Result;
 
 //////////////////////Following REG///////////////////
 
-            RegisterAdd #(.W(4*(SW/2))) finalreg ( //Data X input register
+            RegisterAdd #(.W(2*SW)) finalreg ( //Data X input register
                 .clk(clk), 
                 .rst(rst), 
                 .load(load_b_i), 
-                .D(Result[2*SW-1:0]), 
-                .Q({sgf_result_o})
+                .D(Result[2*SW-1:0]/*P=2*SW*/), 
+                .Q({sgf_result_o[2*SW-1:0]})
             );
 
 ///////////////////////END OF CODE////////////////////

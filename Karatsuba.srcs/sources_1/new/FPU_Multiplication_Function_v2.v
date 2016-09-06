@@ -272,7 +272,7 @@ XOR_M Sign_operation (
 
 /////Significant_Operation//////////////////////////
 
-Sgf_Multiplication #(.SW(SW+1)) Sgf_operation (
+RecursiveKOA #(.SW(SW+1), .Opt_FPGA_ASIC(1)) Sgf_operation (
     .clk(clk),
     .rst(rst),
     .load_b_i(FSM_load_second_step),
