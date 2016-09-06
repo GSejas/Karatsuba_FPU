@@ -1,14 +1,12 @@
 ####################################################################################################################################
 #Institución:                          Instituto Tecnológico de Costa Rica
 
-#Realizado por:		   Jairo Mauricio Valverde Cruz           jmvc04@gmail.com
-#Corregido por:		Reinaldo Castro González	shidarimo@gmail.com
-
-#Proyecto:   Detector de secuencia: 1101. Proyecto creado con fines didácticos.
+#Realizado por:		 Jorge Sequeira
+#Proyecto:   FPU 
 
 #Herramienta:        Design Compiler  Version L-2016.03-SP3 for linux64 - Jul 18, 2016
 
-#Fecha de creación:  27 Agosto 2011 editado en 12 Agosto 2016
+#Fecha de creación:  05/09/2016
 
 #Refrencias (detalladas en el Manual - Wiki):
 # 1. A. Chacón, 2009.  
@@ -23,7 +21,7 @@ remove_design -designs
 analyze -library WORK -format verilog {RecursiveKOA.v}
 
 #Luego se analiza los otros módulos
-analyze -format verilog {KOA_c_v2.v KOA_FPGA.v multiplier_C.v adder.v substractor.v RegisterAdd.v}
+analyze -format verilog {KOA_c_v2.v KOA_c_v3.v KOA_FPGA.v multiplier_C.v adder.v substractor.v RegisterAdd.v}
 
 #Elaboramos el módulo principal
 elaborate RKOA_syn -architecture verilog -library WORK
