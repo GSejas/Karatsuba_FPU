@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : RecursiveKOA
+Version: L-2016.03-SP3
+Date   : Tue Sep  6 18:11:47 2016
+****************************************
+
+Library(s) Used:
+
+    scx3_cmos8rf_lpvt_tt_1p2v_25c (File: /media/datos/IBM/TECH/ibm130_lp/digital/scx3_cmos8rf_lpvt_tt_1p2v_25c.db)
+
+Number of ports:                          227
+Number of nets:                          9426
+Number of cells:                         7163
+Number of combinational cells:           7051
+Number of sequential cells:               112
+Number of macros/black boxes:               0
+Number of buf/inv:                       1785
+Number of references:                      49
+
+Combinational area:             100218.240953
+Buf/Inv area:                     7764.480309
+Noncombinational area:            3709.439880
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                103927.680834
+Total area:                 undefined
+1

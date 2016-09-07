@@ -54,14 +54,14 @@ module KOA_c
     assign zero1 =2'b00;
     assign zero2 =4'b0000;
     ///////////////////////////////////////////////////////////
-    unsigned wire [SW/2-1:0] rightside1;
-    unsigned wire [SW/2:0] rightside2;
+    wire  [SW/2-1:0] rightside1;
+    wire  [SW/2:0] rightside2;
     //Modificacion: Leftside signals are added. They are created as zero fillings as preparation for the final adder.
-    unsigned wire [SW/2-3:0] leftside1;
-    unsigned wire [SW/2-4:0] leftside2;
+    wire  [SW/2-3:0] leftside1;
+    wire  [SW/2-4:0] leftside2;
 
 
-    wire [4*(SW/2)-1:0] sgf_r; 
+    wire  [2*SW-1:0] sgf_r; 
     
     assign rightside1 = (SW/2) *1'b0;
     assign rightside2 = (SW/2+1)*1'b0;
@@ -78,12 +78,14 @@ generate
     
     if (SW<=3 && precision == 0) begin : K1
 
-        multiplier_C #(.W(SW)/*,.level(level1)*/) main(
-            
-            .Data_A_i(Data_A_i),
-            .Data_B_i(Data_B_i),
-            .Data_S_o(sgf_result_o)
-        );
+    //    multiplier_C #(.W(SW)/*,.level(level1)*/) main(
+     //       
+     //       .Data_A_i(Data_A_i),
+      //      .Data_B_i(Data_B_i),
+      //      .Data_S_o(sgf_result_o)
+     //   );
+
+	assign sgf_result_o = Data_A_i * Data_B_i;
 
     end if (SW<=7 && precision == 1) begin : K2
         
