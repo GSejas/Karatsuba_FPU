@@ -7370,4 +7370,5 @@ Information: Checking no_driving_cell...
 Information: Checking partial_input_delay...
 1
 Current design is 'RecursiveKOA'.
-dc_shell> 
+dc_shell> uplevel #0 { analyze_datapath_extraction -filter_msg none -max_msgs 1 } -gui -html_file_name /tmp/Analyze6812.html
+Warning: Design 'RecursiveKOA' has '377' unresolved references. For more detailed information, use the "link" command. (UID-341)

@@ -28,7 +28,7 @@
 
 module KOA_c
     //#(parameter SW = 24, parameter precision = 0, parameter depth = 4)
-    #(parameter SW = 54, parameter precision = 1, parameter depth = 4)
+    #(parameter SW = 54, parameter precision = 1, parameter depth = 3)
 	(
     input wire [SW-1:0] Data_A_i,
     input wire [SW-1:0] Data_B_i,

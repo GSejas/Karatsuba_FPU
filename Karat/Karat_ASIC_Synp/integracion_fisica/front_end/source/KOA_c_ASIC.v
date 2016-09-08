@@ -28,7 +28,7 @@
 
 module KOA_c
     //#(parameter SW = 24, parameter precision = 0, parameter depth = 4)
-    #(parameter SW = 54, parameter precision = 1, parameter depth = 4)
+    #(parameter SW = 54, parameter precision = 1, parameter depth = 3)
 	(
     input wire [SW-1:0] Data_A_i,
     input wire [SW-1:0] Data_B_i,
@@ -77,10 +77,35 @@ module KOA_c
     ////////////////////////////////////
 generate
     
+<<<<<<< HEAD:Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_ASIC.v
     if (depth == 1) begin : Booth_Mult
 
 	assign sgf_result_o = Data_A_i * Data_B_i;
          
+=======
+    if (precision == 0 && depth == 1) begin : K1
+
+    //    multiplier_C #(.W(SW)/*,.level(level1)*/) main(
+     //       
+     //       .Data_A_i(Data_A_i),
+      //      .Data_B_i(Data_B_i),
+      //      .Data_S_o(sgf_result_o)
+     //   );
+
+	assign sgf_result_o = Data_A_i * Data_B_i;
+
+    end if (precision == 1 && depth == 1) begin : K2
+        
+      //  multiplier_C #(.W(SW)/*,.level(level1)*/) main(
+            
+      //      .Data_A_i(Data_A_i),
+       //     .Data_B_i(Data_B_i),
+      //     .Data_S_o(sgf_result_o)
+            
+    assign sgf_result_o = Data_A_i * Data_B_i;
+      
+
+>>>>>>> 0d53d674e9ef599ede9141f29524690147afb00c:ASIC/integracion_fisica/front_end/source/KOA_c_ASIC.v
     end else begin : K3
         
     case (SW%2)
