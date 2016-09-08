@@ -1,7 +1,0 @@
-Running: xsim.dir/testbench_RKOA_time_synth/xsimk.exe -simmode gui -wdb testbench_RKOA_time_synth.wdb -simrunnum 0 -socket 51729
-Design successfully loaded
-Design Loading Memory Usage: 14120 KB (Peak: 14120 KB)
-Design Loading CPU Usage: 46 ms
-Simulation completed
-Simulation Memory Usage: 16820 KB (Peak: 16820 KB)
-Simulation CPU Usage: 140 ms
