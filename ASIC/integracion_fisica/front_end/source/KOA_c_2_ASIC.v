@@ -77,7 +77,7 @@ module KOA_c_2
     ////////////////////////////////////
 generate
     
-    if (precision == 0 && depth = 1) begin : K1
+    if (precision == 0 && depth == 1) begin : K1
 
         multiplier_C #(.W(SW)/*,.level(level1)*/) main(
             
@@ -86,7 +86,7 @@ generate
             .Data_S_o(sgf_result_o)
         );
 
-    end if (precision == 1 && depth = 1) begin  : K2
+    end if (precision == 1 && depth == 1) begin  : K2
         
         multiplier_C #(.W(SW)/*,.level(level1)*/) main(
             

@@ -9,15 +9,13 @@ Report : power
         -analysis_effort high
 Design : RecursiveKOA
 Version: L-2016.03-SP3
-Date   : Tue Sep  6 18:57:03 2016
+Date   : Wed Sep  7 18:58:50 2016
 ****************************************
 
 
 Library(s) Used:
 
     scx3_cmos8rf_lpvt_tt_1p2v_25c (File: /media/datos/IBM/TECH/ibm130_lp/digital/scx3_cmos8rf_lpvt_tt_1p2v_25c.db)
-    gtech (File: /mnt/vol_NFS_Zener/tools/synopsys/apps/syn/L-2016.03-SP3/libraries/syn/gtech.db)
-    gtech (File: /mnt/vol_NFS_Zener/tools/synopsys/apps/syn/L-2016.03-SP3/libraries/syn/gtech.db)
 
 
 Operating Conditions: tt_1p2v_25c   Library: scx3_cmos8rf_lpvt_tt_1p2v_25c
@@ -33,12 +31,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =   2.1722 mW   (76%)
-  Net Switching Power  = 681.5597 uW   (24%)
+  Cell Internal Power  = 110.7537 uW   (97%)
+  Net Switching Power  =   3.4394 uW    (3%)
                          ---------
-Total Dynamic Power    =   2.8538 mW  (100%)
+Total Dynamic Power    = 114.1931 uW  (100%)
 
-Cell Leakage Power     = 127.7507 nW
+Cell Leakage Power     =   2.3474 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -48,9 +46,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           0.1245        5.5850e-04        1.7870e+03            0.1250  (   4.38%)
+register           0.1082        2.3491e-04        1.7886e+03            0.1084  (  94.96%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      2.0478            0.6810        1.2596e+05            2.7289  (  95.62%)
+combinational  2.5461e-03        3.2045e-03          558.7593        5.7511e-03  (   5.04%)
 --------------------------------------------------------------------------------------------------
-Total              2.1723 mW         0.6816 mW     1.2775e+05 pW         2.8539 mW
+Total              0.1108 mW     3.4394e-03 mW     2.3474e+03 pW         0.1142 mW
 1

@@ -1,10 +1,10 @@
-Warning: Design 'RecursiveKOA' has '377' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'RecursiveKOA' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : qor
 Design : RecursiveKOA
 Version: L-2016.03-SP3
-Date   : Tue Sep  6 18:57:07 2016
+Date   : Wed Sep  7 18:58:50 2016
 ****************************************
 
 
@@ -24,14 +24,14 @@ Date   : Tue Sep  6 18:57:07 2016
 
   Cell Count
   -----------------------------------
-  Hierarchical Cell Count:       6364
-  Hierarchical Port Count:      53967
-  Leaf Cell Count:              27320
-  Buf/Inv Cell Count:            7544
-  Buf Cell Count:                 400
-  Inv Cell Count:                7144
+  Hierarchical Cell Count:          1
+  Hierarchical Port Count:         99
+  Leaf Cell Count:                113
+  Buf/Inv Cell Count:              16
+  Buf Cell Count:                  10
+  Inv Cell Count:                   6
   CT Buf/Inv Cell Count:            0
-  Combinational Cell Count:     27272
+  Combinational Cell Count:        65
   Sequential Cell Count:           48
   Macro Count:                      0
   -----------------------------------
@@ -39,21 +39,21 @@ Date   : Tue Sep  6 18:57:07 2016
 
   Area
   -----------------------------------
-  Combinational Area:    93003.841222
+  Combinational Area:      567.360000
   Noncombinational Area:  1589.759949
-  Buf/Inv Area:           8388.000333
-  Total Buffer Area:          2305.44
-  Total Inverter Area:        6082.56
+  Buf/Inv Area:             83.520003
+  Total Buffer Area:            57.60
+  Total Inverter Area:          25.92
   Macro/Black Box Area:      0.000000
   Net Area:                  0.000000
   -----------------------------------
-  Cell Area:             94593.601171
-  Design Area:           94593.601171
+  Cell Area:              2157.119948
+  Design Area:            2157.119948
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:         38120
+  Total Number of Nets:           211
   Nets With Violations:             0
   Max Trans Violations:             0
   Max Cap Violations:               0
@@ -64,12 +64,12 @@ Date   : Tue Sep  6 18:57:07 2016
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                    3.97
-  Logic Optimization:                  1.92
-  Mapping Optimization:               27.56
+  Resource Sharing:                    0.00
+  Logic Optimization:                  0.21
+  Mapping Optimization:                2.29
   -----------------------------------------
-  Overall Compile Time:               79.66
-  Overall Compile Wall Clock Time:    79.94
+  Overall Compile Time:               13.04
+  Overall Compile Wall Clock Time:    14.32
 
   --------------------------------------------------------------------
 
