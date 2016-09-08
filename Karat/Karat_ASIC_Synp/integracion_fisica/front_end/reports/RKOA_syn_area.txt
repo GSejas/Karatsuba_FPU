@@ -1,33 +1,30 @@
-Warning: Design 'RecursiveKOA' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : area
 Design : RecursiveKOA
 Version: L-2016.03-SP3
-Date   : Wed Sep  7 18:58:50 2016
+Date   : Thu Sep  8 00:57:18 2016
 ****************************************
 
 Library(s) Used:
 
     scx3_cmos8rf_lpvt_tt_1p2v_25c (File: /media/datos/IBM/TECH/ibm130_lp/digital/scx3_cmos8rf_lpvt_tt_1p2v_25c.db)
 
-Number of ports:                          198
-Number of nets:                           310
-Number of cells:                          114
-Number of combinational cells:             64
-Number of sequential cells:                49
+Number of ports:                           99
+Number of nets:                          1843
+Number of cells:                         1458
+Number of combinational cells:           1410
+Number of sequential cells:                48
 Number of macros/black boxes:               0
-Number of buf/inv:                         16
-Number of references:                       2
+Number of buf/inv:                        393
+Number of references:                      36
 
-Combinational area:                567.360000
-Buf/Inv area:                       83.520003
+Combinational area:              18558.720140
+Buf/Inv area:                     1749.600070
 Noncombinational area:            1589.759949
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                  2157.119948
+Total cell area:                 20148.480089
 Total area:                 undefined
-
-Information: This design contains black box (unknown) components. (RPT-8)
 1
