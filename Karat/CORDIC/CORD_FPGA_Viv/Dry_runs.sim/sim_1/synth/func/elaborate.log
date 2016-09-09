@@ -1,0 +1,56 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 5b9df52745304cedbdbce7c894ebabc0 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot Testbench_FPU_Add_Subt_func_synth xil_defaultlib.Testbench_FPU_Add_Subt xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut3_mux4
+Compiling module unisims_ver.x_lut3_mux4_reduced_0
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.ffsrce_fdce
+Compiling module unisims_ver.FDCE
+Compiling module xil_defaultlib.RegisterAdd__parameterized8
+Compiling module xil_defaultlib.RegisterAdd_5
+Compiling module xil_defaultlib.add_sub_carry_out__parameterized...
+Compiling module xil_defaultlib.Add_Subt
+Compiling module xil_defaultlib.RegisterAdd__parameterized6
+Compiling module xil_defaultlib.Mux_Array
+Compiling module xil_defaultlib.RegisterAdd__parameterized7
+Compiling module xil_defaultlib.Barrel_Shifter
+Compiling module unisims_ver.IBUF
+Compiling module xil_defaultlib.RegisterAdd_3
+Compiling module xil_defaultlib.RegisterAdd_4
+Compiling module xil_defaultlib.add_sub_carry_out
+Compiling module xil_defaultlib.RegisterAdd__parameterized5
+Compiling module xil_defaultlib.Exp_Operation
+Compiling module xil_defaultlib.FSM_Add_Subtract
+Compiling module xil_defaultlib.RegisterAdd__parameterized9
+Compiling module xil_defaultlib.LZD
+Compiling module xil_defaultlib.RegisterAdd_1
+Compiling module xil_defaultlib.RegisterAdd__parameterized3
+Compiling module unisims_ver.CARRY4
+Compiling module xil_defaultlib.Comparator
+Compiling module xil_defaultlib.RegisterAdd_2
+Compiling module xil_defaultlib.RegisterAdd__parameterized1
+Compiling module xil_defaultlib.RegisterAdd__parameterized2
+Compiling module xil_defaultlib.RegisterAdd__parameterized4
+Compiling module xil_defaultlib.Oper_Start_In
+Compiling module xil_defaultlib.RegisterAdd__parameterized0
+Compiling module xil_defaultlib.RegisterAdd
+Compiling module xil_defaultlib.RegisterAdd_0
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.RegisterAdd__parameterized10
+Compiling module xil_defaultlib.Tenth_Phase
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.FPU_Add_Subtract_Function
+Compiling module xil_defaultlib.Testbench_FPU_Add_Subt
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Testbench_FPU_Add_Subt_func_synth

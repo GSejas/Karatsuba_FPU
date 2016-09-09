@@ -22,62 +22,61 @@
 
 module Testbench_Barrel_Shifter ();
 parameter PERIOD = 10;
-parameter EW=8;
-parameter SW=26;
+parameter EWR=5;
+parameter SWR=26;
 //inputs
 
     reg clk;
     reg rst;
-    reg ctrl_a_i;
-    reg [EW-1:0] Shift_Value_0_i;
-    reg [EW-1:0] Shift_Value_1_i;
-    reg [SW-1:0] Shift_Data_0_i;
-    reg [SW-1:0] Shift_Data_1_i;
-    reg FSM_left_right_i;
-    reg FSM_select_C_i;
-    /////////////////////////////////////////////7
-    wire [SW-1:0] N_mant_o;
+    reg load_i;
+    reg [EWR-1:0] Shift_Value_i;
+    reg [SWR-1:0] Shift_Data_i;
+    reg Left_Right_i;
+    reg Bit_Shift_i;
+    ///////////////////OUTPUT//////////////////////////7
+    wire [SWR-1:0] N_mant_o;
     
-    Barrel_Shifter #(.SW(SW),.EW(EW)) uut(
-    .clk(clk),
-    .rst(rst),
-    .ctrl_a_i(ctrl_a_i),
-    .Shift_Value_0_i(Shift_Value_0_i),
-    .Shift_Value_1_i(Shift_Value_1_i),
-    .Shift_Data_0_i(Shift_Data_0_i),
-    .Shift_Data_1_i(Shift_Data_1_i),
-    .FSM_left_right_i(FSM_left_right_i),
-    .FSM_select_C_i(FSM_select_C_i),
-    .N_mant_o(N_mant_o)
+    Barrel_Shifter #(.SWR(SWR),.EWR(EWR)) uut(
+        .clk(clk),
+        .rst(rst),
+        .load_i(load_i),
+        .Shift_Value_i(Shift_Value_i),
+        .Shift_Data_i(Shift_Data_i),
+        .Left_Right_i(Left_Right_i),
+        .Bit_Shift_i(Bit_Shift_i),
+        .N_mant_o(N_mant_o)
     );
-    
-   /* reg [31:0] Array_IN [0:((2**width)-1)];
-    reg [31:0] Array_IN_2 [0:((2**width)-1)];
-    integer contador;
-    integer FileSaveData;
-    integer Cont_CLK;
-    integer Recept;*/
-    
+    integer Contador_shiftvalue = 0;
+   always begin
+             
+             #(5*PERIOD/2) Contador_shiftvalue = Contador_shiftvalue + 1;
+             Shift_Value_i = Contador_shiftvalue;
+             #(5*PERIOD/2);
+             end
+
+
+     always @ (N_mant_o )
+        begin
+            
+            $monitor($time,"REA Salida = %b Entrada = %b Numero de Corrimiento: %d",N_mant_o,Shift_Data_i, Shift_Value_i);
+            $display($time,"TEO Salida = %b Entrada = %b Numero de Corrimiento: %d",(Shift_Data_i>>Shift_Value_i),Shift_Data_i,Shift_Value_i);
+        end
+
+
     initial begin
             // Initialize Input
             rst = 1;
-            ctrl_a_i = 1;
-            Shift_Value_0_i = 8'b00001001;
-            Shift_Value_1_i = 0;
-            Shift_Data_0_i = 26'b11101010001011101100010000;
-            Shift_Data_1_i = 0;
-            FSM_left_right_i = 0;
-            FSM_select_C_i = 0;
-            
-            
-            
-            // Wait 100 ns for global reset to finish
-            
-            #100 rst = 0;
-            
-            //Add stimulus here
-            
-            
+            clk = 0;
+            load_i = 0;
+            Shift_Value_i = 0;
+            Shift_Data_i = $random;
+            Left_Right_i = 0;
+            Bit_Shift_i = 0;
+
+            #40 rst = 0;
+            load_i = 1;
+
+
             end
             
             
@@ -86,6 +85,6 @@ parameter SW=26;
                   #(PERIOD/2);
                   forever
                      #(PERIOD/2) clk = ~clk;
-               end
+           end
 
 endmodule

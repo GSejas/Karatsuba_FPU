@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Testbench_Barrel_Shifter_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Testbench_Barrel_Shifter" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="119200001fs"></ZoomEndTime>
+      <Cursor1Time time="920000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/Testbench_Barrel_Shifter/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/load_i" type="logic">
+      <obj_property name="ElementShortName">load_i</obj_property>
+      <obj_property name="ObjectShortName">load_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/Shift_Value_i" type="array">
+      <obj_property name="ElementShortName">Shift_Value_i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Shift_Value_i[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/Shift_Data_i" type="array">
+      <obj_property name="ElementShortName">Shift_Data_i[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Shift_Data_i[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/Left_Right_i" type="logic">
+      <obj_property name="ElementShortName">Left_Right_i</obj_property>
+      <obj_property name="ObjectShortName">Left_Right_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/Bit_Shift_i" type="logic">
+      <obj_property name="ElementShortName">Bit_Shift_i</obj_property>
+      <obj_property name="ObjectShortName">Bit_Shift_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/N_mant_o" type="array">
+      <obj_property name="ElementShortName">N_mant_o[25:0]</obj_property>
+      <obj_property name="ObjectShortName">N_mant_o[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/Contador_shiftvalue" type="array">
+      <obj_property name="ElementShortName">Contador_shiftvalue[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Contador_shiftvalue[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/PERIOD" type="array">
+      <obj_property name="ElementShortName">PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/EWR" type="array">
+      <obj_property name="ElementShortName">EWR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EWR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/SWR" type="array">
+      <obj_property name="ElementShortName">SWR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SWR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider60">
+      <obj_property name="label">Mux_array</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/load_i" type="logic">
+      <obj_property name="ElementShortName">load_i</obj_property>
+      <obj_property name="ObjectShortName">load_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/Shift_Value_i" type="array">
+      <obj_property name="ElementShortName">Shift_Value_i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Shift_Value_i[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/Data_i" type="array">
+      <obj_property name="ElementShortName">Data_i[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_i[25:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/FSM_left_right_i" type="logic">
+      <obj_property name="ElementShortName">FSM_left_right_i</obj_property>
+      <obj_property name="ObjectShortName">FSM_left_right_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/bit_shift_i" type="logic">
+      <obj_property name="ElementShortName">bit_shift_i</obj_property>
+      <obj_property name="ObjectShortName">bit_shift_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/Data_o" type="array">
+      <obj_property name="ElementShortName">Data_o[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_o[25:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/Data_array" type="array">
+      <obj_property name="ElementShortName">Data_array[6:0][25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_array[6:0][25:0]</obj_property>
+   </wvobject>
+</wave_config>

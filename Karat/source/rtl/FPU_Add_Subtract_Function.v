@@ -21,11 +21,9 @@
 module FPU_Add_Subtract_Function
 //Add/Subtract Function Parameters
 	
-   /*#(parameter W = 32, parameter EW = 8, parameter SW = 23,
-		parameter SWR=26, parameter EWR = 5)  //Single Precision */
+   #(parameter W = 32, parameter EW = 8, parameter SW = 23,parameter SWR=26, parameter EWR = 5)  //Single Precision */
 		
-	#(parameter W = 64, parameter EW = 11, parameter SW = 52,
-		parameter SWR = 55, parameter EWR = 6) //-- Double Precision */
+	//#(parameter W = 64, parameter EW = 11, parameter SW = 52, parameter SWR = 55, parameter EWR = 6) //-- Double Precision */
 	(
 		//FSM Signals 
 		input wire clk,
@@ -445,7 +443,7 @@ LZD #(.SWR(SWR),.EWR(EWR)) Leading_Zero_Detector_Module (
 /////////Deco_round///////////////////////////////////////
 
 Round_Sgf_Dec Rounding_Decoder(
-    .clk(clk),
+
     .Data_i(Sgf_normalized_result[1:0]),
     .Round_Type_i(r_mode),
     .Sign_Result_i(sign_final_result),

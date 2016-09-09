@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Testbench_Barrel_Shifter_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Testbench_Barrel_Shifter" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="3840000001fs"></ZoomEndTime>
+      <Cursor1Time time="375000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="47" />
+   <wvobject fp_name="/Testbench_Barrel_Shifter/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/load_i" type="logic">
+      <obj_property name="ElementShortName">load_i</obj_property>
+      <obj_property name="ObjectShortName">load_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/Shift_Value_i" type="array">
+      <obj_property name="ElementShortName">Shift_Value_i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Shift_Value_i[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/Shift_Data_i" type="array">
+      <obj_property name="ElementShortName">Shift_Data_i[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Shift_Data_i[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/Left_Right_i" type="logic">
+      <obj_property name="ElementShortName">Left_Right_i</obj_property>
+      <obj_property name="ObjectShortName">Left_Right_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/Bit_Shift_i" type="logic">
+      <obj_property name="ElementShortName">Bit_Shift_i</obj_property>
+      <obj_property name="ObjectShortName">Bit_Shift_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/N_mant_o" type="array">
+      <obj_property name="ElementShortName">N_mant_o[25:0]</obj_property>
+      <obj_property name="ObjectShortName">N_mant_o[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/Contador_shiftvalue" type="array">
+      <obj_property name="ElementShortName">Contador_shiftvalue[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Contador_shiftvalue[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/PERIOD" type="array">
+      <obj_property name="ElementShortName">PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PERIOD[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/EWR" type="array">
+      <obj_property name="ElementShortName">EWR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EWR[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/SWR" type="array">
+      <obj_property name="ElementShortName">SWR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SWR[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider204">
+      <obj_property name="label">First Rotate</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/first_rotate/Data_i" type="array">
+      <obj_property name="ElementShortName">Data_i[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_i[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/first_rotate/select_i" type="logic">
+      <obj_property name="ElementShortName">select_i</obj_property>
+      <obj_property name="ObjectShortName">select_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/first_rotate/Data_o" type="array">
+      <obj_property name="ElementShortName">Data_o[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_o[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/first_rotate/SWR" type="array">
+      <obj_property name="ElementShortName">SWR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SWR[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider210">
+      <obj_property name="label">Shift Mux Array</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk1[0].shift_mux_array /Data_i" type="array">
+      <obj_property name="ElementShortName">Data_i[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_i[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk1[0].shift_mux_array /select_i" type="logic">
+      <obj_property name="ElementShortName">select_i</obj_property>
+      <obj_property name="ObjectShortName">select_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk1[0].shift_mux_array /bit_shift_i" type="logic">
+      <obj_property name="ElementShortName">bit_shift_i</obj_property>
+      <obj_property name="ObjectShortName">bit_shift_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk1[0].shift_mux_array /Data_o" type="array">
+      <obj_property name="ElementShortName">Data_o[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_o[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider215">
+      <obj_property name="label">Shift Mux Array</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk1[1].shift_mux_array /Data_i" type="array">
+      <obj_property name="ElementShortName">Data_i[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_i[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk1[1].shift_mux_array /select_i" type="logic">
+      <obj_property name="ElementShortName">select_i</obj_property>
+      <obj_property name="ObjectShortName">select_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk1[1].shift_mux_array /bit_shift_i" type="logic">
+      <obj_property name="ElementShortName">bit_shift_i</obj_property>
+      <obj_property name="ObjectShortName">bit_shift_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk1[1].shift_mux_array /Data_o" type="array">
+      <obj_property name="ElementShortName">Data_o[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_o[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider220">
+      <obj_property name="label">Shift Mux Array</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk1[2].shift_mux_array /Data_i" type="array">
+      <obj_property name="ElementShortName">Data_i[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_i[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk1[2].shift_mux_array /select_i" type="logic">
+      <obj_property name="ElementShortName">select_i</obj_property>
+      <obj_property name="ObjectShortName">select_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk1[2].shift_mux_array /bit_shift_i" type="logic">
+      <obj_property name="ElementShortName">bit_shift_i</obj_property>
+      <obj_property name="ObjectShortName">bit_shift_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk1[2].shift_mux_array /Data_o" type="array">
+      <obj_property name="ElementShortName">Data_o[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_o[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider225">
+      <obj_property name="label">Shift Mux Array</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk2[3].shift_mux_array /Data_i" type="array">
+      <obj_property name="ElementShortName">Data_i[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_i[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk2[3].shift_mux_array /select_i" type="logic">
+      <obj_property name="ElementShortName">select_i</obj_property>
+      <obj_property name="ObjectShortName">select_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk2[3].shift_mux_array /bit_shift_i" type="logic">
+      <obj_property name="ElementShortName">bit_shift_i</obj_property>
+      <obj_property name="ObjectShortName">bit_shift_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk2[3].shift_mux_array /Data_o" type="array">
+      <obj_property name="ElementShortName">Data_o[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_o[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider230">
+      <obj_property name="label">New Divider 6</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk2[4].shift_mux_array /Data_i" type="array">
+      <obj_property name="ElementShortName">Data_i[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_i[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk2[4].shift_mux_array /select_i" type="logic">
+      <obj_property name="ElementShortName">select_i</obj_property>
+      <obj_property name="ObjectShortName">select_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk2[4].shift_mux_array /bit_shift_i" type="logic">
+      <obj_property name="ElementShortName">bit_shift_i</obj_property>
+      <obj_property name="ObjectShortName">bit_shift_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/\genblk2[4].shift_mux_array /Data_o" type="array">
+      <obj_property name="ElementShortName">Data_o[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_o[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider235">
+      <obj_property name="label">Last Rotate</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/last_rotate/Data_i" type="array">
+      <obj_property name="ElementShortName">Data_i[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_i[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/last_rotate/select_i" type="logic">
+      <obj_property name="ElementShortName">select_i</obj_property>
+      <obj_property name="ObjectShortName">select_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/last_rotate/Data_o" type="array">
+      <obj_property name="ElementShortName">Data_o[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_o[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench_Barrel_Shifter/uut/Mux_Array/last_rotate/SWR" type="array">
+      <obj_property name="ElementShortName">SWR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SWR[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>

@@ -14,364 +14,64 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 37416 
+INFO: Helper process launched with PID 15728 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 305.852 ; gain = 99.430
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 305.992 ; gain = 99.254
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'RecursiveKOA' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/RecursiveKOA.v:23]
 	Parameter SW bound to: 24 - type: integer 
-	Parameter Opt_FPGA_ASIC bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
+	Parameter Opt_FPGA_ASIC bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_FPGA' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_FPGA.v:23]
 	Parameter SW bound to: 24 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 4 - type: integer 
 	Parameter half bound to: 12 - type: integer 
-	Parameter next_level bound to: 3 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_FPGA__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_FPGA.v:23]
 	Parameter SW bound to: 12 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 3 - type: integer 
 	Parameter half bound to: 6 - type: integer 
-	Parameter next_level bound to: 2 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized1' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 6 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 2 - type: integer 
-	Parameter half bound to: 3 - type: integer 
-	Parameter next_level bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized2' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized2' (1#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized3' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized3' (1#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
+INFO: [Synth 8-638] synthesizing module 'multiplier_C' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/multiplier_combinational.v:23]
+	Parameter W bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C' (1#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_FPGA__parameterized0' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_FPGA.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_FPGA__parameterized1' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_FPGA.v:23]
+	Parameter SW bound to: 12 - type: integer 
+	Parameter half bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_FPGA__parameterized1' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_FPGA.v:23]
 INFO: [Synth 8-638] synthesizing module 'adder' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 3 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized4' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 4 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized4' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized1' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized5' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 6 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 2 - type: integer 
-	Parameter half bound to: 3 - type: integer 
-	Parameter next_level bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized6' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized6' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized7' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized7' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized8' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 4 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized8' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized5' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized0' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized1' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized1' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized9' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 7 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 2 - type: integer 
-	Parameter half bound to: 3 - type: integer 
-	Parameter next_level bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized10' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized10' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized11' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 4 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized11' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized2' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized2' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized3' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized3' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized12' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 5 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized12' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized9' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized0' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized13' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 12 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 3 - type: integer 
-	Parameter half bound to: 6 - type: integer 
-	Parameter next_level bound to: 2 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized14' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 6 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 2 - type: integer 
-	Parameter half bound to: 3 - type: integer 
-	Parameter next_level bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized15' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized15' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized16' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized16' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized17' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 4 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized17' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized14' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized18' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 6 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 2 - type: integer 
-	Parameter half bound to: 3 - type: integer 
-	Parameter next_level bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized19' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized19' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized20' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized20' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized21' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 4 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized21' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized18' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized4' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized4' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized5' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized5' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized22' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 7 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 2 - type: integer 
-	Parameter half bound to: 3 - type: integer 
-	Parameter next_level bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized23' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized23' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized24' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 4 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized24' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized6' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized6' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized7' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized7' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized25' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 5 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized25' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized22' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized13' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized8' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
 	Parameter W bound to: 12 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized8' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized9' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 12 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized9' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized26' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
+INFO: [Synth 8-256] done synthesizing module 'adder' (3#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_FPGA__parameterized2' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_FPGA.v:23]
 	Parameter SW bound to: 13 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 3 - type: integer 
 	Parameter half bound to: 6 - type: integer 
-	Parameter next_level bound to: 2 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized27' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 6 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 2 - type: integer 
-	Parameter half bound to: 3 - type: integer 
-	Parameter next_level bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized28' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized28' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized29' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized29' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized30' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 4 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized30' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized27' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized31' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 7 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 2 - type: integer 
-	Parameter half bound to: 3 - type: integer 
-	Parameter next_level bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized32' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 3 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 1 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized32' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized33' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 4 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized33' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized10' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized10' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized11' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized11' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized34' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 5 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized34' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized31' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized12' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 7 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized12' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized13' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 7 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized13' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized35' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 8 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 2 - type: integer 
-	Parameter half bound to: 4 - type: integer 
-	Parameter next_level bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized36' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 4 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized36' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized37' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 4 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized37' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized14' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized14' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'adder__parameterized15' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-	Parameter W bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adder__parameterized15' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized38' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-	Parameter SW bound to: 5 - type: integer 
-	Parameter precision bound to: 0 - type: integer 
-	Parameter depth bound to: 1 - type: integer 
-	Parameter half bound to: 2 - type: integer 
-	Parameter next_level bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized38' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized35' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized26' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
-INFO: [Synth 8-256] done synthesizing module 'KOA_c_2' (2#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_c_2_ASIC.v:30]
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/multiplier_combinational.v:23]
+	Parameter W bound to: 13 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized0' (3#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_FPGA__parameterized2' (3#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_FPGA.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/substractor.v:23]
+	Parameter W bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor' (4#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
+	Parameter W bound to: 48 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized0' (4#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_FPGA' (4#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/KOA_FPGA.v:23]
 INFO: [Synth 8-638] synthesizing module 'RegisterAdd' [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/RegisterAdd.v:21]
 	Parameter W bound to: 48 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'RegisterAdd' (3#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/RegisterAdd.v:21]
-INFO: [Synth 8-256] done synthesizing module 'RecursiveKOA' (4#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/RecursiveKOA.v:23]
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd' (5#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/RegisterAdd.v:21]
+INFO: [Synth 8-256] done synthesizing module 'RecursiveKOA' (6#1) [C:/Users/jsequeira/Proyectos/Karat/Karat_ASIC_Synp/integracion_fisica/front_end/source/RecursiveKOA.v:23]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 343.078 ; gain = 136.656
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 343.301 ; gain = 136.563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 343.078 ; gain = 136.656
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 343.301 ; gain = 136.563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 343.078 ; gain = 136.656
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 343.301 ; gain = 136.563
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 380.363 ; gain = 173.941
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 350.500 ; gain = 143.762
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -386,20 +86,8 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     49 Bit       Adders := 1     
-	   2 Input     26 Bit       Adders := 1     
-	   4 Input     26 Bit       Adders := 1     
-	   2 Input     25 Bit       Adders := 2     
-	   2 Input     17 Bit       Adders := 1     
-	   4 Input     16 Bit       Adders := 1     
-	   2 Input     14 Bit       Adders := 3     
-	   4 Input     14 Bit       Adders := 2     
-	   2 Input     13 Bit       Adders := 7     
-	   4 Input     10 Bit       Adders := 4     
-	   4 Input      8 Bit       Adders := 5     
-	   2 Input      8 Bit       Adders := 2     
-	   2 Input      7 Bit       Adders := 4     
-	   2 Input      5 Bit       Adders := 8     
-	   2 Input      4 Bit       Adders := 10    
+	   3 Input     26 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 2     
 +---Registers : 
 	               48 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
@@ -412,136 +100,15 @@ Hierarchical RTL Component report
 Module adder 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      4 Bit       Adders := 1     
-Module KOA_c_2__parameterized1 
+	   2 Input     13 Bit       Adders := 1     
+Module substractor 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     13 Bit       Adders := 1     
-	   4 Input      8 Bit       Adders := 1     
-Module KOA_c_2__parameterized5 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     13 Bit       Adders := 1     
-	   4 Input      8 Bit       Adders := 1     
+	   3 Input     26 Bit       Adders := 1     
 Module adder__parameterized0 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      7 Bit       Adders := 1     
-Module adder__parameterized1 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      7 Bit       Adders := 1     
-Module adder__parameterized2 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-Module adder__parameterized3 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-Module KOA_c_2__parameterized9 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     14 Bit       Adders := 1     
-	   4 Input     10 Bit       Adders := 1     
-Module KOA_c_2__parameterized0 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     25 Bit       Adders := 1     
-	   4 Input     14 Bit       Adders := 1     
-Module KOA_c_2__parameterized14 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     13 Bit       Adders := 1     
-	   4 Input      8 Bit       Adders := 1     
-Module KOA_c_2__parameterized18 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     13 Bit       Adders := 1     
-	   4 Input      8 Bit       Adders := 1     
-Module adder__parameterized4 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      7 Bit       Adders := 1     
-Module adder__parameterized5 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      7 Bit       Adders := 1     
-Module adder__parameterized6 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-Module adder__parameterized7 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-Module KOA_c_2__parameterized22 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     14 Bit       Adders := 1     
-	   4 Input     10 Bit       Adders := 1     
-Module KOA_c_2__parameterized13 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     25 Bit       Adders := 1     
-	   4 Input     14 Bit       Adders := 1     
-Module adder__parameterized8 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     13 Bit       Adders := 1     
-Module adder__parameterized9 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     13 Bit       Adders := 1     
-Module KOA_c_2__parameterized27 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     13 Bit       Adders := 1     
-	   4 Input      8 Bit       Adders := 1     
-Module adder__parameterized10 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-Module adder__parameterized11 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-Module KOA_c_2__parameterized31 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     14 Bit       Adders := 1     
-	   4 Input     10 Bit       Adders := 1     
-Module adder__parameterized12 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 1     
-Module adder__parameterized13 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 1     
-Module adder__parameterized14 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-Module adder__parameterized15 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-Module KOA_c_2__parameterized35 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     17 Bit       Adders := 1     
-	   4 Input     10 Bit       Adders := 1     
-Module KOA_c_2__parameterized26 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     26 Bit       Adders := 1     
-	   4 Input     16 Bit       Adders := 1     
-Module KOA_c_2 
-Detailed RTL Component Info : 
-+---Adders : 
 	   2 Input     49 Bit       Adders := 1     
-	   4 Input     26 Bit       Adders := 1     
 Module RegisterAdd 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -558,28 +125,56 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 470.527 ; gain = 264.105
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 468.781 ; gain = 262.043
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
+DSP Report: Generating DSP KOA_FPGA.main_KOA/K2.K3.left/K1.main/Data_S_o, operation Mode is: A*B.
+DSP Report: operator KOA_FPGA.main_KOA/K2.K3.left/K1.main/Data_S_o is absorbed into DSP KOA_FPGA.main_KOA/K2.K3.left/K1.main/Data_S_o.
+DSP Report: Generating DSP KOA_FPGA.main_KOA/K2.K3.Subtr_1/Data_S_o0, operation Mode is: C+(D+A)*B+1.
+DSP Report: operator KOA_FPGA.main_KOA/K2.K3.Subtr_1/Data_S_o0 is absorbed into DSP KOA_FPGA.main_KOA/K2.K3.Subtr_1/Data_S_o0.
+DSP Report: operator KOA_FPGA.main_KOA/K2.K3.middle/K1.main/Data_S_o is absorbed into DSP KOA_FPGA.main_KOA/K2.K3.Subtr_1/Data_S_o0.
+DSP Report: operator KOA_FPGA.main_KOA/K2.K3.A_operation/Data_S_o0 is absorbed into DSP KOA_FPGA.main_KOA/K2.K3.Subtr_1/Data_S_o0.
+DSP Report: Generating DSP KOA_FPGA.main_KOA/K2.K3.right/K1.main/Data_S_o, operation Mode is: A*B.
+DSP Report: operator KOA_FPGA.main_KOA/K2.K3.right/K1.main/Data_S_o is absorbed into DSP KOA_FPGA.main_KOA/K2.K3.right/K1.main/Data_S_o.
+DSP Report: Generating DSP KOA_FPGA.main_KOA/K2.K3.Subtr_2/Data_S_o0, operation Mode is: PCIN-A:B.
+DSP Report: operator KOA_FPGA.main_KOA/K2.K3.Subtr_2/Data_S_o0 is absorbed into DSP KOA_FPGA.main_KOA/K2.K3.Subtr_2/Data_S_o0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 471.578 ; gain = 265.156
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 469.828 ; gain = 263.090
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 471.578 ; gain = 265.156
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 469.828 ; gain = 263.090
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|multiplier_C | A*B         | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier_C | C+(D+A)*B+1 | 12     | 13     | 26     | 12     | 26     | 0    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|multiplier_C | A*B         | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|RecursiveKOA | PCIN-A:B    | 8      | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 480.066 ; gain = 273.328
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 480.066 ; gain = 273.328
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -591,7 +186,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 480.066 ; gain = 273.328
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -603,16 +198,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 480.238 ; gain = 273.500
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 480.238 ; gain = 273.500
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 480.238 ; gain = 273.500
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -629,7 +224,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 480.238 ; gain = 273.500
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -642,7 +237,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 480.238 ; gain = 273.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -654,25 +249,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 480.238 ; gain = 273.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 480.238 ; gain = 273.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 480.238 ; gain = 273.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 480.238 ; gain = 273.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -685,72 +280,43 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |   150|
-|3     |LUT1   |    72|
-|4     |LUT2   |   207|
-|5     |LUT3   |   105|
-|6     |LUT4   |   228|
-|7     |LUT5   |   105|
-|8     |LUT6   |   281|
-|9     |FDCE   |    48|
-|10    |IBUF   |    51|
-|11    |OBUF   |    48|
-+------+-------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    14|
+|3     |DSP48E1 |     4|
+|4     |LUT1    |    35|
+|5     |LUT2    |    38|
+|6     |FDCE    |    48|
+|7     |IBUF    |    51|
+|8     |OBUF    |    48|
++------+--------+------+
 
 Report Instance Areas: 
-+------+----------------------------+-------------------------+------+
-|      |Instance                    |Module                   |Cells |
-+------+----------------------------+-------------------------+------+
-|1     |top                         |                         |  1296|
-|2     |  \KOA_ASIC.main_KOA        |KOA_c_2                  |  1108|
-|3     |    \K3.K4.A_operation      |adder__parameterized8    |    16|
-|4     |    \K3.K4.B_operation      |adder__parameterized9    |    16|
-|5     |    \K3.K4.left             |KOA_c_2__parameterized0  |   310|
-|6     |      \K3.K4.A_operation    |adder__parameterized0    |     8|
-|7     |      \K3.K4.B_operation    |adder__parameterized1    |     8|
-|8     |      \K3.K4.left           |KOA_c_2__parameterized1  |    67|
-|9     |        \K3.K4.middle       |KOA_c_2__parameterized4  |    18|
-|10    |      \K3.K4.middle         |KOA_c_2__parameterized9  |    77|
-|11    |        \K3.K5.middle       |KOA_c_2__parameterized12 |    36|
-|12    |        \K3.K5.right_lower  |KOA_c_2__parameterized11 |    32|
-|13    |      \K3.K4.right          |KOA_c_2__parameterized5  |    28|
-|14    |        \K3.K4.middle       |KOA_c_2__parameterized8  |    18|
-|15    |    \K3.K4.middle           |KOA_c_2__parameterized26 |   356|
-|16    |      \K3.K5.A_operation    |adder__parameterized12   |    33|
-|17    |      \K3.K5.B_operation    |adder__parameterized13   |    21|
-|18    |      \K3.K5.left_high      |KOA_c_2__parameterized27 |    28|
-|19    |        \K3.K4.middle       |KOA_c_2__parameterized30 |    18|
-|20    |      \K3.K5.middle         |KOA_c_2__parameterized35 |    86|
-|21    |        \K3.K4.left         |KOA_c_2__parameterized36 |    23|
-|22    |        \K3.K4.middle       |KOA_c_2__parameterized38 |     7|
-|23    |        \K3.K4.right        |KOA_c_2__parameterized37 |     7|
-|24    |      \K3.K5.right_lower    |KOA_c_2__parameterized31 |   169|
-|25    |        \K3.K5.middle       |KOA_c_2__parameterized34 |    36|
-|26    |        \K3.K5.right_lower  |KOA_c_2__parameterized33 |    44|
-|27    |    \K3.K4.right            |KOA_c_2__parameterized13 |   293|
-|28    |      \K3.K4.A_operation    |adder__parameterized4    |     8|
-|29    |      \K3.K4.B_operation    |adder__parameterized5    |     8|
-|30    |      \K3.K4.left           |KOA_c_2__parameterized14 |    67|
-|31    |        \K3.K4.middle       |KOA_c_2__parameterized17 |    18|
-|32    |      \K3.K4.middle         |KOA_c_2__parameterized22 |    77|
-|33    |        \K3.K5.middle       |KOA_c_2__parameterized25 |    36|
-|34    |        \K3.K5.right_lower  |KOA_c_2__parameterized24 |    32|
-|35    |      \K3.K4.right          |KOA_c_2__parameterized18 |    28|
-|36    |        \K3.K4.middle       |KOA_c_2__parameterized21 |    18|
-|37    |  finalreg                  |RegisterAdd              |    81|
-+------+----------------------------+-------------------------+------+
++------+------------------------+-------------------------+------+
+|      |Instance                |Module                   |Cells |
++------+------------------------+-------------------------+------+
+|1     |top                     |                         |   239|
+|2     |  \KOA_FPGA.main_KOA    |KOA_FPGA                 |    91|
+|3     |    \K2.K3.Final        |adder__parameterized0    |    26|
+|4     |    \K2.K3.B_operation  |adder                    |    16|
+|5     |    \K2.K3.Subtr_1      |substractor              |    25|
+|6     |    \K2.K3.Subtr_2      |substractor_0            |     1|
+|7     |    \K2.K3.left         |KOA_FPGA__parameterized0 |    18|
+|8     |      \K1.main          |multiplier_C_1           |    18|
+|9     |    \K2.K3.right        |KOA_FPGA__parameterized1 |     5|
+|10    |      \K1.main          |multiplier_C             |     5|
+|11    |  finalreg              |RegisterAdd              |    48|
++------+------------------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 523.020 ; gain = 316.598
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 480.238 ; gain = 273.500
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 523.020 ; gain = 296.656
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 523.020 ; gain = 316.598
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 480.238 ; gain = 253.699
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 480.238 ; gain = 273.500
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 201 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -758,8 +324,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-127 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+31 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 573.934 ; gain = 349.035
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 573.934 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 08 00:14:32 2016...
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 554.813 ; gain = 329.719
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 554.813 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 08 00:25:00 2016...

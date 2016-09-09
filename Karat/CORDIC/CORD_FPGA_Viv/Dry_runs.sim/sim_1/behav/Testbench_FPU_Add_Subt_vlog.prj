@@ -1,0 +1,33 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../../../source/rtl/Multiplexer_AC.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Greater_Comparator.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Comparator_Less.v"
+verilog xil_defaultlib  "../../../../../source/rtl/RegisterAdd.v"
+verilog xil_defaultlib  "../../../../../source/rtl/shift_mux.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Rotate_Mux_Array.v"
+verilog xil_defaultlib  "../../../../../source/rtl/xor_tri.v"
+verilog xil_defaultlib  "../../../../../source/rtl/sgn_result.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Priority_Codec_64.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Priority_Codec_32.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Mux_3x1.v"
+verilog xil_defaultlib  "../../../../../source/rtl/MultiplexTxT.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Comparators.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Comparator.v"
+verilog xil_defaultlib  "../../../../../source/rtl/add_sub_carry_out.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Mux_Array.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Tenth_Phase.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Round_Sgf_Dec.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Oper_Start_In.v"
+verilog xil_defaultlib  "../../../../../source/rtl/LZD.v"
+verilog xil_defaultlib  "../../../../../source/rtl/FSM_Add_Subtract.v"
+verilog xil_defaultlib  "../../../../../source/rtl/exp_operation.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Add_Subt.v"
+verilog xil_defaultlib  "../../../../../source/rtl/Barrel_shifter.v"
+verilog xil_defaultlib  "../../../../../source/rtl/FPU_Add_Subtract_Function.v"
+verilog xil_defaultlib  "../../../../../source/sim/Testbench_FPU_Add_Subt.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

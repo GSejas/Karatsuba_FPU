@@ -23,7 +23,7 @@
 module RecursiveKOA
    #(parameter SW = 24,
     //#(parameter SW = 56,
-      parameter Opt_FPGA_ASIC=0)  //Se está optimizando el modulo para FPGA o para un ASIC
+      parameter Opt_FPGA_ASIC=1)  //Se está optimizando el modulo para FPGA o para un ASIC
 	(
     input wire clk,
     input wire rst,
