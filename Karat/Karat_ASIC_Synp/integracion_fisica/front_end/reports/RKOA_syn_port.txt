@@ -1,10 +1,9 @@
-Warning: Design 'RecursiveKOA' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : port
 Design : RecursiveKOA
 Version: L-2016.03-SP3
-Date   : Wed Sep  7 18:58:50 2016
+Date   : Thu Sep  8 00:57:18 2016
 ****************************************
 
 

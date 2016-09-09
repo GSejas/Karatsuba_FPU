@@ -56,17 +56,17 @@ wire [2*SW-1:0] Result;
 
         	end else begin  : KOA_ASIC   		  //Opt_FPGA_ASIC=1 Optimizations for FPGA
 
-    	   	// KOA_c #(.SW(SW), .precision(0), .depth(4)/*,.level(level1)*/) main_KOA(
-         //       .Data_A_i(Data_A_i[SW-1:0]/*P=SW*/),
-         //       .Data_B_i(Data_B_i[SW-1:0]/*P=SW*/),
-         //       .sgf_result_o(Result[2*SW-1:0]) /*P=SW*/
-         //   );	
-    	   	// end
-    	    KOA_c_2 #(.SW(SW), .precision(0), .depth(4)/*,.level(level1)*/) main_KOA(
-                 .Data_A_i(Data_A_i[SW-1:0]/*P=SW*/),
-                 .Data_B_i(Data_B_i[SW-1:0]/*P=SW*/),
-                 .sgf_result_o(Result[2*SW-1:0]) /*P=SW*/
-             );
+    	    KOA_c #(.SW(SW), .precision(0), .depth(1)/*,.level(level1)*/) main_KOA(
+                .Data_A_i(Data_A_i[SW-1:0]/*P=SW*/),
+                .Data_B_i(Data_B_i[SW-1:0]/*P=SW*/),
+                .sgf_result_o(Result[2*SW-1:0]) /*P=SW*/
+            );	
+    	   //	 end
+    	   // KOA_c_2 #(.SW(SW), .precision(0), .depth(4)/*,.level(level1)*/) main_KOA(
+         //        .Data_A_i(Data_A_i[SW-1:0]/*P=SW*/),
+         //        .Data_B_i(Data_B_i[SW-1:0]/*P=SW*/),
+         //        .sgf_result_o(Result[2*SW-1:0]) /*P=SW*/
+         //    );
         	end
         	
         endgenerate
