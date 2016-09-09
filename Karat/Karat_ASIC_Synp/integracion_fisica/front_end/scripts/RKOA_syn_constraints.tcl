@@ -17,7 +17,7 @@
 ####################################################################################################################################
 
 
-########Definición de las variables a utilizar###########
+########Definición de las v20ariables a utilizar###########
 
 set LIB_NAME scx3_cmos8rf_lpvt_tt_1p2v_25c.db
 

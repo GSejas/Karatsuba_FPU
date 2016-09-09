@@ -1,0 +1,4 @@
+Running: xsim.dir/Testbench_FPU_Add_Subt_time_synth/xsimk.exe -simmode gui -wdb Testbench_FPU_Add_Subt_time_synth.wdb -simrunnum 0 -socket 51967
+Design successfully loaded
+Design Loading Memory Usage: 26696 KB (Peak: 26696 KB)
+Design Loading CPU Usage: 140 ms

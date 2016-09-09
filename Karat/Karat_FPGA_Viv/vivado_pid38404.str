@@ -1,0 +1,631 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+Process ID: 38404
+
+Current time: 	9/9/16 9:06:59 AM CST
+Time zone: 	Central Standard Time (America/Regina)
+
+OS: Windows Server 2012 R2
+Version: 6.3
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.2/tps/win64/jre
+
+User name: 	jsequeira
+User home directory: C:/Users/jsequeira
+User working directory: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: C:/Xilinx/Vivado
+RDI Data directory: C:/Xilinx/Vivado/2016.2/data
+RDI Bin directory: C:/Xilinx/Vivado/2016.2/bin
+
+Vivado preferences path: C:/Users/jsequeira/AppData/Roaming/Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: C:/Users/jsequeira/AppData/Roaming/Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	195 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 525 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 50 MB (+50210kb) [00:00:05]
+// [Engine Memory]: 404 MB (+271784kb) [00:00:05]
+// Opening Vivado Project: C:\Users\jsequeira\Proyectos\Karat\Karat_FPGA_Viv\Kat_FPGA.xpr. Version: Vivado v2016.2 
+// bL:g (cv:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 68 MB (+16088kb) [00:00:08]
+// [Engine Memory]: 492 MB (+70958kb) [00:00:08]
+// [GUI Memory]: 79 MB (+7693kb) [00:00:08]
+// [Engine Memory]: 517 MB (+1130kb) [00:00:08]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 526 MB. GUI used memory: 37 MB. Current time: 9/9/16 9:07:00 AM CST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 543 MB (+50kb) [00:00:10]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: Kat_FPGA; location: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 791.324 ; gain = 124.430 
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v)]", 2); // z:k (G:JPanel, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, KOA_2 (KOA_2.v)]", 1); // z:k (G:JPanel, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, KOA_2 (KOA_2.v)]", 1); // z:k (G:JPanel, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v)]", 2); // z:k (G:JPanel, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v)]", 3); // z:k (G:JPanel, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cv:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (F:JPanel, b:g)
+// [Engine Memory]: 591 MB (+21349kb) [00:00:57]
+// HMemoryUtils.trashcanNow. Engine heap size: 591 MB. GUI used memory: 38 MB. Current time: 9/9/16 9:07:50 AM CST
+// Elapsed time: 69 seconds
+String[] filenames31467 = {"C:/Users/jsequeira/Proyectos/Karat/source/rtl/Adder_Round.v", "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Barrel_Shifter_M.v", "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v", "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Round_decoder_M.v"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'h' command handler elapsed time: 73 seconds
+dismissDialog("Add Sources"); // b:g (cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: add_files -norecurse -scan_for_includes {C:/Users/jsequeira/Proyectos/Karat/source/rtl/Barrel_Shifter_M.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/Round_decoder_M.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/Adder_Round.v} 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 616 MB. GUI used memory: 38 MB. Current time: 9/9/16 9:08:30 AM CST
+// PAPropertyPanels.initPanels (RecursiveKOA.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v)]", 14, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v)]", 14, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sign_operation - XOR_M]", 13, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v)]", 14, true); // z:k (G:JPanel, cv:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cv:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (F:JPanel, b:g)
+// Elapsed time: 30 seconds
+String[] filenames16706 = {"C:/Users/jsequeira/Proyectos/Karat/source/rtl/Exp_operation_m.v", "C:/Users/jsequeira/Proyectos/Karat/source/rtl/First_Phase_M.v", "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Mux_3x1.v", "C:/Users/jsequeira/Proyectos/Karat/source/rtl/XOR_M.v", "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Zero_InfMult_Unit.v"};
+setFileChooser(filenames16706);
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'h' command handler elapsed time: 34 seconds
+dismissDialog("Add Sources"); // b:g (cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: add_files -norecurse -scan_for_includes {C:/Users/jsequeira/Proyectos/Karat/source/rtl/Mux_3x1.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/Zero_InfMult_Unit.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/XOR_M.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/Exp_operation_m.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/First_Phase_M.v} 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cv:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (F:JPanel, b:g)
+setFileChooser("C:/Users/jsequeira/Proyectos/Karat/source/rtl/Tenth_Phase.v");
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'h' command handler elapsed time: 7 seconds
+dismissDialog("Add Sources"); // b:g (cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: add_files -norecurse -scan_for_includes C:/Users/jsequeira/Proyectos/Karat/source/rtl/Tenth_Phase.v 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, KOA_2 (KOA_2.v)]", 1); // z:k (G:JPanel, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cv:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (F:JPanel, b:g)
+// Elapsed time: 14 seconds
+String[] filenames29306 = {"C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Equal.v", "C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v"};
+setFileChooser(filenames29306);
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'h' command handler elapsed time: 18 seconds
+dismissDialog("Add Sources"); // b:g (cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: add_files -norecurse -scan_for_includes {C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Equal.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v} 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v), Sgf_operation - Sgf_Multiplication (Sgf_Multiplication.v), left - multiplier]", 24, false); // z:k (G:JPanel, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cv:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (F:JPanel, b:g)
+// Elapsed time: 13 seconds
+String[] filenames17995 = {"C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Less.v", "C:/Users/jsequeira/Proyectos/Karat/source/rtl/add_sub_carry_out.v", "C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v"};
+setFileChooser(filenames17995);
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'h' command handler elapsed time: 17 seconds
+dismissDialog("Add Sources"); // b:g (cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: add_files -norecurse -scan_for_includes {C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Less.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/add_sub_carry_out.v} 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cv:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (F:JPanel, b:g)
+// Elapsed time: 81 seconds
+String[] filenames2600 = {"C:/Users/jsequeira/Proyectos/Karat/source/rtl/Deco_Round_Mult.v", "C:/Users/jsequeira/Proyectos/Karat/source/rtl/OR_Module.v"};
+setFileChooser(filenames2600);
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'h' command handler elapsed time: 84 seconds
+dismissDialog("Add Sources"); // b:g (cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: add_files -norecurse -scan_for_includes {C:/Users/jsequeira/Proyectos/Karat/source/rtl/Deco_Round_Mult.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/OR_Module.v} 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v)]", 2); // z:k (G:JPanel, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v)]", 3); // z:k (G:JPanel, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, KOA_2 (KOA_2.v)]", 8); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, KOA_2 (KOA_2.v)]", 8, true); // z:k (G:JPanel, cv:JFrame) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v)]", 3); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v), main_KOA - KOA_c_2 (KOA_c_v3.v), A_operation - adder (adder.v)]", 40, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v), main_KOA - KOA_c_2 (KOA_c_v3.v)]", 37, true); // z:k (G:JPanel, cv:JFrame) - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v), main_KOA - KOA_FPGA (KOA_FPGA.v)]", 25); // z:k (G:JPanel, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v), main_KOA - KOA_c_2 (KOA_c_v3.v)]", 26); // z:k (G:JPanel, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v), main_KOA - KOA_FPGA (KOA_FPGA.v)]", 25); // z:k (G:JPanel, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v), main_KOA - KOA_FPGA (KOA_FPGA.v)]", 25); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v), main_KOA - KOA_FPGA (KOA_FPGA.v)]", 25, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v)]", 24, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v)]", 24, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// Launch External Editor: 'C:/Users/jsequeira/Documents/Sublime/subl.exe "C:/Users/jsequeira/Proyectos/Karat/source/rtl/RecursiveKOA.v":23'
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Barrel_Shifter_module - Barrel_Shifter_M (Barrel_Shifter_M.v), shift_mux_array - shift_mux_array]", 27, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Barrel_Shifter_module - Barrel_Shifter_M (Barrel_Shifter_M.v), shift_mux_array - shift_mux_array]", 27, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Barrel_Shifter_module - Barrel_Shifter_M (Barrel_Shifter_M.v), shift_mux_array - shift_mux_array]", 27, false); // z:k (G:JPanel, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cv:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (F:JPanel, b:g)
+// [GUI Memory]: 83 MB (+480kb) [00:06:44]
+// Elapsed time: 71 seconds
+dismissFileChooser();
+// 'h' command handler elapsed time: 74 seconds
+dismissDialog("Add Sources"); // b:g (cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Barrel_Shifter_module - Barrel_Shifter_M (Barrel_Shifter_M.v)]", 26, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Barrel_Shifter_module - Barrel_Shifter_M (Barrel_Shifter_M.v)]", 26, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// Launch External Editor: 'C:/Users/jsequeira/Documents/Sublime/subl.exe "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Barrel_Shifter_M.v":23'
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cv:JFrame): Add Sources: addNotify
+// Elapsed time: 57 seconds
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (F:JPanel, b:g)
+setFileChooser("C:/Users/jsequeira/Proyectos/Karat/source/rtl/shift_mux.v");
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'h' command handler elapsed time: 7 seconds
+dismissDialog("Add Sources"); // b:g (cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: add_files -norecurse -scan_for_includes C:/Users/jsequeira/Proyectos/Karat/source/rtl/shift_mux.v 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, KOA_2 (KOA_2.v)]", 142); // z:k (G:JPanel, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, KOA_2 (KOA_2.v)]", 1); // z:k (G:JPanel, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v)]", 2); // z:k (G:JPanel, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v)]", 3); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v)]", 2, true, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top FPU_Multiplication_Function [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v)]", 2); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v), Sgf_operation - Sgf_Multiplication (Sgf_Multiplication.v)]", 13, true, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top Sgf_Multiplication [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Synthesis Settings]", 16, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SYNTH_SETTINGS
+// Project Settings: addNotify
+// [GUI Memory]: 88 MB (+110kb) [00:09:06]
+// Elapsed time: 33 seconds
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cv:JFrame): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a:JRadioButton (JPanel:JComponent, b:g)
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES, "Add or create constraints"); // a:JRadioButton (JPanel:JComponent, b:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a:JButton (F:JPanel, b:g)
+dismissFileChooser();
+// Elapsed time: 40 seconds
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a:JButton (F:JPanel, b:g)
+// [GUI Memory]: 93 MB (+563kb) [00:10:24]
+setFileChooser("C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc");
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'h' command handler elapsed time: 61 seconds
+dismissDialog("Add Sources"); // b:g (cv:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 -norecurse C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 21); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys4_Master.xdc]", 22, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys4_Master.xdc]", 22, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+// Launch External Editor: 'C:/Users/jsequeira/Documents/Sublime/subl.exe "C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc":0'
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 72 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v), Sgf_operation - Sgf_Multiplication (Sgf_Multiplication.v)]", 13); // z:k (G:JPanel, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v), Sgf_operation - Sgf_Multiplication (Sgf_Multiplication.v)]", 13); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v), Sgf_operation - Sgf_Multiplication (Sgf_Multiplication.v)]", 13, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v), Sgf_operation - Sgf_Multiplication (Sgf_Multiplication.v)]", 13, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v), Sgf_operation - Sgf_Multiplication (Sgf_Multiplication.v), middle - multiplier (multiplier.v)]", 18, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+// Launch External Editor: 'C:/Users/jsequeira/Documents/Sublime/subl.exe "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Sgf_Multiplication.v":23'
+// Elapsed time: 23 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v), Sgf_operation - Sgf_Multiplication (Sgf_Multiplication.v)]", 13); // z:k (G:JPanel, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Fri Sep 09 09:19:13 2016] Launched synth_1... Run output will be captured here: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Synthesis Settings]", 16, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SYNTH_SETTINGS
+// Project Settings: addNotify
+// Elapsed time: 21 seconds
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+// G:be (cv:JFrame): Create New Run: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:be)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:be)
+// b:x (cv:JFrame): Create Run: addNotify
+dismissDialog("Create New Run"); // G:be (cv:JFrame)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, b:x)
+// TclEventType: RUN_ADD
+// Tcl Command: 'set_property INCLUDE_IN_ARCHIVE [ get_property INCLUDE_IN_ARCHIVE [get_runs synth_1]] [get_runs synth_2]'
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: RUN_MODIFY
+// Tcl Message: create_run synth_2 -flow {Vivado Synthesis 2016} -strategy {Vivado Synthesis Defaults} 
+// Tcl Message: Run is defaulting to srcset: sources_1 Run is defaulting to constrset: constrs_1 Run is defaulting to part: xc7a100tcsg324-1 
+// Tcl Message: current_run [get_runs synth_2] 
+// Tcl Message: set_property STEPS.SYNTH_DESIGN.ARGS.MAX_DSP 0 [get_runs synth_2] 
+dismissDialog("Create Run"); // b:x (cv:JFrame)
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectButton(PAResourceQtoS.RunGadget_SELECT_RUN_AND_DISPLAY_PROPERTIES, "impl_2"); // i:l (JPanel:JComponent, cv:JFrame)
+// PAPropertyPanels.initPanels (impl_2) elapsed time: 0.3s
+// Run Command: PAResourceCommand.PACommandNames_PROPERTIES_WINDOW
+// [Engine Memory]: 629 MB (+8731kb) [00:13:09]
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; Not started ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 2, "synth_2", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_2 ; constrs_1 ; Not started ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2016) ; xc7a100tcsg324-1 ; Default settings for Implementation.", 3, (String) null, 18, false); // W:as (JViewport:JComponent, cv:JFrame)
+expandTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_2 ; constrs_1 ; Not started ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2016) ; xc7a100tcsg324-1 ; Default settings for Implementation.", 3); // W:as (JViewport:JComponent, cv:JFrame)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_2 ; constrs_1 ; Not started ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2016) ; xc7a100tcsg324-1 ; Default settings for Implementation.", 3, (String) null, 18, false, false, false, false, false, true); // W:as (JViewport:JComponent, cv:JFrame) - Double Click
+// [GUI Memory]: 98 MB (+860kb) [00:13:15]
+// TclEventType: RUN_COMPLETED
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_2 ; constrs_1 ; Not started ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2016) ; xc7a100tcsg324-1 ; Default settings for Implementation.", 3, (String) null, 18, false); // W:as (JViewport:JComponent, cv:JFrame)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_2 ; constrs_1 ; Not started ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2016) ; xc7a100tcsg324-1 ; Default settings for Implementation.", 3, (String) null, 18, false, false, false, false, false, true); // W:as (JViewport:JComponent, cv:JFrame) - Double Click
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; Not started ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 2, "synth_2", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+// [Engine Memory]: 679 MB (+19651kb) [00:13:19]
+// HMemoryUtils.trashcanNow. Engine heap size: 691 MB. GUI used memory: 63 MB. Current time: 9/9/16 9:20:10 AM CST
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; Not started ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 2, "synth_2", 0, true, false, false, false, true, false); // W:as (JViewport:JComponent, cv:JFrame) - Popup Trigger - Node
+selectMenuItem(PAResourceEtoH.ExpRunMenu_LAUNCH_RUNS, "Launch Runs..."); // af:JMenuItem (am:JPopupMenu, Popup:JWindow)
+// f:x (cv:JFrame): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:x)
+// f:x (cv:JFrame): Launch Runs: addNotify
+// bL:g (f:x):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_2 -jobs 4 
+// Tcl Message: [Fri Sep 09 09:20:23 2016] Launched synth_2... Run output will be captured here: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_2/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (f:x)
+// Elapsed time: 45 seconds
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 2); // g:JideTabbedPane (JPanel:JComponent, cv:JFrame)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Options", 2); // g:JideTabbedPane (JPanel:JComponent, cv:JFrame)
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 25 seconds
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_2 ; constrs_1 ; Not started ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2016) ; xc7a100tcsg324-1 ; Default settings for Implementation.", 3, "impl_2", 0, false); // W:as (JViewport:JComponent, cv:JFrame)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2988 ; 369 ; 0 ; 0 ; 0 ; Fri Sep 09 09:20:29 CST 2016 ; 00:01:00 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 2, "synth_2", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, null, -1, null, -1, false, false, false, false, true, false); // W:as (JViewport:JComponent, cv:JFrame) - Popup Trigger
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, null, -1, null, -1, false, false, false, false, true, false); // W:as (JViewport:JComponent, cv:JFrame) - Popup Trigger
+selectButton(PAResourceCommand.PACommandNames_DESIGN_AHEAD, "Design Runs_design_ahead"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_DESIGN_AHEAD
+// E:g (cv:JFrame): Create New Runs: addNotify
+selectRadioButton(PAResourceAtoD.DesignAheadWizard_SYNTHESIS, "Synthesis"); // a:JRadioButton (JPanel:JComponent, E:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, E:g)
+selectTable(PAResourceAtoD.ConfigRunTablePanel_CONFIG_RUN_TABLE, "synth_3 ; constrs_1 ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults ; false", 0, "Vivado Synthesis Defaults", 3); // c:v (JViewport:JComponent, E:g)
+// Elapsed time: 12 seconds
+selectTable(PAResourceAtoD.ConfigRunTablePanel_CONFIG_RUN_TABLE, "synth_3 ; constrs_1 ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults ; false", 0, "false", 4); // c:v (JViewport:JComponent, E:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, E:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, E:g)
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// E:g (cv:JFrame): Create New Runs: addNotify
+// bL:g (E:g):  Starting Design Runs : addNotify
+// Tcl Message: create_run synth_3 -flow {Vivado Synthesis 2016} 
+// Tcl Message: Run is defaulting to srcset: sources_1 Run is defaulting to constrset: constrs_1 Run is defaulting to part: xc7a100tcsg324-1 
+// Tcl Message: current_run [get_runs synth_3] 
+dismissDialog("Create New Runs"); // E:g (cv:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_3 -jobs 4 
+// Tcl Message: [Fri Sep 09 09:22:35 2016] Launched synth_3... Run output will be captured here: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_3/runme.log 
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, E:g)
+// 'f' command handler elapsed time: 36 seconds
+dismissDialog("Starting Design Runs"); // bL:g (E:g)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; Running synth_design... ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Fri Sep 09 09:22:35 CST 2016 ; 00:00:00 ; Vivado Synthesis Defaults (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+// [GUI Memory]: 104 MB (+1547kb) [00:15:55]
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2988 ; 369 ; 0 ; 0 ; 0 ; Fri Sep 09 09:20:29 CST 2016 ; 00:01:00 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 2, "synth_2", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2988 ; 369 ; 0 ; 0 ; 0 ; Fri Sep 09 09:20:29 CST 2016 ; 00:01:00 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 2, "synth_2", 0, true, false, false, false, true, false); // W:as (JViewport:JComponent, cv:JFrame) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Synthesis Run Properties..."); // af:JMenuItem (am:JPopupMenu, Popup:JWindow)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+// Elapsed time: 26 seconds
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; Running synth_design... ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Fri Sep 09 09:22:40 CST 2016 ; 00:00:23 ; Vivado Synthesis Defaults (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2988 ; 369 ; 0 ; 0 ; 0 ; Fri Sep 09 09:20:29 CST 2016 ; 00:01:00 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 2, "synth_2", 0, true, false, false, false, true, false); // W:as (JViewport:JComponent, cv:JFrame) - Popup Trigger - Node
+// [GUI Memory]: 111 MB (+1848kb) [00:16:32]
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 335 ; 210 ; 0 ; 0 ; 12 ; Fri Sep 09 09:19:18 CST 2016 ; 00:00:47 ; Vivado Synthesis Defaults (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 0, "synth_1", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_2 ; constrs_1 ; Not started ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2016) ; xc7a100tcsg324-1 ; Default settings for Implementation.", 3, "impl_2", 0, false); // W:as (JViewport:JComponent, cv:JFrame)
+// TclEventType: RUN_COMPLETED
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2988 ; 369 ; 0 ; 0 ; 0 ; Fri Sep 09 09:20:29 CST 2016 ; 00:01:00 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 2, "synth_2", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 335 ; 210 ; 0 ; 0 ; 12 ; Fri Sep 09 09:22:40 CST 2016 ; 00:00:48 ; Vivado Synthesis Defaults (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+// [GUI Memory]: 118 MB (+598kb) [00:16:43]
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 335 ; 210 ; 0 ; 0 ; 12 ; Fri Sep 09 09:19:18 CST 2016 ; 00:00:47 ; Vivado Synthesis Defaults (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 0, "synth_1", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 335 ; 210 ; 0 ; 0 ; 12 ; Fri Sep 09 09:22:40 CST 2016 ; 00:00:48 ; Vivado Synthesis Defaults (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 335 ; 210 ; 0 ; 0 ; 12 ; Fri Sep 09 09:22:40 CST 2016 ; 00:00:48 ; Vivado Synthesis Defaults (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, FPU_Multiplication_Function (FPU_Multiplication_Function.v)]", 26); // z:k (G:JPanel, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, FPU_Multiplication_Function (FPU_Multiplication_Function.v)]", 26); // z:k (G:JPanel, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function (FPU_Multiplication_Function.v)]", 2); // z:k (G:JPanel, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v)]", 3); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v)]", 14, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v)]", 14, true, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+// [GUI Memory]: 124 MB (+431kb) [00:17:14]
+// [GUI Memory]: 133 MB (+2984kb) [00:17:14]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v)]", 14, true, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top RecursiveKOA [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 11 seconds
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; Synthesis Out-of-date ;  ;  ;  ;  ;  ;  ; 335 ; 210 ; 0 ; 0 ; 12 ; Fri Sep 09 09:22:40 CST 2016 ; 00:00:48 ; Vivado Synthesis Defaults (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; Synthesis Out-of-date ;  ;  ;  ;  ;  ;  ; 335 ; 210 ; 0 ; 0 ; 12 ; Fri Sep 09 09:22:40 CST 2016 ; 00:00:48 ; Vivado Synthesis Defaults (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true, false, false, false, true, false); // W:as (JViewport:JComponent, cv:JFrame) - Popup Trigger - Node
+// [GUI Memory]: 141 MB (+1585kb) [00:18:33]
+// [GUI Memory]: 149 MB (+1280kb) [00:32:17]
+// TclEventType: RUN_MODIFY
+// Tcl Message: set_property STEPS.SYNTH_DESIGN.ARGS.RESOURCE_SHARING on [get_runs synth_3] 
+// Elapsed time: 912 seconds
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // g:JideTabbedPane (JPanel:JComponent, cv:JFrame)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "STRATEGY ; Vivado Synthesis Defaults", 17, "Vivado Synthesis Defaults", 1, false); // l:as (JViewport:JComponent, cv:JFrame)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "STRATEGY ; Vivado Synthesis Defaults", 17, "Vivado Synthesis Defaults", 1, false); // l:as (JViewport:JComponent, cv:JFrame)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "INCREMENTAL_CHECKPOINT ; ", 18, (String) null, 1, false); // l:as (JViewport:JComponent, cv:JFrame)
+collapseTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "STEPS ; ", 20); // l:as (JViewport:JComponent, cv:JFrame)
+expandTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "STEPS ; ", 20); // l:as (JViewport:JComponent, cv:JFrame)
+expandTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "SYNTH_DESIGN ; ", 21); // l:as (JViewport:JComponent, cv:JFrame)
+expandTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "TCL ; ", 22); // l:as (JViewport:JComponent, cv:JFrame)
+// [Engine Memory]: 724 MB (+11515kb) [00:32:55]
+expandTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "ARGS ; ", 25); // l:as (JViewport:JComponent, cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 733 MB. GUI used memory: 120 MB. Current time: 9/9/16 9:39:50 AM CST
+collapseTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "ARGS ; ", 25); // l:as (JViewport:JComponent, cv:JFrame)
+expandTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "STATS ; ", 5); // l:as (JViewport:JComponent, cv:JFrame)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 0); // g:JideTabbedPane (JPanel:JComponent, cv:JFrame)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "General", 0); // g:JideTabbedPane (JPanel:JComponent, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+setText(PAResourceEtoH.ExpRunPropPanels_NAME, "synth_3"); // ao:JTextField (JPanel:JComponent, cv:JFrame)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_3 
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_3 -jobs 4 
+// Tcl Message: [Fri Sep 09 09:40:04 2016] Launched synth_3... Run output will be captured here: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_3/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v)]", 30, true); // z:k (G:JPanel, cv:JFrame) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v)]", 30); // z:k (G:JPanel, cv:JFrame)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; Running synth_design... ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Fri Sep 09 09:40:10 CST 2016 ; 00:00:00 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; Synthesis Out-of-date ;  ;  ;  ;  ;  ;  ; 2988 ; 369 ; 0 ; 0 ; 0 ; Fri Sep 09 09:20:29 CST 2016 ; 00:01:00 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 2, "synth_2", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; Synthesis Out-of-date ;  ;  ;  ;  ;  ;  ; 2988 ; 369 ; 0 ; 0 ; 0 ; Fri Sep 09 09:20:29 CST 2016 ; 00:01:00 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 2, "synth_2", 0, true, false, false, false, true, false); // W:as (JViewport:JComponent, cv:JFrame) - Popup Trigger - Node
+// Elapsed time: 21 seconds
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; Running synth_design... ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Fri Sep 09 09:40:10 CST 2016 ; 00:00:26 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Options", 2); // g:JideTabbedPane (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 14 seconds
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; Synthesis Out-of-date ;  ;  ;  ;  ;  ;  ; 2988 ; 369 ; 0 ; 0 ; 0 ; Fri Sep 09 09:20:29 CST 2016 ; 00:01:00 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 2, "synth_2", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+// Elapsed time: 19 seconds
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; Running synth_design... ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Fri Sep 09 09:40:10 CST 2016 ; 00:01:17 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 14 seconds
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2821 ; 112 ; 0 ; 0 ; 0 ; Fri Sep 09 09:40:10 CST 2016 ; 00:01:18 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+collapseTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2821 ; 112 ; 0 ; 0 ; 0 ; Fri Sep 09 09:40:10 CST 2016 ; 00:01:18 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4); // W:as (JViewport:JComponent, cv:JFrame)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2821 ; 112 ; 0 ; 0 ; 0 ; Fri Sep 09 09:40:10 CST 2016 ; 00:01:18 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true, false, false, false, false, true); // W:as (JViewport:JComponent, cv:JFrame) - Double Click - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2821 ; 112 ; 0 ; 0 ; 0 ; Fri Sep 09 09:40:10 CST 2016 ; 00:01:18 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+// [GUI Memory]: 158 MB (+641kb) [00:34:54]
+expandTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2821 ; 112 ; 0 ; 0 ; 0 ; Fri Sep 09 09:40:10 CST 2016 ; 00:01:18 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4); // W:as (JViewport:JComponent, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v)]", 30, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FPU_Multiplication_Function_v2 (FPU_Multiplication_Function_v2.v), Sgf_operation - RecursiveKOA (RecursiveKOA.v)]", 30, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// Launch External Editor: 'C:/Users/jsequeira/Documents/Sublime/subl.exe "C:/Users/jsequeira/Proyectos/Karat/source/rtl/RecursiveKOA.v":23'
+// Elapsed time: 36 seconds
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2821 ; 112 ; 0 ; 0 ; 0 ; Fri Sep 09 09:40:10 CST 2016 ; 00:01:18 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2821 ; 112 ; 0 ; 0 ; 0 ; Fri Sep 09 09:40:10 CST 2016 ; 00:01:18 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true, false, false, false, true, false); // W:as (JViewport:JComponent, cv:JFrame) - Popup Trigger - Node
+// [GUI Memory]: 167 MB (+1706kb) [00:35:37]
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2821 ; 112 ; 0 ; 0 ; 0 ; Fri Sep 09 09:40:10 CST 2016 ; 00:01:18 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; Synthesis Out-of-date ;  ;  ;  ;  ;  ;  ; 2988 ; 369 ; 0 ; 0 ; 0 ; Fri Sep 09 09:20:29 CST 2016 ; 00:01:00 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 2, "synth_2", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_3 ; constrs_1 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 2821 ; 112 ; 0 ; 0 ; 0 ; Fri Sep 09 09:40:10 CST 2016 ; 00:01:18 ; Vivado Synthesis Defaults* (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 4, "synth_3", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+// [GUI Memory]: 176 MB (+136kb) [00:35:46]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 35 seconds
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, null, -1, null, -1, false, false, false, false, true, false); // W:as (JViewport:JComponent, cv:JFrame) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_DESIGN_AHEAD, "Create Runs..."); // af:JMenuItem (am:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_DESIGN_AHEAD
+// E:g (cv:JFrame): Create New Runs: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, E:g)
+selectTable(PAResourceAtoD.ConfigRunTablePanel_CONFIG_RUN_TABLE, "synth_4 ; constrs_1 ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults ; false", 0, "false", 4); // c:v (JViewport:JComponent, E:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, E:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, E:g)
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// E:g (cv:JFrame): Create New Runs: addNotify
+// bL:g (E:g):  Starting Design Runs : addNotify
+// Tcl Message: create_run synth_4 -flow {Vivado Synthesis 2016} 
+// Tcl Message: Run is defaulting to srcset: sources_1 Run is defaulting to constrset: constrs_1 Run is defaulting to part: xc7a100tcsg324-1 
+// Tcl Message: current_run [get_runs synth_4] 
+dismissDialog("Create New Runs"); // E:g (cv:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_4 -jobs 4 
+// Tcl Message: [Fri Sep 09 09:43:27 2016] Launched synth_4... Run output will be captured here: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_4/runme.log 
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, E:g)
+// 'f' command handler elapsed time: 12 seconds
+dismissDialog("Starting Design Runs"); // bL:g (E:g)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_4 ; constrs_1 ; Queued... ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; 00:00:00 ; Vivado Synthesis Defaults (Vivado Synthesis 2016) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 6, "synth_4", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 756 MB. GUI used memory: 157 MB. Current time: 9/9/16 9:43:40 AM CST
+// [GUI Memory]: 185 MB (+431kb) [00:36:53]
+// [Engine Memory]: 761 MB (+1409kb) [00:36:55]
+// TclEventType: RUN_FAILED
+// [GUI Memory]: 197 MB (+2992kb) [00:36:58]
+// [GUI Memory]: 209 MB (+2512kb) [00:37:00]
+// [Engine Memory]: 802 MB (+2938kb) [00:37:01]
+// [GUI Memory]: 220 MB (+784kb) [00:37:01]
+// ap:G (cv:JFrame): Synthesis Failed: addNotify
+// Elapsed time: 24 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+// [GUI Memory]: 234 MB (+2329kb) [00:37:04]
+dismissDialog("Synthesis Failed"); // ap:G (cv:JFrame)
+// [Engine Memory]: 845 MB (+2752kb) [00:37:04]
+// HMemoryUtils.trashcanNow. Engine heap size: 845 MB. GUI used memory: 176 MB. Current time: 9/9/16 9:43:55 AM CST
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, true); // h:JCheckBox (JPanel:JComponent, cv:JFrame): TRUE
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cv:JFrame)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cv:JFrame)
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cv:JFrame)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cv:JFrame)
+selectTab((HResource) null, (HResource) null, "Log", 2); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cv:JFrame)
+selectTab((HResource) null, (HResource) null, "Reports", 3); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cv:JFrame)
+selectTab((HResource) null, (HResource) null, "Log", 2); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cv:JFrame)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 14, true); // x:Y (w:G, cv:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// bL:g (cv:JFrame):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: RecursiveKOA 
+// HMemoryUtils.trashcanNow. Engine heap size: 914 MB. GUI used memory: 176 MB. Current time: 9/9/16 9:44:25 AM CST
+// [Engine Memory]: 948 MB (+63634kb) [00:37:37]

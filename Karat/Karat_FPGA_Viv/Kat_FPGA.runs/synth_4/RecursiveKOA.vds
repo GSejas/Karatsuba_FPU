@@ -1,0 +1,902 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Sep 09 10:52:11 2016
+# Process ID: 46988
+# Current directory: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_4
+# Command line: vivado.exe -log RecursiveKOA.vds -mode batch -messageDb vivado.pb -notrace -source RecursiveKOA.tcl
+# Log file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_4/RecursiveKOA.vds
+# Journal file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_4\vivado.jou
+#-----------------------------------------------------------
+source RecursiveKOA.tcl -notrace
+Command: synth_design -top RecursiveKOA -part xc7a100tcsg324-1 -directive AreaOptimized_high -control_set_opt_threshold 1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 46628 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 305.430 ; gain = 99.141
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'RecursiveKOA' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RecursiveKOA.v:23]
+	Parameter SW bound to: 56 - type: integer 
+	Parameter Opt_FPGA_ASIC bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 56 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 28 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 28 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 14 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized1' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 14 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized2' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized2' (1#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized3' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized3' (1#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'adder' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized4' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized4' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized1' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized5' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 14 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized6' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized6' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized7' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized7' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized8' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized8' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized5' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 14 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized0' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized1' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 14 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized1' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized9' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 15 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized10' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized10' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized11' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized11' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized2' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized2' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized3' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized3' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized12' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 9 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized12' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized9' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized0' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized13' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 28 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 14 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized14' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 14 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized15' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized15' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized16' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized16' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized17' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized17' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized14' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized18' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 14 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized19' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized19' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized20' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized20' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized21' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized21' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized18' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized4' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 14 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized4' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized5' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 14 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized5' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized22' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 15 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized23' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized23' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized24' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized24' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized6' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized6' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized7' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized7' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized25' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 9 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized25' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized22' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized13' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized8' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 28 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized8' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized9' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 28 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized9' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized26' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 29 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 14 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized27' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 14 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized28' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized28' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized29' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized29' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized30' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized30' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized27' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized31' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 15 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized32' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 7 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized32' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized33' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized33' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized10' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized10' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized11' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized11' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized34' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 9 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized34' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized31' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized12' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized12' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized13' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized13' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized35' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 16 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized36' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized36' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized37' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 8 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized37' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized14' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized14' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized15' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized15' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_c_2__parameterized38' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+	Parameter SW bound to: 9 - type: integer 
+	Parameter precision bound to: 0 - type: integer 
+	Parameter half bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized38' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized35' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2__parameterized26' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-256] done synthesizing module 'KOA_c_2' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_c_v3.v:30]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+	Parameter W bound to: 112 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd' (3#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+INFO: [Synth 8-256] done synthesizing module 'RecursiveKOA' (4#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RecursiveKOA.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 342.707 ; gain = 136.418
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 342.707 ; gain = 136.418
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc]
+Finished Parsing XDC File [C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/RecursiveKOA_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/RecursiveKOA_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 647.789 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 647.789 ; gain = 441.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 647.789 ; gain = 441.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 647.789 ; gain = 441.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 647.789 ; gain = 441.500
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    113 Bit       Adders := 1     
+	   2 Input     58 Bit       Adders := 1     
+	   4 Input     58 Bit       Adders := 1     
+	   2 Input     57 Bit       Adders := 2     
+	   2 Input     33 Bit       Adders := 1     
+	   4 Input     32 Bit       Adders := 1     
+	   2 Input     30 Bit       Adders := 3     
+	   4 Input     30 Bit       Adders := 2     
+	   2 Input     29 Bit       Adders := 7     
+	   4 Input     18 Bit       Adders := 4     
+	   4 Input     16 Bit       Adders := 5     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     15 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 8     
+	   2 Input      8 Bit       Adders := 10    
++---Registers : 
+	              112 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+Module KOA_c_2__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+	   4 Input     16 Bit       Adders := 1     
+Module KOA_c_2__parameterized5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+	   4 Input     16 Bit       Adders := 1     
+Module adder__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     15 Bit       Adders := 1     
+Module adder__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     15 Bit       Adders := 1     
+Module adder__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module adder__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module KOA_c_2__parameterized9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     30 Bit       Adders := 1     
+	   4 Input     18 Bit       Adders := 1     
+Module KOA_c_2__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     57 Bit       Adders := 1     
+	   4 Input     30 Bit       Adders := 1     
+Module KOA_c_2__parameterized14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+	   4 Input     16 Bit       Adders := 1     
+Module KOA_c_2__parameterized18 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+	   4 Input     16 Bit       Adders := 1     
+Module adder__parameterized4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     15 Bit       Adders := 1     
+Module adder__parameterized5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     15 Bit       Adders := 1     
+Module adder__parameterized6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module adder__parameterized7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module KOA_c_2__parameterized22 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     30 Bit       Adders := 1     
+	   4 Input     18 Bit       Adders := 1     
+Module KOA_c_2__parameterized13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     57 Bit       Adders := 1     
+	   4 Input     30 Bit       Adders := 1     
+Module adder__parameterized8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+Module adder__parameterized9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+Module KOA_c_2__parameterized27 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+	   4 Input     16 Bit       Adders := 1     
+Module adder__parameterized10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module adder__parameterized11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module KOA_c_2__parameterized31 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     30 Bit       Adders := 1     
+	   4 Input     18 Bit       Adders := 1     
+Module adder__parameterized12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module adder__parameterized13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module adder__parameterized14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module adder__parameterized15 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module KOA_c_2__parameterized35 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   4 Input     18 Bit       Adders := 1     
+Module KOA_c_2__parameterized26 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     58 Bit       Adders := 1     
+	   4 Input     32 Bit       Adders := 1     
+Module KOA_c_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    113 Bit       Adders := 1     
+	   4 Input     58 Bit       Adders := 1     
+Module RegisterAdd 
+Detailed RTL Component Info : 
++---Registers : 
+	              112 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 647.789 ; gain = 441.500
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP middle/right_lower/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator middle/right_lower/sgf_result_o is absorbed into DSP middle/right_lower/sgf_result_o.
+DSP Report: Generating DSP middle/left_high/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator middle/left_high/sgf_result_o is absorbed into DSP middle/left_high/sgf_result_o.
+DSP Report: Generating DSP middle/middle/sgf_result_o, operation Mode is: (D+A)*B.
+DSP Report: operator middle/middle/sgf_result_o is absorbed into DSP middle/middle/sgf_result_o.
+DSP Report: operator middle/A_operation/Data_S_o0 is absorbed into DSP middle/middle/sgf_result_o.
+DSP Report: Generating DSP middle/Result1, operation Mode is: PCIN+(A:0x0):B+(C:0x2).
+DSP Report: operator middle/Result1 is absorbed into DSP middle/Result1.
+DSP Report: Generating DSP middle/Result1, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator middle/Result1 is absorbed into DSP middle/Result1.
+DSP Report: Generating DSP left/right/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator left/right/sgf_result_o is absorbed into DSP left/right/sgf_result_o.
+DSP Report: Generating DSP left/left/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator left/left/sgf_result_o is absorbed into DSP left/left/sgf_result_o.
+DSP Report: Generating DSP left/middle/sgf_result_o, operation Mode is: (D+A)*B.
+DSP Report: operator left/middle/sgf_result_o is absorbed into DSP left/middle/sgf_result_o.
+DSP Report: operator left/A_operation/Data_S_o0 is absorbed into DSP left/middle/sgf_result_o.
+DSP Report: Generating DSP left/Result1, operation Mode is: PCIN+(A:0x0):B+(C:0x2).
+DSP Report: operator left/Result1 is absorbed into DSP left/Result1.
+DSP Report: Generating DSP left/Result1, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator left/Result1 is absorbed into DSP left/Result1.
+DSP Report: Generating DSP right/right/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator right/right/sgf_result_o is absorbed into DSP right/right/sgf_result_o.
+DSP Report: Generating DSP right/left/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator right/left/sgf_result_o is absorbed into DSP right/left/sgf_result_o.
+DSP Report: Generating DSP right/middle/sgf_result_o, operation Mode is: (D+A)*B.
+DSP Report: operator right/middle/sgf_result_o is absorbed into DSP right/middle/sgf_result_o.
+DSP Report: operator right/A_operation/Data_S_o0 is absorbed into DSP right/middle/sgf_result_o.
+DSP Report: Generating DSP right/Result1, operation Mode is: PCIN+(A:0x0):B+(C:0x2).
+DSP Report: operator right/Result1 is absorbed into DSP right/Result1.
+DSP Report: Generating DSP right/Result1, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator right/Result1 is absorbed into DSP right/Result1.
+DSP Report: Generating DSP middle/right_lower/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator middle/right_lower/sgf_result_o is absorbed into DSP middle/right_lower/sgf_result_o.
+DSP Report: Generating DSP middle/left_high/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator middle/left_high/sgf_result_o is absorbed into DSP middle/left_high/sgf_result_o.
+DSP Report: Generating DSP middle/middle/sgf_result_o, operation Mode is: (D+A)*B.
+DSP Report: operator middle/middle/sgf_result_o is absorbed into DSP middle/middle/sgf_result_o.
+DSP Report: operator middle/A_operation/Data_S_o0 is absorbed into DSP middle/middle/sgf_result_o.
+DSP Report: Generating DSP middle/Result1, operation Mode is: PCIN+(A:0x0):B+(C:0x2).
+DSP Report: operator middle/Result1 is absorbed into DSP middle/Result1.
+DSP Report: Generating DSP middle/Result1, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator middle/Result1 is absorbed into DSP middle/Result1.
+DSP Report: Generating DSP left/right/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator left/right/sgf_result_o is absorbed into DSP left/right/sgf_result_o.
+DSP Report: Generating DSP left/left/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator left/left/sgf_result_o is absorbed into DSP left/left/sgf_result_o.
+DSP Report: Generating DSP left/middle/sgf_result_o, operation Mode is: (D+A)*B.
+DSP Report: operator left/middle/sgf_result_o is absorbed into DSP left/middle/sgf_result_o.
+DSP Report: operator left/A_operation/Data_S_o0 is absorbed into DSP left/middle/sgf_result_o.
+DSP Report: Generating DSP left/Result1, operation Mode is: PCIN+(A:0x0):B+(C:0x2).
+DSP Report: operator left/Result1 is absorbed into DSP left/Result1.
+DSP Report: Generating DSP left/Result1, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator left/Result1 is absorbed into DSP left/Result1.
+DSP Report: Generating DSP right/right/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator right/right/sgf_result_o is absorbed into DSP right/right/sgf_result_o.
+DSP Report: Generating DSP right/left/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator right/left/sgf_result_o is absorbed into DSP right/left/sgf_result_o.
+DSP Report: Generating DSP right/middle/sgf_result_o, operation Mode is: (D+A)*B.
+DSP Report: operator right/middle/sgf_result_o is absorbed into DSP right/middle/sgf_result_o.
+DSP Report: operator right/A_operation/Data_S_o0 is absorbed into DSP right/middle/sgf_result_o.
+DSP Report: Generating DSP right/Result1, operation Mode is: PCIN+(A:0x0):B+(C:0x2).
+DSP Report: operator right/Result1 is absorbed into DSP right/Result1.
+DSP Report: Generating DSP right/Result1, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator right/Result1 is absorbed into DSP right/Result1.
+DSP Report: Generating DSP middle/right/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator middle/right/sgf_result_o is absorbed into DSP middle/right/sgf_result_o.
+DSP Report: Generating DSP middle/left/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator middle/left/sgf_result_o is absorbed into DSP middle/left/sgf_result_o.
+DSP Report: Generating DSP middle/middle/sgf_result_o, operation Mode is: (D+A)*B.
+DSP Report: operator middle/middle/sgf_result_o is absorbed into DSP middle/middle/sgf_result_o.
+DSP Report: operator middle/A_operation/Data_S_o0 is absorbed into DSP middle/middle/sgf_result_o.
+DSP Report: Generating DSP middle/Result1, operation Mode is: PCIN+(A:0x0):B+(C:0x2).
+DSP Report: operator middle/Result1 is absorbed into DSP middle/Result1.
+DSP Report: Generating DSP middle/Result1, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator middle/Result1 is absorbed into DSP middle/Result1.
+DSP Report: Generating DSP left_high/right/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator left_high/right/sgf_result_o is absorbed into DSP left_high/right/sgf_result_o.
+DSP Report: Generating DSP left_high/left/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator left_high/left/sgf_result_o is absorbed into DSP left_high/left/sgf_result_o.
+DSP Report: Generating DSP left_high/middle/sgf_result_o, operation Mode is: (D+A)*B.
+DSP Report: operator left_high/middle/sgf_result_o is absorbed into DSP left_high/middle/sgf_result_o.
+DSP Report: operator left_high/A_operation/Data_S_o0 is absorbed into DSP left_high/middle/sgf_result_o.
+DSP Report: Generating DSP left_high/Result1, operation Mode is: PCIN+(A:0x0):B+(C:0x2).
+DSP Report: operator left_high/Result1 is absorbed into DSP left_high/Result1.
+DSP Report: Generating DSP left_high/Result1, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator left_high/Result1 is absorbed into DSP left_high/Result1.
+DSP Report: Generating DSP right_lower/right_lower/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator right_lower/right_lower/sgf_result_o is absorbed into DSP right_lower/right_lower/sgf_result_o.
+DSP Report: Generating DSP right_lower/left_high/sgf_result_o, operation Mode is: A*B.
+DSP Report: operator right_lower/left_high/sgf_result_o is absorbed into DSP right_lower/left_high/sgf_result_o.
+DSP Report: Generating DSP right_lower/middle/sgf_result_o, operation Mode is: (D+A)*B.
+DSP Report: operator right_lower/middle/sgf_result_o is absorbed into DSP right_lower/middle/sgf_result_o.
+DSP Report: operator right_lower/A_operation/Data_S_o0 is absorbed into DSP right_lower/middle/sgf_result_o.
+DSP Report: Generating DSP right_lower/Result1, operation Mode is: PCIN+(A:0x0):B+(C:0x2).
+DSP Report: operator right_lower/Result1 is absorbed into DSP right_lower/Result1.
+DSP Report: Generating DSP right_lower/Result1, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator right_lower/Result1 is absorbed into DSP right_lower/Result1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 647.789 ; gain = 441.500
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 647.789 ; gain = 441.500
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping            | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|KOA_c_2     | A*B                    | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | (D+A)*B                | 8      | 9      | -      | 7      | 18     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B+(C:0x2) | 30     | 18     | 2      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B         | 30     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | (D+A)*B                | 7      | 8      | -      | 7      | 16     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B+(C:0x2) | 30     | 16     | 2      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B         | 30     | 16     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | (D+A)*B                | 7      | 8      | -      | 7      | 16     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B+(C:0x2) | 30     | 16     | 2      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B         | 30     | 16     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | (D+A)*B                | 8      | 9      | -      | 7      | 18     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B+(C:0x2) | 30     | 18     | 2      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B         | 30     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | (D+A)*B                | 7      | 8      | -      | 7      | 16     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B+(C:0x2) | 30     | 16     | 2      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B         | 30     | 16     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | (D+A)*B                | 7      | 8      | -      | 7      | 16     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B+(C:0x2) | 30     | 16     | 2      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B         | 30     | 16     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | (D+A)*B                | 8      | 9      | -      | 8      | 18     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B+(C:0x2) | 30     | 18     | 2      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B         | 30     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | (D+A)*B                | 7      | 8      | -      | 7      | 16     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B+(C:0x2) | 30     | 16     | 2      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B         | 30     | 16     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | A*B                    | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|KOA_c_2     | (D+A)*B                | 8      | 9      | -      | 7      | 18     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B+(C:0x2) | 30     | 18     | 2      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|KOA_c_2     | PCIN+(A:0x0):B         | 30     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 647.789 ; gain = 441.500
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 647.789 ; gain = 441.500
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 674.684 ; gain = 468.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 677.563 ; gain = 471.273
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 703.270 ; gain = 496.980
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 703.270 ; gain = 496.980
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 703.270 ; gain = 496.980
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 703.270 ; gain = 496.980
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 703.270 ; gain = 496.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 703.270 ; gain = 496.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 703.270 ; gain = 496.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 703.270 ; gain = 496.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 703.270 ; gain = 496.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |   211|
+|3     |DSP48E1   |    18|
+|4     |DSP48E1_1 |     9|
+|5     |DSP48E1_2 |     9|
+|6     |DSP48E1_3 |     9|
+|7     |LUT1      |   406|
+|8     |LUT2      |   489|
+|9     |LUT3      |   142|
+|10    |LUT4      |   140|
+|11    |LUT5      |     1|
+|12    |FDCE      |   112|
+|13    |IBUF      |   115|
+|14    |OBUF      |   112|
++------+----------+------+
+
+Report Instance Areas: 
++------+--------------------+-------------------------+------+
+|      |Instance            |Module                   |Cells |
++------+--------------------+-------------------------+------+
+|1     |top                 |                         |  1774|
+|2     |  finalreg          |RegisterAdd              |   238|
+|3     |  main_KOA          |KOA_c_2                  |  1296|
+|4     |    A_operation     |adder__parameterized8    |    36|
+|5     |    B_operation     |adder__parameterized9    |    36|
+|6     |    left            |KOA_c_2__parameterized0  |   391|
+|7     |      A_operation   |adder__parameterized0    |    18|
+|8     |      B_operation   |adder__parameterized1    |    18|
+|9     |      left          |KOA_c_2__parameterized1  |    93|
+|10    |        B_operation |adder_3                  |     9|
+|11    |        left        |KOA_c_2__parameterized2  |    24|
+|12    |        middle      |KOA_c_2__parameterized4  |     1|
+|13    |        right       |KOA_c_2__parameterized3  |    41|
+|14    |      middle        |KOA_c_2__parameterized9  |    73|
+|15    |        B_operation |adder__parameterized3    |    10|
+|16    |        left_high   |KOA_c_2__parameterized10 |    30|
+|17    |        middle      |KOA_c_2__parameterized12 |     2|
+|18    |        right_lower |KOA_c_2__parameterized11 |    29|
+|19    |      right         |KOA_c_2__parameterized5  |   104|
+|20    |        B_operation |adder_2                  |     9|
+|21    |        left        |KOA_c_2__parameterized6  |    24|
+|22    |        middle      |KOA_c_2__parameterized8  |     1|
+|23    |        right       |KOA_c_2__parameterized7  |    52|
+|24    |    middle          |KOA_c_2__parameterized26 |   378|
+|25    |      A_operation   |adder__parameterized12   |    18|
+|26    |      B_operation   |adder__parameterized13   |    20|
+|27    |      left_high     |KOA_c_2__parameterized27 |    89|
+|28    |        B_operation |adder_1                  |     9|
+|29    |        left        |KOA_c_2__parameterized28 |    24|
+|30    |        middle      |KOA_c_2__parameterized30 |     1|
+|31    |        right       |KOA_c_2__parameterized29 |    37|
+|32    |      middle        |KOA_c_2__parameterized35 |    79|
+|33    |        B_operation |adder__parameterized15   |     9|
+|34    |        left        |KOA_c_2__parameterized36 |    37|
+|35    |        middle      |KOA_c_2__parameterized38 |     3|
+|36    |        right       |KOA_c_2__parameterized37 |    26|
+|37    |      right_lower   |KOA_c_2__parameterized31 |    81|
+|38    |        B_operation |adder__parameterized11   |    10|
+|39    |        left_high   |KOA_c_2__parameterized32 |    23|
+|40    |        middle      |KOA_c_2__parameterized34 |     2|
+|41    |        right_lower |KOA_c_2__parameterized33 |    26|
+|42    |    right           |KOA_c_2__parameterized13 |   357|
+|43    |      A_operation   |adder__parameterized4    |    18|
+|44    |      B_operation   |adder__parameterized5    |    18|
+|45    |      left          |KOA_c_2__parameterized14 |    93|
+|46    |        B_operation |adder_0                  |     9|
+|47    |        left        |KOA_c_2__parameterized15 |    24|
+|48    |        middle      |KOA_c_2__parameterized17 |     1|
+|49    |        right       |KOA_c_2__parameterized16 |    41|
+|50    |      middle        |KOA_c_2__parameterized22 |    73|
+|51    |        B_operation |adder__parameterized7    |    10|
+|52    |        left_high   |KOA_c_2__parameterized23 |    30|
+|53    |        middle      |KOA_c_2__parameterized25 |     2|
+|54    |        right_lower |KOA_c_2__parameterized24 |    29|
+|55    |      right         |KOA_c_2__parameterized18 |    70|
+|56    |        B_operation |adder                    |     9|
+|57    |        left        |KOA_c_2__parameterized19 |    24|
+|58    |        middle      |KOA_c_2__parameterized21 |     1|
+|59    |        right       |KOA_c_2__parameterized20 |    18|
++------+--------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 703.270 ; gain = 496.980
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 703.270 ; gain = 170.855
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 703.270 ; gain = 496.980
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 371 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+130 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 703.270 ; gain = 478.445
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 703.270 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 09 10:53:12 2016...

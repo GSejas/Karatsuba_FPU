@@ -1,0 +1,417 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Sep 09 09:19:13 2016
+# Process ID: 56188
+# Current directory: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_1
+# Command line: vivado.exe -log Sgf_Multiplication.vds -mode batch -messageDb vivado.pb -notrace -source Sgf_Multiplication.tcl
+# Log file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_1/Sgf_Multiplication.vds
+# Journal file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Sgf_Multiplication.tcl -notrace
+Command: synth_design -top Sgf_Multiplication -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 33972 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 305.516 ; gain = 99.551
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Sgf_Multiplication' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Sgf_Multiplication.v:23]
+	Parameter SW bound to: 54 - type: integer 
+	Parameter half bound to: 27 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:23]
+	Parameter W bound to: 27 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier' (1#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 27 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'multiplier__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:23]
+	Parameter W bound to: 28 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier__parameterized0' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/substractor.v:23]
+	Parameter W bound to: 56 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor' (3#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 108 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized0' (3#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+WARNING: [Synth 8-689] width (83) of port connection 'Data_B_i' does not match port width (108) of module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Sgf_Multiplication.v:176]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+	Parameter W bound to: 108 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd' (4#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+INFO: [Synth 8-256] done synthesizing module 'Sgf_Multiplication' (5#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Sgf_Multiplication.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 342.762 ; gain = 136.797
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 342.762 ; gain = 136.797
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc]
+Finished Parsing XDC File [C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Sgf_Multiplication_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Sgf_Multiplication_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 646.070 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 646.070 ; gain = 440.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 646.070 ; gain = 440.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 646.070 ; gain = 440.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 646.070 ; gain = 440.105
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    109 Bit       Adders := 1     
+	   2 Input     56 Bit       Adders := 1     
+	   3 Input     56 Bit       Adders := 2     
+	   2 Input     54 Bit       Adders := 2     
+	   2 Input     28 Bit       Adders := 2     
++---Registers : 
+	              108 Bit    Registers := 1     
+	               48 Bit    Registers := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module multiplier 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     54 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 4     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
+Module multiplier__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     56 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 4     
+Module substractor 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     56 Bit       Adders := 1     
+Module adder__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    109 Bit       Adders := 1     
+Module RegisterAdd 
+Detailed RTL Component Info : 
++---Registers : 
+	              108 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 646.070 ; gain = 440.105
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1.left/pdt_int_reg' and it is trimmed from '48' to '20' bits. [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:33]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1.left/pdt_int_reg' and it is trimmed from '48' to '17' bits. [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:33]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1.left/pdt_int_reg' and it is trimmed from '48' to '37' bits. [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:33]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1.left/pdt_int_reg' and it is trimmed from '48' to '17' bits. [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:33]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1.right/pdt_int_reg' and it is trimmed from '48' to '20' bits. [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:33]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1.right/pdt_int_reg' and it is trimmed from '48' to '17' bits. [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:33]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1.right/pdt_int_reg' and it is trimmed from '48' to '37' bits. [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:33]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1.right/pdt_int_reg' and it is trimmed from '48' to '17' bits. [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:33]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1.middle/pdt_int_reg' and it is trimmed from '48' to '22' bits. [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:33]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1.middle/pdt_int_reg' and it is trimmed from '48' to '17' bits. [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:33]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1.middle/pdt_int_reg' and it is trimmed from '48' to '39' bits. [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:33]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1.middle/pdt_int_reg' and it is trimmed from '48' to '17' bits. [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v:33]
+DSP Report: Generating DSP genblk1.middle/pdt_int0, operation Mode is: A*B.
+DSP Report: operator genblk1.middle/pdt_int0 is absorbed into DSP genblk1.middle/pdt_int0.
+DSP Report: operator genblk1.middle/pdt_int0 is absorbed into DSP genblk1.middle/pdt_int0.
+DSP Report: Generating DSP genblk1.middle/pdt_int_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register genblk1.middle/pdt_int_reg is absorbed into DSP genblk1.middle/pdt_int_reg.
+DSP Report: operator genblk1.middle/pdt_int0 is absorbed into DSP genblk1.middle/pdt_int_reg.
+DSP Report: operator genblk1.middle/pdt_int0 is absorbed into DSP genblk1.middle/pdt_int_reg.
+DSP Report: Generating DSP genblk1.middle/pdt_int0, operation Mode is: A*B.
+DSP Report: operator genblk1.middle/pdt_int0 is absorbed into DSP genblk1.middle/pdt_int0.
+DSP Report: operator genblk1.middle/pdt_int0 is absorbed into DSP genblk1.middle/pdt_int0.
+DSP Report: Generating DSP genblk1.middle/pdt_int_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register genblk1.middle/pdt_int_reg is absorbed into DSP genblk1.middle/pdt_int_reg.
+DSP Report: operator genblk1.middle/pdt_int0 is absorbed into DSP genblk1.middle/pdt_int_reg.
+DSP Report: operator genblk1.middle/pdt_int0 is absorbed into DSP genblk1.middle/pdt_int_reg.
+DSP Report: Generating DSP genblk1.left/pdt_int0, operation Mode is: A*B.
+DSP Report: operator genblk1.left/pdt_int0 is absorbed into DSP genblk1.left/pdt_int0.
+DSP Report: operator genblk1.left/pdt_int0 is absorbed into DSP genblk1.left/pdt_int0.
+DSP Report: Generating DSP genblk1.left/pdt_int_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register genblk1.left/pdt_int_reg is absorbed into DSP genblk1.left/pdt_int_reg.
+DSP Report: operator genblk1.left/pdt_int0 is absorbed into DSP genblk1.left/pdt_int_reg.
+DSP Report: operator genblk1.left/pdt_int0 is absorbed into DSP genblk1.left/pdt_int_reg.
+DSP Report: Generating DSP genblk1.left/pdt_int0, operation Mode is: A*B.
+DSP Report: operator genblk1.left/pdt_int0 is absorbed into DSP genblk1.left/pdt_int0.
+DSP Report: operator genblk1.left/pdt_int0 is absorbed into DSP genblk1.left/pdt_int0.
+DSP Report: Generating DSP genblk1.left/pdt_int_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register genblk1.left/pdt_int_reg is absorbed into DSP genblk1.left/pdt_int_reg.
+DSP Report: operator genblk1.left/pdt_int0 is absorbed into DSP genblk1.left/pdt_int_reg.
+DSP Report: operator genblk1.left/pdt_int0 is absorbed into DSP genblk1.left/pdt_int_reg.
+DSP Report: Generating DSP genblk1.right/pdt_int0, operation Mode is: A*B.
+DSP Report: operator genblk1.right/pdt_int0 is absorbed into DSP genblk1.right/pdt_int0.
+DSP Report: operator genblk1.right/pdt_int0 is absorbed into DSP genblk1.right/pdt_int0.
+DSP Report: Generating DSP genblk1.right/pdt_int_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register genblk1.right/pdt_int_reg is absorbed into DSP genblk1.right/pdt_int_reg.
+DSP Report: operator genblk1.right/pdt_int0 is absorbed into DSP genblk1.right/pdt_int_reg.
+DSP Report: operator genblk1.right/pdt_int0 is absorbed into DSP genblk1.right/pdt_int_reg.
+DSP Report: Generating DSP genblk1.right/pdt_int0, operation Mode is: A*B.
+DSP Report: operator genblk1.right/pdt_int0 is absorbed into DSP genblk1.right/pdt_int0.
+DSP Report: operator genblk1.right/pdt_int0 is absorbed into DSP genblk1.right/pdt_int0.
+DSP Report: Generating DSP genblk1.right/pdt_int_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register genblk1.right/pdt_int_reg is absorbed into DSP genblk1.right/pdt_int_reg.
+DSP Report: operator genblk1.right/pdt_int0 is absorbed into DSP genblk1.right/pdt_int_reg.
+DSP Report: operator genblk1.right/pdt_int0 is absorbed into DSP genblk1.right/pdt_int_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 646.070 ; gain = 440.105
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 646.070 ; gain = 440.105
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|multiplier  | A*B            | 18     | 12     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 12     | 12     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|multiplier  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 18     | 12     | -      | -      | 39     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|multiplier  | A*B            | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 11     | 11     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|multiplier  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 18     | 11     | -      | -      | 37     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|multiplier  | A*B            | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 11     | 11     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|multiplier  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 18     | 11     | -      | -      | 37     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 646.070 ; gain = 440.105
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 646.070 ; gain = 440.105
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 649.730 ; gain = 443.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 662.438 ; gain = 456.473
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 674.922 ; gain = 468.957
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 674.922 ; gain = 468.957
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 674.922 ; gain = 468.957
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 674.922 ; gain = 468.957
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 674.922 ; gain = 468.957
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 674.922 ; gain = 468.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 674.922 ; gain = 468.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 674.922 ; gain = 468.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 674.922 ; gain = 468.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |    93|
+|3     |DSP48E1   |     6|
+|4     |DSP48E1_1 |     6|
+|5     |LUT1      |    33|
+|6     |LUT2      |   331|
+|7     |FDCE      |   108|
+|8     |FDRE      |   102|
+|9     |IBUF      |   111|
+|10    |OBUF      |   108|
++------+----------+------+
+
+Report Instance Areas: 
++------+------------------------+---------------------------+------+
+|      |Instance                |Module                     |Cells |
++------+------------------------+---------------------------+------+
+|1     |top                     |                           |   899|
+|2     |  \genblk1.Final        |adder__parameterized0      |    56|
+|3     |  \genblk1.A_operation  |adder                      |    34|
+|4     |  \genblk1.B_operation  |adder_0                    |    34|
+|5     |  \genblk1.Subtr_2      |substractor                |   134|
+|6     |  \genblk1.finalreg     |RegisterAdd                |   108|
+|7     |  \genblk1.left         |multiplier                 |   125|
+|8     |  \genblk1.middle       |multiplier__parameterized0 |    94|
+|9     |  \genblk1.right        |multiplier_1               |    94|
++------+------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 674.922 ; gain = 468.957
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 674.922 ; gain = 144.344
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 674.922 ; gain = 468.957
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 216 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 674.922 ; gain = 450.168
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 674.922 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 09 09:20:05 2016...

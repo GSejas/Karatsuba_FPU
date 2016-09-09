@@ -77,24 +77,20 @@ module KOA_c_2
     ////////////////////////////////////
 generate
     
-    if (SW<=3 && precision == 0) begin
+    if ((SW<=11) && (precision == 0)) begin
 
-        multiplier_C #(.W(SW)/*,.level(level1)*/) main(
-            
-            .Data_A_i(Data_A_i),
-            .Data_B_i(Data_B_i),
-            .Data_S_o(sgf_result_o)
-        );
-
-    end if (SW<=7 && precision == 1) begin
         
-        multiplier_C #(.W(SW)/*,.level(level1)*/) main(
-            
-            .Data_A_i(Data_A_i),
-            .Data_B_i(Data_B_i),
-            .Data_S_o(sgf_result_o)
-        ); 
+        
+        assign    sgf_result_o = Data_A_i * Data_B_i;
+        
 
+    end else if ((SW<=7) && (precision == 1)) begin
+
+
+        
+        assign    sgf_result_o = Data_A_i * Data_B_i;
+        
+        
     end else begin
         
     case (SW%2)

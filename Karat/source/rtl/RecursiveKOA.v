@@ -61,7 +61,7 @@ wire [2*SW-1:0] Result;
       //           .Data_B_i(Data_B_i[SW-1:0]/*P=SW*/),
       //           .sgf_result_o(Result[2*SW-1:0]) /*P=SW*/
       //       );	
-    		KOA_c_2 #(.SW(SW), .precision(1)/*,.level(level1)*/) main_KOA(
+    		KOA_c_2 #(.SW(SW), .precision(0)/*,.level(level1)*/) main_KOA(
                 .Data_A_i(Data_A_i[SW-1:0]/*P=SW*/),
                 .Data_B_i(Data_B_i[SW-1:0]/*P=SW*/),
                 .sgf_result_o(Result[2*SW-1:0]) /*P=SW*/

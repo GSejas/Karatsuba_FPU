@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Sep 09 09:20:24 2016
+# Process ID: 45092
+# Current directory: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_2
+# Command line: vivado.exe -log Sgf_Multiplication.vds -mode batch -messageDb vivado.pb -notrace -source Sgf_Multiplication.tcl
+# Log file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_2/Sgf_Multiplication.vds
+# Journal file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source Sgf_Multiplication.tcl -notrace

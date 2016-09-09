@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Sep 09 09:06:43 2016
+# Process ID: 38404
+# Current directory: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent36024 C:\Users\jsequeira\Proyectos\Karat\Karat_FPGA_Viv\Kat_FPGA.xpr
+# Log file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/vivado.log
+# Journal file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes {C:/Users/jsequeira/Proyectos/Karat/source/rtl/Barrel_Shifter_M.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/Round_decoder_M.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/Adder_Round.v}
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes {C:/Users/jsequeira/Proyectos/Karat/source/rtl/Mux_3x1.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/Zero_InfMult_Unit.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/XOR_M.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/Exp_operation_m.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/First_Phase_M.v}
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes C:/Users/jsequeira/Proyectos/Karat/source/rtl/Tenth_Phase.v
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes {C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Equal.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v}
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes {C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Less.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/add_sub_carry_out.v}
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes {C:/Users/jsequeira/Proyectos/Karat/source/rtl/Deco_Round_Mult.v C:/Users/jsequeira/Proyectos/Karat/source/rtl/OR_Module.v}
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes C:/Users/jsequeira/Proyectos/Karat/source/rtl/shift_mux.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top FPU_Multiplication_Function [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Sgf_Multiplication [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc
+launch_runs synth_1
+wait_on_run synth_1
+create_run synth_2 -flow {Vivado Synthesis 2016} -strategy {Vivado Synthesis Defaults}
+current_run [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.MAX_DSP 0 [get_runs synth_2]
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+create_run synth_3 -flow {Vivado Synthesis 2016}
+current_run [get_runs synth_3]
+launch_runs synth_3 -jobs 4
+wait_on_run synth_3
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top RecursiveKOA [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+set_property STEPS.SYNTH_DESIGN.ARGS.RESOURCE_SHARING on [get_runs synth_3]
+reset_run synth_3
+launch_runs synth_3 -jobs 4
+wait_on_run synth_3
+create_run synth_4 -flow {Vivado Synthesis 2016}
+current_run [get_runs synth_4]
+launch_runs synth_4 -jobs 4
+wait_on_run synth_4
+synth_design -rtl -name rtl_1

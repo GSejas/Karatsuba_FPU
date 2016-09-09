@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2016.2 (64-bit)              -->
+<!--                                                         -->
+<!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
+
+<Project Version="7" Minor="14" Path="C:/Users/jsequeira/Proyectos/Cordic/COR_FPU_FPGA/COR_FPU_FPGA.xpr">
+  <DefaultLaunch Dir="$PRUNDIR"/>
+  <Configuration>
+    <Option Name="Id" Val="e2d7a57e1b204773900ecbd02aed029a"/>
+    <Option Name="Part" Val="xc7a100tcsg324-1"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="CompiledLibDirXSim" Val=""/>
+    <Option Name="CompiledLibDirModelSim" Val="C:/Users/jsequeira/Proyectos/Cordic/COR_FPU_FPGA/COR_FPU_FPGA.cache/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="C:/Users/jsequeira/Proyectos/Cordic/COR_FPU_FPGA/COR_FPU_FPGA.cache/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="C:/Users/jsequeira/Proyectos/Cordic/COR_FPU_FPGA/COR_FPU_FPGA.cache/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="C:/Users/jsequeira/Proyectos/Cordic/COR_FPU_FPGA/COR_FPU_FPGA.cache/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="C:/Users/jsequeira/Proyectos/Cordic/COR_FPU_FPGA/COR_FPU_FPGA.cache/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="C:/Users/jsequeira/Proyectos/Cordic/COR_FPU_FPGA/COR_FPU_FPGA.cache/compile_simlib/activehdl"/>
+    <Option Name="BoardPart" Val=""/>
+    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="EnableCoreContainer" Val="FALSE"/>
+    <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
+    <Option Name="IPUserFilesDir" Val="$PPRDIR/COR_FPU_FPGA.ip_user_files"/>
+    <Option Name="IPStaticSourceDir" Val="$PPRDIR/COR_FPU_FPGA.ip_user_files/ipstatic"/>
+    <Option Name="EnableBDX" Val="FALSE"/>
+    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTModelSimLaunchSim" Val="0"/>
+    <Option Name="WTQuestaLaunchSim" Val="0"/>
+    <Option Name="WTIesLaunchSim" Val="0"/>
+    <Option Name="WTVcsLaunchSim" Val="0"/>
+    <Option Name="WTRivieraLaunchSim" Val="0"/>
+    <Option Name="WTActivehdlLaunchSim" Val="0"/>
+    <Option Name="WTXSimExportSim" Val="0"/>
+    <Option Name="WTModelSimExportSim" Val="0"/>
+    <Option Name="WTQuestaExportSim" Val="0"/>
+    <Option Name="WTIesExportSim" Val="0"/>
+    <Option Name="WTVcsExportSim" Val="0"/>
+    <Option Name="WTRivieraExportSim" Val="0"/>
+    <Option Name="WTActivehdlExportSim" Val="0"/>
+  </Configuration>
+  <FileSets Version="1" Minor="31">
+    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Multiplexer_AC.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Multiplexer_AC.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/shift_mux.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/shift_mux.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Rotate_Mux_Array.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Rotate_Mux_Array.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/RegisterAdd.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/RegisterAdd.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Greater_Comparator.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Greater_Comparator.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Comparator_Less.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Comparator_Less.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/xor_tri.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/xor_tri.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/sgn_result.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/sgn_result.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Priority_Codec_64.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Priority_Codec_64.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Priority_Codec_32.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Priority_Codec_32.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Mux_Array.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Mux_Array.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Mux_3x1.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Mux_3x1.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/MultiplexTxT.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/MultiplexTxT.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Comparators.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Comparators.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Comparator.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Comparator.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/add_sub_carry_out.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/add_sub_carry_out.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Tenth_Phase.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Tenth_Phase.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Round_Sgf_Dec.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Round_Sgf_Dec.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Oper_Start_In.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Oper_Start_In.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/LZD.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/LZD.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/FSM_Add_Subtract.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/FSM_Add_Subtract.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/exp_operation.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/exp_operation.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Barrel_shifter.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Barrel_shifter.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/Add_Subt.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Add_Subt.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Add-Subt/FPU_Add_Subtract_Function.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/FPU_Add_Subtract_Function.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Coprocesador_CORDIC_RTL/Sine_Cosine_CORDIC.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/Coprocesador_CORDIC_RTL/Sine_Cosine_CORDIC.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Coprocesador_CORDIC_RTL/CORDIC_Coprocessor.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Floating-Point-Unit/Coprocesador_CORDIC_RTL/CORDIC_Coprocessor.v"/>
+          <Attr Name="ImportTime" Val="1473290706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="Sine_Cosine_CORDIC"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+      <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/imports/Karat_FPGA_Viv/Nexys4_Master.xdc">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Karat/Karat_FPGA_Viv/Nexys4_Master.xdc"/>
+          <Attr Name="ImportTime" Val="1473434315"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="Sine_Cosine_CORDIC"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TransportPathDelay" Val="0"/>
+        <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+  </FileSets>
+  <Simulators>
+    <Simulator Name="XSim">
+      <Option Name="Description" Val="Vivado Simulator"/>
+      <Option Name="CompiledLib" Val="0"/>
+    </Simulator>
+    <Simulator Name="ModelSim">
+      <Option Name="Description" Val="ModelSim Simulator"/>
+    </Simulator>
+    <Simulator Name="Questa">
+      <Option Name="Description" Val="Questa Advanced Simulator"/>
+    </Simulator>
+    <Simulator Name="IES">
+      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
+    <Simulator Name="Riviera">
+      <Option Name="Description" Val="Riviera-PRO Simulator"/>
+    </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
+    </Simulator>
+  </Simulators>
+  <Runs Version="1" Minor="10">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" SynthRun="synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+  </Runs>
+</Project>

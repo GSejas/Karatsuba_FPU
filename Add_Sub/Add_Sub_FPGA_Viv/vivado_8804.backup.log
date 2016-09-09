@@ -1,0 +1,87 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Thu Sep 08 18:58:47 2016
+# Process ID: 8804
+# Current directory: C:/Users/jsequeira/Proyectos/Add_Sub/Add_Sub_FPGA_Viv
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6416 C:\Users\jsequeira\Proyectos\Add_Sub\Add_Sub_FPGA_Viv\Dry_runs.xpr
+# Log file: C:/Users/jsequeira/Proyectos/Add_Sub/Add_Sub_FPGA_Viv/vivado.log
+# Journal file: C:/Users/jsequeira/Proyectos/Add_Sub/Add_Sub_FPGA_Viv\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jsequeira/Proyectos/Add_Sub/Add_Sub_FPGA_Viv/Dry_runs.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/jsequeira/Proyectos/Karat/CORDIC/CORD_FPGA_Viv' since last save.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Multiplexer_AC.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Greater_Comparator.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Greater_Comparator.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Comparator_Less.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Less.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/RegisterAdd.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/shift_mux.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/shift_mux.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Rotate_Mux_Array.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Rotate_Mux_Array.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/xor_tri.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/xor_tri.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/sgn_result.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/sgn_result.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Priority_Codec_64.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Priority_Codec_64.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Priority_Codec_32.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Priority_Codec_32.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Mux_3x1.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Mux_3x1.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/MultiplexTxT.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/MultiplexTxT.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Comparators.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparators.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Comparator.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/add_sub_carry_out.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/add_sub_carry_out.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Mux_Array.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Mux_Array.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Tenth_Phase.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Tenth_Phase.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Round_Sgf_Dec.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Round_Sgf_Dec.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Oper_Start_In.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Oper_Start_In.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/LZD.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/LZD.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/FSM_Add_Subtract.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/FSM_Add_Subtract.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/exp_operation.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/exp_operation.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Add_Subt.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Add_Subt.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Barrel_shifter.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Barrel_shifter.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/FPU_Add_Subtract_Function.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/FPU_Add_Subtract_Function.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/RegisterMult.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Sign_result_m.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Sign_result_m.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Comparator_Equal.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Equal.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Barrel_Shifter_M.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Barrel_Shifter_M.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Documents/Floating-Point-Unit-master/NATURAL_LOGARITHM_RTL/Nexys4_Master.xdc'; using path 'C:/Users/jsequeira/Documents/Floating-Point-Unit-master/NATURAL_LOGARITHM_RTL/Nexys4_Master.xdc' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/sim/Testbench_FPU_Add_Subt.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/sim/Testbench_FPU_Add_Subt.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/sim/Testbench_Barrel_Shifter.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/sim/Testbench_Barrel_Shifter.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Floating-Point-Unit/TXTVerification/Hexadecimal_A.txt'; using path 'C:/Users/jsequeira/Floating-Point-Unit/TXTVerification/Hexadecimal_A.txt' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Floating-Point-Unit/TXTVerification/Hexadecimal_B.txt'; using path 'C:/Users/jsequeira/Floating-Point-Unit/TXTVerification/Hexadecimal_B.txt' instead.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Multiplexer_AC.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Greater_Comparator.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Greater_Comparator.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Comparator_Less.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Less.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/RegisterAdd.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/shift_mux.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/shift_mux.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Rotate_Mux_Array.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Rotate_Mux_Array.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/xor_tri.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/xor_tri.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/sgn_result.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/sgn_result.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Priority_Codec_64.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Priority_Codec_64.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Priority_Codec_32.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Priority_Codec_32.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Mux_3x1.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Mux_3x1.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/MultiplexTxT.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/MultiplexTxT.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Comparators.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparators.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Comparator.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/add_sub_carry_out.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/add_sub_carry_out.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Mux_Array.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Mux_Array.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Tenth_Phase.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Tenth_Phase.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Round_Sgf_Dec.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Round_Sgf_Dec.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Oper_Start_In.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Oper_Start_In.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/LZD.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/LZD.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/FSM_Add_Subtract.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/FSM_Add_Subtract.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/exp_operation.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/exp_operation.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Add_Subt.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Add_Subt.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Barrel_shifter.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Barrel_shifter.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/FPU_Add_Subtract_Function.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/FPU_Add_Subtract_Function.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/RegisterMult.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Sign_result_m.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Sign_result_m.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Comparator_Equal.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Equal.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/jsequeira/Proyectos/source/rtl/Barrel_Shifter_M.v'; using path 'C:/Users/jsequeira/Proyectos/Karat/source/rtl/Barrel_Shifter_M.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Documents/Floating-Point-Unit-master/NATURAL_LOGARITHM_RTL/Nexys4_Master.xdc'; using path 'C:/Users/jsequeira/Documents/Floating-Point-Unit-master/NATURAL_LOGARITHM_RTL/Nexys4_Master.xdc' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 809.176 ; gain = 138.840
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 08 18:59:18 2016...
