@@ -27,7 +27,7 @@ analyze -library WORK -format verilog {FSM_Mult_Function.v}
 #analyze -format verilog {multiplier.v KOA_c_ASIC.v KOA_c_2_ASIC.v KOA_FPGA.v multiplier_combinational.v RegisterAdd.v adder.v substractor.v}
 
 #Elaboramos el módulo principal
-elaborate RecursiveKOA -architecture verilog -library WORK
+elaborate FSM_Mult -architecture verilog -library WORK
 
 #Enlazar los demás módulos al módulo principal
 link

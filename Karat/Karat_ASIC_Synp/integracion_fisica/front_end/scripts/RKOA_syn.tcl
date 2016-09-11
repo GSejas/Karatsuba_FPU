@@ -43,7 +43,15 @@ propagate_constraints
 check_design
 
 #Compilar el diseño
-compile_ultra
+#el primer switch viene el manual DC_Compiler Optimization Reference Manual
+#Compile ultra
+#Se puede utilizar -area_effort_high_script, para que no se meta a 
+#la jerarquia -no_boundary_optimization
+#Compile
+#Se puede usar la orden: compile map_effort -high
+#compile -incremental_mapping -boundary_optimization
+
+compile_ultra -timing_effort_high_script
 
 #Escribir la lista de nodos a nivel de compuertas (Gate Level Netlist) que se utiliza para:
 #- Verificar el funcionamiento lógico del sistema digital después de la Síntesis RTL.
