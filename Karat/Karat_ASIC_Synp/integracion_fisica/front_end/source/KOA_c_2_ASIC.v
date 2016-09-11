@@ -28,7 +28,10 @@
 
 
 module KOA_c_2
-    //#(parameter SW = 24, parameter precision = 0, parameter depth = 4)
+
+    ´ifdef SINGLE
+        #(parameter SW = 24, parameter precision = 0, parameter depth = 4)
+    ´else 
     #(parameter SW = 54, parameter precision = 1, parameter depth = 4)
 	(
     input wire [SW-1:0] Data_A_i,

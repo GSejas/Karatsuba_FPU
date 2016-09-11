@@ -21,9 +21,12 @@
 
 
 module Sgf_Multiplication
-    #(parameter SW = 24)
-    //#(parameter SW = 54)
-	(
+
+  //  #(parameter SW = 24)
+ 
+    #(parameter SW = 54)
+
+    (
     input wire clk,
     input wire rst,
     input wire load_b_i,
