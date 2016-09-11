@@ -72,7 +72,7 @@ module Sgf_Multiplication
     ////////////////////////////////////
 generate
     case (SW%2)
-        0:begin
+        0:begin : K1
         //////////////////////////////////even//////////////////////////////////
        //Multiplier for left side and right side
         
@@ -190,7 +190,7 @@ generate
             );
             
         end
-    1:begin
+    1:begin : K2
         //////////////////////////////////odd//////////////////////////////////
         //Multiplier for left side and right side
            
@@ -311,5 +311,8 @@ generate
         end
     endcase
 endgenerate
-
+`ifdef PRESTO
+	always $display("Instanciacion: Mult de Francis, SW: %d",SW);
+`endif
 endmodule
+

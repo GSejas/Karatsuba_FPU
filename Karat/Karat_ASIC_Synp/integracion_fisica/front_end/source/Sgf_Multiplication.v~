@@ -21,8 +21,8 @@
 
 
 module Sgf_Multiplication
-    //#(parameter SW = 24)
-    #(parameter SW = 54)
+    #(parameter SW = 24)
+    //#(parameter SW = 54)
 	(
     input wire clk,
     input wire rst,
@@ -311,5 +311,8 @@ generate
         end
     endcase
 endgenerate
-
+`ifdef PRESTO
+	always $display("Instanciacion: Mult de Francis, SW: %d",SW);
+`endif
 endmodule
+
