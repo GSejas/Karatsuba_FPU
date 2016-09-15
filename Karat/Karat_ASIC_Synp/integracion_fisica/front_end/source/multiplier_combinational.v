@@ -30,5 +30,7 @@ module multiplier_C
     
       assign Data_S_o = Data_A_i * Data_B_i;   
     
-    
+`ifdef PRESTO
+	always $display("Instanciacion: multiplier_C de Jorge, W: %d",W);
+`endif
 endmodule

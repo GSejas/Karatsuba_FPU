@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sun Sep 11 21:23:29 2016
+# Process ID: 3842
+# Current directory: /home/jorge
+# Command line: vivado
+# Log file: /home/jorge/vivado.log
+# Journal file: /home/jorge/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/jorge/Documents/Proyecto_Lopez/project_1/project_1.xpr
+reset_run synth_3 -prev_step 
+reset_run synth_4 -prev_step 
+reset_run synth_5 -prev_step 
+reset_run synth_7 -prev_step 
+current_run [get_runs synth_8]
+reset_run synth_8
+launch_runs synth_8 -jobs 2
+wait_on_run synth_8
+current_run [get_runs synth_7]
+launch_runs synth_7 -jobs 2
+wait_on_run synth_7
+launch_runs synth_9 -jobs 2
+wait_on_run synth_9
+list_param
+reset_run synth_5 -from_step synth_design
+launch_runs synth_5 -next_step 
+reset_run synth_4 -from_step synth_design
+launch_runs synth_4 -next_step 
+reset_run synth_3 -from_step synth_design
+launch_runs synth_3 -next_step 
+current_run [get_runs synth_8]
+launch_simulation -mode post-synthesis -type timing
+add_files -norecurse /home/jorge/Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Comparators.v
+add_files -fileset sim_1 -norecurse /home/jorge/Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Comparators.v
+remove_files /home/jorge/Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Comparators.v
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/jorge/Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Greater_Comparator.v
+launch_simulation -mode post-synthesis -type timing
+open_wave_config /home/jorge/Documents/Proyecto_Lopez/project_1/project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/FPU_2.0/Testbench_FPU_Add_Subt_behav.wcfg
+source Testbench_FPU_Add_Subt.tcl
+restart
+run 10 us
+restart
+run 10 us
+close_sim
+current_run [get_runs synth1]
+current_run [get_runs synth_1]
+close_design
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+close_design
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+synth_1 -jobs 2 -generic W=32 -generic EW=8 -generic SW=23 -generic SWR=26 -generic EWR=5
+synth_design -generic W=32 -generic EW=8 -generic SW=23 -generic SWR=26 -generic EWR=5
+launch_simulation -mode post-synthesis -type timing
+open_wave_config /home/jorge/Documents/Proyecto_Lopez/project_1/project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/FPU_2.0/Testbench_FPU_Add_Subt_behav.wcfg
+source Testbench_FPU_Add_Subt.tcl
+restart
+run 10 us
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1 -generic W=32 -generic EW=8 -generic SW=23 -generic SWR=26 -generic EWR=5
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation -mode post-synthesis -type timing
+open_wave_config /home/jorge/Documents/Proyecto_Lopez/project_1/project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/FPU_2.0/Testbench_FPU_Add_Subt_behav.wcfg
+source Testbench_FPU_Add_Subt.tcl
+restart
+run 10 us
+restart
+run 10 us
+archive_project /home/jorge/Documents/Proyecto_Lopez/project_1.xpr.zip -force -include_config_settings

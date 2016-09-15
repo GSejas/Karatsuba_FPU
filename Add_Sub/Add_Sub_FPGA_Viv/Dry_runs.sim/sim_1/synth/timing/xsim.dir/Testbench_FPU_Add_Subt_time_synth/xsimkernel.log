@@ -2,3 +2,6 @@ Running: xsim.dir/Testbench_FPU_Add_Subt_time_synth/xsimk.exe -simmode gui -wdb 
 Design successfully loaded
 Design Loading Memory Usage: 26696 KB (Peak: 26696 KB)
 Design Loading CPU Usage: 140 ms
+Simulation completed
+Simulation Memory Usage: 30332 KB (Peak: 30332 KB)
+Simulation CPU Usage: 6062 ms

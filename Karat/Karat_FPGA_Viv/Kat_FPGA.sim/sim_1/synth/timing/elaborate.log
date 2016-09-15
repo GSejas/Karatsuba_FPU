@@ -1,0 +1,70 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 35bb07299c4a44f7904ff39e793a5014 --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot Testbench_FPU_multiplication_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 xil_defaultlib.Testbench_FPU_multiplication xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port Data_MX [C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.srcs/sim_1/imports/new/Testbench_FPU_multiplication.v:61]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port Data_MY [C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.srcs/sim_1/imports/new/Testbench_FPU_multiplication.v:62]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port final_result_ieee [C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.srcs/sim_1/imports/new/Testbench_FPU_multiplication.v:67]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "Testbench_FPU_multiplication_time_synth.sdf", for root module "Testbench_FPU_multiplication/uut".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "Testbench_FPU_multiplication_time_synth.sdf", for root module "Testbench_FPU_multiplication/uut".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.adder__parameterized1
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.ffsrce_fdce
+Compiling module simprims_ver.FDCE
+Compiling module xil_defaultlib.RegisterAdd__parameterized2
+Compiling module xil_defaultlib.RegisterAdd_4
+Compiling module xil_defaultlib.Adder_Round
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.RegisterMult__parameterized3
+Compiling module xil_defaultlib.Barrel_Shifter_M
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.RegisterMult__parameterized1
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module xil_defaultlib.RegisterMult__parameterized2
+Compiling module xil_defaultlib.add_sub_carry_out
+Compiling module simprims_ver.x_lut3_mux4
+Compiling module simprims_ver.x_lut3_mux4_reduced_0
+Compiling module simprims_ver.LUT3
+Compiling module xil_defaultlib.RegisterMult__parameterized0
+Compiling module xil_defaultlib.Exp_Operation_m
+Compiling module xil_defaultlib.FSM_Mult_Function
+Compiling module xil_defaultlib.RegisterMult
+Compiling module xil_defaultlib.RegisterMult_3
+Compiling module xil_defaultlib.First_Phase_M
+Compiling module xil_defaultlib.RegisterAdd
+Compiling module xil_defaultlib.RegisterAdd__parameterized0
+Compiling module xil_defaultlib.RegisterAdd_0
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.adder_2
+Compiling module xil_defaultlib.adder__parameterized0
+Compiling module xil_defaultlib.substractor
+Compiling module xil_defaultlib.RegisterAdd__parameterized1
+Compiling module simprims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module simprims_ver.sffsrce_fdre
+Compiling module simprims_ver.FDRE
+Compiling module simprims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.multiplier
+Compiling module simprims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.multiplier__parameterized1
+Compiling module xil_defaultlib.multiplier__parameterized0
+Compiling module xil_defaultlib.Sgf_Multiplication
+Compiling module xil_defaultlib.RegisterAdd_1
+Compiling module xil_defaultlib.Zero_InfMult_Unit
+Compiling module simprims_ver.BUFG
+Compiling module xil_defaultlib.RegisterAdd__parameterized3
+Compiling module xil_defaultlib.Tenth_Phase
+Compiling module simprims_ver.OBUF
+Compiling module xil_defaultlib.FPU_Multiplication_Function
+Compiling module xil_defaultlib.Testbench_FPU_multiplication
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Testbench_FPU_multiplication_time_synth

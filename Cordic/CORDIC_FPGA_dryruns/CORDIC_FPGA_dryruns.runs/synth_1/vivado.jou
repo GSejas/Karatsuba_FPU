@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Sep 12 02:53:56 2016
+# Process ID: 24752
+# Current directory: C:/Users/jsequeira/Proyectos/Cordic/CORDIC_FPGA_dryruns/CORDIC_FPGA_dryruns.runs/synth_1
+# Command line: vivado.exe -log CORDIC_Arch2.vds -mode batch -messageDb vivado.pb -notrace -source CORDIC_Arch2.tcl
+# Log file: C:/Users/jsequeira/Proyectos/Cordic/CORDIC_FPGA_dryruns/CORDIC_FPGA_dryruns.runs/synth_1/CORDIC_Arch2.vds
+# Journal file: C:/Users/jsequeira/Proyectos/Cordic/CORDIC_FPGA_dryruns/CORDIC_FPGA_dryruns.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source CORDIC_Arch2.tcl -notrace

@@ -1,0 +1,55 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_AC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/substractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module substractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/shift_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_mux_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterMult
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/OR_Module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_Module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Mux_3x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_3x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Deco_Round_Mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Deco_Round_Mult
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Less.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator_Less
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Equal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator_Equal
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/add_sub_carry_out.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add_sub_carry_out
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterAdd
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Sgf_Multiplication.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sgf_Multiplication
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Zero_InfMult_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Zero_InfMult_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/XOR_M.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XOR_M
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Tenth_Phase.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Tenth_Phase
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Round_decoder_M.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Round_decoder_M
+INFO: [VRFC 10-2458] undeclared symbol round_ok, assumed default net type wire [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Round_decoder_M.v:34]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/FSM_Mult_Function.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM_Mult_Function
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/First_Phase_M.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module First_Phase_M
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Exp_operation_m.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Exp_Operation_m
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Barrel_Shifter_M.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Barrel_Shifter_M
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/Adder_Round.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder_Round
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/source/rtl/FPU_Multiplication_Function.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FPU_Multiplication_Function
+INFO: [VRFC 10-2458] undeclared symbol FSM_Shift_Value, assumed default net type wire [C:/Users/jsequeira/Proyectos/Karat/source/rtl/FPU_Multiplication_Function.v:156]
+INFO: [VRFC 10-2458] undeclared symbol FSM_selector_C, assumed default net type wire [C:/Users/jsequeira/Proyectos/Karat/source/rtl/FPU_Multiplication_Function.v:177]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.srcs/sim_1/imports/new/Testbench_FPU_multiplication.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Testbench_FPU_multiplication
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

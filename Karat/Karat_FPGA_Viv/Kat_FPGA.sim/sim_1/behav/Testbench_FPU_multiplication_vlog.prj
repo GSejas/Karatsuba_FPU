@@ -1,0 +1,32 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../../source/rtl/Multiplexer_AC.v"
+verilog xil_defaultlib  "../../../../source/rtl/multiplier.v"
+verilog xil_defaultlib  "../../../../source/rtl/adder.v"
+verilog xil_defaultlib  "../../../../source/rtl/substractor.v"
+verilog xil_defaultlib  "../../../../source/rtl/shift_mux.v"
+verilog xil_defaultlib  "../../../../source/rtl/RegisterMult.v"
+verilog xil_defaultlib  "../../../../source/rtl/OR_Module.v"
+verilog xil_defaultlib  "../../../../source/rtl/Mux_3x1.v"
+verilog xil_defaultlib  "../../../../source/rtl/Deco_Round_Mult.v"
+verilog xil_defaultlib  "../../../../source/rtl/Comparator_Less.v"
+verilog xil_defaultlib  "../../../../source/rtl/Comparator_Equal.v"
+verilog xil_defaultlib  "../../../../source/rtl/add_sub_carry_out.v"
+verilog xil_defaultlib  "../../../../source/rtl/RegisterAdd.v"
+verilog xil_defaultlib  "../../../../source/rtl/Sgf_Multiplication.v"
+verilog xil_defaultlib  "../../../../source/rtl/Zero_InfMult_Unit.v"
+verilog xil_defaultlib  "../../../../source/rtl/XOR_M.v"
+verilog xil_defaultlib  "../../../../source/rtl/Tenth_Phase.v"
+verilog xil_defaultlib  "../../../../source/rtl/Round_decoder_M.v"
+verilog xil_defaultlib  "../../../../source/rtl/FSM_Mult_Function.v"
+verilog xil_defaultlib  "../../../../source/rtl/First_Phase_M.v"
+verilog xil_defaultlib  "../../../../source/rtl/Exp_operation_m.v"
+verilog xil_defaultlib  "../../../../source/rtl/Barrel_Shifter_M.v"
+verilog xil_defaultlib  "../../../../source/rtl/Adder_Round.v"
+verilog xil_defaultlib  "../../../../source/rtl/FPU_Multiplication_Function.v"
+verilog xil_defaultlib  "../../../Kat_FPGA.srcs/sim_1/imports/new/Testbench_FPU_multiplication.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

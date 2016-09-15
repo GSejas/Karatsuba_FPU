@@ -1,4 +1,8 @@
-`timescale 1ns / 1ps
+`ifdef PRESTO
+	always $display("Instanciacion: Mult de Francis, SW: %d",SW);
+`endif`ifdef PRESTO
+	always $display("Instanciacion: Mult de Francis, SW: %d",SW);
+`endif`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -29,5 +33,7 @@ module substractor
     
         always @*
             Data_S_o <= Data_A_i - Data_B_i;
-
+`ifdef PRESTO
+	always $display("Instanciacion: substractor de Francis, SW: %d",W);
+`endif
 endmodule

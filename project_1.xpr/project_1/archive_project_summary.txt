@@ -1,0 +1,270 @@
+***************************************************************************************
+*                      PROJECT ARCHIVE SUMMARY REPORT
+*
+*                      (archive_project_summary.txt)
+*
+*  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ABOUT THE PROJECT DATA THAT
+*  WAS ARCHIVED FOR THE CURRENT PROJECT
+*
+* The report is divided into following five sections:-
+*
+* Section (1) - PROJECT INFORMATION
+*  This section provides the details of the current project that was archived
+*
+* Section (2) - INCLUDED/EXCLUDED RUNS
+*  This section summarizes the list of design runs for which the results were included
+*  or excluded from the archive
+*
+* Section (3) - ARCHIVED SOURCES
+*  This section summarizes the list of files that were added to the archive
+*
+* Section (3.1) - INCLUDE FILES
+*  This section summarizes the list of 'include' files that were added to the archive
+*
+* Section (3.1.1) - INCLUDE_DIRS SETTINGS
+*  This section summarizes the 'verilog include directory' path settings, if any
+*
+* Section (3.2) - REMOTE SOURCES
+*  This section summarizes the list of referenced 'remote' files that were 'imported'
+*  into the archived project
+*
+* Section (3.3) - SOURCES SUMMARY
+*  This section summarizes the list of all the files present in the archive
+*
+* Section (3.4) - REMOTE IP DEFINITIONS
+*  This section summarizes the list of all the remote IP's present in the archive
+*
+* Section (4) - JOURNAL/LOG FILES
+*  This section summarizes the list of journal/log files that were added to the archive
+*
+* Section (5) - CONFIGURATION SETTINGS/FILES
+*  This section summarizes the configuration settings/files that were added to the archive
+*
+***************************************************************************************
+
+Section (1) - PROJECT INFORMATION
+---------------------------------
+Name      = project_1
+Directory = /home/jorge/Documents/Proyecto_Lopez/project_1
+
+WARNING: Please verify the compiled library directory path for the following property in the
+         current project. The path may point to an invalid location after opening this project.
+         This could happen if the project was unarchived in a location where this path is not
+         accessible. To resolve this issue, please set this property with the desired path
+         before launching simulation:-
+
+Property = compxlib.xsim_compiled_library_dir
+Path     = 
+
+Section (2) - INCLUDED RUNS
+---------------------------
+The run results were included for the following runs in the archived project:-
+
+<synth_1>
+<synth_2>
+<synth_3>
+<synth_4>
+<synth_5>
+<synth_6>
+<synth_7>
+<synth_8>
+<synth_9>
+<impl_1>
+<impl_2>
+<impl_3>
+
+Section (3) - ARCHIVED SOURCES
+------------------------------
+The following sub-sections describes the list of sources that were archived for the current project:-
+
+Section (3.1) - INCLUDE FILES
+-----------------------------
+List of referenced 'RTL Include' files that were 'imported' into the archived project:-
+
+None
+
+Section (3.1.1) - INCLUDE_DIRS SETTINGS
+---------------------------------------
+List of the "INCLUDE_DIRS" fileset property settings that may or may not be applicable in the archived
+project, since most the 'RTL Include' files referenced in the original project were 'imported' into the
+archived project.
+
+<sources_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+<sim_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+Section (3.2) - REMOTE SOURCES
+------------------------------
+List of referenced 'remote' design files that were 'imported' into the archived project:-
+
+<constrs_1>
+None
+
+<sim_1>
+/home/jorge/Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Comparators.v
+/home/jorge/Floating-Point-Unit/FPU_Add_subt_Mult/RTL/Add-Subt/Greater_Comparator.v
+
+<sources_1>
+None
+
+Section (3.3) - SOURCES SUMMARY
+-------------------------------
+List of all the source files present in the archived project:-
+
+<sources_1>
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/MultiplexTxT.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Oper_Start_In.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/xor_tri.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/exp_operation.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/add_sub_carry_out.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Rotate_Mux_Array.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_Array.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Barrel_shifter.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Add_Subt.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Priority_Codec_32.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Priority_Codec_64.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Round_Sgf_Dec.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Tenth_Phase.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_3x1.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FSM_Add_Subtract.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/TXTVerification/Hexadecimal_B.txt
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/TXTVerification/Hexadecimal_A.txt
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/First_Phase_M.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/RegisterMult.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Comparator_Equal.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Zero_InfMult_Unit.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Exp_operation_m.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/FPU_Multiplication_Function.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/XOR_M.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Sgf_Multiplication.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/adder.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/substractor.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/multiplier.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Round_decoder_M.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Deco_Round_Mult.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/OR_Module.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Barrel_Shifter_M.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Adder_Round.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/FSM_Mult_Function.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Transmisor_TX.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Transmisor.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/ROM_test.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/ReceptorRX.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Receptor.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Mux_4x1.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Uart.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Mux_8x1.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/FSM_test.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/UBuffer.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/cont_test.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Coun_Baud.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/FPU_UART.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FPU_Add_Subtract_Function.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/LZD.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Greater_Comparator.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparators.v
+./project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator_Less.v
+
+<constrs_1>
+./project_1.srcs/constrs_1/imports/RTL/Nexys4_Master.xdc
+
+<sim_1>
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_Array.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/MultiplexTxT.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Oper_Start_In.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/exp_operation.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Rotate_Mux_Array.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Barrel_shifter.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/add_sub_carry_out.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/xor_tri.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Priority_Codec_32.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Combinational_Logic_LZA.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Round_Sgf_Dec.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_3x1.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/LZA.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Full_Adder_PG_1b.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Priority_Codec_64.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Tenth_Phase.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Add_Subt.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Full_Adder_PG.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FSM_Add_Subtract.v
+./project_1.srcs/sim_1/new/Testbench_FPU_Add_Subt.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/TXTVerification/Hexadecimal_B.txt
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/TXTVerification/Hexadecimal_A.txt
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/FPU_2.0/Testbench_FPU_Add_Subt_behav.wcfg
+./project_1.srcs/sim_1/new/Testbench_Sgf_multiplication.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Sgf_Multiplication.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/adder.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/substractor.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/RegisterMult.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/multiplier.v
+./project_1.srcs/sim_1/new/Testbench_FPU_multiplication.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Comparator_Equal.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Barrel_Shifter_M.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/FPU_Multiplication_Function.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Exp_operation_m.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Round_decoder_M.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/First_Phase_M.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Comparator_Less.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/XOR_M.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Adder_Round.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Deco_Round_Mult.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/OR_Module.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Zero_InfMult_Unit.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/FSM_Mult_Function.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Sign_result_m.v
+./project_1.srcs/sim_1/new/Testbench_uart.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Transmisor_TX.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Transmisor.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/ROM_test.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/ReceptorRX.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Receptor.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Mux_4x1.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Uart.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Mux_8x1.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/FSM_test.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/UBuffer.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/cont_test.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/Coun_Baud.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/FPU_UART.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FPU_Add_Subtract_Function.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Test_comb_LZA.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comb_1b.v
+./project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/LZD.v
+./project_1.srcs/sim_1/imports/Add-Subt/Comparators.v
+./project_1.srcs/sim_1/imports/Add-Subt/Greater_Comparator.v
+
+Section (3.4) - REMOTE IP DEFINITIONS
+-------------------------------------
+List of all the remote IP's present in the archived project:-
+
+<sources_1>
+None
+
+Section (4) - JOURNAL/LOG FILES
+-------------------------------
+List of Journal/Log files that were added to the archived project:-
+
+Source File = /home/jorge/vivado.jou
+Archived Location = ./project_1/vivado.jou
+
+Source File = /home/jorge/vivado.log
+Archived Location = ./project_1/vivado.log
+
+Section (5) - CONFIGURATION SETTINGS/FILES
+------------------------------------------
+List of configuration settings/files that were added to the archived project:-
+
+

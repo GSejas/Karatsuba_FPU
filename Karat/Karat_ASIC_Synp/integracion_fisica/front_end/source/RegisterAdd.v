@@ -35,5 +35,7 @@ module RegisterAdd
 			Q <= D;
 		else
 			Q <= Q;
-
+`ifdef PRESTO
+	always $display("Instanciacion: RegisterAdd de Francis, W: %d",W);
+`endif
 endmodule

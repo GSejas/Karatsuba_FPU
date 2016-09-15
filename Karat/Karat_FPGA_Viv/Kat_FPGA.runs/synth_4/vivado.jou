@@ -2,11 +2,11 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Fri Sep 09 10:52:11 2016
-# Process ID: 46988
+# Start of session at: Wed Sep 14 11:21:23 2016
+# Process ID: 52440
 # Current directory: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_4
-# Command line: vivado.exe -log RecursiveKOA.vds -mode batch -messageDb vivado.pb -notrace -source RecursiveKOA.tcl
-# Log file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_4/RecursiveKOA.vds
+# Command line: vivado.exe -log FPU_Multiplication_Function_v2.vds -mode batch -messageDb vivado.pb -notrace -source FPU_Multiplication_Function_v2.tcl
+# Log file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_4/FPU_Multiplication_Function_v2.vds
 # Journal file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_4\vivado.jou
 #-----------------------------------------------------------
-source RecursiveKOA.tcl -notrace
+source FPU_Multiplication_Function_v2.tcl -notrace

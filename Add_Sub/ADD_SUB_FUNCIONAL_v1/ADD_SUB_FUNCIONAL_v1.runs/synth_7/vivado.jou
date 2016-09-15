@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sun Sep 11 21:28:17 2016
+# Process ID: 4208
+# Current directory: /home/jorge/Documents/Proyecto_Lopez/project_1/project_1.runs/synth_7
+# Command line: vivado -log FPU_Add_Subtract_Function.vds -mode batch -messageDb vivado.pb -notrace -source FPU_Add_Subtract_Function.tcl
+# Log file: /home/jorge/Documents/Proyecto_Lopez/project_1/project_1.runs/synth_7/FPU_Add_Subtract_Function.vds
+# Journal file: /home/jorge/Documents/Proyecto_Lopez/project_1/project_1.runs/synth_7/vivado.jou
+#-----------------------------------------------------------
+source FPU_Add_Subtract_Function.tcl -notrace

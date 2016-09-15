@@ -1,0 +1,812 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed Sep 14 11:21:23 2016
+# Process ID: 52440
+# Current directory: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_4
+# Command line: vivado.exe -log FPU_Multiplication_Function_v2.vds -mode batch -messageDb vivado.pb -notrace -source FPU_Multiplication_Function_v2.tcl
+# Log file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_4/FPU_Multiplication_Function_v2.vds
+# Journal file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.runs/synth_4\vivado.jou
+#-----------------------------------------------------------
+source FPU_Multiplication_Function_v2.tcl -notrace
+Command: synth_design -top FPU_Multiplication_Function_v2 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11108 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 305.754 ; gain = 99.008
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'FPU_Multiplication_Function_v2' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/FPU_Multiplication_Function_v2.v:23]
+	Parameter W bound to: 32 - type: integer 
+	Parameter EW bound to: 8 - type: integer 
+	Parameter SW bound to: 23 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FSM_Mult_Function' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/FSM_Mult_Function.v:21]
+	Parameter start bound to: 4'b0000 
+	Parameter load_operands bound to: 4'b0001 
+	Parameter extra64_1 bound to: 4'b0010 
+	Parameter add_exp bound to: 4'b0011 
+	Parameter subt_bias bound to: 4'b0100 
+	Parameter mult_overf bound to: 4'b0101 
+	Parameter mult_norn bound to: 4'b0110 
+	Parameter mult_no_norn bound to: 4'b0111 
+	Parameter round_case bound to: 4'b1000 
+	Parameter adder_round bound to: 4'b1001 
+	Parameter round_norm bound to: 4'b1010 
+	Parameter final_load bound to: 4'b1011 
+	Parameter ready_flag bound to: 4'b1100 
+INFO: [Synth 8-256] done synthesizing module 'FSM_Mult_Function' (1#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/FSM_Mult_Function.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized0' (2#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'First_Phase_M' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/First_Phase_M.v:21]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'RegisterMult' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v:21]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterMult' (3#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v:21]
+INFO: [Synth 8-256] done synthesizing module 'First_Phase_M' (4#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/First_Phase_M.v:21]
+INFO: [Synth 8-638] synthesizing module 'Zero_InfMult_Unit' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Zero_InfMult_Unit.v:21]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Comparator_Equal' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Equal.v:26]
+	Parameter S bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Comparator_Equal' (5#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Equal.v:26]
+INFO: [Synth 8-256] done synthesizing module 'Zero_InfMult_Unit' (6#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Zero_InfMult_Unit.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC' (7#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Mux_3x1' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Mux_3x1.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Mux_3x1' (8#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Mux_3x1.v:23]
+INFO: [Synth 8-638] synthesizing module 'Exp_Operation_m' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Exp_operation_m.v:23]
+	Parameter EW bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'add_sub_carry_out' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/add_sub_carry_out.v:23]
+	Parameter W bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'add_sub_carry_out' (9#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/add_sub_carry_out.v:23]
+INFO: [Synth 8-638] synthesizing module 'RegisterMult__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v:21]
+	Parameter W bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterMult__parameterized0' (9#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterMult__parameterized1' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterMult__parameterized1' (9#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v:21]
+INFO: [Synth 8-638] synthesizing module 'Comparator_Less' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Less.v:21]
+	Parameter W bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Comparator_Less' (10#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Comparator_Less.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterMult__parameterized2' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterMult__parameterized2' (10#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v:21]
+INFO: [Synth 8-256] done synthesizing module 'Exp_Operation_m' (11#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Exp_operation_m.v:23]
+INFO: [Synth 8-638] synthesizing module 'XOR_M' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/XOR_M.v:21]
+INFO: [Synth 8-256] done synthesizing module 'XOR_M' (12#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/XOR_M.v:21]
+INFO: [Synth 8-638] synthesizing module 'RecursiveKOA' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RecursiveKOA.v:23]
+	Parameter SW bound to: 24 - type: integer 
+	Parameter Opt_FPGA_ASIC bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_FPGA' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_FPGA.v:23]
+	Parameter SW bound to: 24 - type: integer 
+	Parameter half bound to: 12 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'KOA_FPGA__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_FPGA.v:23]
+	Parameter SW bound to: 12 - type: integer 
+	Parameter half bound to: 6 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier_combinational.v:23]
+	Parameter W bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C' (13#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_FPGA__parameterized0' (14#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_FPGA.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_FPGA__parameterized1' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_FPGA.v:23]
+	Parameter SW bound to: 12 - type: integer 
+	Parameter half bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'KOA_FPGA__parameterized1' (14#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_FPGA.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder' (15#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'KOA_FPGA__parameterized2' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_FPGA.v:23]
+	Parameter SW bound to: 13 - type: integer 
+	Parameter half bound to: 6 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'multiplier_C__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier_combinational.v:23]
+	Parameter W bound to: 13 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier_C__parameterized0' (15#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/multiplier_combinational.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_FPGA__parameterized2' (15#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_FPGA.v:23]
+INFO: [Synth 8-638] synthesizing module 'substractor' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/substractor.v:23]
+	Parameter W bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'substractor' (16#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/substractor.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 48 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized0' (16#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'KOA_FPGA' (16#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/KOA_FPGA.v:23]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized1' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+	Parameter W bound to: 48 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized1' (16#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+INFO: [Synth 8-256] done synthesizing module 'RecursiveKOA' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RecursiveKOA.v:23]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized0' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Barrel_Shifter_M' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Barrel_Shifter_M.v:23]
+	Parameter SW bound to: 24 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'shift_mux_array' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/shift_mux.v:23]
+	Parameter SWR bound to: 24 - type: integer 
+	Parameter LEVEL bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized1' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized1' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized2' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized2' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized3' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized3' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized4' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized4' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized5' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized5' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized6' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized6' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized7' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized7' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized8' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized8' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized9' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized9' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized10' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized10' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized11' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized11' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized12' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized12' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized13' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized13' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized14' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized14' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized15' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized15' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized16' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized16' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized17' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized17' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized18' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized18' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized19' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized19' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized20' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized20' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized21' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized21' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized22' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized22' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized23' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized23' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized24' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized24' (17#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-256] done synthesizing module 'shift_mux_array' (18#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/shift_mux.v:23]
+INFO: [Synth 8-638] synthesizing module 'RegisterMult__parameterized3' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v:21]
+	Parameter W bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterMult__parameterized3' (18#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterMult.v:21]
+INFO: [Synth 8-256] done synthesizing module 'Barrel_Shifter_M' (19#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Barrel_Shifter_M.v:23]
+INFO: [Synth 8-638] synthesizing module 'Round_decoder_M' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Round_decoder_M.v:23]
+	Parameter SW bound to: 23 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'OR_Module' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/OR_Module.v:21]
+	Parameter W bound to: 23 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'OR_Module' (20#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/OR_Module.v:21]
+INFO: [Synth 8-638] synthesizing module 'Deco_Round_Mult' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Deco_Round_Mult.v:21]
+INFO: [Synth 8-256] done synthesizing module 'Deco_Round_Mult' (21#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Deco_Round_Mult.v:21]
+INFO: [Synth 8-256] done synthesizing module 'Round_decoder_M' (22#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Round_decoder_M.v:23]
+WARNING: [Synth 8-689] width (24) of port connection 'Round_Bits_i' does not match port width (23) of module 'Round_decoder_M' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/FPU_Multiplication_Function_v2.v:314]
+INFO: [Synth 8-638] synthesizing module 'Adder_Round' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Adder_Round.v:23]
+	Parameter SW bound to: 24 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'adder__parameterized1' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+	Parameter W bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder__parameterized1' (22#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/adder.v:23]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized2' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+	Parameter W bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized2' (22#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Round' (23#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Adder_Round.v:23]
+INFO: [Synth 8-638] synthesizing module 'Tenth_Phase' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Tenth_Phase.v:21]
+	Parameter W bound to: 32 - type: integer 
+	Parameter EW bound to: 8 - type: integer 
+	Parameter SW bound to: 23 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Mux_3x1__parameterized0' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Mux_3x1.v:23]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Mux_3x1__parameterized0' (23#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Mux_3x1.v:23]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized25' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized25' (23#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized26' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+	Parameter W bound to: 23 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized26' (23#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized3' [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized3' (23#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/RegisterAdd.v:21]
+INFO: [Synth 8-256] done synthesizing module 'Tenth_Phase' (24#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/Tenth_Phase.v:21]
+INFO: [Synth 8-256] done synthesizing module 'FPU_Multiplication_Function_v2' (25#1) [C:/Users/jsequeira/Proyectos/Karat/source/rtl/FPU_Multiplication_Function_v2.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 343.035 ; gain = 136.289
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 343.035 ; gain = 136.289
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc]
+Finished Parsing XDC File [C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Nexys4_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FPU_Multiplication_Function_v2_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/FPU_Multiplication_Function_v2_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 648.191 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 648.191 ; gain = 441.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 648.191 ; gain = 441.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 648.191 ; gain = 441.445
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'FSM_Mult_Function'
+INFO: [Synth 8-5544] ROM "ready" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rst_int" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exp_op_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "load_6_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "load_5_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "load_4_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "load_1_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "load_0_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jsequeira/Proyectos/Karat/source/rtl/add_sub_carry_out.v:33]
+INFO: [Synth 8-5544] ROM "ctrl" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   start |                             0000 |                             0000
+           load_operands |                             0001 |                             0001
+               extra64_1 |                             0010 |                             0010
+                 add_exp |                             0011 |                             0011
+               subt_bias |                             0100 |                             0100
+              mult_overf |                             0101 |                             0101
+               mult_norn |                             0110 |                             0110
+            mult_no_norn |                             0111 |                             0111
+              round_case |                             1000 |                             1000
+             adder_round |                             1001 |                             1001
+              round_norm |                             1010 |                             1010
+              final_load |                             1011 |                             1011
+              ready_flag |                             1100 |                             1100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'FSM_Mult_Function'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 648.191 ; gain = 441.445
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     49 Bit       Adders := 1     
+	   3 Input     26 Bit       Adders := 2     
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 2     
+	   3 Input     10 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	               24 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+	  13 Input      2 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 24    
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module FSM_Mult_Function 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input      4 Bit        Muxes := 1     
+	  13 Input      2 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 14    
+Module RegisterAdd 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module RegisterAdd__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module RegisterMult 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module Multiplexer_AC 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module Mux_3x1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module add_sub_carry_out 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     10 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+Module RegisterMult__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 1     
+Module RegisterMult__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module RegisterMult__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module XOR_M 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 1     
+Module substractor 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     26 Bit       Adders := 1     
+Module adder__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     49 Bit       Adders := 1     
+Module RegisterAdd__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 1     
+Module Multiplexer_AC__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized9 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized10 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized11 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized12 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized13 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized14 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized15 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized16 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized17 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized18 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized19 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized20 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized21 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized22 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized23 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized24 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module RegisterMult__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+Module Deco_Round_Mult 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      1 Bit        Muxes := 1     
+Module adder__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+Module RegisterAdd__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+Module Mux_3x1__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized25 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized26 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+Module RegisterAdd__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 648.191 ; gain = 441.445
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP Sgf_operation/main_KOA/left/main/Data_S_o, operation Mode is: A*B.
+DSP Report: operator Sgf_operation/main_KOA/left/main/Data_S_o is absorbed into DSP Sgf_operation/main_KOA/left/main/Data_S_o.
+DSP Report: Generating DSP Sgf_operation/main_KOA/Subtr_1/Data_S_o0, operation Mode is: C+(D+A)*B+1.
+DSP Report: operator Sgf_operation/main_KOA/Subtr_1/Data_S_o0 is absorbed into DSP Sgf_operation/main_KOA/Subtr_1/Data_S_o0.
+DSP Report: operator Sgf_operation/main_KOA/middle/main/Data_S_o is absorbed into DSP Sgf_operation/main_KOA/Subtr_1/Data_S_o0.
+DSP Report: operator Sgf_operation/main_KOA/A_operation/Data_S_o0 is absorbed into DSP Sgf_operation/main_KOA/Subtr_1/Data_S_o0.
+DSP Report: Generating DSP Sgf_operation/main_KOA/right/main/Data_S_o, operation Mode is: A*B.
+DSP Report: operator Sgf_operation/main_KOA/right/main/Data_S_o is absorbed into DSP Sgf_operation/main_KOA/right/main/Data_S_o.
+DSP Report: Generating DSP Sgf_operation/main_KOA/Subtr_2/Data_S_o0, operation Mode is: PCIN-A:B.
+DSP Report: operator Sgf_operation/main_KOA/Subtr_2/Data_S_o0 is absorbed into DSP Sgf_operation/main_KOA/Subtr_2/Data_S_o0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 648.191 ; gain = 441.445
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 648.191 ; gain = 441.445
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++-------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                    | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|multiplier_C                   | A*B         | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier_C                   | C+(D+A)*B+1 | 12     | 13     | 26     | 12     | 26     | 0    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|multiplier_C                   | A*B         | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FPU_Multiplication_Function_v2 | PCIN-A:B    | 8      | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 648.191 ; gain = 441.445
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 648.191 ; gain = 441.445
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 663.895 ; gain = 457.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 675.492 ; gain = 468.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 688.156 ; gain = 481.410
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 688.156 ; gain = 481.410
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 688.156 ; gain = 481.410
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 688.156 ; gain = 481.410
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 688.156 ; gain = 481.410
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 688.156 ; gain = 481.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 688.156 ; gain = 481.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 688.156 ; gain = 481.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 688.156 ; gain = 481.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |    23|
+|3     |DSP48E1   |     2|
+|4     |DSP48E1_1 |     1|
+|5     |DSP48E1_2 |     1|
+|6     |LUT1      |    60|
+|7     |LUT2      |    41|
+|8     |LUT3      |     4|
+|9     |LUT4      |    58|
+|10    |LUT5      |     9|
+|11    |LUT6      |    47|
+|12    |FDCE      |   213|
+|13    |IBUF      |    70|
+|14    |OBUF      |    35|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------------------------+-----------------------------+------+
+|      |Instance                   |Module                       |Cells |
++------+---------------------------+-----------------------------+------+
+|1     |top                        |                             |   565|
+|2     |  Adder_M                  |Adder_Round                  |    54|
+|3     |    A_operation            |adder__parameterized1        |     6|
+|4     |    Add_Subt_Result        |RegisterAdd__parameterized2  |    47|
+|5     |    Add_overflow_Result    |RegisterAdd_5                |     1|
+|6     |  Barrel_Shifter_module    |Barrel_Shifter_M             |    48|
+|7     |    Output_Reg             |RegisterMult__parameterized3 |    48|
+|8     |  Exp_module               |Exp_Operation_m              |    53|
+|9     |    Oflow_A_m              |RegisterMult__parameterized1 |     3|
+|10    |    Underflow_m            |RegisterMult__parameterized2 |    24|
+|11    |    exp_add_subt_m         |add_sub_carry_out            |     8|
+|12    |    exp_result_m           |RegisterMult__parameterized0 |    18|
+|13    |  FS_Module                |FSM_Mult_Function            |    26|
+|14    |  Operands_load_reg        |First_Phase_M                |    90|
+|15    |    XMRegister             |RegisterMult                 |    39|
+|16    |    YMRegister             |RegisterMult_4               |    51|
+|17    |  Sel_A                    |RegisterAdd                  |     3|
+|18    |  Sel_B                    |RegisterAdd__parameterized0  |    19|
+|19    |  Sel_C                    |RegisterAdd_0                |     1|
+|20    |  Sgf_operation            |RecursiveKOA                 |   132|
+|21    |    finalreg               |RegisterAdd__parameterized1  |    54|
+|22    |    main_KOA               |KOA_FPGA                     |    78|
+|23    |      Final                |adder__parameterized0        |    26|
+|24    |      B_operation          |adder                        |     3|
+|25    |      Subtr_1              |substractor                  |    25|
+|26    |      Subtr_2              |substractor_2                |     1|
+|27    |      left                 |KOA_FPGA__parameterized0     |    18|
+|28    |        main               |multiplier_C_3               |    18|
+|29    |      right                |KOA_FPGA__parameterized1     |     5|
+|30    |        main               |multiplier_C                 |     5|
+|31    |  Zero_Result_Detect       |Zero_InfMult_Unit            |     1|
+|32    |    Zero_Info_Mult         |RegisterAdd_1                |     1|
+|33    |  final_result_ieee_Module |Tenth_Phase                  |    32|
+|34    |    Final_Result_IEEE      |RegisterAdd__parameterized3  |    32|
++------+---------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 688.156 ; gain = 481.410
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 688.156 ; gain = 155.363
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 688.156 ; gain = 481.410
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 97 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+161 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 688.156 ; gain = 463.078
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 688.156 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 14 11:22:16 2016...

@@ -23,9 +23,9 @@
 module FPU_Multiplication_Function_v2	
 
 //SINGLE PRECISION PARAMETERS
-	/*# (parameter W = 32, parameter EW = 8, parameter SW = 23) // */
+	# (parameter W = 32, parameter EW = 8, parameter SW = 23) // */
 //DOUBLE PRECISION PARAMETERS
-	# (parameter W = 64, parameter EW = 11, parameter SW = 52) // */
+//	# (parameter W = 64, parameter EW = 11, parameter SW = 52) // */
 	(
 		input wire clk,
 		input wire rst,

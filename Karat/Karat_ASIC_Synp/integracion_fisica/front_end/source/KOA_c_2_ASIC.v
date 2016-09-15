@@ -29,9 +29,9 @@
 
 module KOA_c_2
 
-    ´ifdef SINGLE
-        #(parameter SW = 24, parameter precision = 0, parameter depth = 4)
-    ´else 
+    
+  //#(parameter SW = 24, parameter precision = 0, parameter depth = 4)
+ 
     #(parameter SW = 54, parameter precision = 1, parameter depth = 4)
 	(
     input wire [SW-1:0] Data_A_i,
@@ -143,6 +143,9 @@ generate
            
             
         end
+`ifdef PRESTO
+    always $display("Instanciacion Par, SW: %d",SW);
+`endif
     1:begin  : K5
         
 
@@ -203,7 +206,9 @@ generate
              //Final assignation
           assign sgf_result_o = Result[2*SW-1:0];
            
-
+`ifdef PRESTO
+    always $display("Instanciacion Impar, SW: %d, nivel = ",SW);
+`endif
             
         end
     endcase

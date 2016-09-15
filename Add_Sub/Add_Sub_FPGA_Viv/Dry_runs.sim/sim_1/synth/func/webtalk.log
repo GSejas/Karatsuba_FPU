@@ -2,12 +2,12 @@
 # Webtalk v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Fri Sep 09 11:35:28 2016
-# Process ID: 50164
+# Start of session at: Mon Sep 12 02:51:51 2016
+# Process ID: 47124
 # Current directory: C:/Users/jsequeira/Proyectos/Add_Sub/Add_Sub_FPGA_Viv/Dry_runs.sim/sim_1/synth/func
 # Command line: wbtcv.exe -mode batch -source C:/Users/jsequeira/Proyectos/Add_Sub/Add_Sub_FPGA_Viv/Dry_runs.sim/sim_1/synth/func/xsim.dir/Testbench_FPU_Add_Subt_func_synth/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/jsequeira/Proyectos/Add_Sub/Add_Sub_FPGA_Viv/Dry_runs.sim/sim_1/synth/func/webtalk.log
 # Journal file: C:/Users/jsequeira/Proyectos/Add_Sub/Add_Sub_FPGA_Viv/Dry_runs.sim/sim_1/synth/func\webtalk.jou
 #-----------------------------------------------------------
 source C:/Users/jsequeira/Proyectos/Add_Sub/Add_Sub_FPGA_Viv/Dry_runs.sim/sim_1/synth/func/xsim.dir/Testbench_FPU_Add_Subt_func_synth/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri Sep 09 11:35:28 2016...
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 12 02:51:52 2016...
