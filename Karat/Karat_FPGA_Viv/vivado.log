@@ -28,3 +28,66 @@ INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
 open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 821.164 ; gain = 0.000
 update_compile_order -fileset sources_1
+current_project Kat_FPGA
+update_compile_order -fileset sources_1
+current_project CORDIC_Jef
+archive_project C:/Users/jsequeira/Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/CORDIC_Jef.xpr.zip -temp_dir C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/.Xil/Vivado-65056-RDS1 -force
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/.Xil/Vivado-65056-RDS1' for archiving project
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/jsequeira/Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/CORDIC_Jef'
+Scanning sources...
+Finished scanning sources
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/.Xil/Vivado-65056-RDS1/PrjAr/_X_'.
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+WARNING: [Coretcl 2-232] Detected issues while importing sources. Closing temporary saved as project...
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/.Xil/Vivado-65056-RDS1/PrjAr/_X_/CORDIC_Jef.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 16 10:09:53 2016...
+ERROR: [Coretcl 2-230] (archive_project): Received exception while importing sources. Please check for any errors reported in the Tcl Console.
+archive_project C:/Users/jsequeira/Proyectos/CORDIC_Jef.xpr.zip -temp_dir C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/.Xil/Vivado-65056-RDS1 -force -include_config_settings
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/.Xil/Vivado-65056-RDS1' for archiving project
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/jsequeira/Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/CORDIC_Jef'
+Scanning sources...
+Finished scanning sources
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/.Xil/Vivado-65056-RDS1/PrjAr/_X_'.
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+WARNING: [Coretcl 2-232] Detected issues while importing sources. Closing temporary saved as project...
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/.Xil/Vivado-65056-RDS1/PrjAr/_X_/CORDIC_Jef.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 16 10:14:46 2016...
+ERROR: [Coretcl 2-230] (archive_project): Received exception while importing sources. Please check for any errors reported in the Tcl Console.
+save_project_as CORDICO C:/Users/jsequeira/Proyectos/CORDICO -force
+import_files
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+close_project
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/jsequeira/Proyectos/CORDICO/CORDICO.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 16 10:15:51 2016...

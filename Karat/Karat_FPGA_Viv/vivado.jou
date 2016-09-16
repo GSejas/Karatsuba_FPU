@@ -14,3 +14,11 @@ open_project C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.xpr
 update_compile_order -fileset sources_1
 open_project C:/Users/jsequeira/Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/CORDIC_Jef/CORDIC_Jef.xpr
 update_compile_order -fileset sources_1
+current_project Kat_FPGA
+update_compile_order -fileset sources_1
+current_project CORDIC_Jef
+archive_project C:/Users/jsequeira/Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/CORDIC_Jef.xpr.zip -temp_dir C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/.Xil/Vivado-65056-RDS1 -force
+archive_project C:/Users/jsequeira/Proyectos/CORDIC_Jef.xpr.zip -temp_dir C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/.Xil/Vivado-65056-RDS1 -force -include_config_settings
+save_project_as CORDICO C:/Users/jsequeira/Proyectos/CORDICO -force
+import_files
+close_project
