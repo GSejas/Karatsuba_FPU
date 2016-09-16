@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_7" LaunchPart="xc7a100tcsg324-1" LaunchTime="1473650895">
-  <File Type="RDS-PROPCONSTRS" Name="FPU_Add_Subtract_Function_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="FPU_Add_Subtract_Function.tcl"/>
-  <File Type="RDS-RDS" Name="FPU_Add_Subtract_Function.vds"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="FPU_Add_Subtract_Function_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="FPU_Add_Subtract_Function_timing_summary_synth.pb"/>
-  <File Type="RDS-DCP" Name="FPU_Add_Subtract_Function.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="FPU_Add_Subtract_Function_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="FPU_Add_Subtract_Function_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="FPU_Add_Subtract_Function_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="FPU_Add_Subtract_Function.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="FPU_Add_Subtract_Function_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="FPU_Add_Subtract_Function.vds"/>
+  <File Type="VDS-TIMING-PB" Name="FPU_Add_Subtract_Function_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="FPU_Add_Subtract_Function_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="FPU_Add_Subtract_Function.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v">
@@ -548,9 +548,9 @@
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Flow_AlternateRoutability" Flow="Vivado Synthesis 2016"/>
     <Step Id="synth_design">
+      <Option Id="ShregMinSize">10</Option>
       <Option Id="NoCombineLuts">1</Option>
       <Option Id="Directive">3</Option>
-      <Option Id="ShregMinSize">10</Option>
     </Step>
   </Strategy>
 </GenRun>

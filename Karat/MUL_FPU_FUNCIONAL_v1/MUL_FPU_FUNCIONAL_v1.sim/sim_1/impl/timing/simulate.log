@@ -1,4 +1,3 @@
-Vivado Simulator 2015.4
+Vivado Simulator 2016.2
 Time resolution is 1 ps
-$finish called at time : 143345 ns : File "/media/francis/Acer/Users/Francis/Documents/GitHub/Proyecto_De_Graduacion/FPU_FLM/FPU_2.0/FPU_2.0.srcs/sim_1/new/Testbench_FPU_multiplication.v" Line 119
-$finish called at time : 143345 ns : File "/media/francis/Acer/Users/Francis/Documents/GitHub/Proyecto_De_Graduacion/FPU_FLM/FPU_2.0/FPU_2.0.srcs/sim_1/new/Testbench_FPU_multiplication.v" Line 119
+$finish called at time : 143345 ns : File "/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/new/Testbench_FPU_multiplication.v" Line 119

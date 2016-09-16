@@ -1,5 +1,5 @@
 #!/bin/bash -f
-xv_path="/opt/Xilinx/Vivado/2015.4"
+xv_path="/opt/Xilinx/Vivado/2016.2"
 ExecStep()
 {
 "$@"
@@ -9,5 +9,5 @@ then
 exit $RETVAL
 fi
 }
-echo "xvlog -m64 --relax -prj Testbench_FPU_Add_Subt_vlog.prj"
-ExecStep $xv_path/bin/xvlog -m64 --relax -prj Testbench_FPU_Add_Subt_vlog.prj 2>&1 | tee compile.log
+echo "xvlog -m64 --relax -prj Testbench_FPU_multiplication_vlog.prj"
+ExecStep $xv_path/bin/xvlog -m64 --relax -prj Testbench_FPU_multiplication_vlog.prj 2>&1 | tee compile.log
