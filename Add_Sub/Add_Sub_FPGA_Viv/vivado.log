@@ -5293,3 +5293,10 @@ xilinx::designutils::write_template -verilog -template
 
 Creating verilog template for Module CORDIC_Arch2 in C:/Users/jsequeira/Proyectos/Add_Sub/Add_Sub_FPGA_Viv/CORDIC_Arch2.v
 0
+save_project_as CORDIC_FUNCIONAL_Viv C:/Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv -force
+import_files
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 15 00:55:29 2016...

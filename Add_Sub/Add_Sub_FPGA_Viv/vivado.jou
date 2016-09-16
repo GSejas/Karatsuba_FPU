@@ -135,3 +135,6 @@ close [ open C:/Users/jsequeira/Documents/Floating-Point-Unit-master/Coprocesado
 add_files -fileset sim_1 C:/Users/jsequeira/Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/CORDIC_Jef/CORDIC_Jef.srcs/sim_1/new/testbench_CORDICArch2.v
 update_compile_order -fileset sim_1
 xilinx::designutils::write_template -verilog -template
+save_project_as CORDIC_FUNCIONAL_Viv C:/Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv -force
+import_files
+update_compile_order -fileset sources_1

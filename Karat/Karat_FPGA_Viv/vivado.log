@@ -2,10 +2,10 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Mon Sep 12 11:30:01 2016
-# Process ID: 51712
+# Start of session at: Thu Sep 15 20:02:09 2016
+# Process ID: 65056
 # Current directory: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29520 C:\Users\jsequeira\Proyectos\Karat\Karat_FPGA_Viv\Kat_FPGA.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent45316 C:\Users\jsequeira\Proyectos\Karat\Karat_FPGA_Viv\Kat_FPGA.xpr
 # Log file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/vivado.log
 # Journal file: C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv\vivado.jou
 #-----------------------------------------------------------
@@ -16,43 +16,15 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
-open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 812.344 ; gain = 160.980
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 792.988 ; gain = 149.871
 update_compile_order -fileset sources_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse -scan_for_includes C:/Users/jsequeira/Proyectos/Karat/source/sim/testbench_RKOA.v
-update_compile_order -fileset sim_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse -scan_for_includes C:/Users/jsequeira/Proyectos/Karat/source/sim/Testbench_FPU_multiplication.v
-update_compile_order -fileset sim_1
-launch_simulation -mode post-synthesis -type timing
-WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.sim/sim_1/synth/timing/elaborate.log
-WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.sim/sim_1/synth/timing/ResultadoXilinxFLM.txt
-WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.sim/sim_1/synth/timing/simulate.log
-WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.sim/sim_1/synth/timing/Testbench_FPU_multiplication_time_synth.wdb
-WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.sim/sim_1/synth/timing/xelab.pb
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7a100tcsg324-1
-WARNING: [Vivado 12-628] No current design set.
-INFO: [USF-XSim-29] Writing simulation netlist file for design ''...
-INFO: [USF-XSim-90] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.sim/sim_1/synth/timing/KOA_2_time_synth.v"
-ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
-
-    while executing
-"write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.sim/sim_1/synth/timing/KOA_..."
-    ("eval" body line 1)
-    invoked from within
-"eval "write_verilog $wv_args""
-    (procedure "::tclapp::xilinx::xsim::usf_write_design_netlist" line 78)
-    invoked from within
-"::tclapp::xilinx::xsim::usf_write_design_netlist"
-    (procedure "usf_xsim_setup_simulation" line 25)
-    invoked from within
-"usf_xsim_setup_simulation"
-    (procedure "tclapp::xilinx::xsim::setup" line 19)
-    invoked from within
-"tclapp::xilinx::xsim::setup { -simset sim_1 -mode post-synthesis -type timing -run_dir C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/Kat_FPGA.sim/..."
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
-exit
-INFO: [Common 17-206] Exiting Vivado at Tue Sep 13 09:06:16 2016...
+open_project C:/Users/jsequeira/Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/CORDIC_Jef/CORDIC_Jef.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/jsequeira/Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/CORDIC_Jef'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 821.164 ; gain = 0.000
+update_compile_order -fileset sources_1
