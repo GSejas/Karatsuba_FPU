@@ -1,3 +1,13 @@
+//==================================================================================================
+//  Filename      : Testbench_FPU_multiplication.v
+//  Created On    : 2016-09-15 17:53:59
+//  Last Modified : 2016-09-16 00:01:57
+//  Revision      : 
+//
+//  Description   : 
+//
+//
+//==================================================================================================
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -19,17 +29,16 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module Testbench_FPU_multiplication();
 
 	parameter PERIOD = 10;
 
 
-	parameter W = 32;
+	/*parameter W = 32;
 	parameter EW = 8;
 	parameter SW = 23;//*/
 
-	/*parameter W = 64;
+	parameter W = 64;
 	parameter EW = 11;
 	parameter SW = 52;// */
 
@@ -53,19 +62,22 @@ module Testbench_FPU_multiplication();
 	wire ready;
 	wire [W-1:0] final_result_ieee;
 
-	FPU_Multiplication_Function #(.W(W),.EW(EW),.SW(SW)) uut(
-		.clk(clk),
-		.rst(rst),
-		.beg_FSM(beg_FSM),
-		.ack_FSM(ack_FSM),
-		.Data_MX(Data_MX),
-		.Data_MY(Data_MY),
-		.round_mode(round_mode),
-		.overflow_flag(overflow_flag),
-		.underflow_flag(underflow_flag),
-		.ready(ready),
-		.final_result_ieee(final_result_ieee)
-		);
+	
+
+        FPU_Multiplication_Function_v2 #(.W(W),.EW(EW),.SW(SW)) uut(
+        .clk(clk),
+        .rst(rst),
+        .beg_FSM(beg_FSM),
+        .ack_FSM(ack_FSM),
+        .Data_MX(Data_MX),
+        .Data_MY(Data_MY),
+        .round_mode(round_mode),
+        .overflow_flag(overflow_flag),
+        .underflow_flag(underflow_flag),
+        .ready(ready),
+        .final_result_ieee(final_result_ieee)
+        );
+
 
 	reg [W-1:0] Array_IN [0:((2**PERIOD)-1)];
     reg [W-1:0] Array_IN_2 [0:((2**PERIOD)-1)];
