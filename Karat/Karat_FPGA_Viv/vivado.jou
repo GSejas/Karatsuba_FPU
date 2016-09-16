@@ -22,3 +22,7 @@ archive_project C:/Users/jsequeira/Proyectos/CORDIC_Jef.xpr.zip -temp_dir C:/Use
 save_project_as CORDICO C:/Users/jsequeira/Proyectos/CORDICO -force
 import_files
 close_project
+close_project
+open_project C:/Users/jsequeira/Proyectos/CORDICO/CORDICO.xpr
+update_compile_order -fileset sources_1
+archive_project C:/Users/jsequeira/Proyectos/CORDICO.xpr.zip -temp_dir C:/Users/jsequeira/Proyectos/Karat/Karat_FPGA_Viv/.Xil/Vivado-65056-RDS1 -force -include_config_settings
