@@ -4,10 +4,11 @@ function grapgresult(typ)
   Teorico=load("Decimal_R.txt")
   if (typ==0)
     Exp_FLM=load("FLMvsTeorico.txt")
-    Exp_DRV=load("FLMvsDRV.txt")
-    h1=figure();
-    plot(n,Exp_FLM,'.b',n,Exp_DRV,'r');
-    axis ([1, 500 ,0, 0.0005], "normal");
+    %Exp_DRV=load("FLMvsDRV.txt")
+    %h1=figure();
+    plot(n,Exp_FLM,'.b');
+    %plot(n,Exp_FLM,'.b',n,Exp_DRV,'r');
+    %axis ([1, 500 ,0, 0.0005], "normal");
     xlabel ("n");
     ylabel ("Porcentaje error");
     legend ("Teorico", "Primera version");

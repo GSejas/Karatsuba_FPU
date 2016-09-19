@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1473670435">
-  <File Type="RDS-PROPCONSTRS" Name="CORDIC_Arch2_drc_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="CORDIC_Arch2_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="CORDIC_Arch2_timing_summary_synth.rpt"/>
   <File Type="PA-TCL" Name="CORDIC_Arch2.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="CORDIC_Arch2_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="CORDIC_Arch2.vds"/>
   <File Type="RDS-UTIL" Name="CORDIC_Arch2_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="CORDIC_Arch2_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="CORDIC_Arch2.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="CORDIC_Arch2_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="CORDIC_Arch2_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../project_1.xpr/project_1/project_1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v">
@@ -1050,9 +1050,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

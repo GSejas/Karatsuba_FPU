@@ -1,0 +1,1 @@
+-wto "661f593270664d72ac16119d9a408109" --debug "typical" --relax --mt "8" -d "RMODE11=1" -d "SINGLE=1" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "CORDIC_Arch3_behav" "xil_defaultlib.CORDIC_Arch3" "xil_defaultlib.glbl" -log "elaborate.log" 

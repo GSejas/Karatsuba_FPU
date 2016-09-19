@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Sep 13 09:29:01 2016
+# Process ID: 58336
+# Current directory: C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.sim/sim_1/synth/func
+# Command line: wbtcv.exe -mode batch -source C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.sim/sim_1/synth/func/xsim.dir/Testbench_FPU_Add_Subt_func_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.sim/sim_1/synth/func/webtalk.log
+# Journal file: C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.sim/sim_1/synth/func\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/jsequeira/Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.sim/sim_1/synth/func/xsim.dir/Testbench_FPU_Add_Subt_func_synth/webtalk/xsim_webtalk.tcl -notrace

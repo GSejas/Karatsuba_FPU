@@ -1,5 +1,19 @@
+//==================================================================================================
+//  Filename      : CORDIC_Arch2.v
+//  Created On    : 2016-09-16 10:43:46
+//  Last Modified : 2016-09-18 13:11:43
+//  Revision      : 
+//  Author        : Jorge Sequeira Rojas
+//  Company       : Instituto Tecnologico de Costa Rica
+//  Email         : jsequeira@gmail.com
+//
+//  Description   : 
+//
+//
+//==================================================================================================
 `timescale 1ns / 1ps
 
+    
 module CORDIC_Arch2 #(parameter W = 32, parameter EW = 8, parameter SW = 23, parameter SWR=26, parameter EWR = 5)//*/
 /*#(parameter W = 64, parameter EW = 11, parameter SW = 52, parameter SWR = 55, parameter EWR = 6) //-- Double Precision */
 (
@@ -12,6 +26,7 @@ input wire operation,					//	Señal que indica si se realiza la operacion seno(1
 
 input wire [W-1:0] data_in,             //	Dato de entrada, contiene el angulo que se desea calcular en radianes.
 input wire [1:0] shift_region_flag,     //	Señal que indica si el ángulo a calcular esta fuera del rango de calculo del algoritmo CORDIC.
+input wire [1:0] r_mode,
 
 //Output Signals
 output wire ready_cordic,                //	Señal de salida que indica que se ha completado el calculo del seno/coseno.
@@ -23,7 +38,6 @@ output wire [W-1:0] data_output          //	Bus de datos con el valor final del 
 localparam d_var = 0;				       //	Valor por defecto que se le carga al contador de variables.
 localparam d_iter = 0;                  //	Valor por defecto que se le carga al contador de iteraciones.
 localparam mode = 1'b0;
-localparam r_mode = 2'b00;
 localparam iter_bits = 4;                  //Modificar valor para obtener diferente cantidad de iteraciones; ejem= 3=8iter, 4=16iter. etc
 
 wire [W-1:0] x0,y0;
