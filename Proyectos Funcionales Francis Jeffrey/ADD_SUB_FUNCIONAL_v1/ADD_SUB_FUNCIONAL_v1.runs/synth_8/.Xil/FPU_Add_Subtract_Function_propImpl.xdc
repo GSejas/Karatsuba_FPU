@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:/home/jorge/Documents/Proyecto_Lopez/project_1/project_1.srcs/constrs_1/imports/RTL/Nexys4_Master.xdc rfile:../../../project_1.srcs/constrs_1/imports/RTL/Nexys4_Master.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E3 [get_ports clk]
+set_property src_info {type:XDC file:1 line:194 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E16 [get_ports rst]

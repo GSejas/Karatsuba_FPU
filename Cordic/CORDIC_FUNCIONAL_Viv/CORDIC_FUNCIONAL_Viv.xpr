@@ -10,12 +10,12 @@
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
-    <Option Name="CompiledLibDirModelSim" Val="$PPRDIR/../../../../../../../Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv/CORDIC_FUNCIONAL_Viv.cache/compile_simlib/modelsim"/>
-    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../../../../../../Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv/CORDIC_FUNCIONAL_Viv.cache/compile_simlib/questa"/>
-    <Option Name="CompiledLibDirIES" Val="$PPRDIR/../../../../../../../Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv/CORDIC_FUNCIONAL_Viv.cache/compile_simlib/ies"/>
-    <Option Name="CompiledLibDirVCS" Val="$PPRDIR/../../../../../../../Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv/CORDIC_FUNCIONAL_Viv.cache/compile_simlib/vcs"/>
-    <Option Name="CompiledLibDirRiviera" Val="$PPRDIR/../../../../../../../Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv/CORDIC_FUNCIONAL_Viv.cache/compile_simlib/riviera"/>
-    <Option Name="CompiledLibDirActivehdl" Val="$PPRDIR/../../../../../../../Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv/CORDIC_FUNCIONAL_Viv.cache/compile_simlib/activehdl"/>
+    <Option Name="CompiledLibDirModelSim" Val="$PPRDIR/../../../../../../../../../../Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv/CORDIC_FUNCIONAL_Viv.cache/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../../../../../../../../../Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv/CORDIC_FUNCIONAL_Viv.cache/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PPRDIR/../../../../../../../../../../Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv/CORDIC_FUNCIONAL_Viv.cache/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="$PPRDIR/../../../../../../../../../../Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv/CORDIC_FUNCIONAL_Viv.cache/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="$PPRDIR/../../../../../../../../../../Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv/CORDIC_FUNCIONAL_Viv.cache/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="$PPRDIR/../../../../../../../../../../Users/jsequeira/Proyectos/Cordic/CORDIC_FUNCIONAL_Viv/CORDIC_FUNCIONAL_Viv.cache/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
@@ -42,29 +42,8 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_64bits.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_64bits.v"/>
-          <Attr Name="ImportTime" Val="1473744647"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_32bits.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_32bits.v"/>
-          <Attr Name="ImportTime" Val="1473744647"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Simple_Subt.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Simple_Subt.v"/>
           <Attr Name="ImportTime" Val="1473670134"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -74,7 +53,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/sign_inverter.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/sign_inverter.v"/>
           <Attr Name="ImportTime" Val="1473670134"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -84,7 +62,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Op_Select.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Op_Select.v"/>
           <Attr Name="ImportTime" Val="1473670134"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -94,7 +71,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_3x1_b.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_3x1_b.v"/>
           <Attr Name="ImportTime" Val="1473670134"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -104,7 +80,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_2x1.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_2x1.v"/>
           <Attr Name="ImportTime" Val="1473670134"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -112,9 +87,26 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_64bits.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_64bits.v"/>
+          <Attr Name="ImportTime" Val="1473744647"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_32bits.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_32bits.v"/>
+          <Attr Name="ImportTime" Val="1473744647"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v"/>
           <Attr Name="ImportTime" Val="1473670134"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -124,7 +116,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/counter_up.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/counter_up.v"/>
           <Attr Name="ImportTime" Val="1473670134"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -134,7 +125,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/counter_d.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/counter_d.v"/>
           <Attr Name="ImportTime" Val="1473670134"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -144,7 +134,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/CORDIC_FSM_v2.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/CORDIC_FSM_v2.v"/>
           <Attr Name="ImportTime" Val="1473740823"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -154,7 +143,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/CORDIC_Arch2.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/CORDIC_Arch2.v"/>
           <Attr Name="ImportTime" Val="1473740881"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -262,6 +250,26 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/NaN_mod_64.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/NaN_mod_64.v"/>
+          <Attr Name="ImportTime" Val="1473670134"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/NaN_mod_32.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/NaN_mod_32.v"/>
+          <Attr Name="ImportTime" Val="1473670134"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_Array.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -287,6 +295,26 @@
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/MultiplexTxT.v"/>
           <Attr Name="ImportTime" Val="1473708146"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/demux_1x3.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/demux_1x3.v"/>
+          <Attr Name="ImportTime" Val="1473670134"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/deco_op.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/deco_op.v"/>
+          <Attr Name="ImportTime" Val="1473670134"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -372,6 +400,16 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/FPU_Interface.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/FPU_Interface.v"/>
+          <Attr Name="ImportTime" Val="1473670134"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/exp_operation.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -412,56 +450,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/NaN_mod_64.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/NaN_mod_64.v"/>
-          <Attr Name="ImportTime" Val="1473670134"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/NaN_mod_32.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/NaN_mod_32.v"/>
-          <Attr Name="ImportTime" Val="1473670134"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/demux_1x3.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/demux_1x3.v"/>
-          <Attr Name="ImportTime" Val="1473670134"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/deco_op.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/deco_op.v"/>
-          <Attr Name="ImportTime" Val="1473670134"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/FPU_Interface.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/FPU_Interface.v"/>
-          <Attr Name="ImportTime" Val="1473670134"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_sincos_64.txt">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_sincos_64.txt"/>
@@ -476,6 +464,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="CORDIC_Arch2"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -487,11 +476,11 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/imports/Sim/CORDIC_FSM_tb.v">
+      <File Path="$PSRCDIR/sim_1/new/testbench_CORDICArch2.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/Sim/CORDIC_FSM_tb.v"/>
-          <Attr Name="ImportTime" Val="1473514083"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/CORDIC_Jef/CORDIC_Jef.srcs/sim_1/new/testbench_CORDICArch2.v"/>
+          <Attr Name="ImportTime" Val="1473780391"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -517,11 +506,11 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/testbench_CORDICArch2.v">
+      <File Path="$PSRCDIR/sim_1/imports/Sim/CORDIC_FSM_tb.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/CORDIC_Jef/CORDIC_Jef.srcs/sim_1/new/testbench_CORDICArch2.v"/>
-          <Attr Name="ImportTime" Val="1473780391"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/Sim/CORDIC_FSM_tb.v"/>
+          <Attr Name="ImportTime" Val="1473514083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -529,6 +518,8 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="CORDIC_Arch2"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>

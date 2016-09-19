@@ -1,7 +1,0 @@
-Running: xsim.dir/testbench_CORDIC_Arch2_func_synth/xsimk -simmode gui -wdb testbench_CORDIC_Arch2_func_synth.wdb -simrunnum 0 -socket 60475
-Design successfully loaded
-Design Loading Memory Usage: 66068 KB (Peak: 66632 KB)
-Design Loading CPU Usage: 90 ms
-Simulation completed
-Simulation Memory Usage: 135736 KB (Peak: 213340 KB)
-Simulation CPU Usage: 800 ms
