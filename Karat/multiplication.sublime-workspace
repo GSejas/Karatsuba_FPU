@@ -4,12 +4,132 @@
 		"selected_items":
 		[
 			[
+				"be",
+				"begin\tbegin"
+			],
+			[
+				"M",
+				"Mantissa_M"
+			],
+			[
+				"Da",
+				"Data_Y_sign"
+			],
+			[
+				"re",
+				"reg"
+			],
+			[
+				"SW",
+				"SW-1"
+			],
+			[
+				"zero",
+				"zero_flag"
+			],
+			[
+				"ZERO",
+				"ZERO_FLAG_SHT2"
+			],
+			[
+				"NRM",
+				"NRM_ACTIVE"
+			],
+			[
+				"reg",
+				"register\t: w bit d register "
+			],
+			[
+				"Comp",
+				"Comparator_Less"
+			],
+			[
+				"SWR",
+				"SWR-1"
+			],
+			[
+				"Compara",
+				"Comparators"
+			],
+			[
+				"Mul",
+				"MultiplexTxT"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"W",
+				"W-2"
+			],
+			[
+				"DMP_exp",
+				"DMP_exp_NRM2"
+			],
+			[
+				"EW",
+				"EW-1"
+			],
+			[
+				"EWR",
+				"EWR-1"
+			],
+			[
+				"LZ",
+				"LZD_output"
+			],
+			[
+				"un",
+				"underflow_flag"
+			],
+			[
+				"over",
+				"overflow_flag"
+			],
+			[
+				"fi",
+				"final_result_ieee_o"
+			],
+			[
+				"mux",
+				"mux_sel_norm"
+			],
+			[
+				"LZD",
+				"LZD_output"
+			],
+			[
+				"ADD",
+				"ADD_OVRFLW_SGF"
+			],
+			[
+				"INPUT",
+				"INPUT_ACTIVE"
+			],
+			[
+				"d_ff3",
+				"d_ff3_LUT_out"
+			],
+			[
+				"d_ff2",
+				"d_ff2_Z"
+			],
+			[
+				"para",
+				"parameter"
+			],
+			[
+				"rea",
+				"ready_cordic"
+			],
+			[
 				"CO",
 				"CORDIC_Arch2"
 			],
 			[
 				"al",
-				"always	always"
+				"always\talways"
 			]
 		]
 	},
@@ -20,6 +140,7 @@
 			"settings":
 			{
 				"buffer_size": 4541,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -56,6 +177,142 @@
 			}
 		},
 		{
+			"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FPU_Add_Subtract_Function.v",
+			"settings":
+			{
+				"buffer_size": 12654,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/exp_operation.v",
+			"settings":
+			{
+				"buffer_size": 2050,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Tenth_Phase.v",
+			"settings":
+			{
+				"buffer_size": 2485,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "`timescale 1ns / 1ps\n//////////////////////////////////////////////////////////////////////////////////\n// Company: \n// Engineer: \n// \n// Create Date:    21:09:39 08/25/2015 \n// Design Name: \n// Module Name:    FSM_Add_Subtract \n// Project Name: \n// Target Devices: \n// Tool versions: \n// Description: \n//\n// Dependencies: \n//\n// Revision: \n// Revision 0.01 - File Created\n// Additional Comments: \n//\n//////////////////////////////////////////////////////////////////////////////////\n\n\n\n\n\n\n\n\n\n\nmodule FSM_Add_Subtract\n\t(\n\t\t//INPUTS\n\t\tinput wire clk, //system clock\n\t\tinput wire rst, //system reset\n\t\tinput wire rst_FSM,\n\t\tinput wire beg_FSM, //Begin Finite State Machine\n\t\t//**REVISAD\n\t\t\n\t//////////////////////////////////////////////////////////////////////////////\n\t\t//Oper_Start_In evaluation signals\n\t\tinput wire zero_flag_i,\n\t\t\n\t\t//Exp_operation evaluation signals\n\t\tinput wire norm_iteration_i,\n\t\t\n\t\t//Barrel_Shifter evaluation signals\n\t\t//None\n\n\t\t//Add_Subt_Sgf evaluation signals\n\t\tinput wire add_overflow_i,\n\n\t\t//LZA evaluation signals\n\t\t//None\n\n\t\t//Deco_round evaluation Signals\n\t\tinput wire round_i,\n\n\t\t//Final_result evaluation signals\n\t\t//None\n\t\t\n\t\t\n\t\t//OUTPUT SIGNALS\n\t\n////////////////////////////////////////////////////////////////////////////////////\t\n\t\t//Oper_Start_In control signals\n\t\toutput wire load_1_o,//Enable input registers\n\t\toutput wire load_2_o,//Enable output registers\n\n\t\t//Exp_operation control signals\n\t\toutput reg load_3_o, //Enable Output registers\n\t\toutput reg load_8_o,\n\t\toutput reg A_S_op_o, //Select operation for exponent normalization(Subt for left shift, Add for right shift)\n\t\n\t\t\n\t\t//Barrel shifter control signals\n\t\toutput reg load_4_o, //Enable Output registers\n\t\toutput reg left_right_o, //Select direction shift (right=0, left=1)\n\t\toutput reg bit_shift_o, //bit input for shifts fills\n\n\t\t\n\t\t//Add_Subt_sgf control signals\n\t\toutput reg load_5_o, //Enables Output registers\n\t\n\t\t\n\t\t//LZA control signals\n\t\toutput reg load_6_o, //Enables Output registers\n\n\t\t//Deco_Round control signals\n\t\t//None\n\n\t\t//Final_Result control signals\n\t\toutput reg load_7_o,\n\t\t\n\t\t///////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\n\t\t//Multiplexer selector for Exp_operation's OPER_A\n\n\t\toutput reg ctrl_a_o,\n\n\t\t//Multiplexer selector for Exp_operation's OPER_B & Barrel_Shifter's Shift value\n\n\t\toutput reg [1:0] ctrl_b_o,\n\t\toutput reg ctrl_b_load_o,\n\n\t\t//Multiplexer selector for Data shift\n\n\t\toutput reg ctrl_c_o,\n\n\t\t//Multiplexer selector for Add_Subt_Sgf's inputs\n\n\t\toutput reg ctrl_d_o,\n\n\t\t\n\n\t\t\n\t\t\n\t\t//Internal reset signal\n\t\toutput reg rst_int,\n\t\t//Ready  Signal\n\t\toutput reg ready\n\t );\n\n\nlocalparam [3:0] \n//First I'm going to declarate the registers of the first phase of execution\n\t\t\t\t\t start = 4'd0, //This state evaluates the beg_FSM to begin operations\n\n\t\t\t\t     load_oper = 4'd1, //This state enables the registers that contains\n\t\t\t\t\t\t\t\t\t\t\t //both operands and the operator\n\t\t\t\t\t zero_info_state = 4'd2, //Evaluate zero condition\n\n\t\t\t\t\t load_diff_exp = 4'd3, //Enable registers for the exponent on the small value normalization and for the first\n\t\t\t\t\t \t\t\t\t\t\t//result normalization\n\t\t\t\t\t \t\t\t\t\t\t\n\t\t\t\t\t extra1_64= 4'd4,\t\t\t\t\t\n\t\t\t\t\t \n\t\t\t\t\t norm_sgf_first= 4'd5, //Enable the barrel shifter's registers and evaluate if it's the first time (small operand) or the\n\t\t\t\t\t \t\t\t\t\t  //second time (result normalization)\t\n                      \n\t\t\t\t\t add_subt = 4'd6, //Enable the add_subt_sgf's registers  \n\n\t\t\t\t\t add_subt_r = 4'd7, //Enable the add_subt_sgf's registers for round condition\n\t\t\t\t\t \n\t\t\t\t\t overflow_add = 4'd8,\n\t\t\t\t\t \n\t\t\t\t\t round_sgf = 4'd9, //Evaluate the significand round condition\n                                          \n                      overflow_add_r = 4'd10,\n     \n                      extra2_64= 4'd11, //Enable registers for the exponent normalization on round condition\n                                                                \n                      norm_sgf_r = 4'd12, //Enable the barrel shifter's registers for round condition\n \n                      load_final_result  = 4'd13, //Load the final_result's register with the result\n \n                      ready_flag = 4'd14; //Enable the ready flag with the final result\n\n                     \n                     \n\t\t\t\t\t \n\t\t\t\t\t \n\n\n\t\t\t\t\t \n\t\t\t\t\t//**********************REVISADO\n\t\n\t\t\t\t\t\nreg [3:0] state_reg, state_next ; //state registers declaration\n\t\t \n////////////////////////Logic outputs///////////////77\n\nassign load_1_o= (state_reg==load_oper);\nassign load_2_o= (state_reg==zero_info_state);\n\n////\nalways @(posedge clk, posedge rst)\n\tif (rst) begin\n\t\tstate_reg <= start;\t\n\tend\n\telse begin\n\t\tstate_reg <= state_next;\n\tend\n\n///\t\nalways @*\n\tbegin\n\tstate_next = state_reg;\n\trst_int = 0;\n\t\t//Oper_Start_In control signals\n\t//load_1_o=0;\n\t//load_2_o=0;\n\n\t//Exp_operation control signals\n\tload_3_o=0;\n\tload_8_o=0;\n\tA_S_op_o=1;\n\n\t//Barrel shifter control signals\n\tload_4_o=0;\n\tleft_right_o=0;\n\tbit_shift_o=0; //bit input for shifts fills\n\n\t\n\t//Add_Subt_sgf control signals\n\tload_5_o=0;\n\n\t//LZA control signals\n\tload_6_o=0;\n\n\t//Deco_Round control signals\n\t//None\n\n\t//Final_Result control signals\n\tload_7_o=0;\n\t\n\t///////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\n\t//Multiplexer selector for Exp_operation's OPER_A\n\t\n\tctrl_a_o=0;\n\n\t//Multiplexer selector for Exp_operation's OPER_B\n\n\tctrl_b_o=2'b00;\n\tctrl_b_load_o=0;\n\n\t//Multiplexer selector for Barrel_Shifter's Data shift\n\n\tctrl_c_o=0;\n\n\t//Multiplexer selector for Barrel_Shifter's Shift value\n\n\n\t//Multiplexer selector for Add_Subt_Sgf's inputs\n\n\tctrl_d_o=0;\n\n\t\n\t//Ready Phase\n\tready = 0;\n\t//**REVISADO\n\trst_int = 0;\n\t\n\tcase(state_reg)\n//FPU reset \n\t\tstart: begin\n\t\t\trst_int=1;\n\n\t\t\tif(beg_FSM) begin\n\t\t\t\tstate_next = load_oper;\n\t\t\tend\n\t\tend\n\n\t\tload_oper: //Load input registers for  Oper_star in evaluation\n\t\t\n\t\tbegin\n\t\t\t\n\t\t//\tload_1_o = 1;\n\t\t\tstate_next = zero_info_state;\n\t\tend\n\n\t\tzero_info_state: //In case of zero condition, go to final result for ready flag. Else, continue with the calculation\n\t\tbegin\n\t\t\tif (zero_flag_i)begin\n\t\t\t\tstate_next = ready_flag;end\n\t\t\telse begin\n\t\t\t\t//load_2_o = 1;\n\t\t\t\tstate_next = load_diff_exp;end\n\t\tend\n\t\t\n\n\t\tload_diff_exp: //in first instance, Calculate DMP - DmP exponents, in other iteration, evaluation in\n\t\tbegin\n\t\t\tload_3_o = 1;\n\t\t\t/*\n\t\t\tif ()*/\n\n\t\t\tstate_next = extra1_64;\n\t\tend\n\n        extra1_64:\n        begin\n        load_3_o = 1;\n            if (norm_iteration_i)begin\n                load_8_o=1;\n                if(add_overflow_i)begin\n                    A_S_op_o=0;\n                    left_right_o=0;\n                    bit_shift_o=1;\n                end\n                        \n\t            else begin\n\t                A_S_op_o=1;\n\t                left_right_o=1;\n\t                bit_shift_o=0;\n                end\n            end               \n            state_next = norm_sgf_first;\n        end\n        \n\t\tnorm_sgf_first: //\n\t\tbegin\n\t\t\tload_4_o = 1;\n\t\t\tif (norm_iteration_i)begin\n\t\t\t\tif(add_overflow_i)begin\n                    left_right_o=0;\n                    bit_shift_o=1;\n                    state_next = round_sgf;\n                end\n\t\t\t\telse begin\n\t\t\t\t\tleft_right_o=1;\n\t\t\t\t\tbit_shift_o=0;\n\t\t\t\t\tstate_next = round_sgf;end\n\t\t\tend\n\t\t\telse \n\t\t\t\tstate_next = add_subt;\n\t\tend\n\n\n\t\tadd_subt:\n\t\tbegin\n\t\t\t//Reg enables\n\t\t\tload_5_o = 1;\n\t\t\tctrl_c_o = 1;\n\t\t\tstate_next = overflow_add;\n\t\tend\n\n\t\toverflow_add:\n\t\tbegin\n\t\t\t//Reg enables/Disables\n\t\t\tload_6_o=1;\n\t\t\tctrl_b_load_o=1;\n            if ( add_overflow_i)begin\n                ctrl_b_o=2'b10;\n                \n                end\n            else begin\n                A_S_op_o=1;\n                ctrl_b_o=2'b01;\n                \n\n            end\t\n            //state_next = load_exp_oper_over;\n            state_next = extra1_64;\n\t\tend\n\n\n\n\t\tround_sgf:\n\t\tbegin\n\t\t\tload_4_o = 0;\n\t\t\t\n\t\t\t\tif(round_i) begin\n\t\t\t\t\tctrl_d_o =1;\n\t\t\t\t\tctrl_a_o = 1;\n\t\t\t\t\tstate_next = add_subt_r; end\n\t\t\t\telse begin\n\t\t\t\t\tstate_next = load_final_result; end\n\t\tend\n\n\t\t\n\t\tadd_subt_r:\n\t\tbegin\n\t\t\tload_5_o = 1;\n\t\t\tstate_next = overflow_add_r;\n\t\t\t\n\t\tend\n\t\t\n\t\toverflow_add_r:\n\t\tbegin\n            ctrl_b_load_o=1;\t\n\t\t\tif ( add_overflow_i)begin\n                ctrl_b_o=2'b10;\n                end\n            else begin\n                ctrl_b_o=2'b11;\n                end\t\t\n\t\t    state_next = extra2_64;\n\t\tend\n\t\t\n\n\t\textra2_64:\n\t\t\n\t\tbegin\n  \t\t\tload_3_o = 1;\n            load_8_o = 1;\n\t\t\tif ( add_overflow_i)begin\n                A_S_op_o=0;\n\t            bit_shift_o=1;\n            end\n\t\n\t\t\tstate_next = norm_sgf_r;\n\t\t  \n        end\n      \n\t\tnorm_sgf_r:\n\t\tbegin\n\t\t\tload_4_o = 1;\n\t\t\tif ( add_overflow_i)begin\n                left_right_o=0;\n                bit_shift_o=1;\n            end\n\t\t\tstate_next = load_final_result;\n\t\tend\n\t\t\n\t\tload_final_result:\n\t\tbegin\n\t\t\tload_7_o = 1;\n\t\t\tstate_next = ready_flag;\n\t\tend\n\t\tready_flag:\n\t\tbegin\n\t\t\tready = 1;\n\t\t\t\tif(rst_FSM) begin\n\t\t\t\t\tstate_next = start;end\n\t\tend\n\n\t\tdefault:\n\t\tbegin\n\t\t\tstate_next =start;end\n\tendcase\nend\n\n\t\nendmodule\t\n",
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FSM_Add_Subtract.v",
+			"file_size": 8934,
+			"file_write_time": 131183957446629510,
+			"settings":
+			{
+				"buffer_size": 8944,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FPU_Add_Subtract_Function.v",
+			"settings":
+			{
+				"buffer_size": 12627,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v",
+			"settings":
+			{
+				"buffer_size": 3173,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Add_Subt.v",
+			"settings":
+			{
+				"buffer_size": 2538,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/add_sub_carry_out.v",
+			"settings":
+			{
+				"buffer_size": 815,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "`timescale 1ns / 1ps\n//////////////////////////////////////////////////////////////////////////////////\n// Company: \n// Engineer: \n// \n// Create Date: 03/12/2016 06:18:20 PM\n// Design Name: \n// Module Name: Mux_Array\n// Project Name: \n// Target Devices: \n// Tool Versions: \n// Description: \n// \n// Dependencies: \n// \n// Revision:\n// Revision 0.01 - File Created\n// Additional Comments:\n// \n//////////////////////////////////////////////////////////////////////////////////\n\n\nmodule Mux_Array\n    #(parameter SWR=26, parameter EWR=5)\n    (\n    input wire [EWR-1:0] Shift_Value_i,\n    input wire [SWR-1:0] Shift_Data_i,\n    input wire Left_Right_i,\n    input wire Bit_Shift_i,\n    /////////////////////////////////////////////7\n    output wire [SWR-1:0] sht_result\n    );\n////\nwire [SWR-1:0] Data_array[EWR+1:0];\n\n//////////////////7\ngenvar k;//Level\n///////////////////77777\nRotate_Mux_Array #(.SWR(SWR)) first_rotate(\n\t.Data_i(Data_i),\n\t.select_i(FSM_left_right_i),\n\t.Data_o(Data_array [0][SWR-1:0])\n\t);\ngenerate for (k=0; k < 3; k=k+1) begin\n\tshift_mux_array #(.SWR(SWR), .LEVEL(k)) shift_mux_array(\n\t\t.Data_i(Data_array[k]),\n\t\t.select_i(Shift_Value_i[k]),\n\t\t.bit_shift_i(bit_shift_i),\n\t\t.Data_o(Data_array[k+1])\n\t\t);\n\tend\nendgenerate\n\nRegisterAdd #(.W(SWR)) Mid_Reg(\n        .clk(clk),\n        .rst(rst),\n        .load(1'b1),\n        .D(Data_array[3]),\n        .Q(Data_array[4])\n        );\n\ngenerate for (k=3; k < EWR; k=k+1) begin\n\tshift_mux_array #(.SWR(SWR), .LEVEL(k)) shift_mux_array(\n\t\t.Data_i(Data_array[k+1]),\n\t\t.select_i(Shift_Value_i[k]),\n\t\t.bit_shift_i(bit_shift_i),\n\t\t.Data_o(Data_array[k+2])\n\t\t);\n\tend\nendgenerate\n\nRotate_Mux_Array #(.SWR(SWR)) last_rotate(\n\t.Data_i(Data_array[EWR+1]),\n\t.select_i(FSM_left_right_i),\n\t.Data_o(Data_o)\n\t);\n\t\n\n\t\nendmodule\n",
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/b_shifter_2.v",
+			"file_size": 1774,
+			"file_write_time": 131189172842516620,
+			"settings":
+			{
+				"buffer_size": 1768,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FORMATTER.v",
+			"settings":
+			{
+				"buffer_size": 2230,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v",
+			"settings":
+			{
+				"buffer_size": 818,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/MultiplexTxT.v",
+			"settings":
+			{
+				"buffer_size": 994,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_3x1.v",
+			"settings":
+			{
+				"buffer_size": 799,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/FPU_UART.v",
+			"settings":
+			{
+				"buffer_size": 4370,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FSM_input_enable.v",
+			"settings":
+			{
+				"buffer_size": 2506,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v",
+			"settings":
+			{
+				"buffer_size": 1224,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Round_decoder_M.v",
 			"settings":
 			{
@@ -76,6 +333,7 @@
 			"settings":
 			{
 				"buffer_size": 2468,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -92,6 +350,7 @@
 			"settings":
 			{
 				"buffer_size": 2461,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -100,6 +359,7 @@
 			"settings":
 			{
 				"buffer_size": 6790,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -108,6 +368,7 @@
 			"settings":
 			{
 				"buffer_size": 9722,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -116,6 +377,7 @@
 			"settings":
 			{
 				"buffer_size": 9722,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -144,29 +406,81 @@
 			}
 		},
 		{
-			"file": "/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/CORDIC_Arch2.v",
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v",
 			"settings":
 			{
-				"buffer_size": 20501,
+				"buffer_size": 754,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "\n`timescale 1ns/1ps\n\nmodule testbench_CORDIC_Arch2 (); /* this is automatically generated */\nreg clk;                         						//	Reloj del sistema.\nreg rst;													//	Señal de reset del sistema.\nreg beg_fsm_cordic;              						//	Señal de inicio de la maquina de estados del módulo CORDIC.\nreg ack_cordic;                  						//	Señal de acknowledge proveniente de otro módulo que indica que ha recibido el resultado del modulo CORDIC.\nreg operation;											//	Señal que indica si se realiza la operacion seno(1'b1) o coseno(1'b0).\n\nreg [W-1:0] data_in;             						//	Dato de entrada, contiene el angulo que se desea calcular en radianes.\nreg [1:0] shift_region_flag;     						//	Señal que indica si el ángulo a calcular esta fuera del rango de calculo del algoritmo CORDIC.\n\n//Output Signals\nwire ready_cordic;                						//	Señal de salida que indica que se ha completado el calculo del seno/coseno.\nwire [W-1:0] data_output;          						//	Bus de datos con el valor final del angulo calculado.\n\nwire overflow_flag;										//	Bandera de overflow de la operacion.\nwire underflow_flag;									//	Bandera de underflow de la operacion.\n\n\n	CORDIC_Arch2 #(.W(32),.EW(8),.SW(23),.SWR(26),.EWR()) inst_CORDIC_Arch2\n	   \n		(\n			.clk               (clk),\n			.rst               (rst),\n			.beg_fsm_cordic    (beg_fsm_cordic),\n			.ack_cordic        (ack_cordic),\n			.operation         (operation),\n			.data_in           (data_in),\n			.shift_region_flag (shift_region_flag),\n			.ready_cordic      (ready_cordic),\n			.overflow_flag     (overflow_flag),\n			.underflow_flag    (underflow_flag),\n			.data_output       (data_output)\n		);\n\n		\n//inicializacion de señales\n	initial begin\n	\n		rst = 1;\n		beg_fsm_cordic = 0;\n		ack_cordic = 0;\n		operation = 0;\n		data_in = 32'h00000000;\n		shift_region_flag = 2'b00;\n		\n		#100\n		rst = 0;\n		#15\n		data_in = 32'h3e72e24b;\n		shift_region_flag = 2'b00;\n		\n		#5\n		beg_fsm_cordic = 1;\n		\n		#10\n		beg_fsm_cordic = 0;\n	end\n\n	// clock\n	initial begin\n		clk = 0;\n		forever #5 clk = ~clk;\n	end\n\n	// reset\n	initial begin\n\n	end\n\n	// initial begin\n	// 	// do something\n\n	// 	repeat(10)@(posedge clk);\n	// 	$finish;\n	// end\n\nendmodule\n",
-			"file": "/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sim_1/new/testbench_CORDICArch2.v",
-			"file_size": 1320,
-			"file_write_time": 131185197075615956,
+			"contents": "//==================================================================================================\n//  Filename      : tb_FPU_PIPELINED_FPADDSUB.v\n//  Created On    : 2016-09-22 21:23:14\n//  Last Modified : 2016-09-22 21:23:14\n//  Revision      :\n//  Author        : Jorge Sequeira Rojas\n//  Company       : Instituto Tecnologico de Costa Rica\n//  Email         : jsequeira@gmail.com\n//\n//  Description   :\n//\n//\n//==================================================================================================\n\n`timescale 1ns/1ps\n\nmodule tb_FPU_PIPELINED_FPADDSUB (); /* this is automatically generated */\n\n\n  // clock\n  initial begin\n    clk = 0;\n    forever #(PERIOD/2) clk = ~clk;\n  end\n\n  // reset\n  initial begin\n      rst = 1;\n    #13 rst = 0;\n    #13 rst = 1;\n    #40 rst = 0;\n  end\n\n  localparam PERIOD = 10;\n\n  // (*NOTE*) replace reset, clock\n   parameter W = 32;\n   parameter EW = 8;\n   parameter SW = 23;\n   parameter SWR=26;\n   parameter EWR = 5;  //Single Precision */\n\n  // parameter W   = 64;\n  // parameter EW  = 11;\n  // parameter SW  = 52;\n  // parameter SWR = 55;\n  // parameter EWR = 6;\n\n  reg         clk;\n  reg         rst;\n  reg         beg_OP;\n  reg [W-1:0] Data_X;\n  reg [W-1:0] Data_Y;\n  reg         add_subt;\n  wire        busy;\n  wire        overflow_flag;\n  wire        underflow_flag;\n  wire        zero_flag;\n  wire [W-1:0] final_result_ieee;\n  wire ready;\n\n//Temps for the testbench and verification\n\n  reg [SW-1:0] Data_X_mant;\n  reg [SW-1:0] Data_Y_mant;\n  reg [EW-1:0] Data_X_exp;\n  reg [EW-1:0] Data_Y_exp;\n  reg Data_X_sign;\n  reg Data_Y_sign;\n\n\n  FPU_PIPELINED_FPADDSUB #(\n      .W(W),\n      .EW(EW),\n      .SW(SW),\n      .SWR(SWR),\n      .EWR(EWR)\n    ) inst_FPU_PIPELINED_FPADDSUB (\n      .clk               (clk),\n      .rst               (rst),\n      .beg_OP            (beg_OP),\n      .Data_X            (Data_X),\n      .Data_Y            (Data_Y),\n      .add_subt          (add_subt),\n      .busy              (busy),\n      .overflow_flag     (overflow_flag),\n      .underflow_flag    (underflow_flag),\n      .zero_flag         (zero_flag),\n      .ready             (ready),\n      .final_result_ieee (final_result_ieee)\n    );\n\n   initial begin\n    add_subt = 0;\n    beg_OP = 0;\n    Data_Y = 0;\n    Data_X = 0;\n    Data_X_mant = 0;\n    Data_Y_mant = 0;\n    Data_X_exp  = 0;\n    Data_Y_exp  = 0;\n    Data_X_sign = 0;\n    Data_Y_sign = 0;\n\n    #75;\n    Data_X = 32'hbe2d8637;\n    Data_Y = 32'h3c9639fd;\n    Data_X_mant = Data_X[SW-1:0]; //01011011000011000110111\n    Data_Y_mant = Data_Y[SW-1:0]; //00101100011100111111101\n    Data_X_exp  = Data_X[W-2:SW]; //01111100\n    Data_Y_exp  = Data_Y[W-2:SW]; //01111001\n    Data_X_sign = Data_X[W-1]; // 1\n    Data_Y_sign = Data_Y[W-1]; // 0\n    #19 beg_OP = 1;\n    @(negedge clk)\n    Data_Y = 0;\n    Data_X = 0;\n\n  //   // do something\n\n  //   repeat(10)@(posedge clk);\n  //   $finish;\n   end\n\n  // // dump wave\n  // initial begin\n  //   $fsdbDumpfile(\"tb_FPU_PIPELINED_FPADDSUB.fsdb\");\n  //   $fsdbDumpvars(0, \"tb_FPU_PIPELINED_FPADDSUB\", \"+mda\");\n  // end\n\nendmodule\n\n\nalways begin\n  @(posedge clk)\n\n\nend\n\nmodule task_global();\n\n  reg          Sign;\n  reg [SW-1:0] Mantissa;\n  reg [EW-1:0] Exponent;\n  reg [W-1:0]  Full_Dat_In;\n\n  task output_format;\n  begin\n    Sign =     Full_Dat_In[W-1];\n    Exponent = Full_Dat_In[EW-1+SW:SW];\n    Mantissa = Full_Dat_InFull_Dat_In[SW-1:0];\n  end\n  endtask\n\nendmodule\n\n// CU Write Task\ntask FPADD;\n\n//inputs\n  input op;\n  input [W-1:0] Operand1_W;\n  input [W-1:0] Operand2_W;\n\n//Temporaries\n  reg [SW-1:0] Mantissa1_SW;\n  reg [SW-1:0] Mantissa2_SW;\n  reg [EW-1:0] Exponent1_EW;\n  reg [EW-1:0] Exponent2_EW;\n\n  reg          Sign1;\n  reg [SW-1:0] Mantissa_M_SW;\n  reg [EW-1:0] Exponent_M_EW;\n\n  reg          Sign2;\n  reg [SW-1:0] Mantissa_m_SW;\n  reg [EW-1:0] Exponent_m_EW;\n\n  reg [SWR-1:0] Mantissa_M_SWR;\n  reg [SWR-1:0] Mantissa_m_SWR;\n\n  reg [EW-1:0] Exponent_diff_EW;\n\n  reg gtXY, gtXY;\n  reg real_sign;\n  reg real_op;\n  reg add_overflow;\n\n  reg [SWR:0]raw_Mantissa_SWR;\n\n//Output\n\n  output [W-1:0] Ouput;\n\n  begin\n    // $display (\"%g CPU Write task with address : %h Data : %h\",\n    //   $time, address,data);\n    // $display (\"%g  -> Driving CE, WR, WR data and ADDRESS on to bus\",\n    //   $time);\n    Sign1 =     Operand1_W[W-1];\n    Sign2 =     Operand2_W[W-1];\n    Exponent1_EW = Operand1_W[EW-1+SW:SW];\n    Exponent2_EW = Operand2_W[EW-1+SW:SW];\n    Mantissa1_SW = Operand1_W[SW-1:0];\n    Mantissa2_SW = Operand2_W[SW-1:0];\n\n    @ (posedge clk);\n\n    Comparator #(.W(W-1)) Magnitude_Comparator ( //Compare between magnitude for DATA_X and DATA_Y and select whos bigger and if there's a equality\n    .Data_X_i({Exponent1_EW, Mantissa1_SW}),\n    .Data_Y_i({Exponent2_EW, Mantissa2_SW}),\n    .gtXY_o(gtXY),\n    .eqXY_o(eqXY)\n    );\n\nxor_tri #(.W(W)) Op_verification ( //Operation between the DATA_X & Y's sign bit and the operation bit to find the real operation for ADDER/SUBTRACT\n    .A_i(Sign1),\n    .B_i(Sign2),\n    .C_i(op),\n    .Z_o(real_op)\n    );\n\nsgn_result result_sign_bit (//Calculate the sign bit for the final result\n    .Add_Subt_i(op),\n    .sgn_X_i(Sign1),\n    .sgn_Y_i(Sign2),\n    .gtXY_i(gtXY),\n    .eqXY_i(eqXY),\n    .sgn_result_o(real_sign)\n    );\n\nMultiplexTxT #(.W(W-1)) MuxXY (//Classify in the registers the bigger value (M) and the smaller value (m)\n    .select(gtXY),\n    .D0_i({Exponent1_EW , Mantissa1_SW}),\n    .D1_i({Exponent2_EW , Mantissa2_SW}),\n    .S0_o({Exponent_M_EW, Mantissa_M_SW}),\n    .S1_o({Exponent_m_EW, Mantissa_m_SW})\n    );\n\n    @ (posedge clk);\n\n    Exponent_diff_EW = Exponent_M_EW - Exponent_m_EW;\n\n    @ (posedge clk);\n\n    Mantissa_m_SWR = {1'b1,Mantissa_m_SW, 2'b0} >> Exponent_diff_EW;\n\n    @ (posedge clk);\n\n    //Our shifter is segmented, hence, the extra clk cycle\n\n    @ (posedge clk);\n\n    Mantissa_m_SWR = {1'b1,Mantissa_M_SW, 2'b0}\n\n    if (real_op)\n      {add_overflow,raw_Mantissa_SWR} = Mantissa_m_SWR + Mantissa_m_SWR;\n    else begin\n      raw_Mantissa_SWR = Mantissa_m_SWR - Mantissa_m_SWR;\n    end\n\n    @ (posedge clk);\n\n    if (add_overflow) begin\n        \n    end\n\n\n  end\nendtask\n",
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB.v",
+			"file_size": 6081,
+			"file_write_time": 131190988246596592,
 			"settings":
 			{
-				"buffer_size": 2193,
+				"buffer_size": 6089,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "tb_FPU_PIPELINED_FPADDSUB.sv",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "//==================================================================================================\n//  Filename      : CORDIC_Arch3.v\n//  Created On    : 2016-09-17 18:42:38\n//  Last Modified : 2016-09-18 15:24:49\n//  Revision      : \n//  Author        : Jorge Sequeira Rojas\n//  Company       : Instituto Tecnologico de Costa Rica\n//  Email         : jsequeira@gmail.com\n//\n//  Description   : \n//   Changelog> The adder structure will be optimized for the CORDIC algorithm. \n//\t\t\t\trounding will be set to 2b'00. FPU Adder structure usage will be \n//\t\t\t\tamplified to 3 units.\n//\n//\n//==================================================================================================\n`timescale 1ns / 1ps\n\n\nmodule CORDIC_Arch3 #(parameter W = 32, parameter EW = 8, parameter SW = 23, parameter SWR=26, parameter EWR = 5)//*/\n/*#(parameter W = 64, parameter EW = 11, parameter SW = 52, parameter SWR = 55, parameter EWR = 6) //-- Double Precision */\n(\n//Input Signals\ninput wire clk,                         //\tReloj del sistema.\ninput wire rst,                         //\tSeñal de reset del sistema.\ninput wire beg_fsm_cordic,              //\tSeñal de inicio de la maquina de estados del módulo CORDIC.\ninput wire ack_cordic,                  //\tSeñal de acknowledge proveniente de otro módulo que indica que ha recibido el resultado del modulo CORDIC.\ninput wire operation,\t\t\t\t\t//\tSeñal que indica si se realiza la operacion seno(1'b1) o coseno(1'b0).\n\ninput wire [W-1:0] data_in,             //\tDato de entrada, contiene el angulo que se desea calcular en radianes.\ninput wire [1:0] shift_region_flag,     //\tSeñal que indica si el ángulo a calcular esta fuera del rango de calculo del algoritmo CORDIC.\n\n//Output Signals\noutput wire ready_cordic,                //\tSeñal de salida que indica que se ha completado el calculo del seno/coseno.\noutput wire overflow_flag,                  //\tBandera de overflow de la operacion.\noutput wire underflow_flag,\t\t\t\t\t//\tBandera de underflow de la operacion.\noutput wire [W-1:0] data_output          //\tBus de datos con el valor final del angulo calculado.\n);\n\nlocalparam d_var = 0;\t\t\t\t       //\tValor por defecto que se le carga al contador de variables.\nlocalparam d_iter = 0;                  //\tValor por defecto que se le carga al contador de iteraciones.\nlocalparam mode = 1'b0;\nlocalparam r_mode = 2'b00;\nlocalparam iter_bits = 4;                  //Modificar valor para obtener diferente cantidad de iteraciones; ejem= 3=8iter, 4=16iter. etc\n\nwire [W-1:0] x0,y0;\n//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\ngenerate\n    case(W)\n    \n    32:\n    begin\n        assign x0 = 32'h3f1b74ee; \t\t\t      //\tx0 = 0.607252935008881, valor inicial de la variable X.\n        assign y0 = 32'h00000000; \t\t\t      //\ty0 = 0, valor inicial de la variable Y.\n    end\n    \n    64:\n    begin\n        assign x0 = 64'h3fe36e9db5086bc9;\t     //\tx0 = 0.607252935008881, valor inicial de la variable X.\n        assign y0 = 64'h0000000000000000;\t     //\ty0 = 0, valor inicial de la variable Y.\n    end\n    \n    default:\n    begin\n        assign x0 = 32'h3f1b74ee;                   //    x0 = 0.607252935008881, valor inicial de la variable X.\n        assign y0 = 32'h00000000;                   //    y0 = 0, valor inicial de la variable Y.\n    end    \n    endcase\nendgenerate\n\n//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\n//Signal declaration\n\nwire reset_reg_cordic;\n\n//ENABLE\nwire enab_d_ff_RB1;                                    \t    // \tEnable de la primera linea de registros.\nwire enab_d_ff2_RB2;                                    \t// \tEnable de la segunda linea de registros.\nwire enab_RB3;\t\t\t\t\t\t\t\t\t\t\t\t//\tEnable del registro que guarda el valor del signo, dependiendo del modo del algoritmo.\nwire enab_d_ff4_Xn, enab_d_ff4_Yn, enab_d_ff4_Zn;       \t//\tEnable de los registros que guardan los datos provenientes del modulo de suma/resta.\nwire enab_d_ff5_data_out;\t\t\t\t\t\t\t\t\t//\tEnable del registo que guarda el valor de salida final, listo para enviarse al procesador.\nwire enab_cont_iter, enab_cont_var;                     \t//\tEnable de los contadores de variable e iteracion\nwire load_cont_iter, load_cont_var;                      \t//\tSeñal de carga de un valor en los contadores de variable e iteraciones.\nwire enab_dff_5;\n\n\n\n//SELECTION\nwire sel_mux_1, sel_mux_3;                                  //\tSeñales de seleccion provenientes de la maquina de estados.\nwire [1:0] sel_mux_2;                      \t\t\t\t\t//\tSeñal de seleccion que se activa dependiendo de la variable que se este calculando.\n\nwire sel_mux_1_reg, sel_mux_3_reg;                          //\tSeñales de seleccion provenientes de la maquina de estados.\nwire [1:0] sel_mux_2_reg;                      \t\t\t\t//\tSeñal de seleccion que se activa dependiendo de la variable que se este calculando.\n\n//DATA WIRES\nwire d_ff1_operation_out;\t\t\t\t\t\t\t\t\t//\tSalida del registro que guarda el dato de entrada de la operacion a realizar, coseno(1'b0) o seno(1'b1)\nwire [1:0] d_ff1_shift_region_flag_out;                    \t//\tSalida del registro que guarda el dato de entrada que indica si el ángulo a calcular esta fuera del rango de calculo del algoritmo CORDIC.\nwire [W-1:0] d_ff1_Z;                                    \t//\tSalidas de los registros que guardan los valores iniciales de las variables X, Y y Z.\nwire [W-1:0] d_ff_Xn, d_ff_Yn, d_ff_Zn;\t\t\t\t\t\t//\tSalidas de los registros que guardan los valores de las variables X, Y y Z despues de cada iteracion.\nwire [W-1:0] first_mux_X, first_mux_Y, first_mux_Z;     \t//\tSalidas de los mux que escogen entre un valor inicial y el valor obtenido en una iteracion.\nwire [W-1:0] d_ff2_X, d_ff2_Y, d_ff2_Z;                 \t//\tSalidas de los registros que guardan los valores provenientes de la primera linea de mux.\nwire sign;                                              \t//\tSalida del mux que escoge entre el signo de Y o Z, dependiendo del modo, ya sea rotacion o vectorizacion.\nwire [W-1:0] data_out_LUT;\t\t\t\t\t\t\t\t\t//\tSalida del modulo generate que genera la LUT necesaria dependiendo del ancho de palabra.\nwire [iter_bits-1:0] cont_iter_out;                         //\tSalida del contador que cuenta las iteraciones realizadas.\nwire [EW-1:0] sh_exp_x, sh_exp_y;                        \t//\tSalidas de los sumadores de punto fijo que realizan los desplazamientos.\nwire [W-1:0] d_ff3_sh_x_out, d_ff3_sh_y_out;            \t//\tSalida del registro que guarda el valor de X y Y luego de realizar los desplazamientos.\nwire [W-1:0] d_ff3_LUT_out;                             \t//\tSalida del registro que guarda el valor de la LUT.\nwire d_ff3_sign_out;                                    \t//\tSalida del registro que guarda el valor del signo.\nwire [1:0] cont_var_out;                                \t//\tSalida del contador que cuenta las variables calculadas.\nwire [W-1:0] mux_sal;\t\t\t\t                     \t//\tSalida del mux final para colocar en la salida el valor deseado.\nwire [W-1:0] data_output2; \t\t\t\t\t\t\t\t\t//\tSalida del registro antes del cambio de signo.\nwire [W-1:0] sign_inv_out;\t\t\t\t\t                //\tSalida del modulo de inversion de signo, dependiendo de si se el angulo de entrada estaba fuera del rango de calculo del algoritmo CORDIC.\nwire min_tick_iter,max_tick_iter;                       \t//\tSeñales que indican cuando se ha alcanzado el valor mas bajo y masalto de cuenta, correspondientemente en el contador de iteraciones.\nwire min_tick_var,max_tick_var;                         \t//\tSeñales que indican cuando se ha alcanzado el valor mas bajo y masalto de cuenta, correspondientemente en el contador de variables.\nwire enab_reg_sel_mux1,enab_reg_sel_mux2,enab_reg_sel_mux3;\nwire ready_add_subt;              \t\t\t\t\t\t\t//\tSeñal que indica que se ha realizado la operacion de suma/resta en punto flotante.\nwire [W-1:0] result_add_subt;     \t\t\t\t\t\t\t//\tDato de entrada, contiene el resultado del módulo de suma/resta.\nwire beg_add_subt;                \t\t\t\t\t\t\t//\tSeñal de salida que indica que se debe de iniciar el modulo de suma/resta.\nwire ack_add_subt;                \t\t\t\t\t\t\t//\tSeñal que le indica al modulo de suma/resta que se recibio el resultado de este modulo correctamente.\nwire op_add_subt;                 \t\t\t\t\t\t\t//\tSeñal hacia el módulo de suma/resta que indica si se va a realizar una suma(1'b0) o una resta(1'b1).\nwire [W-1:0] add_subt_dataA;      \t\t\t\t\t\t\t//\tBus de datos hacia el modulo de suma/resta con el valor al que se le desea aplicar dicha operacion.\nwire [W-1:0] add_subt_dataB;      \t\t\t\t\t\t\t//\tBus de datos hacia el modulo de suma/resta con el valor al que se le desea aplicar dicha operacion.\n\n//Instanciación\n//------------------------------------------------------------------------------------------------------------------------\n//FSM\n\nCORDIC_FSM_v2 cordic_FSM\n(\n.clk(clk),\t\t\t\t\t\t\t\t\t\t\t//\tReloj del sitema.\n.reset(rst),\t\t\t\t\t\t\t\t\t\t//\tReset del sitema.\n.beg_FSM_CORDIC(beg_fsm_cordic),\t\t\t\t\t\t\t\t//\tSeñal de inicio de la maquina de estados.\n.ACK_FSM_CORDIC(ack_cordic),\t\t\t\t\t\t\t\t//\tSeñal proveniente del modulo que recibe el resultado, indicado que el dato ha sido recibido.\n.operation(d_ff1_operation_out),\t\t\t\t\t\t\t\t\t//\tSeñal que determina si lo que se requiere es realizar un coseno(1´b0) o seno (1'b1).\n.exception(1'b0),\n.shift_region_flag(d_ff1_shift_region_flag_out),\t\t\t\t\t\t//\tSeñal que indica si el angulo a calcular se encuentra fuera del rango de calculo del algoritmo CORDIC.\n.cont_var(cont_var_out),\t\t\t\t\t\t\t\t//\tSeñal que indica cual varible se va a calcular. Proveniente del contador de variables.\n.ready_add_subt(ready_add_subt),\t\t\t\t\t\t\t\t//\tSeñal proveniente del módulo de suma/resta, indica que se ha terminado la operacion y que se puede disponer del resultado de dicho modulo.\n.max_tick_iter(max_tick_iter), \n.min_tick_iter(min_tick_iter),\t\t\t\t//\tSeñales que indican la maxima y minima cuenta, respectivamente, en el contador de iteraciones.\n.max_tick_var(max_tick_var),\n.min_tick_var(min_tick_var),\t\t\t\t\t//\tSeñales que indican la maxima y minima cuenta, respectivamente, en el contador de variables.\n\n//Output Signals\n.reset_reg_cordic(reset_reg_cordic),\n.ready_CORDIC(ready_cordic),\t\t\t\t\t\t\t\t//\tSeñal que indica que el calculo CORDIC se ha terminado.\n.beg_add_subt(beg_add_subt),\t\t\t\t\t\t\t\t//\tSeñal que indica al modulo de suma/resta que inicie su operacion.\n.ack_add_subt(ack_add_subt),\t\t\t\t\t\t\t\t//\tSeñal que le indica al modulo de suma/resta que se ha recibido exitosamente el resultado que este entrega.\n.sel_mux_1(sel_mux_1),\n.sel_mux_3(sel_mux_3),\t\t\t\t\t\t//\tSeñales de seleccion de mux, la primera escoge el canal 0 si es la primera iteracion, en otro caso escoge el canal 1, y la segunda escoge cual variable (X o Y) debe aparecer a la salida.\n.sel_mux_2(sel_mux_2),\t\t\t\t\t\t\t\t//\tSeñal de seleccion de mux, que escoge entre X, Y o Z dependiendo de cual variable se deba calcular en ese momento.\n.enab_cont_iter(enab_cont_iter),\n.load_cont_iter(load_cont_iter),\t\t\t\t//\tSeñales de habilitacion y carga, respectivamente, en el contador de iteraciones.\n.enab_cont_var(enab_cont_var),\n.load_cont_var(load_cont_var),\t\t\t\t//\tSeñales de habilitacion y carga, respectivamente, en el contador de variables.\n.enab_RB1(enab_d_ff_RB1),\n.enab_RB2(enab_d_ff2_RB2),\t\t\t\t\t\t\t//\tSeñales de habilitacion para los registros de variables de entrada y para los valores de las variables despues de los primeros mux, respectivamente.\n.enab_d_ff_Xn(enab_d_ff4_Xn),\n.enab_d_ff_Yn(enab_d_ff4_Yn),\n.enab_d_ff_Zn(enab_d_ff4_Zn),\t//\tSeñales de habilitacion para los registros que guardan los resultados de cada variable en cada iteracion provenientes del modulo de suma/resta.\n.enab_d_ff_out(enab_d_ff5_data_out),\n.enab_dff_5(enab_dff_5),\t\t\t\t\t//\tSeñales de habilitacion para los registros en la salida, el primero antes del cambio de signo y el segundo es el que se encuentra en la salida.\n.enab_RB3(enab_RB3),\t\t\t\t\t//\tSeñales de habilitacion para los registros\tque guardan los valores provenientes de la look-up table y del signo, respectivamente.\n.enab_reg_sel_mux1(enab_reg_sel_mux1),\n.enab_reg_sel_mux2(enab_reg_sel_mux2),\n.enab_reg_sel_mux3(enab_reg_sel_mux3)\n);\n\ncounter_d #(.W(iter_bits)) cont_iter\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.load(load_cont_iter),\n.enable(enab_cont_iter),\n.d(d_iter),\n.max_tick(max_tick_iter),\n.min_tick(min_tick_iter),\n.q(cont_iter_out)\n);\n\ncounter_up #(.W(2)) cont_var\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.load(load_cont_var),\n.enable(enab_cont_var),\n.d(d_var),\n.max_tick(max_tick_var),\n.min_tick(min_tick_var),\n.q(cont_var_out)\n);\n\n//--------------------------------------------------------------------------------------------------------------------------------------------------------\n//Primera Etapa:  Registros que guardan los valores iniciales.\n\nd_ff_en\t# (.W(1)) reg_operation\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_d_ff_RB1), //load signal\n.D(operation), //input signal\n.Q(d_ff1_operation_out) //output signal\n);\n\nd_ff_en\t# (.W(2)) reg_region_flag\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_d_ff_RB1), //load signal\n.D(shift_region_flag), //input signal\n.Q(d_ff1_shift_region_flag_out) //output signal\n);\n\nd_ff_en\t# (.W(W)) reg_Z0\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_d_ff_RB1), //load signal\n.D(data_in), //input signal\n.Q(d_ff1_Z) //output signal\n);\n\n//--------------------------------------------------------------------------------------------------------------------------------------------------------\n//Segunda Etapa : Registros que guardan el canal elegido para el mux, asi como los mux.\n\nd_ff_en\t# (.W(1)) reg_ch_mux_1\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_reg_sel_mux1), //load signal\n.D(sel_mux_1), //input signal\n.Q(sel_mux_1_reg) //output signal\n);\n\nMux_2x1 #(.W(W)) mux1_x0\n(\n.select(sel_mux_1_reg),\n.ch_0(x0),\n.ch_1(d_ff_Xn),\n.data_out(first_mux_X)\n);\n\nMux_2x1 #(.W(W)) mux1_y0\n(\n.select(sel_mux_1_reg),\n.ch_0(y0),\n.ch_1(d_ff_Yn),\n.data_out(first_mux_Y)\n);\n\nMux_2x1 #(.W(W)) mux1_z0\n(\n.select(sel_mux_1_reg),\n.ch_0(d_ff1_Z),\n.ch_1(d_ff_Zn),\n.data_out(first_mux_Z)\n);\n\n//----------------------------------------------------------------------------------------------------------------------\n//Tercera Etapa: Registros que guardan los datos provenientes de los mux.\n\nd_ff_en\t# (.W(W)) reg_val_muxX_2stage\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_d_ff2_RB2), //load signal\n.D(first_mux_X), //input signal\n.Q(d_ff2_X) //output signal\n);\n\nd_ff_en\t# (.W(W)) reg_val_muxY_2stage\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_d_ff2_RB2), //load signal\n.D(first_mux_Y), //input signal\n.Q(d_ff2_Y) //output signal\n);\n\nd_ff_en\t# (.W(W)) reg_val_muxZ_2stage\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_d_ff2_RB2), //load signal\n.D(first_mux_Z), //input signal\n.Q(d_ff2_Z) //output signal\n);\n\n//----------------------------------------------------------------------------------------------------------------------\n//Cuarta Etapa : Restadores para el corrimiento del exponente de X y Y, Lookup-Table y mux de signo dependiendo del modo.\n\nSimple_Subt #(.W(EW),.N(iter_bits)) shift_x\n(\n.A(d_ff2_X[W-2:SW]),\n.B(cont_iter_out),\n.Y(sh_exp_x)\n);\n\nSimple_Subt #(.W(EW),.N(iter_bits)) shift_y\n(\n.A(d_ff2_Y[W-2:SW]),\n.B(cont_iter_out),\n.Y(sh_exp_y)\n);\n\n//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\ngenerate\n    case(W)\n    32:\n    begin\n        LUT_ROM_32bits #(.W(W),.N(iter_bits)) LUT32\n        (\n        .address(cont_iter_out),\n        .data_out(data_out_LUT)\n        );\n    end\n    64:\n    begin        \n        LUT_ROM_64bits #(.W(W),.N(iter_bits)) LUT64\n        (\n        .address(cont_iter_out),\n        .data_out(data_out_LUT)\n        );\n    end\n    default:\n    begin\n        LUT_ROM_32bits #(.W(W),.N(iter_bits)) LUT32\n        (\n        .address(cont_iter_out),\n        .data_out(data_out_LUT)\n        );\n    end\n    endcase\nendgenerate\n\n//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\nMux_2x1 #(.W(1)) mux_sign\n(\n.select(mode),\n.ch_0(d_ff2_Z[W-1]),\n.ch_1(d_ff2_Y[W-1]),\n.data_out(sign)\n);\n\n//-------------------------------------------------------------------------------------------------------------------------\n//Quinta Etapa : Registros que guardan los datos provenientes de la etapa anterior.\n\nd_ff_en\t# (.W(W)) reg_shift_x\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_RB3), //load signal\n.D({d_ff2_X[W-1],sh_exp_x,d_ff2_X[SW-1:0]}), //input signal\n.Q(d_ff3_sh_x_out) //output signal\n);\n\nd_ff_en\t# (.W(W)) reg_shift_y\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_RB3), //load signal\n.D({d_ff2_Y[W-1],sh_exp_y,d_ff2_Y[SW-1:0]}), //input signal\n.Q(d_ff3_sh_y_out) //output signal\n);\n\nd_ff_en\t# (.W(W)) reg_LUT\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_RB3), //load signal\n.D(data_out_LUT), //input signal\n.Q(d_ff3_LUT_out) //output signal\n);\n\nd_ff_en\t# (.W(1)) reg_sign\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_RB3), //load signal\n.D(sign), //input signal\n.Q(d_ff3_sign_out) //output signal\n);\n\n//-------------------------------------------------------------------------------------------------------------------------------------------------------\n//Sexta Etapa : Mux de 3 canales que se activan dependiendo de la variable a calcular.\n//Modificacion 18/8/2016 Muxes are elminated\n\nd_ff_en\t# (.W(2)) reg_ch_mux_2\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_reg_sel_mux2), //load signal\n.D(sel_mux_2), //input signal\n.Q(sel_mux_2_reg) //output signal\n);\n\n\n// Mux_3x1_b #(.W(W)) mux_3x1_var1\n// (\n// .select(sel_mux_2_reg),\n// .ch_0(d_ff2_X),\n// .ch_1(d_ff2_Y),\n// .ch_2(d_ff2_Z),\n// .data_out(add_subt_dataA)\n// );\n\n// Mux_3x1_b #(.W(W)) mux_3x1_var2\n// (\n// .select(sel_mux_2_reg),\n// .ch_0(d_ff3_sh_y_out),\n// .ch_1(d_ff3_sh_x_out),\n// .ch_2(d_ff3_LUT_out),\n// .data_out(add_subt_dataB)\n// );\n\nOp_Select\top_select_mod\n(\n.variable(cont_var_out[0]),\n.sign(d_ff3_sign_out),\n.operation(op_add_subt)\n);\n\n//--------------------------------------------------------------------------------------------------------------------------------\n//Septima Etapa : Instanciamiento del módulo de suma y resta.\n//Modificacion 18/8/2016 2 FPU Adders are added for parallel operation.\n\nFPU_Add_Subtract_Function\t#(.W(W),.EW(EW),.SW(SW),.SWR(SWR),.EWR(EWR)) add_sub_Xn_Yshift\n(\n\t.clk(clk),\n\t.rst(rst),\n\t.beg_FSM(beg_add_subt),\n\t.ack_FSM(ack_add_subt),\n\t.Data_X(d_ff2_X),\n\t.Data_Y(d_ff3_sh_y_out),\n\t.add_subt(op_add_subt),\n\t.r_mode(r_mode),\n\t.overflow_flag(overflow_flag),\n\t.underflow_flag(underflow_flag),\n\t.ready(ready_add_subt),\n\t.final_result_ieee(result_add_subt)\n);\n\nFPU_Add_Subtract_Function\t#(.W(W),.EW(EW),.SW(SW),.SWR(SWR),.EWR(EWR)) add_sub_Yn_Xshift\n(\n\t.clk(clk),\n\t.rst(rst),\n\t.beg_FSM(beg_add_subt),\n\t.ack_FSM(ack_add_subt),\n\t.Data_X(d_ff2_Y),\n\t.Data_Y(d_ff3_sh_x_out),\n\t.add_subt(op_add_subt),\n\t.r_mode(r_mode),\n\t.overflow_flag(overflow_flag),\n\t.underflow_flag(underflow_flag),\n\t.ready(ready_add_subt),\n\t.final_result_ieee(result_add_subt)\n);\n\nFPU_Add_Subtract_Function\t#(.W(W),.EW(EW),.SW(SW),.SWR(SWR),.EWR(EWR)) add_sub_Zn_LUT\n(\n\t.clk(clk),\n\t.rst(rst),\n\t.beg_FSM(beg_add_subt),\n\t.ack_FSM(ack_add_subt),\n\t.Data_X(d_ff2_Z),\n\t.Data_Y(d_ff3_LUT_out),\n\t.add_subt(op_add_subt),\n\t.r_mode(r_mode),\n\t.overflow_flag(overflow_flag),\n\t.underflow_flag(underflow_flag),\n\t.ready(ready_add_subt),\n\t.final_result_ieee(result_add_subt)\n);\n//-------------------------------------------------------------------------------------------------------------------------------\n//Octava Etapa: Registros que guardan los valores de calculo del modulo de suma y resta.\n\nd_ff_en\t#(.W(W)) d_ff4_Xn\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.enable(enab_d_ff4_Xn),\n.D(result_add_subt),\n.Q(d_ff_Xn)\n);\n\nd_ff_en\t#(.W(W)) d_ff4_Yn\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.enable(enab_d_ff4_Yn),\n.D(result_add_subt),\n.Q(d_ff_Yn)\n);\n\nd_ff_en\t#(.W(W)) d_ff4_Zn\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.enable(enab_d_ff4_Zn),\n.D(result_add_subt),\n.Q(d_ff_Zn)\n);\n\n//--------------------------------------------------------------------------------------------------------------------------------\n//Novena Etapa: Mux de selección del valor de salida, así como el modulo de correccion de signo y los registros intermedios que\n//guardan los datos de salida.\n\nd_ff_en\t#(.W(1)) reg_ch_mux_3\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.enable(enab_reg_sel_mux3),\n.D(sel_mux_3),\n.Q(sel_mux_3_reg)\n);\n\nMux_2x1 #(.W(W)) mux_2x1_sal\n(\n.select(sel_mux_3_reg),\n.ch_0(d_ff_Xn),\n.ch_1(d_ff_Yn),\n.data_out(mux_sal)\n);\n\nd_ff_en\t#(.W(W)) d_ff5\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.enable(enab_dff_5),\n.D(mux_sal),\n.Q(data_output2)\n);\n\nsign_inverter #(.W(W)) sign_inverter_mod\n(\n.data(data_output2),\n.shift_region_flag(d_ff1_shift_region_flag_out),\n.operation(d_ff1_operation_out),\n.data_out(sign_inv_out)\n);\n\nd_ff_en\t#(.W(W)) d_ff5_data_out\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.enable(enab_d_ff5_data_out),\n.D(sign_inv_out),\n.Q(data_output)\n);\n\nendmodule\n",
+			"file": "/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/new/CORDIC_Arch3.v",
+			"file_size": 21520,
+			"file_write_time": 131187074892014132,
+			"settings":
+			{
+				"buffer_size": 21616,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sim_1/imports/Sim/Sine_Cosine_CORDIC_tb.v",
+			"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Oper_Start_In.v",
 			"settings":
 			{
-				"buffer_size": 3849,
+				"buffer_size": 3977,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v",
+			"settings":
+			{
+				"buffer_size": 23058,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "`timescale 1ns / 1ps\n//////////////////////////////////////////////////////////////////////////////////\n// Company: \n// Engineer: \n// \n// Create Date: 03/12/2016 06:18:20 PM\n// Design Name: \n// Module Name: Mux_Array\n// Project Name: \n// Target Devices: \n// Tool Versions: \n// Description: \n// \n// Dependencies: \n// \n// Revision:\n// Revision 0.01 - File Created\n// Additional Comments:\n// \n//////////////////////////////////////////////////////////////////////////////////\n\n\nmodule Mux_Array\n    #(parameter SWR=26, parameter EWR=5)\n    (\n    input wire clk,\n    input wire rst,\n    input wire load_i,\n    input wire [SWR-1:0] Data_i,\n    input wire FSM_left_right_i,\n    input wire [EWR-1:0] Shift_Value_i,\n    input wire bit_shift_i,\n    output wire [SWR-1:0] Data_o\n    );\n////\nwire [SWR-1:0] Data_array[EWR+1:0];\n\n//////////////////7\ngenvar k;//Level\n///////////////////77777\nRotate_Mux_Array #(.SWR(SWR)) first_rotate(\n\t.Data_i(Data_i),\n\t.select_i(FSM_left_right_i),\n\t.Data_o(Data_array [0][SWR-1:0])\n\t);\ngenerate for (k=0; k < 3; k=k+1) begin\n\tshift_mux_array #(.SWR(SWR), .LEVEL(k)) shift_mux_array(\n\t\t.Data_i(Data_array[k]),\n\t\t.select_i(Shift_Value_i[k]),\n\t\t.bit_shift_i(bit_shift_i),\n\t\t.Data_o(Data_array[k+1])\n\t\t);\n\tend\nendgenerate\n\nRegisterAdd #(.W(SWR)) Mid_Reg(\n        .clk(clk),\n        .rst(rst),\n        .load(1'b1),\n        .D(Data_array[3]),\n        .Q(Data_array[4])\n        );\n\ngenerate for (k=3; k < EWR; k=k+1) begin\n\tshift_mux_array #(.SWR(SWR), .LEVEL(k)) shift_mux_array(\n\t\t.Data_i(Data_array[k+1]),\n\t\t.select_i(Shift_Value_i[k]),\n\t\t.bit_shift_i(bit_shift_i),\n\t\t.Data_o(Data_array[k+2])\n\t\t);\n\tend\nendgenerate\n\nRotate_Mux_Array #(.SWR(SWR)) last_rotate(\n\t.Data_i(Data_array[EWR+1]),\n\t.select_i(FSM_left_right_i),\n\t.Data_o(Data_o)\n\t);\n\t\n\n\t\nendmodule\n",
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/b_shifter_1.v",
+			"file_size": 1774,
+			"file_write_time": 131189172763759527,
+			"settings":
+			{
+				"buffer_size": 1774,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n`timescale 1ns/1ps\n\nmodule tb_LUT_ROM_32bits (); /* this is automatically generated */\n\n\tlogic rstb;\n\tlogic srst;\n\tlogic clk;\n\n\t// clock\n\tinitial begin\n\t\tclk = 0;\n\t\tforever #5 clk = ~clk;\n\tend\n\n\t// reset\n\tinitial begin\n\t\trstb = 0;\n\t\tsrst = 0;\n\t\t#20\n\t\trstb = 1;\n\t\trepeat (5) @(posedge clk);\n\t\tsrst = 1;\n\t\trepeat (1) @(posedge clk);\n\t\tsrst = 0;\n\tend\n\n\t// (*NOTE*) replace reset, clock\n\n\tparameter W         = 32;\n\tparameter N         = 3;\n\tlocalparam ROM_FILE = \"LUT_sincos_32.txt\";\n\n\tlogic [N-1:0] address;\n\tlogic [W-1:0] data_out;\n\n\tLUT_ROM_32bits #(.W(W), .N(N)) inst_LUT_ROM_32bits (.address(address), .data_out(data_out));\n\n\tinitial begin\n\t\t// do something\n\n\t\trepeat(10)@(posedge clk);\n\t\t$finish;\n\tend\n\n\t// dump wave\n\tinitial begin\n\t\t$fsdbDumpfile(\"tb_LUT_ROM_32bits.fsdb\");\n\t\t$fsdbDumpvars(0, \"tb_LUT_ROM_32bits\", \"+mda\");\n\tend\n\nendmodule\n",
+			"settings":
+			{
+				"buffer_size": 844,
+				"line_ending": "Unix",
+				"name": "tb_LUT_ROM_32bits.sv",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "`timescale 1ns / 1ps\n\nmodule LUT_ROM_32bits #(parameter W=32,N=3)\n(\n//Input Signals\ninput wire [N-1:0] address,\n//Output Signals\noutput reg [W-1:0] data_out\n);\nlocalparam ROM_FILE=\"LUT_sincos_32.txt\";\n\nreg [W-1:0] rom_test [2**N-1:0];\n initial\nbegin\n    $readmemh(ROM_FILE, rom_test, 0, 2**N-1);\nend\nalways @*\nbegin\n    data_out = rom_test[address];\nend\nendmodule\n",
+			"settings":
+			{
+				"buffer_size": 364,
 				"line_ending": "Unix"
 			}
 		}
@@ -178,20 +492,28 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 368.0,
+		"height": 319.0,
 		"last_filter": "",
 		"selected_items":
 		[
 			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: forg"
 			],
 			[
 				"package",
 				"Package Control: Enable Package"
 			]
 		],
-		"width": 453.0
+		"width": 402.0
 	},
 	"console":
 	{
@@ -212,15 +534,51 @@
 	},
 	"file_history":
 	[
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparators.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Barrel_shifter.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_Array.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FPU_Add_Subtract_Function.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/LZD.v",
+		"/home/jorge/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/Shift_left_logical.v",
+		"/home/jorge/.config/sublime-text-3/Packages/User/usersnippet_verilogregister.sublime-snippet",
+		"/home/jorge/.config/sublime-text-3/Packages/User/usersnippet_verilog.sublime-snippet",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Greater_Comparator.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/exp_operation.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/RegisterAdd.v",
+		"/home/jorge/.config/sublime-text-3/Packages/User/usersnippet_verilogcase3b.sublime-snippet",
+		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Oper_Start_In.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Add_Subt.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FPU_Add_Subtract_Function.v",
+		"/home/jorge/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/jorge/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings",
+		"/home/jorge/.config/sublime-text-3/Packages/User/Distraction Free.sublime-settings",
+		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FSM_Add_Subtract.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Barrel_Shifter_M.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sim_1/imports/Sim/Sine_Cosine_CORDIC_tb.v",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/imports/new/Testbench_FPU_Add_Subt.v",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_64bits.v",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sim_1/new/Testbench_LUT.v",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_32bits.v",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/counter_d.v",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sim_1/new/testbench_CORDICArch2.v",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/CORDIC_Arch2.v",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.sim/CORDIC_COS_32bits_round00/behav/CORDIC32_input_angles_dec.txt",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/CORDIC_COS_32bits_round00/imports/COSENO",
+		"/home/jorge/TESTING",
+		"/home/jorge/FILES/CORDIC32_input_angles_dec.txt",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_sincos_32.txt",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sim_1/imports/ADD_SUB_Files/Hexadecimal_R.txt",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v",
 		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sim_1/new/tb_CORDIC_Arch2.v",
 		"/home/jorge/.config/sublime-text-3/Packages/Verilog Gadget/Verilog Gadget.sublime-settings",
 		"/home/jorge/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/home/jorge/.config/sublime-text-3/Packages/Verilog Gadget/Default (Linux).sublime-keymap",
-		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sim_1/new/testbench_CORDICArch2.v",
 		"/home/jorge/.config/sublime-text-3/Packages/Verilog Automatic/README.md",
 		"/home/jorge/.config/sublime-text-3/Packages/User/Verilog Automatic.sublime-settings",
 		"/home/jorge/.config/sublime-text-3/Packages/Verilog Automatic/Verilog Automatic.sublime-settings",
-		"/home/jorge/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings",
 		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/imports/rtl/KOA_c_v2.v",
 		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Add_Subt.v",
 		"/home/jorge/Documents/Karatsuba_FPU/Karat/source/rtl/KOA_c_v3.v",
@@ -230,27 +588,152 @@
 		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/FPU_Multiplication_Function.v",
 		"/home/jorge/.config/sublime-text-3/Packages/Verilog Automatic/Default (Linux).sublime-keymap",
 		"/home/jorge/.config/sublime-text-3/Packages/User/Verilog.sublime-settings",
-		"/home/jorge/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/jorge/.config/sublime-text-3/Packages/User/JSON.sublime-settings"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 48.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 136.0,
 		"where_history":
 		[
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
-			"output",
-			"input"
+			"Exponent_diff",
+			"Exponent_m",
+			"Exponent_M",
+			"Mantissa_m",
+			"Mantissa_M",
+			"Mantissa2",
+			"Mantissa1",
+			"Operand2",
+			"Operand1",
+			"Exponent2",
+			"Exponent1",
+			"raw_Mantissa",
+			"UNDRFLW_FLAG_FRMT",
+			"exp_rslt_NRM2",
+			"UNDRFLW_FLAG_FRMT",
+			"NRM2_ACTIVE",
+			"SHT2_ACTIVE",
+			"exp_rslt_NRM2",
+			"exp_oper_result",
+			"exp_rslt_NRM2",
+			"Carry_out_SFT2",
+			"exp_rslt_NRM2",
+			"UNDRFLW_FLAG_FRMT",
+			"underflow_flag",
+			"mux_sel_norm",
+			"ADD_OVRFLW_SGF",
+			"shf_amnt_SHT2",
+			"Overflow_flag_",
+			"Overflow_flag_SH2",
+			"shift_value_SHT1",
+			"Carry_out_SGF",
+			"ADD_OVRFLW_SGF",
+			"DMP_exp_EXP",
+			",",
+			"SIGN_FLAG_NRM",
+			"NRM_STAGE",
+			"ADDSUB_exp_operand",
+			"LZD_raw_output_NRM2",
+			"LZD_ZFiller",
+			"LZD_output_NRM2",
+			"Exp_oper_1",
+			"Raw_mant_SGF",
+			"Raw_mant_NRM",
+			"Add_Subt_LZD",
+			"LZD_raw_output",
+			"LZD_raw_output_NRM2",
+			"LZD_output_NRM2",
+			"LZD_raw_output_NRM2",
+			"LZD_raw_output",
+			"LZD_output_NRM2",
+			"DMP_exp_NRM",
+			"LZD_raw_output",
+			"LZD_raw_output_NRM2",
+			"LZD_raw_output",
+			"LZD_output",
+			"LZD",
+			"DMP_exp_NRM",
+			"LZD_output_NRM2",
+			"LZD_output",
+			"VARS",
+			"SFT2F",
+			"DMP_exp_NRM2",
+			"DMP_exp_NRM",
+			"DMP_exp_SFG",
+			"DMP_exp_NRM",
+			"DMP_exp_NRM2",
+			"DMP_exp_NRM",
+			"LZD_output_NRM2",
+			"LZD_output",
+			"SFT2",
+			"SFT2FRMT",
+			"OVRFLW_FLAG_FRMT",
+			"Data_array",
+			"ZERO_FLAG_NRM",
+			"ZERO_FLAG_SFG",
+			"ZERO_FLAG_SHT2",
+			"ZERO_FLAG_SHT1SHT2",
+			"ZERO_FLAG_NRM",
+			"ZERO_FLAG_SFG",
+			"OP_FLAG_SFG",
+			"OP_FLAG_SHT2",
+			"OP_FLAG_SHT1",
+			"OP_FLAG_EXP",
+			"Data_array",
+			"formatted_number",
+			"ZERO_FLAG_EXP",
+			"EXP_STAGE_FLAGS",
+			"sftr_odat_SHT1",
+			"shift_value_SHT1",
+			"Data_array",
+			"DMP_exp_SFG",
+			"Raw_mant_SGF",
+			"FORMATTER",
+			"Shift_amount_EXP",
+			"Shift_amount_SHT1",
+			"Shift_amount_EXP",
+			"DmP_mant_SHT1",
+			"DmP_mant_EXP",
+			"DMP_SHT1",
+			"DmP_EXP",
+			"DMP_EXP",
+			"intDX",
+			"LZD_ZFiller",
+			"DMP_SFG",
+			"Exp_oper_1",
+			"inputcomp",
+			"DMP_SHT1",
+			"Carry_out_SFT2",
+			"UNDRFLW_FLAG_FRMT",
+			"OVRFLW_FLAG_FRMT",
+			"intAS",
+			"UNDRFLW_FLAG_FRMT",
+			"UNDR",
+			"UNDRFLW",
+			"W_Exp",
+			"DMP_mant_SFG",
+			"Raw_mant_SGF",
+			"Carry_out_SGF",
+			"ADD_OVR",
+			"ADD_OVRFLW",
+			"ADD_OVRFLW_SGF",
+			"b_shifter_one",
+			"exp_rslt_NRM2",
+			"Carry_out_SFT2",
+			"Data_X",
+			"add_subt",
+			"intDX",
+			"xor_tri"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -258,19 +741,48 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Exponent_diff_EW",
+			"Exponent_m_EW",
+			"Exponent_M_EW",
+			"Mantissa_m_SW",
+			"Mantissa_M_SW",
+			"Mantissa2_SW",
+			"Mantissa1_SW",
+			"Operand2_W",
+			"Operand1_W",
+			"Exponent2_EW",
+			"Exponent1_EW",
+			"raw_Mantissa_SWR",
+			"shft_value_mux_o",
+			";",
+			"EW",
+			"UNDRFLW_FLAG_FRMT",
+			"OVRFLW_FLAG_FRMT",
+			"exp_rslt_NRM2",
+			"LZD_output_NRM2",
+			"underflow_flag",
+			"overflow_flag",
+			"shf_amnt_SHT2",
+			"shf_amnt_SHT1",
+			"_SHT1",
+			"beg_fsm_cordic",
+			"data_in",
+			"ready_cordic",
+			"beg_fsm_cordic",
+			"ack_cordic",
 			"",
 			" "
 		],
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": false,
+		"whole_word": true,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 14,
+			"selected": 33,
 			"sheets":
 			[
 				{
@@ -286,8 +798,8 @@
 						"selection":
 						[
 							[
-								1009,
-								1009
+								2458,
+								2458
 							]
 						],
 						"settings":
@@ -295,10 +807,10 @@
 							"syntax": "Packages/Verilog/Verilog.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 262.0,
+						"translation.y": 1503.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -320,15 +832,16 @@
 						],
 						"settings":
 						{
+							"history_list_is_closing": true,
 							"syntax": "Packages/Verilog/Verilog.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 64.0,
+						"translation.y": 80.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 29,
 					"type": "text"
 				},
 				{
@@ -353,10 +866,10 @@
 							"syntax": "Packages/TCL/Tcl.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 12585.0,
+						"translation.y": 13258.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 30,
 					"type": "text"
 				},
 				{
@@ -384,7 +897,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 31,
 					"type": "text"
 				},
 				{
@@ -400,8 +913,8 @@
 						"selection":
 						[
 							[
-								6422,
-								6422
+								6956,
+								6956
 							]
 						],
 						"settings":
@@ -411,14 +924,487 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4844.0,
+						"translation.y": 6251.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 28,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FPU_Add_Subtract_Function.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12654,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8872,
+								8872
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5422.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/exp_operation.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2050,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1584,
+								1584
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1090.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Tenth_Phase.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2485,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								479,
+								479
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 484.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FSM_Add_Subtract.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8944,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1530,
+								1530
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6091.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FPU_Add_Subtract_Function.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12627,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3885,
+								3885
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2948.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2117,
+								2117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 629.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Add_Subt.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2538,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1543,
+								1543
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 741.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/add_sub_carry_out.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								549,
+								549
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/b_shifter_2.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								762,
+								762
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 571.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 18,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 14,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FORMATTER.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1341,
+								1341
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/Verilog/Verilog.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1254.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 818,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								761,
+								761
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 114.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/MultiplexTxT.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								993,
+								993
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 178.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_3x1.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 799,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								657,
+								657
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/fpuuart/FPU_UART.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4370,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								474,
+								474
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FSM_input_enable.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								631,
+								631
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1224,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								956,
+								956
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 385.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
 					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Round_decoder_M.v",
 					"semi_transient": false,
 					"settings":
@@ -441,14 +1427,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 254.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 22,
 					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/OR_Module.v",
 					"semi_transient": false,
 					"settings":
@@ -460,8 +1446,8 @@
 						"selection":
 						[
 							[
-								818,
-								818
+								845,
+								845
 							]
 						],
 						"settings":
@@ -469,14 +1455,14 @@
 							"syntax": "Packages/Verilog/Verilog.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 164.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 23,
 					"file": "source/rtl/RecursiveKOA.v",
 					"semi_transient": false,
 					"settings":
@@ -499,14 +1485,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 100.0,
+						"translation.y": 133.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 32,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 24,
 					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/FSM_Mult_Function.v",
 					"semi_transient": false,
 					"settings":
@@ -518,8 +1504,8 @@
 						"selection":
 						[
 							[
-								485,
-								485
+								5817,
+								5817
 							]
 						],
 						"settings":
@@ -528,14 +1514,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 64.0,
+						"translation.y": 5099.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 25,
 					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/imports/rtl/RecursiveKOA.v",
 					"semi_transient": false,
 					"settings":
@@ -558,14 +1544,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 740.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 33,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 26,
 					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/imports/rtl/KOA_c_v3.v",
 					"semi_transient": false,
 					"settings":
@@ -588,14 +1574,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 928.0,
+						"translation.y": 1181.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 39,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 27,
 					"file": "source/rtl/KOA_c_v2.v",
 					"semi_transient": false,
 					"settings":
@@ -618,14 +1604,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 504.0,
+						"translation.y": 636.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 34,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 28,
 					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/imports/rtl/KOA_c_v2.v",
 					"semi_transient": false,
 					"settings":
@@ -648,14 +1634,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2746.0,
+						"translation.y": 3478.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 29,
 					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Sgf_Multiplication.v",
 					"semi_transient": false,
 					"settings":
@@ -678,14 +1664,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 280.0,
+						"translation.y": 361.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 35,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 30,
 					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/new/Testbench_Sgf_multiplication.v",
 					"semi_transient": false,
 					"settings":
@@ -708,14 +1694,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 308.0,
+						"translation.y": 66.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 36,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 31,
 					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/imports/sim/testbench_RKOA.v",
 					"semi_transient": false,
 					"settings":
@@ -727,8 +1713,8 @@
 						"selection":
 						[
 							[
-								324,
-								324
+								2955,
+								2955
 							]
 						],
 						"settings":
@@ -738,64 +1724,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 92.0,
+						"translation.y": 2191.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 16,
-					"file": "/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/CORDIC_Arch2.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 20501,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								622,
-								622
-							]
-						],
-						"settings":
-						{
-							"spell_check": false,
-							"syntax": "Packages/Verilog/Verilog.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 37,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
-					"file": "/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sim_1/new/testbench_CORDICArch2.v",
+					"buffer": 32,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2193,
+						"buffer_size": 754,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1182,
-								1182
+								482,
+								482
 							]
 						],
 						"settings":
@@ -806,36 +1755,227 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
-					"file": "/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sim_1/imports/Sim/Sine_Cosine_CORDIC_tb.v",
+					"buffer": 33,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB.v",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3849,
+						"buffer_size": 6089,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								305,
-								305
+								6064,
+								6064
 							]
 						],
 						"settings":
 						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4513.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 34,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/new/CORDIC_Arch3.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21616,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18155,
+								18155
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 8765.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 35,
+					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Oper_Start_In.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3601,
+								3601
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
 							"syntax": "Packages/Verilog/Verilog.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1888.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 36,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23058,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										16765,
+										16765
+									],
+									[
+										17565,
+										17565
+									]
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								12363,
+								12363
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 7881.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 37,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/b_shifter_1.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1774,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								539,
+								539
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 38,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 844,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								844,
+								844
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 38,
+					"type": "text"
+				},
+				{
+					"buffer": 39,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 364,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								364,
+								364
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
 					"type": "text"
 				}
 			]
@@ -843,11 +1983,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 24.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 48.0
 	},
 	"layout":
 	{
@@ -869,7 +2009,7 @@
 		"cols":
 		[
 			0.0,
-			0.0461680517082,
+			0.684747968717,
 			1.0
 		],
 		"rows":
@@ -883,19 +2023,27 @@
 	{
 		"height": 0.0
 	},
+	"output.unsaved_changes":
+	{
+		"height": 116.0
+	},
 	"pinned_build_system": "",
 	"project": "",
 	"replace":
 	{
-		"height": 50.0
+		"height": 92.0
 	},
-	"save_all_on_build": true,
+	"save_all_on_build": false,
 	"select_file":
 	{
 		"height": 0.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"~/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v"
+			]
 		],
 		"width": 0.0
 	},
@@ -910,39 +2058,29 @@
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 322.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"Add_Subt"
+			]
 		],
-		"width": 0.0
+		"width": 314.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
-		"last_automatic_layout":
-		[
-			[
-				0,
-				0,
-				1,
-				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
-			]
-		]
 	},
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 218.0,
+	"side_bar_width": 195.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
+		"max_columns": 2
 	}
 }

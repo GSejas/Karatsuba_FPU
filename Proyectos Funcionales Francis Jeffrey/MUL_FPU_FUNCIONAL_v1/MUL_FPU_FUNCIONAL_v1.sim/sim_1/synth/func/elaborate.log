@@ -1,0 +1,38 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 83c4f9698eee450992069ac841852b3d --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot testbench_RKOA_func_synth xil_defaultlib.testbench_RKOA xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.multiplier_C(W=6)
+Compiling module xil_defaultlib.KOA_c(SW=6,precision=1)
+Compiling module xil_defaultlib.adder(W=6)
+Compiling module xil_defaultlib.multiplier_C(W=7)
+Compiling module xil_defaultlib.KOA_c(SW=7,precision=1)
+Compiling module xil_defaultlib.substractor(W=14)
+Compiling module xil_defaultlib.adder(W=24)
+Compiling module xil_defaultlib.KOA_c(SW=12,precision=1)
+Compiling module xil_defaultlib.adder(W=12)
+Compiling module xil_defaultlib.adder(W=7)
+Compiling module xil_defaultlib.multiplier_C(W=4)
+Compiling module xil_defaultlib.KOA_c(SW=4,precision=1)
+Compiling module xil_defaultlib.adder(W=4)
+Compiling module xil_defaultlib.multiplier_C(W=5)
+Compiling module xil_defaultlib.KOA_c(SW=5,precision=1)
+Compiling module xil_defaultlib.substractor(W=10)
+Compiling module xil_defaultlib.adder(W=16)
+Compiling module xil_defaultlib.KOA_c(SW=8,precision=1)
+Compiling module xil_defaultlib.substractor(W=16)
+Compiling module xil_defaultlib.adder(W=26)
+Compiling module xil_defaultlib.KOA_c(SW=13,precision=1)
+Compiling module xil_defaultlib.substractor(W=26)
+Compiling module xil_defaultlib.adder(W=48)
+Compiling module xil_defaultlib.KOA_c(SW=24)
+Compiling module xil_defaultlib.RegisterAdd(W=48)
+Compiling module xil_defaultlib.RecursiveKOA(SW=24)
+Compiling module xil_defaultlib.testbench_RKOA
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_RKOA_func_synth

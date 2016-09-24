@@ -1,0 +1,636 @@
+
+*** Running vivado
+    with args -log FPU_PIPELINED_FPADDSUB.vds -m64 -mode batch -messageDb vivado.pb -notrace -source FPU_PIPELINED_FPADDSUB.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source FPU_PIPELINED_FPADDSUB.tcl -notrace
+Command: synth_design -top FPU_PIPELINED_FPADDSUB -part xc7a100tcsg324-1 -keep_equivalent_registers
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10771 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1021.113 ; gain = 129.137 ; free physical = 299 ; free virtual = 6771
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'FPU_PIPELINED_FPADDSUB' [/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v:34]
+	Parameter W bound to: 32 - type: integer 
+	Parameter EW bound to: 8 - type: integer 
+	Parameter SW bound to: 23 - type: integer 
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter EWR bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'shift_mux_array' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter LEVEL bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC' (1#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+INFO: [Synth 8-256] done synthesizing module 'shift_mux_array' (2#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+INFO: [Synth 8-638] synthesizing module 'shift_mux_array__parameterized0' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter LEVEL bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift_mux_array__parameterized0' (2#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+INFO: [Synth 8-638] synthesizing module 'shift_mux_array__parameterized1' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter LEVEL bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift_mux_array__parameterized1' (2#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+INFO: [Synth 8-638] synthesizing module 'shift_mux_array__parameterized2' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter LEVEL bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift_mux_array__parameterized2' (2#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+INFO: [Synth 8-638] synthesizing module 'shift_mux_array__parameterized3' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter LEVEL bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift_mux_array__parameterized3' (2#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+INFO: [Synth 8-638] synthesizing module 'Priority_Codec_32' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Priority_Codec_32.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Priority_Codec_32' (3#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Priority_Codec_32.v:23]
+INFO: [Synth 8-638] synthesizing module 'FSM_INPUT_ENABLE' [/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FSM_input_enable.v:19]
+	Parameter State0 bound to: 4'b0000 
+	Parameter State1 bound to: 4'b0001 
+	Parameter State2 bound to: 4'b0010 
+	Parameter State3 bound to: 4'b0011 
+	Parameter State4 bound to: 4'b0100 
+	Parameter State5 bound to: 4'b0101 
+	Parameter State6 bound to: 4'b0110 
+INFO: [Synth 8-256] done synthesizing module 'FSM_INPUT_ENABLE' (4#1) [/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FSM_input_enable.v:19]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd' (5#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized0' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized0' (5#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'Comparator' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator.v:23]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Comparator' (6#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator.v:23]
+INFO: [Synth 8-638] synthesizing module 'MultiplexTxT' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/MultiplexTxT.v:23]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MultiplexTxT' (7#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/MultiplexTxT.v:23]
+INFO: [Synth 8-638] synthesizing module 'xor_tri' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/xor_tri.v:23]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xor_tri' (8#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/xor_tri.v:23]
+INFO: [Synth 8-638] synthesizing module 'sgn_result' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v:23]
+INFO: [Synth 8-256] done synthesizing module 'sgn_result' (9#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v:23]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized1' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized1' (9#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized2' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized2' (9#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized3' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized3' (9#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized4' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized4' (9#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized5' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 23 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized5' (9#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized6' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized6' (9#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized7' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized7' (9#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized0' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+	Parameter W bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized0' (9#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Rotate_Mux_Array' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Rotate_Mux_Array.v:23]
+	Parameter SWR bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Rotate_Mux_Array' (10#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Rotate_Mux_Array.v:23]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized8' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized8' (10#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized9' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized9' (10#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized10' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized10' (10#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized11' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized11' (10#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized12' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 13 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized12' (10#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized13' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized13' (10#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'FORMATTER' [/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FORMATTER.v:37]
+	Parameter EW bound to: 9 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Greater_Comparator' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Greater_Comparator.v:21]
+	Parameter W bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Greater_Comparator' (11#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Greater_Comparator.v:21]
+INFO: [Synth 8-638] synthesizing module 'Comparator_Less' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator_Less.v:21]
+	Parameter W bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Comparator_Less' (12#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator_Less.v:21]
+INFO: [Synth 8-256] done synthesizing module 'FORMATTER' (13#1) [/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FORMATTER.v:37]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized14' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized14' (13#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized15' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized15' (13#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized16' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized16' (13#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-226] default block is never used [/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v:633]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized17' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized17' (13#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized18' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized18' (13#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized19' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized19' (13#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'FRMT_STAGE' [/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v:41]
+	Parameter W bound to: 32 - type: integer 
+	Parameter EW bound to: 8 - type: integer 
+	Parameter SW bound to: 23 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Mux_3x1' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_3x1.v:23]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Mux_3x1' (14#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_3x1.v:23]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized1' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized1' (14#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized2' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+	Parameter W bound to: 23 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized2' (14#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+INFO: [Synth 8-256] done synthesizing module 'FRMT_STAGE' (15#1) [/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v:41]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized20' [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized20' (15#1) [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-256] done synthesizing module 'FPU_PIPELINED_FPADDSUB' (16#1) [/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v:34]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1061.551 ; gain = 169.574 ; free physical = 253 ; free virtual = 6727
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1061.551 ; gain = 169.574 ; free physical = 253 ; free virtual = 6727
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/constrs_1/imports/RTL/Nexys4_Master.xdc]
+Finished Parsing XDC File [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/constrs_1/imports/RTL/Nexys4_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/constrs_1/imports/RTL/Nexys4_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FPU_PIPELINED_FPADDSUB_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/FPU_PIPELINED_FPADDSUB_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1368.223 ; gain = 0.000 ; free physical = 170 ; free virtual = 6535
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 167 ; free virtual = 6533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 167 ; free virtual = 6533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 167 ; free virtual = 6533
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'FSM_INPUT_ENABLE'
+INFO: [Synth 8-5544] ROM "enable_input_internal" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v:563]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  State0 |                              000 |                              000
+                  State1 |                              001 |                              001
+                  State2 |                              010 |                              010
+                  State3 |                              011 |                              011
+                  State4 |                              100 |                              100
+                  State5 |                              101 |                              101
+                  State6 |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'FSM_INPUT_ENABLE'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 174 ; free virtual = 6540
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     27 Bit       Adders := 1     
+	   2 Input     27 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               31 Bit    Registers := 5     
+	               26 Bit    Registers := 3     
+	               23 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 6     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input     26 Bit        Muxes := 2     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 22    
+	   8 Input      3 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 185   
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module FPU_PIPELINED_FPADDSUB 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     27 Bit       Adders := 1     
+	   2 Input     27 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module Priority_Codec_32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 19    
+Module FSM_INPUT_ENABLE 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      3 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+Module RegisterAdd 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module RegisterAdd__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module MultiplexTxT 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 2     
+Module xor_tri 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module RegisterAdd__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+Module RegisterAdd__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+Module RegisterAdd__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module RegisterAdd__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+Module RegisterAdd__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	               23 Bit    Registers := 1     
+Module RegisterAdd__parameterized6 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+Module RegisterAdd__parameterized7 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module Multiplexer_AC__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+Module Multiplexer_AC 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module RegisterAdd__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+Module RegisterAdd__parameterized9 
+Detailed RTL Component Info : 
++---Registers : 
+	               26 Bit    Registers := 1     
+Module RegisterAdd__parameterized10 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
+Module RegisterAdd__parameterized11 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module RegisterAdd__parameterized12 
+Detailed RTL Component Info : 
++---Registers : 
+	               13 Bit    Registers := 1     
+Module RegisterAdd__parameterized13 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module RegisterAdd__parameterized14 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+Module RegisterAdd__parameterized15 
+Detailed RTL Component Info : 
++---Registers : 
+	               26 Bit    Registers := 1     
+Module RegisterAdd__parameterized16 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module RegisterAdd__parameterized17 
+Detailed RTL Component Info : 
++---Registers : 
+	               26 Bit    Registers := 1     
+Module RegisterAdd__parameterized18 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module RegisterAdd__parameterized19 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module Mux_3x1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+Module RegisterAdd__parameterized20 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 174 ; free virtual = 6540
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 166 ; free virtual = 6532
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 166 ; free virtual = 6532
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (EXP_STAGE_DmP/Q_reg[30]) is unused and will be removed from module FPU_PIPELINED_FPADDSUB.
+WARNING: [Synth 8-3332] Sequential element (EXP_STAGE_DmP/Q_reg[29]) is unused and will be removed from module FPU_PIPELINED_FPADDSUB.
+WARNING: [Synth 8-3332] Sequential element (EXP_STAGE_DmP/Q_reg[28]) is unused and will be removed from module FPU_PIPELINED_FPADDSUB.
+WARNING: [Synth 8-3332] Sequential element (SHT2_STAGE_SHFTVARS/Q_reg[4]) is unused and will be removed from module FPU_PIPELINED_FPADDSUB.
+WARNING: [Synth 8-3332] Sequential element (SHT2_STAGE_SHFTVARS/Q_reg[3]) is unused and will be removed from module FPU_PIPELINED_FPADDSUB.
+WARNING: [Synth 8-3332] Sequential element (SHT2_STAGE_SHFTVARS/Q_reg[2]) is unused and will be removed from module FPU_PIPELINED_FPADDSUB.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 150 ; free virtual = 6518
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 150 ; free virtual = 6518
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 141 ; free virtual = 6471
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 128 ; free virtual = 6459
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 117 ; free virtual = 6447
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 117 ; free virtual = 6447
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 117 ; free virtual = 6447
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 117 ; free virtual = 6447
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 117 ; free virtual = 6447
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 117 ; free virtual = 6447
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 117 ; free virtual = 6447
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 117 ; free virtual = 6447
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 117 ; free virtual = 6447
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    24|
+|3     |LUT1   |     7|
+|4     |LUT2   |    74|
+|5     |LUT3   |   113|
+|6     |LUT4   |    64|
+|7     |LUT5   |    24|
+|8     |LUT6   |   133|
+|9     |FDCE   |   410|
+|10    |IBUF   |    68|
+|11    |OBUF   |    37|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------+-------------------------------+------+
+|      |Instance                |Module                         |Cells |
++------+------------------------+-------------------------------+------+
+|1     |top                     |                               |   955|
+|2     |  EXP_STAGE_DMP         |RegisterAdd__parameterized1    |    33|
+|3     |  EXP_STAGE_DmP         |RegisterAdd__parameterized2    |    32|
+|4     |  EXP_STAGE_FLAGS       |RegisterAdd__parameterized3    |     4|
+|5     |  FRMT_STAGE_DATAOUT    |RegisterAdd                    |    32|
+|6     |  FRMT_STAGE_FLAGS      |RegisterAdd__parameterized20   |     4|
+|7     |  INPUT_STAGE_FLAGS     |RegisterAdd__parameterized0    |     3|
+|8     |  INPUT_STAGE_OPERANDX  |RegisterAdd_0                  |    74|
+|9     |  INPUT_STAGE_OPERANDY  |RegisterAdd_1                  |    34|
+|10    |  Magnitude_Comparator  |Comparator                     |     8|
+|11    |  MuxXY                 |MultiplexTxT                   |    59|
+|12    |  NRM_STAGE_DMP_exp     |RegisterAdd__parameterized18   |     8|
+|13    |  NRM_STAGE_FLAGS       |RegisterAdd__parameterized19   |    21|
+|14    |  NRM_STAGE_Raw_mant    |RegisterAdd__parameterized17   |   135|
+|15    |  SFT2FRMT_STAGE_FLAGS  |RegisterAdd__parameterized13   |     3|
+|16    |  SFT2FRMT_STAGE_VARS   |RegisterAdd__parameterized12   |    22|
+|17    |  SGF_STAGE_DMP         |RegisterAdd__parameterized14   |    60|
+|18    |  SGF_STAGE_DmP_mant    |RegisterAdd__parameterized15   |    62|
+|19    |  SGF_STAGE_FLAGS       |RegisterAdd__parameterized16   |    30|
+|20    |  SHT1_STAGE_DMP        |RegisterAdd__parameterized4    |    31|
+|21    |  SHT1_STAGE_DmP_mant   |RegisterAdd__parameterized5    |    23|
+|22    |  SHT1_STAGE_FLAGS      |RegisterAdd__parameterized7    |     4|
+|23    |  SHT1_STAGE_sft_amount |RegisterAdd__parameterized6    |     5|
+|24    |  SHT2_SHIFT_DATA       |RegisterAdd__parameterized9    |    37|
+|25    |  SHT2_STAGE_DMP        |RegisterAdd__parameterized8    |    31|
+|26    |  SHT2_STAGE_FLAGS      |RegisterAdd__parameterized11   |     5|
+|27    |  SHT2_STAGE_SHFTVARS   |RegisterAdd__parameterized10   |    61|
+|28    |  inst_FRMT_STAGE       |FRMT_STAGE                     |    19|
+|29    |    Exp_Mux             |Multiplexer_AC__parameterized1 |    19|
+|30    |  inst_FSM_INPUT_ENABLE |FSM_INPUT_ENABLE               |     8|
+|31    |  result_sign_bit       |sgn_result                     |     1|
++------+------------------------+-------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1368.223 ; gain = 476.246 ; free physical = 117 ; free virtual = 6447
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1368.223 ; gain = 82.434 ; free physical = 117 ; free virtual = 6447
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1368.230 ; gain = 476.254 ; free physical = 117 ; free virtual = 6447
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 92 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+105 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1368.230 ; gain = 401.699 ; free physical = 114 ; free virtual = 6447
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.22 . Memory (MB): peak = 1400.238 ; gain = 0.000 ; free physical = 142 ; free virtual = 6449
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 24 00:50:09 2016...

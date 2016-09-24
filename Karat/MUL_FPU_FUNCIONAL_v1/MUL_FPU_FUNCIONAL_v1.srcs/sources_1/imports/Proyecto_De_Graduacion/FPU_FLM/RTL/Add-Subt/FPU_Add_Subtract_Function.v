@@ -260,19 +260,19 @@ Multiplexer_AC #(.W(EW)) Exp_Oper_A_mux(
         .ctrl(FSM_selector_A),
         .D0 (DMP[W-2:W-EW-1]),
         .D1 (exp_oper_result),
-        .S (S_Oper_A_exp)
+        .S  (S_Oper_A_exp   )
     );
 
 ///////////Mux exp_operation OPER_B_i//////////
 wire [EW-EWR-1:0] Exp_oper_B_D1;
-wire [EW-1:0] Exp_oper_B_D2;
+wire [EW-1:0]     Exp_oper_B_D2;
 
 Mux_3x1 #(.W(EW)) Exp_Oper_B_mux(
                 .ctrl(FSM_selector_B),
-                .D0 (DmP[W-2:W-EW-1]),
-                .D1 ({Exp_oper_B_D1,LZA_output}),
-                .D2 (Exp_oper_B_D2),
-                .S(S_Oper_B_exp)
+                .D0  (DmP[W-2:W-EW-1]),
+                .D1  ({Exp_oper_B_D1,LZA_output}),
+                .D2  (Exp_oper_B_D2),
+                .S   (S_Oper_B_exp)
             );
             
 

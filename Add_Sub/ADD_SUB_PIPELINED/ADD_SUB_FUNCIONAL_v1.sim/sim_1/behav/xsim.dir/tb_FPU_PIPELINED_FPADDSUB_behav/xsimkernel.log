@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_FPU_PIPELINED_FPADDSUB_behav/xsimk -simmode gui -wdb tb_FPU_PIPELINED_FPADDSUB_behav.wdb -simrunnum 0 -socket 58267
+Design successfully loaded
+Design Loading Memory Usage: 53580 KB (Peak: 53724 KB)
+Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 135016 KB (Peak: 200852 KB)
+Simulation CPU Usage: 70 ms

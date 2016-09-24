@@ -1,0 +1,150 @@
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+===============INIT STAGE: input signals============
+---------First Operator------------
+Mantissa = 0000000000000000002c517, Exponent = 00000088, sign = 0
+Mantissa = 00000101100010100010111, Exponent = 10001000, sign = 0
+--------Second Operator------------
+Mantissa = 000000000000000003c4bbe, Exponent = 00000081, sign = 1
+Mantissa = 01111000100101110111110, Exponent = 10000001, sign = 1
+======================== ^ ===================
+======================== ^ ===================
+======================== ^ ===================
+======================== ^ ===================
+===============INIT STAGE: output signals============
+--------------------FLAGS------------------
+Sign = 0, real_op = 1
+--------Big Number------------
+Mantissa_M_SW = 0000000000000000002c517, Exponent_M_EW = 00000088
+Mantissa_M_SW = 00000101100010100010111, Exponent_M_EW = 10001000
+--------Small Number------------
+Mantissa_m_SW = 000000000000000003c4bbe, Exponent_m_EW = 00000081
+Mantissa_m_SW = 01111000100101110111110, Exponent_m_EW = 10000001
+======================== ^ ===================
+======================== ^ ===================
+======================== ^ ===================
+======================== ^ ===================
+===============EXP STAGE============
+--------------------FLAGS------------------
+Sign = 0, real_op = 1
+--------Big Number------------
+Mantissa_M_SW = 0000000000000000002c517, Exponent_M_EW = 00000088
+Mantissa_M_SW = 00000101100010100010111, Exponent_M_EW = 10001000
+--------Small Number------------
+Mantissa_m_SW = 000000000000000003c4bbe
+Mantissa_m_SW = 01111000100101110111110
+--------OPERATION RESULT------------
+Exponent_diff_EW = Exp M - Exp m = 00000007
+Exponent_diff_EW = Exp M - Exp m = 00000111
+===============EXP STAGE============
+======================== ^ ===================
+======================== ^ ===================
+======================== ^ ===================
+======================== ^ ===================
+===================SHT1 STAGE================
+--------------------FLAGS------------------
+--------Sign = 0, real_op = 1 ----------------
+--------Big Number------------------------------------
+--------------Mantissa_M_SW = 0000000000000000002c517, Exponent_M_EW = 00000088--------
+--------------Mantissa_M_SW = 00000101100010100010111, Exponent_M_EW = 10001000--------
+--------------Small Number--------------------
+--------Mantissa_m_SW hex = 000000000000000003c4bbe--------
+--------Mantissa_m_SW bin = 01111000100101110111110----------
+--------------------OPERATION RESULT--------------------
+--------Shifted mantissa result hex = 0000000000000000000005e25d-------
+--------Shifted mantissa result bin = 00000001011110001001011101-------
+===========------========SHT1 STAGE===-------=============
+======================== ^ ===================
+======================== ^ ===================
+======================== ^ ===================
+======================== ^ ===================
+===================SHT2 STAGE================
+--------------------FLAGS------------------
+Sign = 0, real_op = 1
+--------Big Number------------
+Mantissa_M_SW = 0000000000000000002c517, Exponent_M_EW = 00000088
+Mantissa_M_SW = 00000101100010100010111, Exponent_M_EW = 10001000
+--------OPERATION RESULT------------
+Shifted Mantissa_m_SWR = 0000000000000000000005e25d
+Shifted Mantissa_m_SWR = 00000001011110001001011101
+===================SHT2 STAGE================
+Se restan las mantisas
+======================== ^ ===================
+======================== ^ ===================
+======================== ^ ===================
+======================== ^ ===================
+===================SGF STAGE================
+--------------------FLAGS------------------
+add_overflw = 0, Sign = 0
+--------Big Number------------
+Mantissa_M_SW = 0000000000000000000002c517, Exponent_M_EW = 00000088
+Mantissa_M_SW = 00000101100010100010111, Exponent_M_EW = 10001000
+Mantissa_M_SW =                     181527, Exponent_M_EW =      136
+Mantissa_M_SWR = 000000000000000000020b145c, Exponent_M_EW = 00000088
+Mantissa_M_SWR = 10000010110001010001011100, Exponent_M_EW = 10001000
+Mantissa_M_SWR =                   34280540, Exponent_M_EW =      136
+--------Small Number------------
+Mantissa hex = 0000000000000000000005e25d
+Mantissa bin = 00000001011110001001011101
+Mantissa bin =                     385629
+--------OPERATION RESULT------------
+Mantissa operation result = 000000000000000000020531ff
+Mantissa operation result = 10000001010011000111111111
+Mantissa operation result =                   33894911
+===================SGF STAGE================
+Mantissa operation result = 20531ff, Mantissa result bin = 10000001010011000111111111
+dentro del loop 1, 
+======================== ^ ===================
+======================== ^ ===================
+======================== ^ ===================
+======================== ^ ===================
+=================== NRM STAGE ================
+--------------------FLAGS------------------
+add_overflw = 0, Sign = 0
+--------Big Number------------
+Mantisa hex SW  = 0000000000000000002c517 
+Mantisa hex SW  = 00000101100010100010111
+Mantisa hex SWR = 000000000000000000020b145c
+Mantisa hex SWR = 10000010110001010001011100
+Exponent = 88
+--------OPERATION RESULT------------
+Mantissa operation result = 000000000000000000020531ff
+Mantissa operation result = 20531ff
+Mantissa operation result =                   33894911
+LZD result hex = 00, LZD result hex = 00000
+=================== NRM STAGE ================
+=================== SH1NRM STAGE ================
+--------------------FLAGS------------------
+add_overflw = 0, sign = 0
+--------Big Number------------
+Exponent = 00000088
+Exponent = 10001000
+Exponent =      136
+--------OPERATION RESULT------------
+Normalized mantissa (shifted) = 000000000000000000020531ff
+Normalized mantissa (shifted) = 10000001010011000111111111
+Normalized mantissa (shifted) =                   33894911
+LZD result hex = 00, LZD result bin = 00000
+=================== SH1NRM STAGE ================
+=================== NRM2 STAGE ================
+--------------------FLAGS------------------
+overflow flag = 0, underflow flag = 0, sign flag = 0
+--------OPERATION RESULT------------
+Compensated Exponent = 00000088, Normalized mantissa (shifted) = 000000000000000000020531ff
+Compensated Exponent = 10001000,  Normalized mantissa (shifted) = 10000001010011000111111111
+Compensated Exponent =      136, Normalized mantissa (shifted) =                   33894911
+=================== NRM2 STAGE ================
+La mantisa final sera: 00000000000000000014c7f
+La mantisa final sera: 00000010100110001111111
+La mantisa final sera:                   85119
+El exponente final sera: 00000088
+El exponente final sera: 10001000
+El exponente final sera:      136
+=================== FRMT STAGE ================
+--------------------FLAGS------------------
+overflow flag = 0, underflow flag = 0
+--------OPERATION RESULT------------
+El resultado final sera: 00000000000000000000000044014c7f
+El resultado final sera: 01000100000000010100110001111111
+El resultado final sera:                       1140935807
+=================== FRMT STAGE ================

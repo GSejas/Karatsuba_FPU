@@ -3,19 +3,19 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="14" Path="/home/jorge/.Xil/Vivado-3031-jorge-pc/PrjAr/_X_/MUL_FPU_FUNCIONAL_v1.xpr">
+<Project Version="7" Minor="14" Path="/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="2c3403cea31e4cd89217b2fe0ee32ff6"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
-    <Option Name="CompiledLibDirModelSim" Val="$PPRDIR/../../../../../../../../../../../../../Users/jsequeira/Proyectos/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.cache/compile_simlib/modelsim"/>
-    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../../../../../../../../../../../../Users/jsequeira/Proyectos/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.cache/compile_simlib/questa"/>
-    <Option Name="CompiledLibDirIES" Val="$PPRDIR/../../../../../../../../../../../../../Users/jsequeira/Proyectos/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.cache/compile_simlib/ies"/>
-    <Option Name="CompiledLibDirVCS" Val="$PPRDIR/../../../../../../../../../../../../../Users/jsequeira/Proyectos/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.cache/compile_simlib/vcs"/>
-    <Option Name="CompiledLibDirRiviera" Val="$PPRDIR/../../../../../../../../../../../../../Users/jsequeira/Proyectos/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.cache/compile_simlib/riviera"/>
-    <Option Name="CompiledLibDirActivehdl" Val="$PPRDIR/../../../../../../../../../../../../../Users/jsequeira/Proyectos/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.cache/compile_simlib/activehdl"/>
+    <Option Name="CompiledLibDirModelSim" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.cache/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.cache/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.cache/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.cache/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.cache/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.cache/compile_simlib/activehdl"/>
     <Option Name="SimulatorLanguage" Val="Verilog"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
@@ -541,7 +541,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/rtl/FPU_Multiplication_Function_v2.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/rtl/FPU_Multiplication_Function_v2.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/rtl/FPU_Multiplication_Function_v2.v"/>
           <Attr Name="ImportTime" Val="1474005615"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -550,7 +550,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/rtl/KOA_FPGA.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/rtl/KOA_FPGA.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/rtl/KOA_FPGA.v"/>
           <Attr Name="ImportTime" Val="1473922146"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -559,7 +559,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/rtl/KOA_c_v2.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/rtl/KOA_c_v2.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/rtl/KOA_c_v2.v"/>
           <Attr Name="ImportTime" Val="1474005374"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -568,7 +568,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/rtl/KOA_c_v3.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/rtl/KOA_c_v3.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/rtl/KOA_c_v3.v"/>
           <Attr Name="ImportTime" Val="1473990014"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -577,7 +577,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/rtl/multiplier_combinational.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/rtl/multiplier_combinational.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/rtl/multiplier_combinational.v"/>
           <Attr Name="ImportTime" Val="1473922146"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -586,7 +586,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/rtl/RecursiveKOA.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/rtl/RecursiveKOA.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/rtl/RecursiveKOA.v"/>
           <Attr Name="ImportTime" Val="1474005194"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1209,7 +1209,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/behav/ResultadoXilinxFLM.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.sim/sim_1/behav/ResultadoXilinxFLM.txt"/>
+          <Attr Name="ImportPath" Val="$PSIMDIR/sim_1/behav/ResultadoXilinxFLM.txt"/>
           <Attr Name="ImportTime" Val="1473977664"/>
         </FileInfo>
       </File>
@@ -1251,7 +1251,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/rtl/FPU_Multiplication_Function_v2.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/rtl/FPU_Multiplication_Function_v2.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/rtl/FPU_Multiplication_Function_v2.v"/>
           <Attr Name="ImportTime" Val="1473989512"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1260,7 +1260,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/rtl/RecursiveKOA.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/rtl/RecursiveKOA.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/rtl/RecursiveKOA.v"/>
           <Attr Name="ImportTime" Val="1473922146"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1269,7 +1269,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/rtl/multiplier_combinational.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/rtl/multiplier_combinational.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/rtl/multiplier_combinational.v"/>
           <Attr Name="ImportTime" Val="1473922146"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1278,7 +1278,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/rtl/KOA_FPGA.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/rtl/KOA_FPGA.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/rtl/KOA_FPGA.v"/>
           <Attr Name="ImportTime" Val="1473922146"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1287,7 +1287,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/rtl/KOA_c_v2.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/rtl/KOA_c_v2.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/rtl/KOA_c_v2.v"/>
           <Attr Name="ImportTime" Val="1473922146"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1296,7 +1296,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/rtl/KOA_c_v3.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/rtl/KOA_c_v3.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/rtl/KOA_c_v3.v"/>
           <Attr Name="ImportTime" Val="1473990014"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1305,7 +1305,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/sim/testbench_RKOA.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Karatsuba_FPU/Karat/source/sim/testbench_RKOA.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/sim/testbench_RKOA.v"/>
           <Attr Name="ImportTime" Val="1473922146"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1358,12 +1358,12 @@
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design">
-          <Option Id="ResourceSharing">2</Option>
           <Option Id="RepFanoutThreshold">400</Option>
+          <Option Id="ResourceSharing">2</Option>
           <Option Id="FsmExtraction">1</Option>
           <Option Id="NoCombineLuts">1</Option>
-          <Option Id="KeepEquivalentRegisters">1</Option>
           <Option Id="ShregMinSize">5</Option>
+          <Option Id="KeepEquivalentRegisters">1</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
