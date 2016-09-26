@@ -8,14 +8,15 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.FSM_INPUT_ENABLE
+Compiling module xil_defaultlib.ShiftRegister(W=7)
 Compiling module xil_defaultlib.RegisterAdd(W=32)
-Compiling module xil_defaultlib.RegisterAdd(W=2)
+Compiling module xil_defaultlib.RegisterAdd(W=1)
 Compiling module xil_defaultlib.Comparator(W=31)
 Compiling module xil_defaultlib.MultiplexTxT(W=31)
 Compiling module xil_defaultlib.xor_tri(W=32)
 Compiling module xil_defaultlib.sgn_result
 Compiling module xil_defaultlib.RegisterAdd(W=31)
-Compiling module xil_defaultlib.RegisterAdd(W=4)
+Compiling module xil_defaultlib.RegisterAdd(W=3)
 Compiling module xil_defaultlib.RegisterAdd(W=23)
 Compiling module xil_defaultlib.RegisterAdd(W=5)
 Compiling module xil_defaultlib.Multiplexer_AC(W=26)
@@ -38,6 +39,7 @@ Compiling module xil_defaultlib.Mux_3x1(W=1)
 Compiling module xil_defaultlib.Multiplexer_AC(W=8)
 Compiling module xil_defaultlib.Multiplexer_AC(W=23)
 Compiling module xil_defaultlib.FRMT_STAGE(W=32,EW=8,SW=23)
+Compiling module xil_defaultlib.RegisterAdd(W=4)
 Compiling module xil_defaultlib.FPU_PIPELINED_FPADDSUB(W=32,EW=8...
 Compiling module xil_defaultlib.tb_FPU_PIPELINED_FPADDSUB2_vecto...
 Compiling module xil_defaultlib.glbl

@@ -71,6 +71,7 @@ verilog xil_defaultlib  "../../../../../Pipeline_FPADD_sourcefiles/FSM_input_ena
 verilog xil_defaultlib  "../../../../../Pipeline_FPADD_sourcefiles/FORMATTER.v"
 verilog xil_defaultlib  "../../../../../Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v"
 verilog xil_defaultlib  "../../../../../Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sim_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v"
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

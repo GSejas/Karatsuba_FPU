@@ -150,5 +150,7 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU
 INFO: [VRFC 10-311] analyzing module FRMT_STAGE
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_FPU_PIPELINED_FPADDSUB2_vector_testing
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ShiftRegister
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

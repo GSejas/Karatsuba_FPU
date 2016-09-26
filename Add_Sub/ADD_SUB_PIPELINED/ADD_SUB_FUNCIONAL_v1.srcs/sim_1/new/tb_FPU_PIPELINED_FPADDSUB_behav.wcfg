@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_FPU_PIPELINED_FPADDSUB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_FPU_PIPELINED_FPADDSUB" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="57610667fs"></ZoomStartTime>
+      <ZoomEndTime time="241410668fs"></ZoomEndTime>
+      <Cursor1Time time="88244000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="89" />
+   <wave_markers>
+      <marker label="" time="190115000000" />
+      <marker label="" time="190185000000" />
+      <marker label="" time="190165000000" />
+      <marker label="" time="190225000000" />
+      <marker label="" time="105000000" />
+      <marker label="" time="135000000" />
+      <marker label="" time="85000000" />
+      <marker label="" time="145000000" />
+      <marker label="" time="155000000" />
+      <marker label="" time="115000000" />
+      <marker label="" time="125000000" />
+      <marker label="" time="165000000" />
+      <marker label="" time="95000000" />
+   </wave_markers>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/beg_OP">
+      <obj_property name="ElementShortName">beg_OP</obj_property>
+      <obj_property name="ObjectShortName">beg_OP</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_X">
+      <obj_property name="ElementShortName">Data_X[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_X[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_Y">
+      <obj_property name="ElementShortName">Data_Y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_Y[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_X">
+      <obj_property name="ElementShortName">Data_X[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_X[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_Y">
+      <obj_property name="ElementShortName">Data_Y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_Y[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/add_subt">
+      <obj_property name="ElementShortName">add_subt</obj_property>
+      <obj_property name="ObjectShortName">add_subt</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/busy">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/overflow_flag">
+      <obj_property name="ElementShortName">overflow_flag</obj_property>
+      <obj_property name="ObjectShortName">overflow_flag</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/underflow_flag">
+      <obj_property name="ElementShortName">underflow_flag</obj_property>
+      <obj_property name="ObjectShortName">underflow_flag</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/zero_flag">
+      <obj_property name="ElementShortName">zero_flag</obj_property>
+      <obj_property name="ObjectShortName">zero_flag</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/final_result_ieee">
+      <obj_property name="ElementShortName">final_result_ieee[31:0]</obj_property>
+      <obj_property name="ObjectShortName">final_result_ieee[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/final_result_ieee">
+      <obj_property name="ElementShortName">final_result_ieee[31:0]</obj_property>
+      <obj_property name="ObjectShortName">final_result_ieee[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/final_result_ieee_mantissa">
+      <obj_property name="ElementShortName">final_result_ieee_mantissa[22:0]</obj_property>
+      <obj_property name="ObjectShortName">final_result_ieee_mantissa[22:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/final_result_ieee_exponent">
+      <obj_property name="ElementShortName">final_result_ieee_exponent[7:0]</obj_property>
+      <obj_property name="ObjectShortName">final_result_ieee_exponent[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/final_result_ieee_sign">
+      <obj_property name="ElementShortName">final_result_ieee_sign</obj_property>
+      <obj_property name="ObjectShortName">final_result_ieee_sign</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/ready">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_X_mant">
+      <obj_property name="ElementShortName">Data_X_mant[22:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_X_mant[22:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_Y_mant">
+      <obj_property name="ElementShortName">Data_Y_mant[22:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_Y_mant[22:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_X_exp">
+      <obj_property name="ElementShortName">Data_X_exp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_X_exp[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_Y_exp">
+      <obj_property name="ElementShortName">Data_Y_exp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_Y_exp[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_X_sign">
+      <obj_property name="ElementShortName">Data_X_sign</obj_property>
+      <obj_property name="ObjectShortName">Data_X_sign</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_Y_sign">
+      <obj_property name="ElementShortName">Data_Y_sign</obj_property>
+      <obj_property name="ObjectShortName">Data_Y_sign</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/formatted_number_W">
+      <obj_property name="ElementShortName">formatted_number_W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">formatted_number_W[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/overflow_flag_t">
+      <obj_property name="ElementShortName">overflow_flag_t</obj_property>
+      <obj_property name="ObjectShortName">overflow_flag_t</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/underflow_flag_t">
+      <obj_property name="ElementShortName">underflow_flag_t</obj_property>
+      <obj_property name="ObjectShortName">underflow_flag_t</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/LZD_raw_val_EWR">
+      <obj_property name="ElementShortName">LZD_raw_val_EWR[4:0]</obj_property>
+      <obj_property name="ObjectShortName">LZD_raw_val_EWR[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Theoretical_result">
+      <obj_property name="ElementShortName">Theoretical_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Theoretical_result[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Theoretical_result_mantissa">
+      <obj_property name="ElementShortName">Theoretical_result_mantissa[22:0]</obj_property>
+      <obj_property name="ObjectShortName">Theoretical_result_mantissa[22:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Theoretical_result_exponent">
+      <obj_property name="ElementShortName">Theoretical_result_exponent[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Theoretical_result_exponent[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Theoretical_result_sign">
+      <obj_property name="ElementShortName">Theoretical_result_sign</obj_property>
+      <obj_property name="ObjectShortName">Theoretical_result_sign</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/PERIOD">
+      <obj_property name="ElementShortName">PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/W">
+      <obj_property name="ElementShortName">W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">W[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/EW">
+      <obj_property name="ElementShortName">EW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EW[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/SW">
+      <obj_property name="ElementShortName">SW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SW[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/SWR">
+      <obj_property name="ElementShortName">SWR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SWR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/EWR">
+      <obj_property name="ElementShortName">EWR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EWR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/beg_OP">
+      <obj_property name="ElementShortName">beg_OP</obj_property>
+      <obj_property name="ObjectShortName">beg_OP</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_X">
+      <obj_property name="ElementShortName">Data_X[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_X[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_Y">
+      <obj_property name="ElementShortName">Data_Y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_Y[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/add_subt">
+      <obj_property name="ElementShortName">add_subt</obj_property>
+      <obj_property name="ObjectShortName">add_subt</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/busy">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/overflow_flag">
+      <obj_property name="ElementShortName">overflow_flag</obj_property>
+      <obj_property name="ObjectShortName">overflow_flag</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/underflow_flag">
+      <obj_property name="ElementShortName">underflow_flag</obj_property>
+      <obj_property name="ObjectShortName">underflow_flag</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/zero_flag">
+      <obj_property name="ElementShortName">zero_flag</obj_property>
+      <obj_property name="ObjectShortName">zero_flag</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/final_result_ieee">
+      <obj_property name="ElementShortName">final_result_ieee[31:0]</obj_property>
+      <obj_property name="ObjectShortName">final_result_ieee[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/final_result_ieee_mantissa">
+      <obj_property name="ElementShortName">final_result_ieee_mantissa[22:0]</obj_property>
+      <obj_property name="ObjectShortName">final_result_ieee_mantissa[22:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/final_result_ieee_exponent">
+      <obj_property name="ElementShortName">final_result_ieee_exponent[7:0]</obj_property>
+      <obj_property name="ObjectShortName">final_result_ieee_exponent[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/final_result_ieee_sign">
+      <obj_property name="ElementShortName">final_result_ieee_sign</obj_property>
+      <obj_property name="ObjectShortName">final_result_ieee_sign</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/ready">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_X_mant">
+      <obj_property name="ElementShortName">Data_X_mant[22:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_X_mant[22:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_Y_mant">
+      <obj_property name="ElementShortName">Data_Y_mant[22:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_Y_mant[22:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_X_exp">
+      <obj_property name="ElementShortName">Data_X_exp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_X_exp[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_Y_exp">
+      <obj_property name="ElementShortName">Data_Y_exp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_Y_exp[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_X_sign">
+      <obj_property name="ElementShortName">Data_X_sign</obj_property>
+      <obj_property name="ObjectShortName">Data_X_sign</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Data_Y_sign">
+      <obj_property name="ElementShortName">Data_Y_sign</obj_property>
+      <obj_property name="ObjectShortName">Data_Y_sign</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/formatted_number_W">
+      <obj_property name="ElementShortName">formatted_number_W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">formatted_number_W[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/overflow_flag_t">
+      <obj_property name="ElementShortName">overflow_flag_t</obj_property>
+      <obj_property name="ObjectShortName">overflow_flag_t</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/underflow_flag_t">
+      <obj_property name="ElementShortName">underflow_flag_t</obj_property>
+      <obj_property name="ObjectShortName">underflow_flag_t</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/LZD_raw_val_EWR">
+      <obj_property name="ElementShortName">LZD_raw_val_EWR[4:0]</obj_property>
+      <obj_property name="ObjectShortName">LZD_raw_val_EWR[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Theoretical_result">
+      <obj_property name="ElementShortName">Theoretical_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Theoretical_result[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Theoretical_result_mantissa">
+      <obj_property name="ElementShortName">Theoretical_result_mantissa[22:0]</obj_property>
+      <obj_property name="ObjectShortName">Theoretical_result_mantissa[22:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Theoretical_result_exponent">
+      <obj_property name="ElementShortName">Theoretical_result_exponent[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Theoretical_result_exponent[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB/Theoretical_result_sign">
+      <obj_property name="ElementShortName">Theoretical_result_sign</obj_property>
+      <obj_property name="ObjectShortName">Theoretical_result_sign</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/PERIOD">
+      <obj_property name="ElementShortName">PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/W">
+      <obj_property name="ElementShortName">W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">W[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/EW">
+      <obj_property name="ElementShortName">EW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EW[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/SW">
+      <obj_property name="ElementShortName">SW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SW[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/SWR">
+      <obj_property name="ElementShortName">SWR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SWR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB/EWR">
+      <obj_property name="ElementShortName">EWR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EWR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider144" type="divider">
+      <obj_property name="label">INIT STAGE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group879">
+      <obj_property name="label">INIT STAGE FLAGS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider144" type="divider">
+      <obj_property name="label">EXP STAGE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group891">
+      <obj_property name="label">EXP STAGE FLAGS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider144" type="divider">
+      <obj_property name="label">SHT1 STAGE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group1046">
+      <obj_property name="label">SHT1 STAGE FLAGS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider144" type="divider">
+      <obj_property name="label">SHT2 STAGE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group1047">
+      <obj_property name="label">SHT2 STAGE FLAGS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider144" type="divider">
+      <obj_property name="label">SGF STAGE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group1049">
+      <obj_property name="label">SGF STAGE FLAGS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="divider144" type="divider">
+      <obj_property name="label">NRM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group1050">
+      <obj_property name="label">NRM FLAGS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="divider144" type="divider">
+      <obj_property name="label">NRM2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group1048">
+      <obj_property name="label">NRM2 FLAGS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="divider144" type="divider">
+      <obj_property name="label">FRMT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group1051">
+      <obj_property name="label">FRMT FLAGS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1474699746">
-  <File Type="PA-TCL" Name="FPU_PIPELINED_FPADDSUB.tcl"/>
-  <File Type="RDS-RDS" Name="FPU_PIPELINED_FPADDSUB.vds"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1474845050">
   <File Type="VDS-TIMINGSUMMARY" Name="FPU_PIPELINED_FPADDSUB_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="FPU_PIPELINED_FPADDSUB_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="FPU_PIPELINED_FPADDSUB.tcl"/>
   <File Type="RDS-DCP" Name="FPU_PIPELINED_FPADDSUB.dcp"/>
   <File Type="RDS-UTIL-PB" Name="FPU_PIPELINED_FPADDSUB_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="FPU_PIPELINED_FPADDSUB_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="FPU_PIPELINED_FPADDSUB_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="FPU_PIPELINED_FPADDSUB.vds"/>
+  <File Type="VDS-TIMING-PB" Name="FPU_PIPELINED_FPADDSUB_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v">
@@ -276,6 +276,15 @@
     </File>
     <File Path="$PPRDIR/../../Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/shift_reg.v"/>
+        <Attr Name="ImportTime" Val="1474784785"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
