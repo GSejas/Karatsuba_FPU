@@ -1,0 +1,38 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FSM_input_enable.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/MultiplexTxT.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Oper_Start_In.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/xor_tri.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/exp_operation.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/add_sub_carry_out.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Rotate_Mux_Array.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_Array.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Barrel_shifter.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Add_Subt.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Priority_Codec_32.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Priority_Codec_64.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Round_Sgf_Dec.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Tenth_Phase.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_3x1.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FSM_Add_Subtract.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FPU_Add_Subtract_Function.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/LZD.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Greater_Comparator.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparators.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator_Less.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FORMATTER.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v" -d "SUB_OPER=1"
+verilog xil_defaultlib  "../../../ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v" -d "SUB_OPER=1"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

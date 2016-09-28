@@ -1,0 +1,36 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/sim_double_fpsub/synth/func/tb_FPU_PIPELINED_FPADDSUB2_vector_testing_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator
+INFO: [VRFC 10-311] analyzing module FPU_PIPELINED_FPADDSUB
+INFO: [VRFC 10-311] analyzing module FSM_INPUT_ENABLE
+INFO: [VRFC 10-311] analyzing module MultiplexTxT
+INFO: [VRFC 10-311] analyzing module RegisterAdd
+INFO: [VRFC 10-311] analyzing module RegisterAdd_0
+INFO: [VRFC 10-311] analyzing module RegisterAdd_1
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized0
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized1
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized10
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized11
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized12
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized13
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized14
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized15
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized16
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized17
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized18
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized19
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized2
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized20
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized21
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized22
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized3
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized4
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized5
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized6
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized7
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized8
+INFO: [VRFC 10-311] analyzing module RegisterAdd__parameterized9
+INFO: [VRFC 10-311] analyzing module ShiftRegister
+INFO: [VRFC 10-311] analyzing module sgn_result
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_FPU_PIPELINED_FPADDSUB2_vector_testing

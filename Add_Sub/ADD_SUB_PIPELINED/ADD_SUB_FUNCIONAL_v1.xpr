@@ -19,14 +19,14 @@
     <Option Name="SimulatorLanguage" Val="Verilog"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
-    <Option Name="ActiveSimSet" Val="bloody_simruns"/>
+    <Option Name="ActiveSimSet" Val="sim_double_fpsub"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PPRDIR/ADD_SUB_FUNCIONAL_v1.ip_user_files"/>
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/ADD_SUB_FUNCIONAL_v1.ip_user_files/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="422"/>
+    <Option Name="WTXSimLaunchSim" Val="428"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -1180,25 +1180,115 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_single_fpsub" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_single_fpsub">
+      <File Path="$PSRCDIR/sim_single_fpsub/imports/singl/Decimal_B.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Resultados/FPSUB/singl/Decimal_B.txt"/>
+          <Attr Name="ImportTime" Val="1475027128"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_single_fpsub/imports/singl/Decimal_R.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Resultados/FPSUB/singl/Decimal_R.txt"/>
+          <Attr Name="ImportTime" Val="1475027128"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_single_fpsub/imports/singl/Decimal_A.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Resultados/FPSUB/singl/Decimal_A.txt"/>
+          <Attr Name="ImportTime" Val="1475027128"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_single_fpsub/imports/singl/Hexadecimal_R.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Resultados/FPSUB/singl/Hexadecimal_R.txt"/>
+          <Attr Name="ImportTime" Val="1475027128"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_single_fpsub/imports/singl/Hexadecimal_A.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Resultados/FPSUB/singl/Hexadecimal_A.txt"/>
+          <Attr Name="ImportTime" Val="1475027129"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_single_fpsub/imports/singl/Hexadecimal_B.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Resultados/FPSUB/singl/Hexadecimal_B.txt"/>
+          <Attr Name="ImportTime" Val="1475027129"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="tb_FPU_PIPELINED_FPADDSUB2_vector_testing"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SimMode" Val="post-synthesis"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="xsim.simulate.saif_all_signals" Val="true"/>
+        <Define Name="SUB_OPER" Val="1"/>
       </Config>
     </FileSet>
     <FileSet Name="sim_double_fpsub" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_double_fpsub">
+      <File Path="$PSRCDIR/sim_double_fpsub/imports/doubl/Hexadecimal_R.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Resultados/FPSUB/doubl/Hexadecimal_R.txt"/>
+          <Attr Name="ImportTime" Val="1475029005"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_double_fpsub/imports/doubl/Hexadecimal_B.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Resultados/FPSUB/doubl/Hexadecimal_B.txt"/>
+          <Attr Name="ImportTime" Val="1475029005"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_double_fpsub/imports/doubl/Hexadecimal_A.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Resultados/FPSUB/doubl/Hexadecimal_A.txt"/>
+          <Attr Name="ImportTime" Val="1475029005"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_double_fpsub/imports/doubl/Decimal_A.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Resultados/FPSUB/doubl/Decimal_A.txt"/>
+          <Attr Name="ImportTime" Val="1475029005"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_double_fpsub/imports/doubl/Decimal_R.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Resultados/FPSUB/doubl/Decimal_R.txt"/>
+          <Attr Name="ImportTime" Val="1475029005"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_double_fpsub/imports/doubl/Decimal_B.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Resultados/FPSUB/doubl/Decimal_B.txt"/>
+          <Attr Name="ImportTime" Val="1475029005"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="tb_FPU_PIPELINED_FPADDSUB2_vector_testing"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SimMode" Val="post-synthesis"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="xsim.simulate.saif_all_signals" Val="true"/>
+        <Define Name="SUB_OPER" Val="1"/>
         <Generic Name="W" Val="64"/>
         <Generic Name="EW" Val="11"/>
         <Generic Name="SW" Val="52"/>
@@ -1229,7 +1319,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design">
@@ -1239,7 +1329,7 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="Double_Design" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/Double_Design" IncludeInArchive="true">
+    <Run Id="Double_Design" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/Double_Design" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design">
@@ -1248,7 +1338,7 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1" IncludeInArchive="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
@@ -1262,7 +1352,7 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="impl_2" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." SynthRun="Double_Design" IncludeInArchive="true">
+    <Run Id="impl_2" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" SynthRun="Double_Design" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>

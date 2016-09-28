@@ -2,3 +2,6 @@ Running: xsim.dir/tb_FPU_PIPELINED_FPADDSUB2_vector_testing_func_synth/xsimk -si
 Design successfully loaded
 Design Loading Memory Usage: 61060 KB (Peak: 61520 KB)
 Design Loading CPU Usage: 90 ms
+Simulation completed
+Simulation Memory Usage: 146764 KB (Peak: 208332 KB)
+Simulation CPU Usage: 1890 ms

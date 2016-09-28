@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "tb_FPU_PIPELINED_FPADDSUB2_vector_testing_time_synth.v"
+verilog xil_defaultlib  "../../../../ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"
+
+# Do not sort compile order
+nosort

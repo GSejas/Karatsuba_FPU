@@ -1,0 +1,68 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FSM_input_enable.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM_INPUT_ENABLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ShiftRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterAdd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/MultiplexTxT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MultiplexTxT
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sgn_result
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Oper_Start_In.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Oper_Start_In
+INFO: [VRFC 10-2458] undeclared symbol sign_result, assumed default net type wire [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Oper_Start_In.v:110]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/xor_tri.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xor_tri
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/exp_operation.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Exp_Operation
+INFO: [VRFC 10-2458] undeclared symbol Overflow_flag, assumed default net type wire [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/exp_operation.v:63]
+INFO: [VRFC 10-2458] undeclared symbol Underflow_flag, assumed default net type wire [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/exp_operation.v:64]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_AC
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/add_sub_carry_out.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add_sub_carry_out
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Rotate_Mux_Array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Rotate_Mux_Array
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_Array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_Array
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_mux_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Barrel_shifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Barrel_Shifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Add_Subt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add_Subt
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Priority_Codec_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Priority_Codec_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Priority_Codec_64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Priority_Codec_64
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Round_Sgf_Dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Round_Sgf_Dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Tenth_Phase.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Tenth_Phase
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_3x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_3x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FSM_Add_Subtract.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM_Add_Subtract
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FPU_Add_Subtract_Function.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FPU_Add_Subtract_Function
+INFO: [VRFC 10-2458] undeclared symbol zero_flag, assumed default net type wire [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/FPU_Add_Subtract_Function.v:167]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/LZD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LZD
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Greater_Comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Greater_Comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparators.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparators
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator_Less.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator_Less
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FPU_PIPELINED_FPADDSUB
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FORMATTER.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FORMATTER
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FRMT_STAGE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_FPU_PIPELINED_FPADDSUB2_vector_testing
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/sim_single_fpsub/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
