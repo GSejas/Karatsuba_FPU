@@ -1,0 +1,62 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 4d91bfde9a844ec993ad3726e43f6b61 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_FPU_PIPELINED_FPADDSUB2_vector_testing_func_synth xil_defaultlib.tb_FPU_PIPELINED_FPADDSUB2_vector_testing xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.ffsrce_fdce
+Compiling module unisims_ver.FDCE
+Compiling module xil_defaultlib.RegisterAdd__parameterized1
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut3_mux4
+Compiling module unisims_ver.x_lut3_mux4_reduced_0
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module xil_defaultlib.RegisterAdd__parameterized2
+Compiling module xil_defaultlib.RegisterAdd__parameterized3
+Compiling module xil_defaultlib.RegisterAdd
+Compiling module xil_defaultlib.RegisterAdd__parameterized21
+Compiling module xil_defaultlib.RegisterAdd__parameterized0
+Compiling module xil_defaultlib.RegisterAdd_0
+Compiling module xil_defaultlib.RegisterAdd_1
+Compiling module unisims_ver.CARRY4
+Compiling module xil_defaultlib.Comparator
+Compiling module xil_defaultlib.MultiplexTxT
+Compiling module xil_defaultlib.RegisterAdd__parameterized19
+Compiling module xil_defaultlib.RegisterAdd__parameterized20
+Compiling module xil_defaultlib.RegisterAdd__parameterized18
+Compiling module xil_defaultlib.RegisterAdd__parameterized22
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module xil_defaultlib.RegisterAdd__parameterized14
+Compiling module xil_defaultlib.RegisterAdd__parameterized13
+Compiling module xil_defaultlib.RegisterAdd__parameterized15
+Compiling module xil_defaultlib.RegisterAdd__parameterized16
+Compiling module xil_defaultlib.RegisterAdd__parameterized17
+Compiling module xil_defaultlib.RegisterAdd__parameterized4
+Compiling module xil_defaultlib.RegisterAdd__parameterized5
+Compiling module xil_defaultlib.RegisterAdd__parameterized7
+Compiling module xil_defaultlib.RegisterAdd__parameterized6
+Compiling module xil_defaultlib.RegisterAdd__parameterized9
+Compiling module xil_defaultlib.RegisterAdd__parameterized8
+Compiling module xil_defaultlib.RegisterAdd__parameterized12
+Compiling module xil_defaultlib.RegisterAdd__parameterized10
+Compiling module xil_defaultlib.RegisterAdd__parameterized11
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.Multiplexer_AC__parameterized1
+Compiling module xil_defaultlib.FRMT_STAGE
+Compiling module xil_defaultlib.FSM_INPUT_ENABLE
+Compiling module xil_defaultlib.ShiftRegister
+Compiling module xil_defaultlib.sgn_result
+Compiling module xil_defaultlib.FPU_PIPELINED_FPADDSUB
+Compiling module xil_defaultlib.tb_FPU_PIPELINED_FPADDSUB2_vecto...
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_FPU_PIPELINED_FPADDSUB2_vector_testing_func_synth

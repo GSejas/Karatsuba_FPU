@@ -1,7 +1,20 @@
 //==================================================================================================
 //  Filename      : tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v
+//  Created On    : 2016-09-27 18:38:13
+//  Last Modified : 2016-09-27 20:00:38
+//  Revision      :
+//  Author        : Jorge Sequeira Rojas
+//  Company       : Instituto Tecnologico de Costa Rica
+//  Email         : jsequeira@gmail.com
+//
+//  Description   :
+//
+//
+//==================================================================================================
+//==================================================================================================
+//  Filename      : tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v
 //  Created On    : 2016-09-25 17:59:05
-//  Last Modified : 2016-09-25 17:59:05
+//  Last Modified : 2016-09-27 18:36:46
 //  Revision      :
 //  Author        : Jorge Sequeira Rojas
 //  Company       : Instituto Tecnologico de Costa Rica
@@ -188,7 +201,13 @@ end
     logVectorReference = $fopen("output_log.py","w");
 
     rst = 1;
-    add_subt = 0;
+
+`ifdef SUB_OPER
+    add_subt = 1; //Se realiza la operacion de resta
+`else
+    add_subt = 0; //Se realiza la operacion de suma
+`endif
+
     beg_OP = 0;
     Data_Y = 0;
     Data_X = 0;
@@ -223,7 +242,7 @@ end
      //**************************** Transmision de datos de forma paralela ************************************************************//
 
   always @(posedge clk) begin
-      if (contador == (2**PERIOD)) begin
+      if (contador == (2**PERIOD+6)) begin
           $fclose(FileSaveData);
           $fclose(logVectorReference);
           $finish;
@@ -234,14 +253,14 @@ end
   end
 
 always @(negedge clk) begin
-    #(PERIOD/3);
+    #(PERIOD/5);
     if(~busy & ~rst) begin
       beg_OP = 1;
     end
 end
 
 always @(posedge clk) begin
-    #(PERIOD/3);
+    #(PERIOD/5);
     if(rst) begin
         contador = 0;
     end

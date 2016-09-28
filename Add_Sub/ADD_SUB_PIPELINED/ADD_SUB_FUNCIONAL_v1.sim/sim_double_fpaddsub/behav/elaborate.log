@@ -1,0 +1,48 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 4d91bfde9a844ec993ad3726e43f6b61 --debug typical --relax --mt 8 -generic_top W=64 -generic_top EW=11 -generic_top SW=52 -generic_top SWR=55 -generic_top EWR=6 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_FPU_PIPELINED_FPADDSUB2_vector_testing_behav xil_defaultlib.tb_FPU_PIPELINED_FPADDSUB2_vector_testing xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-1761] module glbl does not have a parameter named W to override [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/sim_double_fpaddsub/behav/glbl.v:6]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port load [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v:820]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.FSM_INPUT_ENABLE
+Compiling module xil_defaultlib.ShiftRegister(W=7)
+Compiling module xil_defaultlib.RegisterAdd(W=64)
+Compiling module xil_defaultlib.RegisterAdd(W=1)
+Compiling module xil_defaultlib.Comparator(W=63)
+Compiling module xil_defaultlib.MultiplexTxT(W=63)
+Compiling module xil_defaultlib.xor_tri(W=64)
+Compiling module xil_defaultlib.sgn_result
+Compiling module xil_defaultlib.RegisterAdd(W=63)
+Compiling module xil_defaultlib.RegisterAdd(W=3)
+Compiling module xil_defaultlib.RegisterAdd(W=52)
+Compiling module xil_defaultlib.RegisterAdd(W=6)
+Compiling module xil_defaultlib.Multiplexer_AC(W=55)
+Compiling module xil_defaultlib.Multiplexer_AC(W=1)
+Compiling module xil_defaultlib.Rotate_Mux_Array(SWR=55)
+Compiling module xil_defaultlib.shift_mux_array(SWR=55,LEVEL=0)
+Compiling module xil_defaultlib.shift_mux_array(SWR=55,LEVEL=1)
+Compiling module xil_defaultlib.RegisterAdd(W=55)
+Compiling module xil_defaultlib.RegisterAdd(W=2)
+Compiling module xil_defaultlib.RegisterAdd(W=17)
+Compiling module xil_defaultlib.shift_mux_array(SWR=55,LEVEL=2)
+Compiling module xil_defaultlib.shift_mux_array(SWR=55,LEVEL=3)
+Compiling module xil_defaultlib.shift_mux_array(SWR=55,LEVEL=4)
+Compiling module xil_defaultlib.shift_mux_array(SWR=55)
+Compiling module xil_defaultlib.Greater_Comparator(W=12)
+Compiling module xil_defaultlib.Comparator_Less(W=12)
+Compiling module xil_defaultlib.FORMATTER(EW=12)
+Compiling module xil_defaultlib.RegisterAdd(W=11)
+Compiling module xil_defaultlib.Priority_Codec_64
+Compiling module xil_defaultlib.Mux_3x1(W=1)
+Compiling module xil_defaultlib.Multiplexer_AC(W=11)
+Compiling module xil_defaultlib.Multiplexer_AC(W=52)
+Compiling module xil_defaultlib.FRMT_STAGE(W=64,EW=11,SW=52)
+Compiling module xil_defaultlib.FPU_PIPELINED_FPADDSUB(W=64,EW=1...
+Compiling module xil_defaultlib.tb_FPU_PIPELINED_FPADDSUB2_vecto...
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_FPU_PIPELINED_FPADDSUB2_vector_testing_behav

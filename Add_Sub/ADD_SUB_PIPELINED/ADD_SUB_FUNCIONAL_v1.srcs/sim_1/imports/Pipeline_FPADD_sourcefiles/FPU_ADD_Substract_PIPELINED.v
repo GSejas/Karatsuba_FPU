@@ -2,7 +2,7 @@
 //==================================================================================================
 //  Filename      : FPU_ADD_Substract_PIPELINED.v
 //  Created On    : 2016-09-21 14:31:41
-//  Last Modified : 2016-09-25 18:39:20
+//  Last Modified : 2016-09-27 18:00:06
 //  Revision      :
 //  Author        : Jorge Sequeira Rojas
 //  Company       : Instituto Tecnologico de Costa Rica
@@ -34,32 +34,32 @@
 module FPU_PIPELINED_FPADDSUB
 
    /*#(parameter W = 32, parameter EW = 8, parameter SW = 23,
-		parameter SWR=26, parameter EWR = 5)  //Single Precision */
+    parameter SWR=26, parameter EWR = 5)  //Single Precision */
 
 #(parameter W = 64, parameter EW = 11, parameter SW = 52,
-		parameter SWR = 55, parameter EWR = 6) //-- Double Precision */
-	(
-		//FSM Signals
-		input wire clk,
-		input wire rst,
-		input wire beg_OP,
-		//input wire ack_OP,
+    parameter SWR = 55, parameter EWR = 6) //-- Double Precision */
+  (
+    //FSM Signals
+    input wire clk,
+    input wire rst,
+    input wire beg_OP,
+    //input wire ack_OP,
 
-		//Oper_Start_in signals
-		input wire [W-1:0] Data_X,
-		input wire [W-1:0] Data_Y,
-		input wire add_subt,
+    //Oper_Start_in signals
+    input wire [W-1:0] Data_X,
+    input wire [W-1:0] Data_Y,
+    input wire add_subt,
 
-		//Round signals signals
-		//input wire [1:0] r_mode,
+    //Round signals signals
+    //input wire [1:0] r_mode,
 
-		//OUTPUT SIGNALS
+    //OUTPUT SIGNALS
     output wire busy,
-		output wire overflow_flag,
-		output wire underflow_flag,
+    output wire overflow_flag,
+    output wire underflow_flag,
     output wire zero_flag,
-	  output wire ready,
-		output wire [W-1:0] final_result_ieee
+    output wire ready,
+    output wire [W-1:0] final_result_ieee
     );
 
 
@@ -76,13 +76,13 @@ wire enable_shift_reg;
 
 
 FSM_INPUT_ENABLE inst_FSM_INPUT_ENABLE (
-		.clk                   (clk),
-		.rst                   (rst),
-		.init_OPERATION        (beg_OP),
+    .clk                   (clk),
+    .rst                   (rst),
+    .init_OPERATION        (beg_OP),
     .enable_input_internal (FSM_enable_input_internal),
-		.enable_Pipeline_input (enable_Pipeline_input),
+    .enable_Pipeline_input (enable_Pipeline_input),
     .enable_shift_reg      (enable_shift_reg)
-	);
+  );
 
 
 
@@ -185,7 +185,7 @@ wire [SWR-1:0] sftr_odat_SHT2_SWR; //SHIFTER OUTPUT DATA
 
 wire ADD_OVRFLW_NRM2, NRM2_ACTIVE;
 
-wire [EWR-1:0]Exp_oper_1_EWR;
+wire [EW-1:0]Exp_oper_1_EW;
 /////////////////------SIGNALS FOR THE LAST EXPONENT OPERATION-------/////////-///////////////////
 
 reg [EW:0] exp_rslt_NRM2_EW1;
@@ -283,7 +283,7 @@ Comparator #(.W(W-1)) Magnitude_Comparator (
 //Classifies in the registers the bigger value (M) and the smaller value (m)
 
 MultiplexTxT #(.W(W-1)) MuxXY (
-	.select(gtXY),
+  .select(gtXY),
     .D0_i(intDX_EWSW[W-2:0]),
     .D1_i(intDY_EWSW[W-2:0]),
     .S0_o(DMP_INIT_EWSW),
@@ -437,11 +437,11 @@ generate
     case(EW)
         8:begin
             assign LZD_ZFiller =3'd0;
-            assign Exp_oper_1_EWR = 8'd1;
+            assign Exp_oper_1_EW = 8'd1;
         end
         default:begin
             assign LZD_ZFiller =5'd0;
-             assign Exp_oper_1_EWR = 11'd1;
+             assign Exp_oper_1_EW = 11'd1;
         end
     endcase
 endgenerate
@@ -452,44 +452,44 @@ endgenerate
 assign mux_sel_norm_EWR     = (ADD_OVRFLW_NRM) ? b_shifter_one_SWR : LZD_raw_out_EWR;
 assign shft_value_mux_o_EWR = (NRM_ACTIVE)     ?  mux_sel_norm_EWR : Shift_amount_SHT1_EWR;
 
-assign left_right_SHT1      = (NRM_ACTIVE)     ? (~ADD_OVRFLW_SGF) : 1'b0;
-assign bit_shift_SHT1       = ADD_OVRFLW_NRM;
+//assign left_right_SHT1      = (NRM_ACTIVE)     ? (~ADD_OVRFLW_NRM) : 1'b0;
+
+assign left_right_SHT1      = (NRM_ACTIVE)&(~ADD_OVRFLW_NRM);
+
+assign bit_shift_SHT1       = (NRM_ACTIVE)&(ADD_OVRFLW_NRM);
 
 
-	Multiplexer_AC #(.W(SWR)) b_shftr_idat_mux_SHT1 (
-		.ctrl(NRM_ACTIVE                   ),
-		.D0  ({1'b1,DmP_mant_SHT1_SW,2'b00}),
-		.D1  (Raw_mant_NRM_SWR             ),
-		.S   (sftr_idat_SHT1_SWR           )
-		);
+  Multiplexer_AC #(.W(SWR)) b_shftr_idat_mux_SHT1 (
+    .ctrl(NRM_ACTIVE                   ),
+    .D0  ({1'b1,DmP_mant_SHT1_SW,2'b00}),
+    .D1  (Raw_mant_NRM_SWR             ),
+    .S   (sftr_idat_SHT1_SWR           )
+    );
 
 ////////////////////////////////////////////////////
-	genvar k;			//Level//
+  genvar k;     //Level//
 ////////////////////////////////////////////////////
 
 
-	Rotate_Mux_Array #(.SWR(SWR)) first_rotate(
-		.Data_i  (sftr_idat_SHT1_SWR),
-		.select_i(left_right_SHT1),
-		.Data_o  (Data_array_SWR [0][SWR-1:0])
-		);
+  Rotate_Mux_Array #(.SWR(SWR)) first_rotate(
+    .Data_i  (sftr_idat_SHT1_SWR),
+    .select_i(left_right_SHT1),
+    .Data_o  (Data_array_SWR [0][SWR-1:0])
+    );
 
-	generate for (k=0; k < 2; k=k+1) begin : shift_mux_array1
-		shift_mux_array #(.SWR(SWR), .LEVEL(k)) shift_mux_array(
-			.Data_i     (Data_array_SWR[k]),
-			.select_i   (shft_value_mux_o_EWR[k]),
-			.bit_shift_i(bit_shift_SHT1),
-			.Data_o     (Data_array_SWR[k+1])
-			);
-		end
-	endgenerate
+  generate for (k=0; k < 2; k=k+1) begin : shift_mux_array1
+    shift_mux_array #(.SWR(SWR), .LEVEL(k)) shift_mux_array(
+      .Data_i     (Data_array_SWR[k]),
+      .select_i   (shft_value_mux_o_EWR[k]),
+      .bit_shift_i(bit_shift_SHT1),
+      .Data_o     (Data_array_SWR[k+1])
+      );
+    end
+  endgenerate
 
 assign sftr_odat_SHT1_SWR = Data_array_SWR[2];
 assign Data_array_SWR[3] = sftr_idat_SHT2_SWR;
 
-
-assign SIGN_FLAG_SHT1SHT2 = (NRM_ACTIVE) ? SIGN_FLAG_NRM : SIGN_FLAG_SHT1;
-assign ZERO_FLAG_SHT1SHT2 = (NRM_ACTIVE) ? ZERO_FLAG_NRM : ZERO_FLAG_SHT1;
 
 
 //////////////////////////////----------------------------------///////////////////////////////
@@ -534,8 +534,8 @@ assign ZERO_FLAG_SHT1SHT2 = (NRM_ACTIVE) ? ZERO_FLAG_NRM : ZERO_FLAG_SHT1;
   .clk(clk),
   .rst(rst),
   .load(SHT1_ACTIVE),
-  .D({SIGN_FLAG_SHT1SHT2, OP_FLAG_SHT1, ZERO_FLAG_SHT1SHT2}),
-  .Q({SIGN_FLAG_SHT2    , OP_FLAG_SHT2, ZERO_FLAG_SHT2    }));
+  .D({SIGN_FLAG_SHT1, OP_FLAG_SHT1, ZERO_FLAG_SHT1}),
+  .Q({SIGN_FLAG_SHT2, OP_FLAG_SHT2, ZERO_FLAG_SHT2}));
 
 /////////////////DE ACA SALE DIRECTO A LA ETAPA DE FORMATO//////////////
 
@@ -547,12 +547,12 @@ assign ZERO_FLAG_SHT1SHT2 = (NRM_ACTIVE) ? ZERO_FLAG_NRM : ZERO_FLAG_SHT1;
     .Q({LZD_raw_out_NRM2_EWR, DMP_exp_NRM2_EW})
     );
 
-  RegisterAdd #(.W(1)) SFT2FRMT_STAGE_FLAGS (
+  RegisterAdd #(.W(3)) SFT2FRMT_STAGE_FLAGS (
     .clk(clk),
     .rst(rst),
     .load(NRM_ACTIVE),
-    .D({ADD_OVRFLW_NRM }),
-    .Q({ADD_OVRFLW_NRM2}));
+    .D({ADD_OVRFLW_NRM , SIGN_FLAG_NRM     , ZERO_FLAG_NRM }),
+    .Q({ADD_OVRFLW_NRM2, SIGN_FLAG_SHT1SHT2, ZERO_FLAG_SHT1SHT2}));
 //////////////////////////////----------------------------------///////////////////////////////
 
 
@@ -560,34 +560,34 @@ assign ZERO_FLAG_SHT1SHT2 = (NRM_ACTIVE) ? ZERO_FLAG_NRM : ZERO_FLAG_SHT1;
 //////////////////////////////----------------------------------///////////////////////////////
 
 generate for (k=2; k < EWR; k=k+1) begin : shift_mux_array2
-	shift_mux_array #(.SWR(SWR), .LEVEL(k)) shift_mux_array(
-		.Data_i(Data_array_SWR[k+1]),
-		.select_i(shift_value_SHT2_EWR[k]),
-		.bit_shift_i(bit_shift_SHT2),
-		.Data_o(Data_array_SWR[k+2])
-		);
-	end
+  shift_mux_array #(.SWR(SWR), .LEVEL(k)) shift_mux_array(
+    .Data_i(Data_array_SWR[k+1]),
+    .select_i(shift_value_SHT2_EWR[k]),
+    .bit_shift_i(bit_shift_SHT2),
+    .Data_o(Data_array_SWR[k+2])
+    );
+  end
 endgenerate
 
-	Rotate_Mux_Array #(.SWR(SWR)) last_rotate(
-		.Data_i(Data_array_SWR[EWR+1]),
-		.select_i(left_right_SHT2),
-		.Data_o(sftr_odat_SHT2_SWR)
-		);
+  Rotate_Mux_Array #(.SWR(SWR)) last_rotate(
+    .Data_i(Data_array_SWR[EWR+1]),
+    .select_i(left_right_SHT2),
+    .Data_o(sftr_odat_SHT2_SWR)
+    );
 
 
 assign LZD_output_NRM2_EW = {LZD_ZFiller, LZD_raw_out_NRM2_EWR};
 
 ////////////////////////INPUT MUX FOR ADD/SUB/////////////////////////
 
-	assign ADDSUB_exp_operand_EW = (ADD_OVRFLW_NRM2) ? Exp_oper_1_EWR : LZD_output_NRM2_EW;
+  assign ADDSUB_exp_operand_EW = (ADD_OVRFLW_NRM2) ? Exp_oper_1_EW : LZD_output_NRM2_EW;
 
 ////////////////////////INPUT MUX FOR ADD/SUB/////////////////////////
 
 //////////////////////////ADDER/SUBSTRACTOR///////////////////////
 
-	// always @* begin : ADD_SUB_NRM
-	//    case (ADD_OVRFLW_NRM2)
+  // always @* begin : ADD_SUB_NRM
+  //    case (ADD_OVRFLW_NRM2)
  //        1'b0  : begin
  //                    {Carry_out_SFT2, exp_rslt_NRM2_EW1} = DMP_exp_NRM2_EW + ADDSUB_exp_operand_EW;
  //                 end
@@ -601,10 +601,10 @@ assign LZD_output_NRM2_EW = {LZD_ZFiller, LZD_raw_out_NRM2_EWR};
 
   always @* begin
     if (ADD_OVRFLW_NRM2) begin
-      exp_rslt_NRM2_EW1 = DMP_exp_NRM2_EW - ADDSUB_exp_operand_EW;
+      exp_rslt_NRM2_EW1 = DMP_exp_NRM2_EW + ADDSUB_exp_operand_EW;
     end
     else begin
-      exp_rslt_NRM2_EW1 = DMP_exp_NRM2_EW + ADDSUB_exp_operand_EW;
+      exp_rslt_NRM2_EW1 = DMP_exp_NRM2_EW - ADDSUB_exp_operand_EW;
     end
   end
 //////////////////////////ADDER/SUBSTRACTOR///////////////////////
@@ -644,9 +644,9 @@ FORMATTER #(.EW(EW+1)) array_comparators(
 
 
 // RegisterAdd #(.W(W+SWR+4)) SGF_STAGE(
-// 		.clk(clk),
-// 		.rst(rst),
-// 		.load(SHT2_ACTIVE&~NRM2_ACTIVE),//Esto significa que si esta en NRM2, no active SGF
+//    .clk(clk),
+//    .rst(rst),
+//    .load(SHT2_ACTIVE&~NRM2_ACTIVE),//Esto significa que si esta en NRM2, no active SGF
 //     .D({DMP_SHT2_EWSW, sftr_odat_SHT2_SWR, SIGN_FLAG_SHT2,OP_FLAG_SHT2, ZERO_FLAG_SHT2, SHT2_ACTIVE}),
 //     .Q({DMP_SFG , DmP_mant_SFG_SWR  , SIGN_FLAG_SFG , OP_FLAG_SFG, ZERO_FLAG_SFG , SFG_ACTIVE})
 //     );
@@ -665,11 +665,11 @@ FORMATTER #(.EW(EW+1)) array_comparators(
 
 
 //////////////////////////////----------------------------------///////////////////////////////
-	assign DMP_mant_SFG_SWR = {1'b1,DMP_SFG[SW-1:0],2'b00};
+  assign DMP_mant_SFG_SWR = {1'b1,DMP_SFG[SW-1:0],2'b00};
 
-	assign DMP_exp_SFG = DMP_SFG[W-2:SW];
+  assign DMP_exp_SFG = DMP_SFG[W-2:SW];
 
-	always @* begin : ADD_SUB_SGF
+  always @* begin : ADD_SUB_SGF
        case (OP_FLAG_SFG)
           1'b0  : begin
                       {Carry_out_SGF, Raw_mant_SGF} = DMP_mant_SFG_SWR + DmP_mant_SFG_SWR;
@@ -682,7 +682,7 @@ FORMATTER #(.EW(EW+1)) array_comparators(
                    end
        endcase
   end
-	assign ADD_OVRFLW_SGF = Carry_out_SGF&(~OP_FLAG_SFG);
+  assign ADD_OVRFLW_SGF = Carry_out_SGF&(~OP_FLAG_SFG);
 
 
 //////////////////////////////----------------------------------///////////////////////////////
@@ -735,20 +735,20 @@ assign Add_Subt_LZD_SWR = ~Raw_mant_NRM_SWR;
 /////////////////////////LZD BEGIN////////////////////////////
 
 generate
-		case (SWR)
-			26:begin : LZD_SINGLE
-				Priority_Codec_32 Codec_32(
-					.Data_Dec_i(Add_Subt_LZD_SWR),
-					.Data_Bin_o(LZD_raw_out_EWR)
-					);
-				end
-			55:begin : LZD_DOUBLE
-				Priority_Codec_64 Codec_64(
-					.Data_Dec_i(Add_Subt_LZD_SWR),
-					.Data_Bin_o(LZD_raw_out_EWR)
-					);
-				end
-		endcase
+    case (SWR)
+      26:begin : LZD_SINGLE
+        Priority_Codec_32 Codec_32(
+          .Data_Dec_i(Add_Subt_LZD_SWR),
+          .Data_Bin_o(LZD_raw_out_EWR)
+          );
+        end
+      55:begin : LZD_DOUBLE
+        Priority_Codec_64 Codec_64(
+          .Data_Dec_i(Add_Subt_LZD_SWR),
+          .Data_Bin_o(LZD_raw_out_EWR)
+          );
+        end
+    endcase
 
 endgenerate
 
@@ -773,14 +773,14 @@ endgenerate
 
 
 
-	FRMT_STAGE #(.W(W),.EW(EW),.SW(SW)) inst_FRMT_STAGE (
-			.overflow_flag    (OVRFLW_FLAG_FRMT ),
-			.underflow_flag   (UNDRFLW_FLAG_FRMT),
-			.sign_i           (SIGN_FLAG_SHT2),
-			.exp_ieee_i       (exp_rslt_NRM2_EW1[EW-1:0]),
-			.sgf_ieee_i       (sftr_odat_SHT2_SWR[SWR-2:2]),
-			.formatted_number (formatted_number_W)
-		);
+  FRMT_STAGE #(.W(W),.EW(EW),.SW(SW)) inst_FRMT_STAGE (
+      .overflow_flag    (OVRFLW_FLAG_FRMT ),
+      .underflow_flag   (UNDRFLW_FLAG_FRMT),
+      .sign_i           (SIGN_FLAG_SHT1SHT2),
+      .exp_ieee_i       (exp_rslt_NRM2_EW1[EW-1:0]),
+      .sgf_ieee_i       (sftr_odat_SHT2_SWR[SWR-2:2]),
+      .formatted_number (formatted_number_W)
+    );
 
 //////////////////////////////-------------------------------------///////////////////////////////
 
@@ -806,14 +806,20 @@ assign busy = SHT1_ACTIVE;
   .Q(final_result_ieee)
   );
 
-  RegisterAdd #(.W(4)) FRMT_STAGE_FLAGS (
+  RegisterAdd #(.W(3)) FRMT_STAGE_FLAGS (
   .clk(clk),
   .rst(rst),
   .load(NRM2_ACTIVE),
-  .D({OVRFLW_FLAG_FRMT,UNDRFLW_FLAG_FRMT, ZERO_FLAG_SHT2, NRM2_ACTIVE}),
-  .Q({overflow_flag   , underflow_flag  , zero_flag     , ready})
+  .D({OVRFLW_FLAG_FRMT,UNDRFLW_FLAG_FRMT, ZERO_FLAG_SHT1SHT2}),
+  .Q({overflow_flag   , underflow_flag  , zero_flag     })
   );
 
+  RegisterAdd #(.W(1)) Ready_reg (
+  .clk(clk),
+  .rst(rst),
+  .load(1),
+  .D(NRM2_ACTIVE),
+  .Q(ready));
 
 //////////////////////////////----------------------------------///////////////////////////////
 //////////////////////////////----------------------------------///////////////////////////////

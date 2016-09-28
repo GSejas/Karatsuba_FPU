@@ -11,9 +11,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="650740000fs"></ZoomStartTime>
-      <ZoomEndTime time="745540001fs"></ZoomEndTime>
-      <Cursor1Time time="662740000fs"></Cursor1Time>
+      <ZoomStartTime time="823940000fs"></ZoomStartTime>
+      <ZoomEndTime time="918840001fs"></ZoomEndTime>
+      <Cursor1Time time="865140000fs"></Cursor1Time>
    </zoom_setting>
    <WVObjectSize size="35" />
    <wave_markers>
@@ -25,6 +25,9 @@
       <marker label="" time="523400000" />
       <marker label="" time="289380000" />
       <marker label="" time="662740000" />
+      <marker label="" time="898000000" />
+      <marker label="" time="835000000" />
+      <marker label="" time="895000000" />
    </wave_markers>
    <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/clk">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -193,7 +196,6 @@
    <wvobject type="group" fp_name="group925">
       <obj_property name="label">INIT GROUP</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="group" fp_name="group925">
          <obj_property name="label">FLAGS</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -463,7 +465,6 @@
    <wvobject type="group" fp_name="group925">
       <obj_property name="label">SHT2 GROUP</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="group" fp_name="group925">
          <obj_property name="label">FLAGS</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -539,7 +540,6 @@
    <wvobject type="group" fp_name="group925">
       <obj_property name="label">SGF GROUP</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="group" fp_name="group925">
          <obj_property name="label">FLAGS</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -694,7 +694,6 @@
    <wvobject type="group" fp_name="group925">
       <obj_property name="label">NRM2 GROUP</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="group" fp_name="group925">
          <obj_property name="label">FLAGS</obj_property>
          <obj_property name="DisplayName">label</obj_property>

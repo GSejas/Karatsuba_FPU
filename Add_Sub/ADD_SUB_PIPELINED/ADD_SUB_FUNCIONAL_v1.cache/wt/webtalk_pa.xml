@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Mon Sep 26 09:45:09 2016">
+<application name="pa" timeStamp="Tue Sep 27 18:28:38 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="3dd1fa7fd3064771bb8bbd0dcd75e5f9" type="ProjectID"/>
 <property name="ProjectIteration" value="229" type="ProjectIteration"/>
@@ -17,38 +17,45 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
-<property name="AddSources" value="23" type="JavaHandler"/>
+<property name="AddSources" value="26" type="JavaHandler"/>
 <property name="CloseProject" value="-2" type="JavaHandler"/>
-<property name="EditDelete" value="10" type="JavaHandler"/>
-<property name="EditPaste" value="1" type="JavaHandler"/>
-<property name="EditProperties" value="2" type="JavaHandler"/>
+<property name="EditDelete" value="11" type="JavaHandler"/>
+<property name="EditPaste" value="3" type="JavaHandler"/>
+<property name="EditProperties" value="11" type="JavaHandler"/>
+<property name="EditSimulationSets" value="1" type="JavaHandler"/>
 <property name="FitSelection" value="4" type="JavaHandler"/>
 <property name="FlipToViewTaskRTLAnalysis" value="1" type="JavaHandler"/>
-<property name="MakeActiveSimSet" value="1" type="JavaHandler"/>
-<property name="MoveToSimSet" value="1" type="JavaHandler"/>
+<property name="FlipToViewTaskSynthesis" value="2" type="JavaHandler"/>
+<property name="MakeActiveSimSet" value="3" type="JavaHandler"/>
+<property name="MoveToDesignSet" value="2" type="JavaHandler"/>
+<property name="MoveToSimSet" value="2" type="JavaHandler"/>
 <property name="OpenProject" value="4" type="JavaHandler"/>
-<property name="ProjectSettingsCmdHandler" value="13" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="19" type="JavaHandler"/>
 <property name="ReportMethodology" value="3" type="JavaHandler"/>
-<property name="ReportUtilization" value="1" type="JavaHandler"/>
-<property name="RunDesignAhead" value="2" type="JavaHandler"/>
+<property name="ReportTimingSummary" value="1" type="JavaHandler"/>
+<property name="ReportUtilization" value="2" type="JavaHandler"/>
+<property name="RunDesignAhead" value="3" type="JavaHandler"/>
 <property name="RunImplementation" value="5" type="JavaHandler"/>
+<property name="RunPowerEstimation" value="1" type="JavaHandler"/>
 <property name="RunSchematic" value="10" type="JavaHandler"/>
-<property name="RunSynthesis" value="53" type="JavaHandler"/>
+<property name="RunSynthesis" value="61" type="JavaHandler"/>
 <property name="SaveLayoutAs" value="2" type="JavaHandler"/>
 <property name="SaveProjectAs" value="2" type="JavaHandler"/>
-<property name="SetSourceEnabled" value="2" type="JavaHandler"/>
+<property name="SetGlobalInclude" value="4" type="JavaHandler"/>
+<property name="SetSourceEnabled" value="5" type="JavaHandler"/>
 <property name="SetTopNode" value="9" type="JavaHandler"/>
 <property name="ShowConnectivity" value="3" type="JavaHandler"/>
 <property name="ShowHierarchy" value="5" type="JavaHandler"/>
+<property name="ShowPowerEstimation" value="1" type="JavaHandler"/>
 <property name="ShowSource" value="15" type="JavaHandler"/>
-<property name="ShowView" value="27" type="JavaHandler"/>
+<property name="ShowView" value="29" type="JavaHandler"/>
 <property name="ShowWorldView" value="1" type="JavaHandler"/>
 <property name="SimulationClose" value="66" type="JavaHandler"/>
-<property name="SimulationRelaunch" value="82" type="JavaHandler"/>
-<property name="SimulationRestart" value="45" type="JavaHandler"/>
-<property name="SimulationRun" value="117" type="JavaHandler"/>
-<property name="SimulationRunAll" value="5" type="JavaHandler"/>
-<property name="SimulationRunForTime" value="81" type="JavaHandler"/>
+<property name="SimulationRelaunch" value="95" type="JavaHandler"/>
+<property name="SimulationRestart" value="59" type="JavaHandler"/>
+<property name="SimulationRun" value="126" type="JavaHandler"/>
+<property name="SimulationRunAll" value="11" type="JavaHandler"/>
+<property name="SimulationRunForTime" value="106" type="JavaHandler"/>
 <property name="SimulationStep" value="33" type="JavaHandler"/>
 <property name="ToggleAutoFitSelection" value="6" type="JavaHandler"/>
 <property name="ToggleViewNavigator" value="8" type="JavaHandler"/>
@@ -56,15 +63,15 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ToolsTemplates" value="3" type="JavaHandler"/>
 <property name="UpdateSourceFiles" value="9" type="JavaHandler"/>
 <property name="ViewLayoutCmd" value="5" type="JavaHandler"/>
-<property name="ViewTaskProjectManager" value="12" type="JavaHandler"/>
+<property name="ViewTaskProjectManager" value="19" type="JavaHandler"/>
 <property name="ViewTaskRTLAnalysis" value="6" type="JavaHandler"/>
-<property name="ViewTaskSimulation" value="4" type="JavaHandler"/>
+<property name="ViewTaskSimulation" value="7" type="JavaHandler"/>
 <property name="ViewTaskSynthesis" value="4" type="JavaHandler"/>
 <property name="WaveformNewConfiguration" value="1" type="JavaHandler"/>
-<property name="WaveformOpenConfiguration" value="1" type="JavaHandler"/>
+<property name="WaveformOpenConfiguration" value="10" type="JavaHandler"/>
 <property name="WaveformRenameObject" value="17" type="JavaHandler"/>
-<property name="WaveformSaveConfiguration" value="35" type="JavaHandler"/>
-<property name="WaveformSaveConfigurationAs" value="3" type="JavaHandler"/>
+<property name="WaveformSaveConfiguration" value="38" type="JavaHandler"/>
+<property name="WaveformSaveConfigurationAs" value="5" type="JavaHandler"/>
 <property name="ZoomFit" value="6" type="JavaHandler"/>
 <property name="ZoomIn" value="3" type="JavaHandler"/>
 <property name="ZoomOut" value="4" type="JavaHandler"/>
@@ -72,31 +79,16 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ui.views.b.aG" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update" value="2" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RESTART, simulation_live_restart" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, simulation_live_run_for_time" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_RESET, Reset Simulation" value="3" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_RUN, Run Simulation" value="4" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, Run Behavioral Simulation" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, bloody_simruns], 6, true, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources], 5" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, /home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.xpr, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, Open Recent Project" value="3" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy" value="2" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 158, 249, false, true, false, false, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 234, 173" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 478, 175" value="3" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 480, 175" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 485, 190" value="9" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 487, 190" value="10" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 93, 269" value="1" type="GuiResourceData"/>
-<property name="RDIResourceCommand.RDICommands_WAVEFORM_OPEN_CONFIGURATION, Open Waveform Configuration..." value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.ExpRunMenu_LAUNCH_RUNS, Launch Runs..." value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, synth_1 ; constrs_1 ; Synthesis Out-of-date ;  ;  ;  ;  ;  ;  ; 303 ; 413 ; 0 ; 0 ; 0 ; Tue Sep 27 09:59:59 CST 2016 ; 00:00:41 ; Vivado Synthesis Defaults* (Vivado Synthesis 2015" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Synthesis, [Synth 8-3332] Sequential element (EXP_STAGE_DmP/Q_reg[62]" value="4" type="GuiResourceData"/>
+<property name="PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="2" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="31" type="GuiMode"/>
+<property name="GuiMode" value="35" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="21" type="TclMode"/>
+<property name="TclMode" value="24" type="TclMode"/>
 </item>
 </section>
 </application>

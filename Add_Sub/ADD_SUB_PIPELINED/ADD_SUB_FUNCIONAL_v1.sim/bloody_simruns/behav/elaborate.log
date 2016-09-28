@@ -3,6 +3,7 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: /opt/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 4d91bfde9a844ec993ad3726e43f6b61 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_FPU_PIPELINED_FPADDSUB2_vector_testing_behav xil_defaultlib.tb_FPU_PIPELINED_FPADDSUB2_vector_testing xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port load [/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v:820]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -39,7 +40,6 @@ Compiling module xil_defaultlib.Mux_3x1(W=1)
 Compiling module xil_defaultlib.Multiplexer_AC(W=8)
 Compiling module xil_defaultlib.Multiplexer_AC(W=23)
 Compiling module xil_defaultlib.FRMT_STAGE(W=32,EW=8,SW=23)
-Compiling module xil_defaultlib.RegisterAdd(W=4)
 Compiling module xil_defaultlib.FPU_PIPELINED_FPADDSUB(W=32,EW=8...
 Compiling module xil_defaultlib.tb_FPU_PIPELINED_FPADDSUB2_vecto...
 Compiling module xil_defaultlib.glbl

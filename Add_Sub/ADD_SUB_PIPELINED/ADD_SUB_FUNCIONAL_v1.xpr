@@ -10,12 +10,12 @@
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
-    <Option Name="CompiledLibDirModelSim" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Add_Sub/ADD_SUB_FUNCIONAL_v1/ADD_SUB_FUNCIONAL_v1.cache/compile_simlib/modelsim"/>
-    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Add_Sub/ADD_SUB_FUNCIONAL_v1/ADD_SUB_FUNCIONAL_v1.cache/compile_simlib/questa"/>
-    <Option Name="CompiledLibDirIES" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Add_Sub/ADD_SUB_FUNCIONAL_v1/ADD_SUB_FUNCIONAL_v1.cache/compile_simlib/ies"/>
-    <Option Name="CompiledLibDirVCS" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Add_Sub/ADD_SUB_FUNCIONAL_v1/ADD_SUB_FUNCIONAL_v1.cache/compile_simlib/vcs"/>
-    <Option Name="CompiledLibDirRiviera" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Add_Sub/ADD_SUB_FUNCIONAL_v1/ADD_SUB_FUNCIONAL_v1.cache/compile_simlib/riviera"/>
-    <Option Name="CompiledLibDirActivehdl" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Add_Sub/ADD_SUB_FUNCIONAL_v1/ADD_SUB_FUNCIONAL_v1.cache/compile_simlib/activehdl"/>
+    <Option Name="CompiledLibDirModelSim" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Add_Sub/ADD_SUB_FUNCIONAL_v1/ADD_SUB_FUNCIONAL_v1.cache/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Add_Sub/ADD_SUB_FUNCIONAL_v1/ADD_SUB_FUNCIONAL_v1.cache/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Add_Sub/ADD_SUB_FUNCIONAL_v1/ADD_SUB_FUNCIONAL_v1.cache/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Add_Sub/ADD_SUB_FUNCIONAL_v1/ADD_SUB_FUNCIONAL_v1.cache/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Add_Sub/ADD_SUB_FUNCIONAL_v1/ADD_SUB_FUNCIONAL_v1.cache/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/Add_Sub/ADD_SUB_FUNCIONAL_v1/ADD_SUB_FUNCIONAL_v1.cache/compile_simlib/activehdl"/>
     <Option Name="SimulatorLanguage" Val="Verilog"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
@@ -26,7 +26,7 @@
     <Option Name="IPUserFilesDir" Val="$PPRDIR/ADD_SUB_FUNCIONAL_v1.ip_user_files"/>
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/ADD_SUB_FUNCIONAL_v1.ip_user_files/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="355"/>
+    <Option Name="WTXSimLaunchSim" Val="422"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -44,19 +44,28 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v">
+      <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FSM_input_enable.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../media/francis/Acer/Users/Francis/Documents/GitHub/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v"/>
-          <Attr Name="ImportTime" Val="1457912815"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/FSM_input_enable.v"/>
+          <Attr Name="ImportTime" Val="1474861060"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v">
+      <File Path="$PSRCDIR/sources_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../media/francis/Acer/Users/Francis/Documents/GitHub/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v"/>
-          <Attr Name="ImportTime" Val="1457647299"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/shift_reg.v"/>
+          <Attr Name="ImportTime" Val="1474784785"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../media/francis/Acer/Users/Francis/Documents/GitHub/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v"/>
+          <Attr Name="ImportTime" Val="1457912815"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -75,6 +84,23 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../media/francis/Acer/Users/Francis/Documents/GitHub/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/MultiplexTxT.v"/>
           <Attr Name="ImportTime" Val="1457647384"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v">
+        <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../media/francis/Acer/Users/Francis/Documents/GitHub/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v"/>
+          <Attr Name="ImportTime" Val="1457647299"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -275,15 +301,6 @@
           <Attr Name="ImportTime" Val="1473708142"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FSM_input_enable.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/FSM_input_enable.v"/>
-          <Attr Name="ImportTime" Val="1474861060"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v"/>
@@ -311,15 +328,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/shift_reg.v"/>
-          <Attr Name="ImportTime" Val="1474784785"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Decimal_R.txt">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PSIMDIR/vector_simulation_add/behav/Decimal_R.txt"/>
@@ -341,11 +349,6 @@
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="FPU_PIPELINED_FPADDSUB"/>
-        <Generic Name="W" Val="32"/>
-        <Generic Name="EW" Val="8"/>
-        <Generic Name="SW" Val="23"/>
-        <Generic Name="SWR" Val="26"/>
-        <Generic Name="EWR" Val="5"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -1128,8 +1131,79 @@
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="xsim.simulate.saif_all_signals" Val="true"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_double_fpaddsub" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_double_fpaddsub">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_double_fpaddsub/imports/TXTVerification_v3/Hexadecimal_A.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../TXTVerification_v3/Hexadecimal_A.txt"/>
+          <Attr Name="ImportTime" Val="1475009697"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_double_fpaddsub/imports/TXTVerification_v3/Hexadecimal_R.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../TXTVerification_v3/Hexadecimal_R.txt"/>
+          <Attr Name="ImportTime" Val="1475009697"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_double_fpaddsub/imports/TXTVerification_v3/Hexadecimal_B.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../TXTVerification_v3/Hexadecimal_B.txt"/>
+          <Attr Name="ImportTime" Val="1475009697"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="tb_FPU_PIPELINED_FPADDSUB2_vector_testing"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TransportPathDelay" Val="0"/>
+        <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SimMode" Val="post-synthesis"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="xsim.simulate.saif_all_signals" Val="true"/>
+        <Generic Name="W" Val="64"/>
+        <Generic Name="EW" Val="11"/>
+        <Generic Name="SW" Val="52"/>
+        <Generic Name="SWR" Val="55"/>
+        <Generic Name="EWR" Val="6"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_single_fpsub" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_single_fpsub">
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="tb_FPU_PIPELINED_FPADDSUB2_vector_testing"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TransportPathDelay" Val="0"/>
+        <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="xsim.simulate.saif_all_signals" Val="true"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_double_fpsub" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_double_fpsub">
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="tb_FPU_PIPELINED_FPADDSUB2_vector_testing"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TransportPathDelay" Val="0"/>
+        <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="xsim.simulate.saif_all_signals" Val="true"/>
+        <Generic Name="W" Val="64"/>
+        <Generic Name="EW" Val="11"/>
+        <Generic Name="SW" Val="52"/>
+        <Generic Name="SWR" Val="55"/>
+        <Generic Name="EWR" Val="6"/>
       </Config>
     </FileSet>
   </FileSets>
@@ -1159,7 +1233,17 @@
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design">
+          <Option Id="MoreOptsStr"><![CDATA[-generic W=32 -generic SW=23 -generic EW=8 -generic SWR=26 -generic EWR=5]]></Option>
           <Option Id="KeepEquivalentRegisters">1</Option>
+        </Step>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="Double_Design" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/Double_Design" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design">
+          <Option Id="MoreOptsStr"><![CDATA[-generic W=64 -generic SW=52 -generic EW=11 -generic SWR=55 -generic EWR=6]]></Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1167,6 +1251,20 @@
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="impl_2" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." SynthRun="Double_Design" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

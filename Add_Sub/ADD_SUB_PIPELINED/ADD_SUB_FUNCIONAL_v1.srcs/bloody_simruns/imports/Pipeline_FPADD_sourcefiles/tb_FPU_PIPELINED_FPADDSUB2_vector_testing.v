@@ -1,7 +1,20 @@
 //==================================================================================================
 //  Filename      : tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v
+//  Created On    : 2016-09-27 18:38:13
+//  Last Modified : 2016-09-27 20:01:24
+//  Revision      :
+//  Author        : Jorge Sequeira Rojas
+//  Company       : Instituto Tecnologico de Costa Rica
+//  Email         : jsequeira@gmail.com
+//
+//  Description   :
+//
+//
+//==================================================================================================
+//==================================================================================================
+//  Filename      : tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v
 //  Created On    : 2016-09-25 17:59:05
-//  Last Modified : 2016-09-26 00:55:10
+//  Last Modified : 2016-09-27 18:36:46
 //  Revision      :
 //  Author        : Jorge Sequeira Rojas
 //  Company       : Instituto Tecnologico de Costa Rica
@@ -182,18 +195,19 @@ end
 //    end
 //  endfunction
 
-   initial begin
-     #100;
-     FPADD_FPSUB(0, 32'hbe3cd424, 32'h3d9b573f, formatted_number_W, overflow_flag_t, underflow_flag_t);
-
-   end
 
    initial begin
     FileSaveData = $fopen("ResultadoXilinxFLM.txt","w");
     logVectorReference = $fopen("output_log.py","w");
 
     rst = 1;
-    add_subt = 0;
+
+`ifdef SUB_OPER
+    add_subt = 1; //Se realiza la operacion de resta
+`else
+    add_subt = 0; //Se realiza la operacion de suma
+`endif
+
     beg_OP = 0;
     Data_Y = 0;
     Data_X = 0;
@@ -228,9 +242,9 @@ end
      //**************************** Transmision de datos de forma paralela ************************************************************//
 
   always @(posedge clk) begin
-      if (contador == (2**PERIOD)) begin
+      if (contador == (2**PERIOD+6)) begin
           $fclose(FileSaveData);
-
+          $fclose(logVectorReference);
           $finish;
       end else if(ready) begin
         $fwrite(FileSaveData,"%h\n",final_result_ieee);
@@ -239,14 +253,14 @@ end
   end
 
 always @(negedge clk) begin
-    #(PERIOD/3);
+    #(PERIOD/5);
     if(~busy & ~rst) begin
       beg_OP = 1;
     end
 end
 
 always @(posedge clk) begin
-    #(PERIOD/3);
+    #(PERIOD/5);
     if(rst) begin
         contador = 0;
     end
@@ -548,14 +562,14 @@ task FPADD_FPSUB;
 
       if (real_op == 1) begin
         raw_Mantissa_SWR1 = Mantissa_M_SWR - Mantissa_m_SWR;
-        $fwrite(logVectorReference,"Se restan las mantisas\n");
+        $display("Se restan las mantisas\n");
       end
       else begin
         raw_Mantissa_SWR1 = Mantissa_M_SWR + Mantissa_m_SWR;
-        $fwrite(logVectorReference,"Se suman las mantisas\n");
+        $display("Se suman las mantisas\n");
       end
       raw_Mantissa_SWR = raw_Mantissa_SWR1[SWR-1:0];
-      add_overflow = raw_Mantissa_SWR1[SWR];
+      add_overflow = raw_Mantissa_SWR1[SWR-2];
 
       add_overflow = add_overflow&(~real_op);
 
@@ -566,7 +580,7 @@ task FPADD_FPSUB;
       $fwrite(logVectorReference,"===                                             \n");
       $fwrite(logVectorReference,"======================== * ===================\n");
       $fwrite(logVectorReference,"--------------------FLAGS------------------\n");
-      $fwrite(logVectorReference,"add_overflw = %d, Sign = %d, add overflow = %d\n", add_overflow, real_sign, add_overflow);
+      $fwrite(logVectorReference,"add_overflw = %d, Sign = %d\n", add_overflow, real_sign);
       $fwrite(logVectorReference,"--------Big Number------------\n");
       $fwrite(logVectorReference,"Mantissa_M_SW = 0x%24h, Exponent_M_EW = 0x%6h\n", Mantissa_M_SW, Exponent_M_EW);
       $fwrite(logVectorReference,"Mantissa_M_SW = %b, Exponent_M_EW = %b\n", Mantissa_M_SW, Exponent_M_EW);
@@ -666,10 +680,10 @@ task FPADD_FPSUB;
       //We do the xponent compensation
 
       if (add_overflow) begin
-        {carry_out_exp_oper,Exponent_M_EW} = Exponent_M_EW + 1;
+        {carry_out_exp_oper,Exponent_M_EW} = Exponent_M_EW - 1;
       end
       else begin
-        {carry_out_exp_oper,Exponent_M_EW} = Exponent_M_EW - {LZD_ZFiller,LZD_raw_val_EWR};
+        {carry_out_exp_oper,Exponent_M_EW} = Exponent_M_EW + {LZD_ZFiller,LZD_raw_val_EWR};
       end
 
         overflow_flag  =({carry_out_exp_oper,Exponent_M_EW} > U_limit) ? 1'b1 : 1'b0;
@@ -734,7 +748,7 @@ task FPADD_FPSUB;
       $fwrite(logVectorReference,"El resultado final sera: %b\n", formatted_number_W);
       $fwrite(logVectorReference,"El resultado final sera: %32d\n", formatted_number_W);
       $fwrite(logVectorReference,"=================== FRMT STAGE ================\n");
-      $fclose(logVectorReference);
+
     end
 endtask
 

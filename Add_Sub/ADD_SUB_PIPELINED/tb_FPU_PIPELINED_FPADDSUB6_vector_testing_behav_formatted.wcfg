@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_FPU_PIPELINED_FPADDSUB2_vector_testing_time_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_FPU_PIPELINED_FPADDSUB2_vector_testing" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="150000000fs"></ZoomStartTime>
+      <ZoomEndTime time="179800001fs"></ZoomEndTime>
+      <Cursor1Time time="224600000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="34" />
+   <wave_markers>
+      <marker label="" time="342400000" />
+      <marker label="" time="353200000" />
+      <marker label="" time="532400000" />
+      <marker label="" time="523400000" />
+      <marker label="" time="289380000" />
+      <marker label="" time="662740000" />
+      <marker label="" time="898000000" />
+      <marker label="" time="835000000" />
+      <marker label="" time="895000000" />
+      <marker label="" time="108000000" />
+      <marker label="" time="191938000" />
+   </wave_markers>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/contador">
+      <obj_property name="ElementShortName">contador[31:0]</obj_property>
+      <obj_property name="ObjectShortName">contador[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/beg_OP">
+      <obj_property name="ElementShortName">beg_OP</obj_property>
+      <obj_property name="ObjectShortName">beg_OP</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Data_X">
+      <obj_property name="ElementShortName">Data_X[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_X[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Data_Y">
+      <obj_property name="ElementShortName">Data_Y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_Y[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Data_X">
+      <obj_property name="ElementShortName">Data_X[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_X[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Data_Y">
+      <obj_property name="ElementShortName">Data_Y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_Y[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group925">
+      <obj_property name="label">OUTPUT FLAGS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/zero_flag">
+         <obj_property name="ElementShortName">zero_flag</obj_property>
+         <obj_property name="ObjectShortName">zero_flag</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/underflow_flag">
+         <obj_property name="ElementShortName">underflow_flag</obj_property>
+         <obj_property name="ObjectShortName">underflow_flag</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/overflow_flag">
+         <obj_property name="ElementShortName">overflow_flag</obj_property>
+         <obj_property name="ObjectShortName">overflow_flag</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/busy">
+         <obj_property name="ElementShortName">busy</obj_property>
+         <obj_property name="ObjectShortName">busy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/add_subt">
+         <obj_property name="ElementShortName">add_subt</obj_property>
+         <obj_property name="ObjectShortName">add_subt</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group925">
+      <obj_property name="label">Theoretical Output</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Theoretical_result">
+         <obj_property name="ElementShortName">Theoretical_result[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Theoretical_result[31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Theoretical_result_mantissa">
+         <obj_property name="ElementShortName">Theoretical_result_mantissa[22:0]</obj_property>
+         <obj_property name="ObjectShortName">Theoretical_result_mantissa[22:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Theoretical_result_exponent">
+         <obj_property name="ElementShortName">Theoretical_result_exponent[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Theoretical_result_exponent[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Theoretical_result_sign">
+         <obj_property name="ElementShortName">Theoretical_result_sign</obj_property>
+         <obj_property name="ObjectShortName">Theoretical_result_sign</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group925">
+      <obj_property name="label">FINAL RESULT OUTPUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/final_result_ieee">
+         <obj_property name="ElementShortName">final_result_ieee[31:0]</obj_property>
+         <obj_property name="ObjectShortName">final_result_ieee[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/final_result_ieee_exponent">
+         <obj_property name="ElementShortName">final_result_ieee_exponent[7:0]</obj_property>
+         <obj_property name="ObjectShortName">final_result_ieee_exponent[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/final_result_ieee_mantissa">
+         <obj_property name="ElementShortName">final_result_ieee_mantissa[22:0]</obj_property>
+         <obj_property name="ObjectShortName">final_result_ieee_mantissa[22:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/final_result_ieee">
+         <obj_property name="ElementShortName">final_result_ieee[31:0]</obj_property>
+         <obj_property name="ObjectShortName">final_result_ieee[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/ready">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Data_X_mant">
+      <obj_property name="ElementShortName">Data_X_mant[22:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_X_mant[22:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Data_Y_mant">
+      <obj_property name="ElementShortName">Data_Y_mant[22:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_Y_mant[22:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Data_X_mant">
+      <obj_property name="ElementShortName">Data_X_mant[22:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_X_mant[22:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Data_Y_mant">
+      <obj_property name="ElementShortName">Data_Y_mant[22:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_Y_mant[22:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Data_X_exp">
+      <obj_property name="ElementShortName">Data_X_exp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_X_exp[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Data_Y_exp">
+      <obj_property name="ElementShortName">Data_Y_exp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_Y_exp[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Data_X_sign">
+      <obj_property name="ElementShortName">Data_X_sign</obj_property>
+      <obj_property name="ObjectShortName">Data_X_sign</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/Data_Y_sign">
+      <obj_property name="ElementShortName">Data_Y_sign</obj_property>
+      <obj_property name="ObjectShortName">Data_Y_sign</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider967" type="divider">
+      <obj_property name="label">INIT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group925">
+      <obj_property name="label">INIT GROUP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group925">
+         <obj_property name="label">FLAGS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/intAS">
+            <obj_property name="ElementShortName">intAS</obj_property>
+            <obj_property name="ObjectShortName">intAS</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/gtXY">
+            <obj_property name="ElementShortName">gtXY</obj_property>
+            <obj_property name="ObjectShortName">gtXY</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/eqXY">
+            <obj_property name="ElementShortName">eqXY</obj_property>
+            <obj_property name="ObjectShortName">eqXY</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/OP_FLAG_INIT">
+            <obj_property name="ElementShortName">OP_FLAG_INIT</obj_property>
+            <obj_property name="ObjectShortName">OP_FLAG_INIT</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/SIGN_FLAG_INIT">
+            <obj_property name="ElementShortName">SIGN_FLAG_INIT</obj_property>
+            <obj_property name="ObjectShortName">SIGN_FLAG_INIT</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/intDX_EWSW">
+         <obj_property name="ElementShortName">intDX_EWSW[31:31]</obj_property>
+         <obj_property name="ObjectShortName">intDX_EWSW[31:31]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/intDY_EWSW">
+         <obj_property name="ElementShortName">intDY_EWSW[31:31]</obj_property>
+         <obj_property name="ObjectShortName">intDY_EWSW[31:31]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/intDX_EWSW">
+         <obj_property name="ElementShortName">intDX_EWSW[31:31]</obj_property>
+         <obj_property name="ObjectShortName">intDX_EWSW[31:31]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/intDY_EWSW">
+         <obj_property name="ElementShortName">intDY_EWSW[31:31]</obj_property>
+         <obj_property name="ObjectShortName">intDY_EWSW[31:31]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider967" type="divider">
+      <obj_property name="label">EXP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider967" type="divider">
+      <obj_property name="label">SHT1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group925">
+      <obj_property name="label">SHT1 GROUP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="group" fp_name="group925">
+         <obj_property name="label">FLAGS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/left_right_SHT1">
+            <obj_property name="ElementShortName">left_right_SHT1</obj_property>
+            <obj_property name="ObjectShortName">left_right_SHT1</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/bit_shift_SHT1">
+            <obj_property name="ElementShortName">bit_shift_SHT1</obj_property>
+            <obj_property name="ObjectShortName">bit_shift_SHT1</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/Shift_amount_SHT1_EWR">
+         <obj_property name="ElementShortName">Shift_amount_SHT1_EWR[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Shift_amount_SHT1_EWR[4:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/shft_value_mux_o_EWR">
+         <obj_property name="ElementShortName">shft_value_mux_o_EWR[4:2]</obj_property>
+         <obj_property name="ObjectShortName">shft_value_mux_o_EWR[4:2]</obj_property>
+         <obj_property name="CustomSignalColor">#800000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider967" type="divider">
+      <obj_property name="label">SHT2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group925">
+      <obj_property name="label">SHT2 GROUP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group925">
+         <obj_property name="label">FLAGS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/left_right_SHT2">
+            <obj_property name="ElementShortName">left_right_SHT2</obj_property>
+            <obj_property name="ObjectShortName">left_right_SHT2</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/shift_value_SHT2_EWR">
+         <obj_property name="ElementShortName">shift_value_SHT2_EWR[4:2]</obj_property>
+         <obj_property name="ObjectShortName">shift_value_SHT2_EWR[4:2]</obj_property>
+         <obj_property name="CustomSignalColor">#800000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/sftr_odat_SHT2_SWR">
+         <obj_property name="ElementShortName">sftr_odat_SHT2_SWR[25:0]</obj_property>
+         <obj_property name="ObjectShortName">sftr_odat_SHT2_SWR[25:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/sftr_odat_SHT2_SWR">
+         <obj_property name="ElementShortName">sftr_odat_SHT2_SWR[25:0]</obj_property>
+         <obj_property name="ObjectShortName">sftr_odat_SHT2_SWR[25:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider967" type="divider">
+      <obj_property name="label">SGF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group925">
+      <obj_property name="label">SGF GROUP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group925">
+         <obj_property name="label">FLAGS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/DMP_mant_SFG_SWR">
+         <obj_property name="ElementShortName">DMP_mant_SFG_SWR[24:2]</obj_property>
+         <obj_property name="ObjectShortName">DMP_mant_SFG_SWR[24:2]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/Raw_mant_SGF">
+         <obj_property name="ElementShortName">Raw_mant_SGF[25:0]</obj_property>
+         <obj_property name="ObjectShortName">Raw_mant_SGF[25:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/Raw_mant_SGF">
+         <obj_property name="ElementShortName">Raw_mant_SGF[25:0]</obj_property>
+         <obj_property name="ObjectShortName">Raw_mant_SGF[25:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider967" type="divider">
+      <obj_property name="label">NRM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group925">
+      <obj_property name="label">NRM GROUP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="group" fp_name="group925">
+         <obj_property name="label">FLAGS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/ADD_OVRFLW_NRM">
+            <obj_property name="ElementShortName">ADD_OVRFLW_NRM</obj_property>
+            <obj_property name="ObjectShortName">ADD_OVRFLW_NRM</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/LZD_raw_out_EWR">
+         <obj_property name="ElementShortName">LZD_raw_out_EWR[3:3]</obj_property>
+         <obj_property name="ObjectShortName">LZD_raw_out_EWR[3:3]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/shft_value_mux_o_EWR">
+         <obj_property name="ElementShortName">shft_value_mux_o_EWR[4:2]</obj_property>
+         <obj_property name="ObjectShortName">shft_value_mux_o_EWR[4:2]</obj_property>
+         <obj_property name="CustomSignalColor">#800000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/bit_shift_SHT1">
+         <obj_property name="ElementShortName">bit_shift_SHT1</obj_property>
+         <obj_property name="ObjectShortName">bit_shift_SHT1</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/left_right_SHT1">
+         <obj_property name="ElementShortName">left_right_SHT1</obj_property>
+         <obj_property name="ObjectShortName">left_right_SHT1</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider967" type="divider">
+      <obj_property name="label">NRM2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group925">
+      <obj_property name="label">NRM2 GROUP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group925">
+         <obj_property name="label">FLAGS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/SIGN_FLAG_SHT1SHT2">
+            <obj_property name="ElementShortName">SIGN_FLAG_SHT1SHT2</obj_property>
+            <obj_property name="ObjectShortName">SIGN_FLAG_SHT1SHT2</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/ADD_OVRFLW_NRM2">
+            <obj_property name="ElementShortName">ADD_OVRFLW_NRM2</obj_property>
+            <obj_property name="ObjectShortName">ADD_OVRFLW_NRM2</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/left_right_SHT2">
+         <obj_property name="ElementShortName">left_right_SHT2</obj_property>
+         <obj_property name="ObjectShortName">left_right_SHT2</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/sftr_odat_SHT2_SWR">
+         <obj_property name="ElementShortName">sftr_odat_SHT2_SWR[25:0]</obj_property>
+         <obj_property name="ObjectShortName">sftr_odat_SHT2_SWR[25:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/sftr_odat_SHT2_SWR">
+         <obj_property name="ElementShortName">sftr_odat_SHT2_SWR[25:0]</obj_property>
+         <obj_property name="ObjectShortName">sftr_odat_SHT2_SWR[25:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/shift_value_SHT2_EWR">
+         <obj_property name="ElementShortName">shift_value_SHT2_EWR[4:2]</obj_property>
+         <obj_property name="ObjectShortName">shift_value_SHT2_EWR[4:2]</obj_property>
+         <obj_property name="CustomSignalColor">#800000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider967" type="divider">
+      <obj_property name="label">FRMT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group925">
+      <obj_property name="label">FRMT GROUP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group925">
+         <obj_property name="label">FLAGS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/OVRFLW_FLAG_FRMT">
+            <obj_property name="ElementShortName">OVRFLW_FLAG_FRMT</obj_property>
+            <obj_property name="ObjectShortName">OVRFLW_FLAG_FRMT</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/UNDRFLW_FLAG_FRMT">
+            <obj_property name="ElementShortName">UNDRFLW_FLAG_FRMT</obj_property>
+            <obj_property name="ObjectShortName">UNDRFLW_FLAG_FRMT</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_FPU_PIPELINED_FPADDSUB2_vector_testing/inst_uut/formatted_number_W">
+         <obj_property name="ElementShortName">formatted_number_W[31:31]</obj_property>
+         <obj_property name="ObjectShortName">formatted_number_W[31:31]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

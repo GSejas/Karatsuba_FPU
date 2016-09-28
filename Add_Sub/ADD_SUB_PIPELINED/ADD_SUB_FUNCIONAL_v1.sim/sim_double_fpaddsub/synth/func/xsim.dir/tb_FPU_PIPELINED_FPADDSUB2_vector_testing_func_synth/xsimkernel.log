@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_FPU_PIPELINED_FPADDSUB2_vector_testing_func_synth/xsimk -simmode gui -wdb tb_FPU_PIPELINED_FPADDSUB2_vector_testing_func_synth.wdb -simrunnum 0 -socket 46260
+Design successfully loaded
+Design Loading Memory Usage: 69096 KB (Peak: 69560 KB)
+Design Loading CPU Usage: 90 ms

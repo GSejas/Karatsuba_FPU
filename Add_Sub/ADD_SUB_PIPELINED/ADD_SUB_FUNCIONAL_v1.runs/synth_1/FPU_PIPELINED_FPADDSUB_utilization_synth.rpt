@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Sun Sep 25 17:12:18 2016
+| Date         : Tue Sep 27 18:29:29 2016
 | Host         : jorge-pc running 64-bit Ubuntu 16.04.1 LTS
 | Command      : report_utilization -file FPU_PIPELINED_FPADDSUB_utilization_synth.rpt -pb FPU_PIPELINED_FPADDSUB_utilization_synth.pb
 | Design       : FPU_PIPELINED_FPADDSUB
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  302 |     0 |     63400 |  0.48 |
-|   LUT as Logic          |  302 |     0 |     63400 |  0.48 |
+| Slice LUTs*             |  303 |     0 |     63400 |  0.48 |
+|   LUT as Logic          |  303 |     0 |     63400 |  0.48 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  411 |     0 |    126800 |  0.32 |
-|   Register as Flip Flop |  411 |     0 |    126800 |  0.32 |
+| Slice Registers         |  413 |     0 |    126800 |  0.33 |
+|   Register as Flip Flop |  413 |     0 |    126800 |  0.33 |
 |   Register as Latch     |    0 |     0 |    126800 |  0.00 |
 | F7 Muxes                |    0 |     0 |     31700 |  0.00 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 411   |          Yes |           - |        Reset |
+| 413   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -146,13 +146,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |  411 |        Flop & Latch |
-| LUT3     |  138 |                 LUT |
-| LUT6     |  100 |                 LUT |
+| FDCE     |  413 |        Flop & Latch |
+| LUT3     |  136 |                 LUT |
+| LUT6     |   79 |                 LUT |
 | IBUF     |   68 |                  IO |
-| LUT2     |   63 |                 LUT |
-| LUT4     |   49 |                 LUT |
-| LUT5     |   48 |                 LUT |
+| LUT5     |   67 |                 LUT |
+| LUT2     |   64 |                 LUT |
+| LUT4     |   51 |                 LUT |
 | OBUF     |   37 |                  IO |
 | CARRY4   |   24 |          CarryLogic |
 | LUT1     |    5 |                 LUT |

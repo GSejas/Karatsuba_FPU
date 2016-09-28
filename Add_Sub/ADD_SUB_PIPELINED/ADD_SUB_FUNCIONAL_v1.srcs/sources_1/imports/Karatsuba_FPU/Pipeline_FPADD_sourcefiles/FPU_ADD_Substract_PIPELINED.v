@@ -2,7 +2,7 @@
 //==================================================================================================
 //  Filename      : FPU_ADD_Substract_PIPELINED.v
 //  Created On    : 2016-09-21 14:31:41
-//  Last Modified : 2016-09-26 01:51:40
+//  Last Modified : 2016-09-27 08:58:31
 //  Revision      :
 //  Author        : Jorge Sequeira Rojas
 //  Company       : Instituto Tecnologico de Costa Rica
@@ -452,8 +452,11 @@ endgenerate
 assign mux_sel_norm_EWR     = (ADD_OVRFLW_NRM) ? b_shifter_one_SWR : LZD_raw_out_EWR;
 assign shft_value_mux_o_EWR = (NRM_ACTIVE)     ?  mux_sel_norm_EWR : Shift_amount_SHT1_EWR;
 
-assign left_right_SHT1      = (NRM_ACTIVE)     ? (~ADD_OVRFLW_NRM) : 1'b0;
-assign bit_shift_SHT1       = ADD_OVRFLW_NRM;
+//assign left_right_SHT1      = (NRM_ACTIVE)     ? (~ADD_OVRFLW_NRM) : 1'b0;
+
+assign left_right_SHT1      = (NRM_ACTIVE)&(~ADD_OVRFLW_NRM);
+
+assign bit_shift_SHT1       = (NRM_ACTIVE)&(ADD_OVRFLW_NRM);
 
 
 	Multiplexer_AC #(.W(SWR)) b_shftr_idat_mux_SHT1 (
@@ -803,14 +806,20 @@ assign busy = SHT1_ACTIVE;
   .Q(final_result_ieee)
   );
 
-  RegisterAdd #(.W(4)) FRMT_STAGE_FLAGS (
+  RegisterAdd #(.W(3)) FRMT_STAGE_FLAGS (
   .clk(clk),
   .rst(rst),
   .load(NRM2_ACTIVE),
-  .D({OVRFLW_FLAG_FRMT,UNDRFLW_FLAG_FRMT, ZERO_FLAG_SHT1SHT2, NRM2_ACTIVE}),
-  .Q({overflow_flag   , underflow_flag  , zero_flag     , ready})
+  .D({OVRFLW_FLAG_FRMT,UNDRFLW_FLAG_FRMT, ZERO_FLAG_SHT1SHT2}),
+  .Q({overflow_flag   , underflow_flag  , zero_flag     })
   );
 
+  RegisterAdd #(.W(1)) Ready_reg (
+  .clk(clk),
+  .rst(rst),
+  .load(1),
+  .D(NRM2_ACTIVE),
+  .Q(ready));
 
 //////////////////////////////----------------------------------///////////////////////////////
 //////////////////////////////----------------------------------///////////////////////////////
