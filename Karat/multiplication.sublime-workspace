@@ -435,23 +435,18 @@
 			}
 		},
 		{
-			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/behav/Hexadecimal_A.txt",
-			"settings":
-			{
-				"buffer_size": 9216,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/bloody_simruns/behav/output_log.py",
 			"settings":
 			{
-				"buffer_size": 9534,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "//==================================================================================================\n//  Filename      : FSM_input_enable.v\n//  Created On    : 2016-09-21 00:26:00\n//  Last Modified : 2016-09-25 21:37:40\n//  Revision      :\n//  Author        : Jorge Sequeira Rojas\n//  Company       : Instituto Tecnologico de Costa Rica\n//  Email         : jsequeira@gmail.com\n//\n//  Description   : FSM controlling the initialization and input of the operands and the\n//\t\tdesired operation\n//\n//==================================================================================================\n\n`timescale 1ns / 1ps\n\n\n\nmodule FSM_INPUT_ENABLE(\n\t//INPUTS\n\tinput wire clk,\n\tinput wire rst,\n\tinput wire init_OPERATION,\n\n\toutput reg enable_input_internal,\n\t//output enable for the first stage of the pipeline\n\toutput wire enable_Pipeline_input,\n\toutput reg enable_shift_reg\n\n    );\n\n\n////////States///////////\n//Zero Phase\nparameter [3:0] State0 = 3'd0,\n\n\tState1 = 3'd1,\n\n\tState2 = 3'd2,\n\n\tState3 = 3'd3,\n\n\tState4 = 3'd4,\n\n\tState5= 3'd5,\n\n\tState6 = 3'd6,\n\n\tState7 = 3'd7;\n\n\n//State registers\nreg [2:0] state_reg, state_next;\n\n//State registers reset and standby logic\nalways @(posedge clk, posedge rst)\n\tif(rst)\n\t\tstate_reg <= State0;\n\telse\n\t\tstate_reg <= state_next;\n\n//Transition and Output Logic\nalways @*\n\tbegin\n\t\t\t//DEFAULT INITIAL VALUES\n\t//STATE DEFAULT BEHAVIOR\n\tstate_next = state_reg; //If no changes, keep the value of the register unaltered\n\n\tenable_input_internal=1; //It is internal because its an intermediary value\n\tenable_shift_reg = 0;\n\tcase(state_reg)\n\n\t\tState0:\n\t\t\tbegin\n\t\t\t\t//OUTPUT SIGNAL\n\t\t\t\tenable_input_internal=1;\n\t\t\t\tenable_shift_reg = 0;\n\t\t\t\t//NEXT STATE\n\t\t\t\tif(init_OPERATION)\n\t\t\t\t\tstate_next = State1; //JUMP TO NEXT STATE\n\t\t\t\telse begin\n\t\t\t\t\tstate_next = State0; //STAY\n\t\t\t\tend\n\n\t\t\tend\n\n\t\tState1:\n\t\t\tbegin\n\t\t\t\t//OUTPUT SIGNAL\n\t\t\t\tenable_input_internal=1;\n\t\t\t\tenable_shift_reg = 1;\n\t\t\t\t//NEXT STATE\n\t\t\t\tstate_next = State2;\n\t\t\tend\n\n\t\tState2:\n\t\t\tbegin\n\t\t\t\t//OUTPUT SIGNAL\n\t\t\t\tenable_input_internal=1;\n\t\t\t\tenable_shift_reg = 1;\n\t\t\t\t//NEXT STATE\n\t\t\t\tstate_next = State3;\n\t\t\tend\n\n\t\tState3:\n\t\t\tbegin\n\t\t\t\t//OUTPUT SIGNAL\n\t\t\t\tenable_input_internal=0;\n\t\t\t\tenable_shift_reg = 1;\n\t\t\t\t//NEXT STATE\n\t\t\t\tstate_next = State4;\n\t\t\tend\n\n\t\tState4:\n\t\t\tbegin\n\t\t\t\t//OUTPUT SIGNAL\n\t\t\t\tenable_input_internal=0;\n\t\t\t\tenable_shift_reg = 1;\n\t\t\t\t//NEXT STATE\n\t\t\t\tstate_next = State5;\n\t\t\tend\n\n\t\tState5:\n\t\t\tbegin\n\t\t\t\t//OUTPUT SIGNAL\n\t\t\t\tenable_input_internal=0;\n\t\t\t\tenable_shift_reg = 1;\n\t\t\t\t//NEXT STATE\n\t\t\t\tstate_next = State0;\n\t\t\tend\n\n\t\t// State6:\n\t\t// \tbegin\n\t\t// \t\t//OUTPUT SIGNAL\n\t\t// \t\tenable_input_internal=0;\n\t\t// \t\tenable_shift_reg = 1;\n\t\t// \t\t//NEXT STATE\n\t\t// \t\tstate_next = State7;\n\t\t// \tend\n\n\t\t// State7:\n\t\t// \tbegin\n\t\t// \t\t//OUTPUT SIGNAL\n\t\t// \t\tenable_input_internal=0;\n\t\t// \t\tenable_shift_reg = 1;\n\t\t// \t\t//NEXT STATE\n\t\t// \t\tstate_next = State0;\n\t\t//\tend\n\t\tdefault:\n\t\t\tbegin\n\t\t\t\tstate_next =State0;\n\n\t\t\tend\n\tendcase\nend\n\n\nassign  enable_Pipeline_input = enable_input_internal & init_OPERATION;\n\nendmodule\n",
 			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FSM_input_enable.v",
+			"file_size": 3019,
+			"file_write_time": 131193346600000000,
 			"settings":
 			{
 				"buffer_size": 3019,
@@ -463,8 +458,25 @@
 			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v",
 			"settings":
 			{
-				"buffer_size": 34726,
+				"buffer_size": 35125,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/imports/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v",
+			"settings":
+			{
+				"buffer_size": 24534,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v",
+			"settings":
+			{
+				"buffer_size": 930,
 				"line_ending": "Unix"
 			}
 		},
@@ -472,7 +484,19 @@
 			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v",
 			"settings":
 			{
-				"buffer_size": 24336,
+				"buffer_size": 24854,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "//==================================================================================================\n//  Filename      : FPU_ADD_Substract_PIPELINED.v\n//  Created On    : 2016-09-27 20:11:48\n//  Last Modified : 2016-09-27 20:12:02\n//  Revision      :\n//  Author        : Jorge Sequeira Rojas\n//  Company       : Instituto Tecnologico de Costa Rica\n//  Email         : jsequeira@gmail.com\n//\n//  Description   :\n//\n//\n//==================================================================================================\n`timescale 1ns/1ps\n//==================================================================================================\n//  Filename      : FPU_ADD_Substract_PIPELINED.v\n//  Created On    : 2016-09-21 14:31:41\n//  Last Modified : 2016-09-27 08:58:31\n//  Revision      :\n//  Author        : Jorge Sequeira Rojas\n//  Company       : Instituto Tecnologico de Costa Rica\n//  Email         : jsequeira@gmail.com\n//\n//  Description   : This is the TOP for the pipelined FP Addition and substraction.\n//\n//\n//==================================================================================================\n\n// `include \"Tenth_Phase_v2.v\"\n// `include \"Priority_Codec_32.v\"\n// `include \"Priority_Codec_64.v\"\n// `include \"sgn_result.v\"\n// `include \"Shift_left_logical.v\"\n// `include \"xor_tri.v\"\n// `include \"RegisterAdd.v\"\n// `include \"Multiplexer_AC.v\"\n// `include \"FSM_input_enable.v\"\n// `include \"MultiplexTxT.v\"\n// `include \"shift_mux.v\"\n// `include \"FORMATTER.v\"\n// `include \"Rotate_Mux_Array.v\"\n\n\n\n\n\nmodule FPU_PIPELINED_FPADDSUB\n\n   /*#(parameter W = 32, parameter EW = 8, parameter SW = 23,\n\t\tparameter SWR=26, parameter EWR = 5)  //Single Precision */\n\n#(parameter W = 64, parameter EW = 11, parameter SW = 52,\n\t\tparameter SWR = 55, parameter EWR = 6) //-- Double Precision */\n\t(\n\t\t//FSM Signals\n\t\tinput wire clk,\n\t\tinput wire rst,\n\t\tinput wire beg_OP,\n\t\t//input wire ack_OP,\n\n\t\t//Oper_Start_in signals\n\t\tinput wire [W-1:0] Data_X,\n\t\tinput wire [W-1:0] Data_Y,\n\t\tinput wire add_subt,\n\n\t\t//Round signals signals\n\t\t//input wire [1:0] r_mode,\n\n\t\t//OUTPUT SIGNALS\n    output wire busy,\n\t\toutput wire overflow_flag,\n\t\toutput wire underflow_flag,\n    output wire zero_flag,\n\t  output wire ready,\n\t\toutput wire [W-1:0] final_result_ieee\n    );\n\n\n///////////////////WE LOAD THE INPUT VALUES AND OTHER SIGNALS ////\n// ONTO THE FIRST STAGE//////\n\n\nwire enable_Pipeline_input;\nwire FSM_enable_input_internal;\nwire [6:0] Shift_reg_FLAGS_7;\nwire real_input_enable;\nwire enable_shift_reg;\n\n\n\nFSM_INPUT_ENABLE inst_FSM_INPUT_ENABLE (\n\t\t.clk                   (clk),\n\t\t.rst                   (rst),\n\t\t.init_OPERATION        (beg_OP),\n    .enable_input_internal (FSM_enable_input_internal),\n\t\t.enable_Pipeline_input (enable_Pipeline_input),\n    .enable_shift_reg      (enable_shift_reg)\n\t);\n\n\n\n\n  ShiftRegister #(.W(7)) inst_ShiftRegister (\n      .clk(clk),\n      .rst(rst),\n      .load  (enable_shift_reg|enable_Pipeline_input),\n      .in_bit (FSM_enable_input_internal),\n      .Q(Shift_reg_FLAGS_7));\n\n\n\n\n\n\n//////////////////////////////----------------INIT------------------///////////////////////////////\nwire ZERO_FLAG_INIT;\n\nwire [W-1:0] intDX_EWSW, intDY_EWSW; //BUFFER OPERAND 1, OPERAND 2\nwire intAS; //ADD SUB INPUT OPERATION\n\nwire INPUT_ACTIVE;\n\n\nwire gtXY, eqXY;\n\n/// FLAGS PIPE STAGE: INIT\nwire OP_FLAG_INIT, SIGN_FLAG_INIT;\n/// DATA PIPE STAGE : INIT\nwire [W-2:0] DMP_INIT_EWSW, DmP_INIT_EWSW;\n\n\n//////////////////////////////----------------EXP------------------///////////////////////////////\n\n\n// FLAGS\nwire SIGN_FLAG_EXP, OP_FLAG_EXP, ZERO_FLAG_EXP, EXP_ACTIVE;\n\n//Whole operand declaration\n\nwire [W-2:0] DMP_EXP_EWSW, DmP_EXP_EWSW;\n\n/// EXPONENT DECLARATION\n\nwire [EW-1:0] DMP_exp_EXP_EW, DmP_exp_EXP_EW;\n\n/// MANTISSA OR SIGNIFICAND DECLARATION\n\nwire [SW-1:0] DMP_mant_EXP_SW, DmP_mant_EXP_SW;\n\n//SHIFT AMOUNT DECLARATION\n\nwire [EW-1:0] Shift_amount_EXP_EW; //Exponent operation result\n\n\n//////////////////////////////----------------SHT1------------------///////////////////////////////\n\n//FLAGS\n\nwire [SWR-1:0]b_shifter_one_SWR;\n\nwire SIGN_FLAG_SHT1, OP_FLAG_SHT1, ZERO_FLAG_SHT1, SHT1_ACTIVE;\n\n\n//OPERAND SIGNALS\nwire [W-2:0]  DMP_SHT1_EWSW;\nwire [SW-1:0] DmP_mant_SHT1_SW;\nwire [EWR-1:0] Shift_amount_SHT1_EWR;\n/////////////////------SIGNALS FOR THE FIRST PART OF THE SHIFTER-------//////////-///////////////////\n\nwire [EWR-1:0] shft_value_mux_o_EWR;\nwire left_right_SHT1;\nwire bit_shift_SHT1;\n\nwire [SWR-1:0] sftr_idat_SHT1_SWR; //SHIFTER INPUT DATA\nwire [SWR-1:0] sftr_odat_SHT1_SWR; //SHIFTER OUTPUT DATA\n\n///////////BARREL SHIFTER INPUT VALUE MUX SIGNALS\n\n// TEMPORARY WIRES\nwire [EWR-1:0] mux_sel_norm_EWR; //OUTPUT SIGNAL FOR MUX SHIFT VALUE\nwire [SWR-1:0] Data_array_SWR[EWR+1:0]; //TEMPORARY FOR THE DIFFERENT STAGES OF THE SHIFTER\n\n//////////////////////////////----------------SHT2------------------///////////////////////////////\n\n//FLAGS\nwire SIGN_FLAG_SHT2, OP_FLAG_SHT2, ZERO_FLAG_SHT2, SHT2_ACTIVE;\n\n\n/////////////////------SIGNALS FOR THE SECOND PART OF THE SHIFTER-------//////////-///////////////////\nwire [W-2:0]DMP_SHT2_EWSW;\n\nwire [EWR-1:0] shift_value_SHT2_EWR;\nwire left_right_SHT2;\nwire bit_shift_SHT2;\n\nwire [SWR-1:0] sftr_idat_SHT2_SWR; //SHIFTER INPUT DATA\nwire [SWR-1:0] sftr_odat_SHT2_SWR; //SHIFTER OUTPUT DATA\n\nwire ADD_OVRFLW_NRM2, NRM2_ACTIVE;\n\nwire [EW-1:0]Exp_oper_1_EW;\n/////////////////------SIGNALS FOR THE LAST EXPONENT OPERATION-------/////////-///////////////////\n\nreg [EW:0] exp_rslt_NRM2_EW1;\nwire [EW-1:0] ADDSUB_exp_operand_EW;\n\nwire [EW-1:0]DMP_exp_NRM2_EW;\nwire SIGN_FLAG_SHT1SHT2, ZERO_FLAG_SHT1SHT2;\n\n//////////////////////////////----------------SGF------------------///////////////////////////////\n\n//FLAGS\nwire SIGN_FLAG_SFG, OP_FLAG_SFG, ZERO_FLAG_SFG, SFG_ACTIVE;\nwire ADD_OVRFLW_SGF;\n\nwire [SWR-1:0]    DmP_mant_SFG_SWR;\nwire [SWR-1:0]    DMP_mant_SFG_SWR;\n\nwire [EW-1:0] DMP_exp_SFG;\n\nreg Carry_out_SGF;\nreg [SWR-1:0] Raw_mant_SGF;\nwire [W-2:0] DMP_SFG;\n\n//////////////////////////////----------------NRM------------------///////////////////////////////\n//Flags\n\nwire ADD_OVRFLW_NRM, SIGN_FLAG_NRM, ZERO_FLAG_NRM, NRM_ACTIVE;\n\nwire [EW-1:0]DMP_exp_NRM_EW;\n\nwire [SWR-1:0] Add_Subt_LZD_SWR;\nwire [SWR-1:0] Raw_mant_NRM_SWR;\n\nwire [EW-1:0] LZD_output_NRM2_EW;\nwire [EWR-1:0] LZD_raw_out_NRM2_EWR;\nwire [EWR-1:0] LZD_raw_out_EWR;\nwire [EW-EWR-1:0] LZD_ZFiller;\n\n\n//////////////////////////////----------------FRMT------------------///////////////////////////////\n\nwire OVRFLW_FLAG_FRMT, UNDRFLW_FLAG_FRMT;\nwire [W-1:0] formatted_number_W;\n\n\n /////////////////////////////////////FIRST STAGE \"INIT\" ///////////////////////////////\n///////////////////////////////////// PIPELINE REGISTER = INIT//////////////////////////////////////\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n  RegisterAdd #(.W(W)) INPUT_STAGE_OPERANDX (\n  .clk(clk),\n  .rst(rst),\n  .load(enable_Pipeline_input),\n  .D(Data_X),\n  .Q(intDX_EWSW));\n\n  RegisterAdd #(.W(W)) INPUT_STAGE_OPERANDY (\n  .clk(clk),\n  .rst(rst),\n  .load(enable_Pipeline_input),\n  .D(Data_Y),\n  .Q(intDY_EWSW));\n\n  RegisterAdd #(.W(1)) INPUT_STAGE_FLAGS (\n  .clk(clk),\n  .rst(rst),\n  .load(enable_Pipeline_input),\n  .D(add_subt),\n  .Q(intAS));\n\n// RegisterAdd #(.W(2*W+1+1)) INPUT_STAGE (\n//     .clk(clk),\n//     .rst(rst),\n//     .load(enable_Pipeline_input),\n//     .D({add_subt , Data_X, Data_Y, enable_Pipeline_input}),\n//     .Q({intAS      , intDX_EWSW   , intDY_EWSW   , INPUT_ACTIVE})\n//     );\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n//Compares between magnitude for DATA_X and DATA_Y and select whos bigger and if there's a equality\n\nComparator #(.W(W-1)) Magnitude_Comparator (\n    .Data_X_i(intDX_EWSW[W-2:0]),\n    .Data_Y_i(intDY_EWSW[W-2:0]),\n    .gtXY_o(gtXY),\n    .eqXY_o(eqXY)\n    );\n\n\n//Classifies in the registers the bigger value (M) and the smaller value (m)\n\nMultiplexTxT #(.W(W-1)) MuxXY (\n\t.select(gtXY),\n    .D0_i(intDX_EWSW[W-2:0]),\n    .D1_i(intDY_EWSW[W-2:0]),\n    .S0_o(DMP_INIT_EWSW),\n    .S1_o(DmP_INIT_EWSW)\n    );\n\n//Operation between the DATA_X & Y's sign bit and the operation bit to find the real operation for ADDER/SUBTRACT\nxor_tri #(.W(W)) Op_verification (\n    .A_i(intDX_EWSW[W-1]),   //Signo de ese operando\n    .B_i(intDY_EWSW[W-1]),   //Signo de ese operando\n    .C_i(intAS),        //Operacion ingresada por modulo externo\n    .Z_o(OP_FLAG_INIT)\n    );\n\n//Calculate the sign bit for the final result\nsgn_result result_sign_bit (\n    .Add_Subt_i(intAS),\n    .sgn_X_i(intDX_EWSW[W-1]),\n    .sgn_Y_i(intDY_EWSW[W-1]),\n    .gtXY_i(gtXY),\n    .eqXY_i(eqXY),\n    .sgn_result_o(SIGN_FLAG_INIT)\n    );\n\n//zero flag if theres a subtraction and the variables are equal\n\n\nassign ZERO_FLAG_INIT = OP_FLAG_INIT & eqXY;\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n ////////////////////////////////////////SECOND STAGE \"EXP\" ///////////////////////////////\n///////////////////////////////////// PIPELINE REGISTER = EXP//////////////////////////////////////\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n  RegisterAdd #(.W(W-1)) EXP_STAGE_DMP (\n  .clk(clk),\n  .rst(rst),\n  .load(INPUT_ACTIVE),\n  .D(DMP_INIT_EWSW),\n  .Q(DMP_EXP_EWSW));\n//El sintetizador puede eliminar algunos registros de acá debido a\n//la no utilización de estos. Para este caso, se reducirá el tamaño\n//de el registro de menor tamaño\n\n//Estos warnings pueden ser ignorados.\n\n  RegisterAdd #(.W(W-1)) EXP_STAGE_DmP (\n  .clk(clk),\n  .rst(rst),\n  .load(INPUT_ACTIVE),\n  .D(DmP_INIT_EWSW),\n  .Q(DmP_EXP_EWSW));\n\n  RegisterAdd #(.W(3))  EXP_STAGE_FLAGS (\n  .clk(clk),\n  .rst(rst),\n  .load(INPUT_ACTIVE),\n  .D({SIGN_FLAG_INIT, OP_FLAG_INIT, ZERO_FLAG_INIT}),\n  .Q({SIGN_FLAG_EXP , OP_FLAG_EXP , ZERO_FLAG_EXP}));\n\n\n// RegisterAdd #(.W( W - 1 + W - 1 + 3 )) EXP_STAGE (\n//     .clk(clk),\n//     .rst(rst),\n//     .load(INPUT_ACTIVE),\n//     .D({DMP_EXP_EWSW, DmP_INIT_EWSW, SIGN_FLAG_INIT, OP_FLAG_INIT, ZERO_FLAG_INIT, INPUT_ACTIVE}),\n//     .Q({DMP_EXP_EWSW , DmP_EXP_EWSW , SIGN_FLAG_EXP , OP_FLAG_EXP , ZERO_FLAG_EXP , EXP_ACTIVE   })\n//     );\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n\n\n//Aca pueden salir problemas por el largo del exponente.\n\n//THE FOLLOWING IS JUST FOR SIMULATION PURPOSES\n assign DMP_exp_EXP_EW = DMP_EXP_EWSW[W-2:W-EW-1]; //We assign the exponent bits for the comming operation\n assign DmP_exp_EXP_EW = DmP_EXP_EWSW[W-2:W-EW-1]; //We assign the exponent bits for the comming operation\n assign DMP_mant_EXP_SW = DMP_EXP_EWSW[SW-1:0];\n////////////WE SUBTRACT THE DIFFERENCE BETWEEN EXPONENTS (hence, the EXP name) /////////////\n\nassign Shift_amount_EXP_EW = DMP_EXP_EWSW[W-2:SW] - DmP_EXP_EWSW[W-2:SW];\n\n//assign DMP_mant_EXP_SW = DMP_EXP_EWSW[SW-1:0];\nassign DmP_mant_EXP_SW = DmP_EXP_EWSW[SW-1:0];\n\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n/////////////////////////////////////////THIRD STAGE \"SFT1\" ////////////////////////////\n/////////////////////////////////// PIPELINE REGISTER = SFT1 /////////////////////////////\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n// RegisterAdd #(.W(W-1+SW+EWR+4)) SHT1_STAGE (\n//     .clk(clk),\n//     .rst(rst),\n//     .load(EXP_ACTIVE),\n//     .D({DMP_EXP_EWSW , DmP_mant_EXP_SW , Shift_amount_EXP_EW , SIGN_FLAG_EXP , OP_FLAG_EXP , ZERO_FLAG_EXP , EXP_ACTIVE}),\n//     .Q({DMP_SHT1_EWSW, DmP_mant_SHT1_SW, Shift_amount_SHT1_EWR, SIGN_FLAG_SHT1, OP_FLAG_SHT1, ZERO_FLAG_SHT1, SHT1_ACTIVE})\n//     );\n  RegisterAdd #(.W(W-1)) SHT1_STAGE_DMP (\n  .clk(clk),\n  .rst(rst),\n  .load(EXP_ACTIVE),\n  .D(DMP_EXP_EWSW),\n  .Q(DMP_SHT1_EWSW));\n\n  RegisterAdd #(.W(SW)) SHT1_STAGE_DmP_mant (\n  .clk(clk),\n  .rst(rst),\n  .load(EXP_ACTIVE),\n  .D(DmP_mant_EXP_SW),\n  .Q(DmP_mant_SHT1_SW));\n\n  RegisterAdd #(.W(EWR)) SHT1_STAGE_sft_amount (\n  .clk(clk),\n  .rst(rst),\n  .load(EXP_ACTIVE),\n  .D(Shift_amount_EXP_EW[EWR-1:0]),\n  .Q(Shift_amount_SHT1_EWR));\n\n  RegisterAdd #(.W(3)) SHT1_STAGE_FLAGS (\n  .clk(clk),\n  .rst(rst),\n  .load(EXP_ACTIVE),\n  .D({SIGN_FLAG_EXP , OP_FLAG_EXP , ZERO_FLAG_EXP}),\n  .Q({SIGN_FLAG_SHT1, OP_FLAG_SHT1, ZERO_FLAG_SHT1}));\n////////////////////////----------------------TEMPS---------------///////////////////////////////\n\n\n//////////////////////////////----------------------------------///////////////////////////////\n\ngenerate\n    case(EW)\n        8:begin\n            assign b_shifter_one_SWR = 5'd1;\n        end\n        default:begin\n            assign b_shifter_one_SWR = 6'd1;\n        end\n    endcase\nendgenerate\n\ngenerate\n    case(EW)\n        8:begin\n            assign LZD_ZFiller =3'd0;\n            assign Exp_oper_1_EW = 8'd1;\n        end\n        default:begin\n            assign LZD_ZFiller =5'd0;\n             assign Exp_oper_1_EW = 11'd1;\n        end\n    endcase\nendgenerate\n//assign mux_out = (sel) ? din_1 : din_0;\n//Input variables for the shifter, depending upon the stage.\n\n\nassign mux_sel_norm_EWR     = (ADD_OVRFLW_NRM) ? b_shifter_one_SWR : LZD_raw_out_EWR;\nassign shft_value_mux_o_EWR = (NRM_ACTIVE)     ?  mux_sel_norm_EWR : Shift_amount_SHT1_EWR;\n\n//assign left_right_SHT1      = (NRM_ACTIVE)     ? (~ADD_OVRFLW_NRM) : 1'b0;\n\nassign left_right_SHT1      = (NRM_ACTIVE)&(~ADD_OVRFLW_NRM);\n\nassign bit_shift_SHT1       = (NRM_ACTIVE)&(ADD_OVRFLW_NRM);\n\n\n\tMultiplexer_AC #(.W(SWR)) b_shftr_idat_mux_SHT1 (\n\t\t.ctrl(NRM_ACTIVE                   ),\n\t\t.D0  ({1'b1,DmP_mant_SHT1_SW,2'b00}),\n\t\t.D1  (Raw_mant_NRM_SWR             ),\n\t\t.S   (sftr_idat_SHT1_SWR           )\n\t\t);\n\n////////////////////////////////////////////////////\n\tgenvar k;\t\t\t//Level//\n////////////////////////////////////////////////////\n\n\n\tRotate_Mux_Array #(.SWR(SWR)) first_rotate(\n\t\t.Data_i  (sftr_idat_SHT1_SWR),\n\t\t.select_i(left_right_SHT1),\n\t\t.Data_o  (Data_array_SWR [0][SWR-1:0])\n\t\t);\n\n\tgenerate for (k=0; k < 2; k=k+1) begin : shift_mux_array1\n\t\tshift_mux_array #(.SWR(SWR), .LEVEL(k)) shift_mux_array(\n\t\t\t.Data_i     (Data_array_SWR[k]),\n\t\t\t.select_i   (shft_value_mux_o_EWR[k]),\n\t\t\t.bit_shift_i(bit_shift_SHT1),\n\t\t\t.Data_o     (Data_array_SWR[k+1])\n\t\t\t);\n\t\tend\n\tendgenerate\n\nassign sftr_odat_SHT1_SWR = Data_array_SWR[2];\nassign Data_array_SWR[3] = sftr_idat_SHT2_SWR;\n\n\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n/////////////////////////////////////////FOURTH STAGE \"SFT2\" ////////////////////////////\n/////////////////////////////////// PIPELINE REGISTER = SFT2 /////////////////////////////\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n  RegisterAdd #(.W(W-1)) SHT2_STAGE_DMP (\n  .clk(clk),\n  .rst(rst),\n  .load(SHT1_ACTIVE),\n  .D(DMP_SHT1_EWSW),\n  .Q(DMP_SHT2_EWSW));\n\n  RegisterAdd #(.W(SWR)) SHT2_SHIFT_DATA (\n  .clk(clk),\n  .rst(rst),\n  .load((SHT1_ACTIVE|NRM_ACTIVE)),\n  .D(sftr_odat_SHT1_SWR),\n  .Q(sftr_idat_SHT2_SWR));\n\n//LOS BITS 4, 3 y 2 DE ESTE REGISTRO PUEDEN SER ELIMINADOS\n//GRACIAS A QUE SE UTILIZARON EN LA ETAPA ANTERIOR DE CORRIMIENTO.\n\n  RegisterAdd #(.W(EWR)) SHT2_STAGE_SHFTVARS1 (\n  .clk(clk),\n  .rst(rst),\n  .load(SHT1_ACTIVE|NRM_ACTIVE),\n  .D({shft_value_mux_o_EWR}),\n  .Q({shift_value_SHT2_EWR}));\n\n  RegisterAdd #(.W(2)) SHT2_STAGE_SHFTVARS2 (\n  .clk(clk),\n  .rst(rst),\n  .load(SHT1_ACTIVE|NRM_ACTIVE),\n  .D({left_right_SHT1,bit_shift_SHT1}),\n  .Q({left_right_SHT2, bit_shift_SHT2}));\n\n  RegisterAdd #(.W(3)) SHT2_STAGE_FLAGS (\n  .clk(clk),\n  .rst(rst),\n  .load(SHT1_ACTIVE),\n  .D({SIGN_FLAG_SHT1, OP_FLAG_SHT1, ZERO_FLAG_SHT1}),\n  .Q({SIGN_FLAG_SHT2, OP_FLAG_SHT2, ZERO_FLAG_SHT2}));\n\n/////////////////DE ACA SALE DIRECTO A LA ETAPA DE FORMATO//////////////\n\n  RegisterAdd #(.W(EWR+EW)) SFT2FRMT_STAGE_VARS(\n    .clk(clk),\n    .rst(rst),\n    .load(NRM_ACTIVE),\n    .D({LZD_raw_out_EWR     , DMP_exp_NRM_EW }),\n    .Q({LZD_raw_out_NRM2_EWR, DMP_exp_NRM2_EW})\n    );\n\n  RegisterAdd #(.W(3)) SFT2FRMT_STAGE_FLAGS (\n    .clk(clk),\n    .rst(rst),\n    .load(NRM_ACTIVE),\n    .D({ADD_OVRFLW_NRM , SIGN_FLAG_NRM     , ZERO_FLAG_NRM }),\n    .Q({ADD_OVRFLW_NRM2, SIGN_FLAG_SHT1SHT2, ZERO_FLAG_SHT1SHT2}));\n//////////////////////////////----------------------------------///////////////////////////////\n\n\n\n//////////////////////////////----------------------------------///////////////////////////////\n\ngenerate for (k=2; k < EWR; k=k+1) begin : shift_mux_array2\n\tshift_mux_array #(.SWR(SWR), .LEVEL(k)) shift_mux_array(\n\t\t.Data_i(Data_array_SWR[k+1]),\n\t\t.select_i(shift_value_SHT2_EWR[k]),\n\t\t.bit_shift_i(bit_shift_SHT2),\n\t\t.Data_o(Data_array_SWR[k+2])\n\t\t);\n\tend\nendgenerate\n\n\tRotate_Mux_Array #(.SWR(SWR)) last_rotate(\n\t\t.Data_i(Data_array_SWR[EWR+1]),\n\t\t.select_i(left_right_SHT2),\n\t\t.Data_o(sftr_odat_SHT2_SWR)\n\t\t);\n\n\nassign LZD_output_NRM2_EW = {LZD_ZFiller, LZD_raw_out_NRM2_EWR};\n\n////////////////////////INPUT MUX FOR ADD/SUB/////////////////////////\n\n\tassign ADDSUB_exp_operand_EW = (ADD_OVRFLW_NRM2) ? Exp_oper_1_EW : LZD_output_NRM2_EW;\n\n////////////////////////INPUT MUX FOR ADD/SUB/////////////////////////\n\n//////////////////////////ADDER/SUBSTRACTOR///////////////////////\n\n\t// always @* begin : ADD_SUB_NRM\n\t//    case (ADD_OVRFLW_NRM2)\n //        1'b0  : begin\n //                    {Carry_out_SFT2, exp_rslt_NRM2_EW1} = DMP_exp_NRM2_EW + ADDSUB_exp_operand_EW;\n //                 end\n //        1'b1  : begin\n //                    {Carry_out_SFT2, exp_rslt_NRM2_EW1} = DMP_exp_NRM2_EW - ADDSUB_exp_operand_EW;\n //                 end\n //        default: begin\n //                    {Carry_out_SFT2, exp_rslt_NRM2_EW1} = DMP_exp_NRM2_EW + ADDSUB_exp_operand_EW;\n //                 end\n //     endcase\n\n  always @* begin\n    if (ADD_OVRFLW_NRM2) begin\n      exp_rslt_NRM2_EW1 = DMP_exp_NRM2_EW + ADDSUB_exp_operand_EW;\n    end\n    else begin\n      exp_rslt_NRM2_EW1 = DMP_exp_NRM2_EW - ADDSUB_exp_operand_EW;\n    end\n  end\n//////////////////////////ADDER/SUBSTRACTOR///////////////////////\n\n\nFORMATTER #(.EW(EW+1)) array_comparators(\n    .exp(exp_rslt_NRM2_EW1),\n    .overflow (OVRFLW_FLAG_FRMT),\n    .underflow(UNDRFLW_FLAG_FRMT));\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n/////////////////////////////////////////FIFTH STAGE \"SGF\" ////////////////////////////\n/////////////////////////////////// PIPELINE REGISTER = SGF /////////////////////////////\n\n//////////////////////////////----------------------------------///////////////////////////////\n  RegisterAdd #(.W(W-1))   SGF_STAGE_DMP (\n  .clk(clk),\n  .rst(rst),\n  .load((SHT2_ACTIVE&~NRM2_ACTIVE)),\n  .D(DMP_SHT2_EWSW),\n  .Q(DMP_SFG));\n\n  RegisterAdd #(.W(SWR))  SGF_STAGE_DmP_mant (\n  .clk(clk),\n  .rst(rst),\n  .load(SHT2_ACTIVE&~NRM2_ACTIVE),\n  .D(sftr_odat_SHT2_SWR),\n  .Q(DmP_mant_SFG_SWR));\n\n  RegisterAdd #(.W(3))    SGF_STAGE_FLAGS (\n  .clk(clk),\n  .rst(rst),\n  .load(SHT2_ACTIVE&~NRM2_ACTIVE),\n  .D({SIGN_FLAG_SHT2,OP_FLAG_SHT2, ZERO_FLAG_SHT2}),\n  .Q({SIGN_FLAG_SFG , OP_FLAG_SFG, ZERO_FLAG_SFG }));\n\n\n// RegisterAdd #(.W(W+SWR+4)) SGF_STAGE(\n// \t\t.clk(clk),\n// \t\t.rst(rst),\n// \t\t.load(SHT2_ACTIVE&~NRM2_ACTIVE),//Esto significa que si esta en NRM2, no active SGF\n//     .D({DMP_SHT2_EWSW, sftr_odat_SHT2_SWR, SIGN_FLAG_SHT2,OP_FLAG_SHT2, ZERO_FLAG_SHT2, SHT2_ACTIVE}),\n//     .Q({DMP_SFG , DmP_mant_SFG_SWR  , SIGN_FLAG_SFG , OP_FLAG_SFG, ZERO_FLAG_SFG , SFG_ACTIVE})\n//     );\n\n// RegisterAdd #(.W( )) NORM_2_SGF_STAGE(\n//         .clk(clk),+\n//         .rst(rst),\n//         .load(NRM2SFT2_ACTIVE),\n//         .D({, Overflow_flag_SHT2, Underflow_flag_SHT2, NRM2SFT2_ACTIVE}),\n//         .Q({, OVRFLW_FLAG_FRMT, UNDRFLW_FLAG_FRMT, SFT2FRMT_ACTIVE  })\n//         );\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n\n\n\n//////////////////////////////----------------------------------///////////////////////////////\n\tassign DMP_mant_SFG_SWR = {1'b1,DMP_SFG[SW-1:0],2'b00};\n\n\tassign DMP_exp_SFG = DMP_SFG[W-2:SW];\n\n\talways @* begin : ADD_SUB_SGF\n       case (OP_FLAG_SFG)\n          1'b0  : begin\n                      {Carry_out_SGF, Raw_mant_SGF} = DMP_mant_SFG_SWR + DmP_mant_SFG_SWR;\n                   end\n          1'b1  : begin\n                      {Carry_out_SGF, Raw_mant_SGF} = DMP_mant_SFG_SWR - DmP_mant_SFG_SWR;\n                   end\n          default: begin\n                      {Carry_out_SGF, Raw_mant_SGF} = DMP_mant_SFG_SWR + DmP_mant_SFG_SWR;\n                   end\n       endcase\n  end\n\tassign ADD_OVRFLW_SGF = Carry_out_SGF&(~OP_FLAG_SFG);\n\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n/////////////////////////////////////////SIXTH STAGE \"NRM\" ////////////////////////////\n/////////////////////////////////// PIPELINE REGISTER = NRM /////////////////////////////\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n\n// RegisterAdd #(.W( )) NRM_STAGE(\n//         .clk(clk),\n//         .rst(rst),\n//         .load(SFG_ACTIVE),\n//         .D({Raw_mant_SGF, DMP_exp_SFG, ADD_OVRFLW_SGF, SIGN_FLAG_SFG, ZERO_FLAG_SFG, SFG_ACTIVE}),\n//         .Q({Raw_mant_NRM_SWR, DMP_exp_NRM_EW, ADD_OVRFLW_NRM, SIGN_FLAG_NRM, ZERO_FLAG_NRM, NRM_ACTIVE})\n//         );\n\n  RegisterAdd #(.W(SWR)) NRM_STAGE_Raw_mant (\n  .clk(clk),\n  .rst(rst),\n  .load(SFG_ACTIVE),\n  .D(Raw_mant_SGF),\n  .Q(Raw_mant_NRM_SWR));\n\n  RegisterAdd #(.W(EW)) NRM_STAGE_DMP_exp (\n  .clk(clk),\n  .rst(rst),\n  .load(SFG_ACTIVE),\n  .D(DMP_exp_SFG),\n  .Q(DMP_exp_NRM_EW));\n\n  RegisterAdd #(.W(3)) NRM_STAGE_FLAGS (\n  .clk(clk),\n  .rst(rst),\n  .load(SFG_ACTIVE),\n  .D({ADD_OVRFLW_SGF, SIGN_FLAG_SFG, ZERO_FLAG_SFG}),\n  .Q({ADD_OVRFLW_NRM, SIGN_FLAG_NRM, ZERO_FLAG_NRM}));\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n\n//////////////////////////////----------------------------------///////////////////////////////\n//assign mux_out = (sel) ? din_1 : din_0;\n\n\n\nassign Add_Subt_LZD_SWR = ~Raw_mant_NRM_SWR;\n\n/////////////////////////LZD BEGIN////////////////////////////\n\ngenerate\n\t\tcase (SWR)\n\t\t\t26:begin : LZD_SINGLE\n\t\t\t\tPriority_Codec_32 Codec_32(\n\t\t\t\t\t.Data_Dec_i(Add_Subt_LZD_SWR),\n\t\t\t\t\t.Data_Bin_o(LZD_raw_out_EWR)\n\t\t\t\t\t);\n\t\t\t\tend\n\t\t\t55:begin : LZD_DOUBLE\n\t\t\t\tPriority_Codec_64 Codec_64(\n\t\t\t\t\t.Data_Dec_i(Add_Subt_LZD_SWR),\n\t\t\t\t\t.Data_Bin_o(LZD_raw_out_EWR)\n\t\t\t\t\t);\n\t\t\t\tend\n\t\tendcase\n\nendgenerate\n\n\n\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n/////////////////////////////////////////SEVENTH STAGE \"FRMT\" ////////////////////////////\n/////////////////////////////////// PIPELINE REGISTER = FRMT /////////////////////////////\n\n//////////////////////////////----------------------------------///////////////////////////////\n\n\n\n// NO REGISTER FOR THIS STAGE, BECAUSE WE RECYCLE THE BARREL SHIFTER\n\n\n\n//////////////////////////////----------------------------------///////////////////////////////\n//////////////////////////////----------------------------------///////////////////////////////\n\n\n\n\tFRMT_STAGE #(.W(W),.EW(EW),.SW(SW)) inst_FRMT_STAGE (\n\t\t\t.overflow_flag    (OVRFLW_FLAG_FRMT ),\n\t\t\t.underflow_flag   (UNDRFLW_FLAG_FRMT),\n\t\t\t.sign_i           (SIGN_FLAG_SHT1SHT2),\n\t\t\t.exp_ieee_i       (exp_rslt_NRM2_EW1[EW-1:0]),\n\t\t\t.sgf_ieee_i       (sftr_odat_SHT2_SWR[SWR-2:2]),\n\t\t\t.formatted_number (formatted_number_W)\n\t\t);\n\n//////////////////////////////-------------------------------------///////////////////////////////\n\n/////////////////////////////////////////EIGHT STAGE \"DATAO\" ////////////////////////////\n/////////////////////////////////// PIPELINE REGISTER = DATAO /////////////////////////////\n\n//////////////////////////////-------------------------------------///////////////////////////////\n  assign {INPUT_ACTIVE,\n          EXP_ACTIVE,\n          SHT1_ACTIVE,\n          SHT2_ACTIVE,\n          SFG_ACTIVE,\n          NRM_ACTIVE,\n          NRM2_ACTIVE} = Shift_reg_FLAGS_7;\n\nassign busy = SHT1_ACTIVE;\n\n  RegisterAdd #(.W(W)) FRMT_STAGE_DATAOUT (\n  .clk(clk),\n  .rst(rst),\n  .load(NRM2_ACTIVE),\n  .D(formatted_number_W),\n  .Q(final_result_ieee)\n  );\n\n  RegisterAdd #(.W(3)) FRMT_STAGE_FLAGS (\n  .clk(clk),\n  .rst(rst),\n  .load(NRM2_ACTIVE),\n  .D({OVRFLW_FLAG_FRMT,UNDRFLW_FLAG_FRMT, ZERO_FLAG_SHT1SHT2}),\n  .Q({overflow_flag   , underflow_flag  , zero_flag     })\n  );\n\n  RegisterAdd #(.W(1)) Ready_reg (\n  .clk(clk),\n  .rst(rst),\n  .load(1),\n  .D(NRM2_ACTIVE),\n  .Q(ready));\n\n//////////////////////////////----------------------------------///////////////////////////////\n//////////////////////////////----------------------------------///////////////////////////////\n\n\nendmodule\n\n",
+			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v",
+			"file_size": 24860,
+			"file_write_time": 131195589852555577,
+			"settings":
+			{
+				"buffer_size": 24855,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -483,98 +507,6 @@
 			{
 				"buffer_size": 4541,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/new/Testbench_Sgf_multiplication.v",
-			"settings":
-			{
-				"buffer_size": 1836,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/imports/sim/testbench_RKOA.v",
-			"settings":
-			{
-				"buffer_size": 3845,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "//==================================================================================================\n//  Filename      : CORDIC_Arch3.v\n//  Created On    : 2016-09-17 18:42:38\n//  Last Modified : 2016-09-18 15:24:49\n//  Revision      : \n//  Author        : Jorge Sequeira Rojas\n//  Company       : Instituto Tecnologico de Costa Rica\n//  Email         : jsequeira@gmail.com\n//\n//  Description   : \n//   Changelog> The adder structure will be optimized for the CORDIC algorithm. \n//\t\t\t\trounding will be set to 2b'00. FPU Adder structure usage will be \n//\t\t\t\tamplified to 3 units.\n//\n//\n//==================================================================================================\n`timescale 1ns / 1ps\n\n\nmodule CORDIC_Arch3 #(parameter W = 32, parameter EW = 8, parameter SW = 23, parameter SWR=26, parameter EWR = 5)//*/\n/*#(parameter W = 64, parameter EW = 11, parameter SW = 52, parameter SWR = 55, parameter EWR = 6) //-- Double Precision */\n(\n//Input Signals\ninput wire clk,                         //\tReloj del sistema.\ninput wire rst,                         //\tSeñal de reset del sistema.\ninput wire beg_fsm_cordic,              //\tSeñal de inicio de la maquina de estados del módulo CORDIC.\ninput wire ack_cordic,                  //\tSeñal de acknowledge proveniente de otro módulo que indica que ha recibido el resultado del modulo CORDIC.\ninput wire operation,\t\t\t\t\t//\tSeñal que indica si se realiza la operacion seno(1'b1) o coseno(1'b0).\n\ninput wire [W-1:0] data_in,             //\tDato de entrada, contiene el angulo que se desea calcular en radianes.\ninput wire [1:0] shift_region_flag,     //\tSeñal que indica si el ángulo a calcular esta fuera del rango de calculo del algoritmo CORDIC.\n\n//Output Signals\noutput wire ready_cordic,                //\tSeñal de salida que indica que se ha completado el calculo del seno/coseno.\noutput wire overflow_flag,                  //\tBandera de overflow de la operacion.\noutput wire underflow_flag,\t\t\t\t\t//\tBandera de underflow de la operacion.\noutput wire [W-1:0] data_output          //\tBus de datos con el valor final del angulo calculado.\n);\n\nlocalparam d_var = 0;\t\t\t\t       //\tValor por defecto que se le carga al contador de variables.\nlocalparam d_iter = 0;                  //\tValor por defecto que se le carga al contador de iteraciones.\nlocalparam mode = 1'b0;\nlocalparam r_mode = 2'b00;\nlocalparam iter_bits = 4;                  //Modificar valor para obtener diferente cantidad de iteraciones; ejem= 3=8iter, 4=16iter. etc\n\nwire [W-1:0] x0,y0;\n//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\ngenerate\n    case(W)\n    \n    32:\n    begin\n        assign x0 = 32'h3f1b74ee; \t\t\t      //\tx0 = 0.607252935008881, valor inicial de la variable X.\n        assign y0 = 32'h00000000; \t\t\t      //\ty0 = 0, valor inicial de la variable Y.\n    end\n    \n    64:\n    begin\n        assign x0 = 64'h3fe36e9db5086bc9;\t     //\tx0 = 0.607252935008881, valor inicial de la variable X.\n        assign y0 = 64'h0000000000000000;\t     //\ty0 = 0, valor inicial de la variable Y.\n    end\n    \n    default:\n    begin\n        assign x0 = 32'h3f1b74ee;                   //    x0 = 0.607252935008881, valor inicial de la variable X.\n        assign y0 = 32'h00000000;                   //    y0 = 0, valor inicial de la variable Y.\n    end    \n    endcase\nendgenerate\n\n//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\n//Signal declaration\n\nwire reset_reg_cordic;\n\n//ENABLE\nwire enab_d_ff_RB1;                                    \t    // \tEnable de la primera linea de registros.\nwire enab_d_ff2_RB2;                                    \t// \tEnable de la segunda linea de registros.\nwire enab_RB3;\t\t\t\t\t\t\t\t\t\t\t\t//\tEnable del registro que guarda el valor del signo, dependiendo del modo del algoritmo.\nwire enab_d_ff4_Xn, enab_d_ff4_Yn, enab_d_ff4_Zn;       \t//\tEnable de los registros que guardan los datos provenientes del modulo de suma/resta.\nwire enab_d_ff5_data_out;\t\t\t\t\t\t\t\t\t//\tEnable del registo que guarda el valor de salida final, listo para enviarse al procesador.\nwire enab_cont_iter, enab_cont_var;                     \t//\tEnable de los contadores de variable e iteracion\nwire load_cont_iter, load_cont_var;                      \t//\tSeñal de carga de un valor en los contadores de variable e iteraciones.\nwire enab_dff_5;\n\n\n\n//SELECTION\nwire sel_mux_1, sel_mux_3;                                  //\tSeñales de seleccion provenientes de la maquina de estados.\nwire [1:0] sel_mux_2;                      \t\t\t\t\t//\tSeñal de seleccion que se activa dependiendo de la variable que se este calculando.\n\nwire sel_mux_1_reg, sel_mux_3_reg;                          //\tSeñales de seleccion provenientes de la maquina de estados.\nwire [1:0] sel_mux_2_reg;                      \t\t\t\t//\tSeñal de seleccion que se activa dependiendo de la variable que se este calculando.\n\n//DATA WIRES\nwire d_ff1_operation_out;\t\t\t\t\t\t\t\t\t//\tSalida del registro que guarda el dato de entrada de la operacion a realizar, coseno(1'b0) o seno(1'b1)\nwire [1:0] d_ff1_shift_region_flag_out;                    \t//\tSalida del registro que guarda el dato de entrada que indica si el ángulo a calcular esta fuera del rango de calculo del algoritmo CORDIC.\nwire [W-1:0] d_ff1_Z;                                    \t//\tSalidas de los registros que guardan los valores iniciales de las variables X, Y y Z.\nwire [W-1:0] d_ff_Xn, d_ff_Yn, d_ff_Zn;\t\t\t\t\t\t//\tSalidas de los registros que guardan los valores de las variables X, Y y Z despues de cada iteracion.\nwire [W-1:0] first_mux_X, first_mux_Y, first_mux_Z;     \t//\tSalidas de los mux que escogen entre un valor inicial y el valor obtenido en una iteracion.\nwire [W-1:0] d_ff2_X, d_ff2_Y, d_ff2_Z;                 \t//\tSalidas de los registros que guardan los valores provenientes de la primera linea de mux.\nwire sign;                                              \t//\tSalida del mux que escoge entre el signo de Y o Z, dependiendo del modo, ya sea rotacion o vectorizacion.\nwire [W-1:0] data_out_LUT;\t\t\t\t\t\t\t\t\t//\tSalida del modulo generate que genera la LUT necesaria dependiendo del ancho de palabra.\nwire [iter_bits-1:0] cont_iter_out;                         //\tSalida del contador que cuenta las iteraciones realizadas.\nwire [EW-1:0] sh_exp_x, sh_exp_y;                        \t//\tSalidas de los sumadores de punto fijo que realizan los desplazamientos.\nwire [W-1:0] d_ff3_sh_x_out, d_ff3_sh_y_out;            \t//\tSalida del registro que guarda el valor de X y Y luego de realizar los desplazamientos.\nwire [W-1:0] d_ff3_LUT_out;                             \t//\tSalida del registro que guarda el valor de la LUT.\nwire d_ff3_sign_out;                                    \t//\tSalida del registro que guarda el valor del signo.\nwire [1:0] cont_var_out;                                \t//\tSalida del contador que cuenta las variables calculadas.\nwire [W-1:0] mux_sal;\t\t\t\t                     \t//\tSalida del mux final para colocar en la salida el valor deseado.\nwire [W-1:0] data_output2; \t\t\t\t\t\t\t\t\t//\tSalida del registro antes del cambio de signo.\nwire [W-1:0] sign_inv_out;\t\t\t\t\t                //\tSalida del modulo de inversion de signo, dependiendo de si se el angulo de entrada estaba fuera del rango de calculo del algoritmo CORDIC.\nwire min_tick_iter,max_tick_iter;                       \t//\tSeñales que indican cuando se ha alcanzado el valor mas bajo y masalto de cuenta, correspondientemente en el contador de iteraciones.\nwire min_tick_var,max_tick_var;                         \t//\tSeñales que indican cuando se ha alcanzado el valor mas bajo y masalto de cuenta, correspondientemente en el contador de variables.\nwire enab_reg_sel_mux1,enab_reg_sel_mux2,enab_reg_sel_mux3;\nwire ready_add_subt;              \t\t\t\t\t\t\t//\tSeñal que indica que se ha realizado la operacion de suma/resta en punto flotante.\nwire [W-1:0] result_add_subt;     \t\t\t\t\t\t\t//\tDato de entrada, contiene el resultado del módulo de suma/resta.\nwire beg_add_subt;                \t\t\t\t\t\t\t//\tSeñal de salida que indica que se debe de iniciar el modulo de suma/resta.\nwire ack_add_subt;                \t\t\t\t\t\t\t//\tSeñal que le indica al modulo de suma/resta que se recibio el resultado de este modulo correctamente.\nwire op_add_subt;                 \t\t\t\t\t\t\t//\tSeñal hacia el módulo de suma/resta que indica si se va a realizar una suma(1'b0) o una resta(1'b1).\nwire [W-1:0] add_subt_dataA;      \t\t\t\t\t\t\t//\tBus de datos hacia el modulo de suma/resta con el valor al que se le desea aplicar dicha operacion.\nwire [W-1:0] add_subt_dataB;      \t\t\t\t\t\t\t//\tBus de datos hacia el modulo de suma/resta con el valor al que se le desea aplicar dicha operacion.\n\n//Instanciación\n//------------------------------------------------------------------------------------------------------------------------\n//FSM\n\nCORDIC_FSM_v2 cordic_FSM\n(\n.clk(clk),\t\t\t\t\t\t\t\t\t\t\t//\tReloj del sitema.\n.reset(rst),\t\t\t\t\t\t\t\t\t\t//\tReset del sitema.\n.beg_FSM_CORDIC(beg_fsm_cordic),\t\t\t\t\t\t\t\t//\tSeñal de inicio de la maquina de estados.\n.ACK_FSM_CORDIC(ack_cordic),\t\t\t\t\t\t\t\t//\tSeñal proveniente del modulo que recibe el resultado, indicado que el dato ha sido recibido.\n.operation(d_ff1_operation_out),\t\t\t\t\t\t\t\t\t//\tSeñal que determina si lo que se requiere es realizar un coseno(1´b0) o seno (1'b1).\n.exception(1'b0),\n.shift_region_flag(d_ff1_shift_region_flag_out),\t\t\t\t\t\t//\tSeñal que indica si el angulo a calcular se encuentra fuera del rango de calculo del algoritmo CORDIC.\n.cont_var(cont_var_out),\t\t\t\t\t\t\t\t//\tSeñal que indica cual varible se va a calcular. Proveniente del contador de variables.\n.ready_add_subt(ready_add_subt),\t\t\t\t\t\t\t\t//\tSeñal proveniente del módulo de suma/resta, indica que se ha terminado la operacion y que se puede disponer del resultado de dicho modulo.\n.max_tick_iter(max_tick_iter), \n.min_tick_iter(min_tick_iter),\t\t\t\t//\tSeñales que indican la maxima y minima cuenta, respectivamente, en el contador de iteraciones.\n.max_tick_var(max_tick_var),\n.min_tick_var(min_tick_var),\t\t\t\t\t//\tSeñales que indican la maxima y minima cuenta, respectivamente, en el contador de variables.\n\n//Output Signals\n.reset_reg_cordic(reset_reg_cordic),\n.ready_CORDIC(ready_cordic),\t\t\t\t\t\t\t\t//\tSeñal que indica que el calculo CORDIC se ha terminado.\n.beg_add_subt(beg_add_subt),\t\t\t\t\t\t\t\t//\tSeñal que indica al modulo de suma/resta que inicie su operacion.\n.ack_add_subt(ack_add_subt),\t\t\t\t\t\t\t\t//\tSeñal que le indica al modulo de suma/resta que se ha recibido exitosamente el resultado que este entrega.\n.sel_mux_1(sel_mux_1),\n.sel_mux_3(sel_mux_3),\t\t\t\t\t\t//\tSeñales de seleccion de mux, la primera escoge el canal 0 si es la primera iteracion, en otro caso escoge el canal 1, y la segunda escoge cual variable (X o Y) debe aparecer a la salida.\n.sel_mux_2(sel_mux_2),\t\t\t\t\t\t\t\t//\tSeñal de seleccion de mux, que escoge entre X, Y o Z dependiendo de cual variable se deba calcular en ese momento.\n.enab_cont_iter(enab_cont_iter),\n.load_cont_iter(load_cont_iter),\t\t\t\t//\tSeñales de habilitacion y carga, respectivamente, en el contador de iteraciones.\n.enab_cont_var(enab_cont_var),\n.load_cont_var(load_cont_var),\t\t\t\t//\tSeñales de habilitacion y carga, respectivamente, en el contador de variables.\n.enab_RB1(enab_d_ff_RB1),\n.enab_RB2(enab_d_ff2_RB2),\t\t\t\t\t\t\t//\tSeñales de habilitacion para los registros de variables de entrada y para los valores de las variables despues de los primeros mux, respectivamente.\n.enab_d_ff_Xn(enab_d_ff4_Xn),\n.enab_d_ff_Yn(enab_d_ff4_Yn),\n.enab_d_ff_Zn(enab_d_ff4_Zn),\t//\tSeñales de habilitacion para los registros que guardan los resultados de cada variable en cada iteracion provenientes del modulo de suma/resta.\n.enab_d_ff_out(enab_d_ff5_data_out),\n.enab_dff_5(enab_dff_5),\t\t\t\t\t//\tSeñales de habilitacion para los registros en la salida, el primero antes del cambio de signo y el segundo es el que se encuentra en la salida.\n.enab_RB3(enab_RB3),\t\t\t\t\t//\tSeñales de habilitacion para los registros\tque guardan los valores provenientes de la look-up table y del signo, respectivamente.\n.enab_reg_sel_mux1(enab_reg_sel_mux1),\n.enab_reg_sel_mux2(enab_reg_sel_mux2),\n.enab_reg_sel_mux3(enab_reg_sel_mux3)\n);\n\ncounter_d #(.W(iter_bits)) cont_iter\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.load(load_cont_iter),\n.enable(enab_cont_iter),\n.d(d_iter),\n.max_tick(max_tick_iter),\n.min_tick(min_tick_iter),\n.q(cont_iter_out)\n);\n\ncounter_up #(.W(2)) cont_var\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.load(load_cont_var),\n.enable(enab_cont_var),\n.d(d_var),\n.max_tick(max_tick_var),\n.min_tick(min_tick_var),\n.q(cont_var_out)\n);\n\n//--------------------------------------------------------------------------------------------------------------------------------------------------------\n//Primera Etapa:  Registros que guardan los valores iniciales.\n\nd_ff_en\t# (.W(1)) reg_operation\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_d_ff_RB1), //load signal\n.D(operation), //input signal\n.Q(d_ff1_operation_out) //output signal\n);\n\nd_ff_en\t# (.W(2)) reg_region_flag\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_d_ff_RB1), //load signal\n.D(shift_region_flag), //input signal\n.Q(d_ff1_shift_region_flag_out) //output signal\n);\n\nd_ff_en\t# (.W(W)) reg_Z0\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_d_ff_RB1), //load signal\n.D(data_in), //input signal\n.Q(d_ff1_Z) //output signal\n);\n\n//--------------------------------------------------------------------------------------------------------------------------------------------------------\n//Segunda Etapa : Registros que guardan el canal elegido para el mux, asi como los mux.\n\nd_ff_en\t# (.W(1)) reg_ch_mux_1\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_reg_sel_mux1), //load signal\n.D(sel_mux_1), //input signal\n.Q(sel_mux_1_reg) //output signal\n);\n\nMux_2x1 #(.W(W)) mux1_x0\n(\n.select(sel_mux_1_reg),\n.ch_0(x0),\n.ch_1(d_ff_Xn),\n.data_out(first_mux_X)\n);\n\nMux_2x1 #(.W(W)) mux1_y0\n(\n.select(sel_mux_1_reg),\n.ch_0(y0),\n.ch_1(d_ff_Yn),\n.data_out(first_mux_Y)\n);\n\nMux_2x1 #(.W(W)) mux1_z0\n(\n.select(sel_mux_1_reg),\n.ch_0(d_ff1_Z),\n.ch_1(d_ff_Zn),\n.data_out(first_mux_Z)\n);\n\n//----------------------------------------------------------------------------------------------------------------------\n//Tercera Etapa: Registros que guardan los datos provenientes de los mux.\n\nd_ff_en\t# (.W(W)) reg_val_muxX_2stage\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_d_ff2_RB2), //load signal\n.D(first_mux_X), //input signal\n.Q(d_ff2_X) //output signal\n);\n\nd_ff_en\t# (.W(W)) reg_val_muxY_2stage\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_d_ff2_RB2), //load signal\n.D(first_mux_Y), //input signal\n.Q(d_ff2_Y) //output signal\n);\n\nd_ff_en\t# (.W(W)) reg_val_muxZ_2stage\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_d_ff2_RB2), //load signal\n.D(first_mux_Z), //input signal\n.Q(d_ff2_Z) //output signal\n);\n\n//----------------------------------------------------------------------------------------------------------------------\n//Cuarta Etapa : Restadores para el corrimiento del exponente de X y Y, Lookup-Table y mux de signo dependiendo del modo.\n\nSimple_Subt #(.W(EW),.N(iter_bits)) shift_x\n(\n.A(d_ff2_X[W-2:SW]),\n.B(cont_iter_out),\n.Y(sh_exp_x)\n);\n\nSimple_Subt #(.W(EW),.N(iter_bits)) shift_y\n(\n.A(d_ff2_Y[W-2:SW]),\n.B(cont_iter_out),\n.Y(sh_exp_y)\n);\n\n//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\ngenerate\n    case(W)\n    32:\n    begin\n        LUT_ROM_32bits #(.W(W),.N(iter_bits)) LUT32\n        (\n        .address(cont_iter_out),\n        .data_out(data_out_LUT)\n        );\n    end\n    64:\n    begin        \n        LUT_ROM_64bits #(.W(W),.N(iter_bits)) LUT64\n        (\n        .address(cont_iter_out),\n        .data_out(data_out_LUT)\n        );\n    end\n    default:\n    begin\n        LUT_ROM_32bits #(.W(W),.N(iter_bits)) LUT32\n        (\n        .address(cont_iter_out),\n        .data_out(data_out_LUT)\n        );\n    end\n    endcase\nendgenerate\n\n//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\nMux_2x1 #(.W(1)) mux_sign\n(\n.select(mode),\n.ch_0(d_ff2_Z[W-1]),\n.ch_1(d_ff2_Y[W-1]),\n.data_out(sign)\n);\n\n//-------------------------------------------------------------------------------------------------------------------------\n//Quinta Etapa : Registros que guardan los datos provenientes de la etapa anterior.\n\nd_ff_en\t# (.W(W)) reg_shift_x\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_RB3), //load signal\n.D({d_ff2_X[W-1],sh_exp_x,d_ff2_X[SW-1:0]}), //input signal\n.Q(d_ff3_sh_x_out) //output signal\n);\n\nd_ff_en\t# (.W(W)) reg_shift_y\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_RB3), //load signal\n.D({d_ff2_Y[W-1],sh_exp_y,d_ff2_Y[SW-1:0]}), //input signal\n.Q(d_ff3_sh_y_out) //output signal\n);\n\nd_ff_en\t# (.W(W)) reg_LUT\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_RB3), //load signal\n.D(data_out_LUT), //input signal\n.Q(d_ff3_LUT_out) //output signal\n);\n\nd_ff_en\t# (.W(1)) reg_sign\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_RB3), //load signal\n.D(sign), //input signal\n.Q(d_ff3_sign_out) //output signal\n);\n\n//-------------------------------------------------------------------------------------------------------------------------------------------------------\n//Sexta Etapa : Mux de 3 canales que se activan dependiendo de la variable a calcular.\n//Modificacion 18/8/2016 Muxes are elminated\n\nd_ff_en\t# (.W(2)) reg_ch_mux_2\n(\n.clk(clk),//system clock\n.rst(reset_reg_cordic), //system reset\n.enable(enab_reg_sel_mux2), //load signal\n.D(sel_mux_2), //input signal\n.Q(sel_mux_2_reg) //output signal\n);\n\n\n// Mux_3x1_b #(.W(W)) mux_3x1_var1\n// (\n// .select(sel_mux_2_reg),\n// .ch_0(d_ff2_X),\n// .ch_1(d_ff2_Y),\n// .ch_2(d_ff2_Z),\n// .data_out(add_subt_dataA)\n// );\n\n// Mux_3x1_b #(.W(W)) mux_3x1_var2\n// (\n// .select(sel_mux_2_reg),\n// .ch_0(d_ff3_sh_y_out),\n// .ch_1(d_ff3_sh_x_out),\n// .ch_2(d_ff3_LUT_out),\n// .data_out(add_subt_dataB)\n// );\n\nOp_Select\top_select_mod\n(\n.variable(cont_var_out[0]),\n.sign(d_ff3_sign_out),\n.operation(op_add_subt)\n);\n\n//--------------------------------------------------------------------------------------------------------------------------------\n//Septima Etapa : Instanciamiento del módulo de suma y resta.\n//Modificacion 18/8/2016 2 FPU Adders are added for parallel operation.\n\nFPU_Add_Subtract_Function\t#(.W(W),.EW(EW),.SW(SW),.SWR(SWR),.EWR(EWR)) add_sub_Xn_Yshift\n(\n\t.clk(clk),\n\t.rst(rst),\n\t.beg_FSM(beg_add_subt),\n\t.ack_FSM(ack_add_subt),\n\t.Data_X(d_ff2_X),\n\t.Data_Y(d_ff3_sh_y_out),\n\t.add_subt(op_add_subt),\n\t.r_mode(r_mode),\n\t.overflow_flag(overflow_flag),\n\t.underflow_flag(underflow_flag),\n\t.ready(ready_add_subt),\n\t.final_result_ieee(result_add_subt)\n);\n\nFPU_Add_Subtract_Function\t#(.W(W),.EW(EW),.SW(SW),.SWR(SWR),.EWR(EWR)) add_sub_Yn_Xshift\n(\n\t.clk(clk),\n\t.rst(rst),\n\t.beg_FSM(beg_add_subt),\n\t.ack_FSM(ack_add_subt),\n\t.Data_X(d_ff2_Y),\n\t.Data_Y(d_ff3_sh_x_out),\n\t.add_subt(op_add_subt),\n\t.r_mode(r_mode),\n\t.overflow_flag(overflow_flag),\n\t.underflow_flag(underflow_flag),\n\t.ready(ready_add_subt),\n\t.final_result_ieee(result_add_subt)\n);\n\nFPU_Add_Subtract_Function\t#(.W(W),.EW(EW),.SW(SW),.SWR(SWR),.EWR(EWR)) add_sub_Zn_LUT\n(\n\t.clk(clk),\n\t.rst(rst),\n\t.beg_FSM(beg_add_subt),\n\t.ack_FSM(ack_add_subt),\n\t.Data_X(d_ff2_Z),\n\t.Data_Y(d_ff3_LUT_out),\n\t.add_subt(op_add_subt),\n\t.r_mode(r_mode),\n\t.overflow_flag(overflow_flag),\n\t.underflow_flag(underflow_flag),\n\t.ready(ready_add_subt),\n\t.final_result_ieee(result_add_subt)\n);\n//-------------------------------------------------------------------------------------------------------------------------------\n//Octava Etapa: Registros que guardan los valores de calculo del modulo de suma y resta.\n\nd_ff_en\t#(.W(W)) d_ff4_Xn\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.enable(enab_d_ff4_Xn),\n.D(result_add_subt),\n.Q(d_ff_Xn)\n);\n\nd_ff_en\t#(.W(W)) d_ff4_Yn\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.enable(enab_d_ff4_Yn),\n.D(result_add_subt),\n.Q(d_ff_Yn)\n);\n\nd_ff_en\t#(.W(W)) d_ff4_Zn\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.enable(enab_d_ff4_Zn),\n.D(result_add_subt),\n.Q(d_ff_Zn)\n);\n\n//--------------------------------------------------------------------------------------------------------------------------------\n//Novena Etapa: Mux de selección del valor de salida, así como el modulo de correccion de signo y los registros intermedios que\n//guardan los datos de salida.\n\nd_ff_en\t#(.W(1)) reg_ch_mux_3\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.enable(enab_reg_sel_mux3),\n.D(sel_mux_3),\n.Q(sel_mux_3_reg)\n);\n\nMux_2x1 #(.W(W)) mux_2x1_sal\n(\n.select(sel_mux_3_reg),\n.ch_0(d_ff_Xn),\n.ch_1(d_ff_Yn),\n.data_out(mux_sal)\n);\n\nd_ff_en\t#(.W(W)) d_ff5\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.enable(enab_dff_5),\n.D(mux_sal),\n.Q(data_output2)\n);\n\nsign_inverter #(.W(W)) sign_inverter_mod\n(\n.data(data_output2),\n.shift_region_flag(d_ff1_shift_region_flag_out),\n.operation(d_ff1_operation_out),\n.data_out(sign_inv_out)\n);\n\nd_ff_en\t#(.W(W)) d_ff5_data_out\n(\n.clk(clk),\n.rst(reset_reg_cordic),\n.enable(enab_d_ff5_data_out),\n.D(sign_inv_out),\n.Q(data_output)\n);\n\nendmodule\n",
-			"file": "/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/new/CORDIC_Arch3.v",
-			"file_size": 21520,
-			"file_write_time": 131187074892014132,
-			"settings":
-			{
-				"buffer_size": 21616,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v",
-			"settings":
-			{
-				"buffer_size": 24534,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB.v",
-			"settings":
-			{
-				"buffer_size": 20984,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v",
-			"settings":
-			{
-				"buffer_size": 948,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/shift_reg.v",
-			"settings":
-			{
-				"buffer_size": 952,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "`timescale 1ns / 1ps\n//////////////////////////////////////////////////////////////////////////////////\n// Company: \n// Engineer: \n// \n// Create Date: 03/12/2016 06:18:20 PM\n// Design Name: \n// Module Name: Mux_Array\n// Project Name: \n// Target Devices: \n// Tool Versions: \n// Description: \n// \n// Dependencies: \n// \n// Revision:\n// Revision 0.01 - File Created\n// Additional Comments:\n// \n//////////////////////////////////////////////////////////////////////////////////\n\n\nmodule Mux_Array\n    #(parameter SWR=26, parameter EWR=5)\n    (\n    input wire clk,\n    input wire rst,\n    input wire load_i,\n    input wire [SWR-1:0] Data_i,\n    input wire FSM_left_right_i,\n    input wire [EWR-1:0] Shift_Value_i,\n    input wire bit_shift_i,\n    output wire [SWR-1:0] Data_o\n    );\n////\nwire [SWR-1:0] Data_array[EWR+1:0];\n\n//////////////////7\ngenvar k;//Level\n///////////////////77777\nRotate_Mux_Array #(.SWR(SWR)) first_rotate(\n\t.Data_i(Data_i),\n\t.select_i(FSM_left_right_i),\n\t.Data_o(Data_array [0][SWR-1:0])\n\t);\ngenerate for (k=0; k < 3; k=k+1) begin\n\tshift_mux_array #(.SWR(SWR), .LEVEL(k)) shift_mux_array(\n\t\t.Data_i(Data_array[k]),\n\t\t.select_i(Shift_Value_i[k]),\n\t\t.bit_shift_i(bit_shift_i),\n\t\t.Data_o(Data_array[k+1])\n\t\t);\n\tend\nendgenerate\n\nRegisterAdd #(.W(SWR)) Mid_Reg(\n        .clk(clk),\n        .rst(rst),\n        .load(1'b1),\n        .D(Data_array[3]),\n        .Q(Data_array[4])\n        );\n\ngenerate for (k=3; k < EWR; k=k+1) begin\n\tshift_mux_array #(.SWR(SWR), .LEVEL(k)) shift_mux_array(\n\t\t.Data_i(Data_array[k+1]),\n\t\t.select_i(Shift_Value_i[k]),\n\t\t.bit_shift_i(bit_shift_i),\n\t\t.Data_o(Data_array[k+2])\n\t\t);\n\tend\nendgenerate\n\nRotate_Mux_Array #(.SWR(SWR)) last_rotate(\n\t.Data_i(Data_array[EWR+1]),\n\t.select_i(FSM_left_right_i),\n\t.Data_o(Data_o)\n\t);\n\t\n\n\t\nendmodule\n",
-			"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/b_shifter_1.v",
-			"file_size": 1774,
-			"file_write_time": 131189172763759527,
-			"settings":
-			{
-				"buffer_size": 1774,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "\n`timescale 1ns/1ps\n\nmodule tb_LUT_ROM_32bits (); /* this is automatically generated */\n\n\tlogic rstb;\n\tlogic srst;\n\tlogic clk;\n\n\t// clock\n\tinitial begin\n\t\tclk = 0;\n\t\tforever #5 clk = ~clk;\n\tend\n\n\t// reset\n\tinitial begin\n\t\trstb = 0;\n\t\tsrst = 0;\n\t\t#20\n\t\trstb = 1;\n\t\trepeat (5) @(posedge clk);\n\t\tsrst = 1;\n\t\trepeat (1) @(posedge clk);\n\t\tsrst = 0;\n\tend\n\n\t// (*NOTE*) replace reset, clock\n\n\tparameter W         = 32;\n\tparameter N         = 3;\n\tlocalparam ROM_FILE = \"LUT_sincos_32.txt\";\n\n\tlogic [N-1:0] address;\n\tlogic [W-1:0] data_out;\n\n\tLUT_ROM_32bits #(.W(W), .N(N)) inst_LUT_ROM_32bits (.address(address), .data_out(data_out));\n\n\tinitial begin\n\t\t// do something\n\n\t\trepeat(10)@(posedge clk);\n\t\t$finish;\n\tend\n\n\t// dump wave\n\tinitial begin\n\t\t$fsdbDumpfile(\"tb_LUT_ROM_32bits.fsdb\");\n\t\t$fsdbDumpvars(0, \"tb_LUT_ROM_32bits\", \"+mda\");\n\tend\n\nendmodule\n",
-			"settings":
-			{
-				"buffer_size": 844,
-				"line_ending": "Unix",
-				"name": "tb_LUT_ROM_32bits.sv",
-				"scratch": true
-			}
-		},
-		{
-			"contents": "`timescale 1ns / 1ps\n\nmodule LUT_ROM_32bits #(parameter W=32,N=3)\n(\n//Input Signals\ninput wire [N-1:0] address,\n//Output Signals\noutput reg [W-1:0] data_out\n);\nlocalparam ROM_FILE=\"LUT_sincos_32.txt\";\n\nreg [W-1:0] rom_test [2**N-1:0];\n initial\nbegin\n    $readmemh(ROM_FILE, rom_test, 0, 2**N-1);\nend\nalways @*\nbegin\n    data_out = rom_test[address];\nend\nendmodule\n",
-			"settings":
-			{
-				"buffer_size": 364,
 				"line_ending": "Unix"
 			}
 		}
@@ -628,6 +560,27 @@
 	},
 	"file_history":
 	[
+		"/home/jorge/Documents/Karatsuba_FPU/Proyectos",
+		"/home/jorge/Funcionales",
+		"/home/jorge/Francis",
+		"/home/jorge/Jeffrey/CORDICO/CORDICO.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/CORDIC_Arch2.v",
+		"/home/jorge/Jeffrey/CORDICO/CORDICO.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/CORDIC_FSM_v2.v",
+		"/home/jorge/Jeffrey/CORDICO/CORDICO.srcs/sources_1/new/CORDIC_Arch3.v",
+		"/home/jorge/Jeffrey/CORDICO/CORDICO.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/FPU_Interface_and_NaN/FPU_Interface.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/new/Testbench_Sgf_multiplication.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/imports/sim/testbench_RKOA.v",
+		"/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/new/CORDIC_Arch3.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Resultados/FPSUB/FPADDFPSUB_Pipelined/FPADDFPSUB_Pipelined.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Resultados/FPADDFPSUB_Pipelined/FPADDFPSUB_Pipelined.srcs/constrs_1/new/Time_Constrains.xdc",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/vector_simulation_add/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/shift_reg.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/b_shifter_1.v",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_double_fpaddsub/imports/TXTVerification_v3/Hexadecimal_A.txt",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/behav/Hexadecimal_A.txt",
+		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/constrs_1/imports/RTL/Nexys4_Master.xdc",
 		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/bloody_simruns/behav/output_log.py",
 		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/vector_simulation_add/imports/behav/Hexadecimal_B.txt",
 		"/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/imports/Proyecto_De_Graduacion/TXTVerification/Hexadecimal_B.txt",
@@ -691,7 +644,6 @@
 		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Add_Subt.v",
 		"/home/jorge/Documents/Karatsuba_FPU/Karat/source/rtl/KOA_c_v3.v",
 		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/FPU_Multiplication_Function.v",
-		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/imports/sim/testbench_RKOA.v",
 		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/Sgf_Multiplication.v",
 		"/home/jorge/Documents/Karatsuba_FPU/Karat/MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Mult/FPU_Multiplication_Function.v",
 		"/home/jorge/.config/sublime-text-3/Packages/Verilog Automatic/Default (Linux).sublime-keymap",
@@ -987,7 +939,7 @@
 	"groups":
 	[
 		{
-			"selected": 31,
+			"selected": 34,
 			"sheets":
 			[
 				{
@@ -1018,7 +970,7 @@
 						"translation.y": 70.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 35,
+					"stack_index": 28,
 					"type": "text"
 				},
 				{
@@ -1046,7 +998,7 @@
 						"translation.y": 10220.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 36,
+					"stack_index": 29,
 					"type": "text"
 				},
 				{
@@ -1074,7 +1026,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 37,
+					"stack_index": 30,
 					"type": "text"
 				},
 				{
@@ -1104,7 +1056,7 @@
 						"translation.y": 4900.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 34,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
@@ -1135,7 +1087,7 @@
 						"translation.y": 4746.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -1165,7 +1117,7 @@
 						"translation.y": 954.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -1195,7 +1147,7 @@
 						"translation.y": 424.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -1224,7 +1176,7 @@
 						"translation.y": 5334.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1254,7 +1206,7 @@
 						"translation.y": 6203.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1283,7 +1235,7 @@
 						"translation.y": 280.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -1314,7 +1266,7 @@
 						"translation.y": 649.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -1343,7 +1295,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -1371,7 +1323,7 @@
 						"translation.y": 504.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
@@ -1400,7 +1352,7 @@
 						"translation.y": 100.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 31,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
@@ -1430,7 +1382,7 @@
 						"translation.y": 156.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
@@ -1460,7 +1412,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -1490,7 +1442,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
@@ -1518,7 +1470,7 @@
 						"translation.y": 337.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
@@ -1548,7 +1500,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 33,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
@@ -1576,7 +1528,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 32,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
@@ -1606,7 +1558,7 @@
 						"translation.y": 117.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 38,
+					"stack_index": 31,
 					"type": "text"
 				},
 				{
@@ -1635,7 +1587,7 @@
 						"translation.y": 4060.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 29,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
@@ -1665,7 +1617,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 39,
+					"stack_index": 32,
 					"type": "text"
 				},
 				{
@@ -1695,7 +1647,7 @@
 						"translation.y": 1036.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 43,
+					"stack_index": 35,
 					"type": "text"
 				},
 				{
@@ -1725,7 +1677,7 @@
 						"translation.y": 561.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 40,
+					"stack_index": 33,
 					"type": "text"
 				},
 				{
@@ -1755,7 +1707,7 @@
 						"translation.y": 3044.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 28,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
@@ -1785,7 +1737,7 @@
 						"translation.y": 317.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 41,
+					"stack_index": 34,
 					"type": "text"
 				},
 				{
@@ -1813,52 +1765,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 28,
-					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/behav/Hexadecimal_A.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9216,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9,
-								17
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 29,
 					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/bloody_simruns/behav/output_log.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9534,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9369,
-								9369
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1869,11 +1793,11 @@
 						"translation.y": 2464.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 29,
 					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FSM_input_enable.v",
 					"semi_transient": false,
 					"settings":
@@ -1898,24 +1822,24 @@
 						"translation.y": 2207.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 30,
 					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 34726,
+						"buffer_size": 35125,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7407,
-								7407
+								2254,
+								2254
 							]
 						],
 						"settings":
@@ -1925,27 +1849,85 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3025.0,
+						"translation.y": 456.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/imports/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 24534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23855,
+								23855
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 62.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 32,
-					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v",
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 24336,
+						"buffer_size": 930,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								24130,
-								24130
+								476,
+								476
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 24854,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1515,
+								1515
 							]
 						],
 						"settings":
@@ -1955,10 +1937,51 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 11009.0,
+						"translation.y": 126.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 34,
+					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 24855,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										24534,
+										24534
+									]
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								1514,
+								1514
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 336.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1968,7 +1991,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 33,
+					"buffer": 35,
 					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/new/Testbench_FPU_multiplication.v",
 					"semi_transient": false,
 					"settings":
@@ -1989,310 +2012,10 @@
 							"syntax": "Packages/Verilog/Verilog.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2030.0,
+						"translation.y": 1864.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 34,
-					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/new/Testbench_Sgf_multiplication.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1836,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								494,
-								494
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Verilog/Verilog.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 742.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 35,
-					"file": "MUL_FPU_FUNCIONAL_v1/MUL_FPU_FUNCIONAL_v1.srcs/sim_1/imports/sim/testbench_RKOA.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3845,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2955,
-								2955
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Verilog/Verilog.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 100.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 36,
-					"file": "/home/jorge/Documents/Karatsuba_FPU/CORDICO/CORDICO.srcs/sources_1/new/CORDIC_Arch3.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 21616,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								18155,
-								18155
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Verilog/Verilog.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 6914.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 37,
-					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 24534,
-						"regions":
-						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-									[
-										24534,
-										24534
-									]
-								],
-								"scope": "bookmarks"
-							}
-						},
-						"selection":
-						[
-							[
-								24534,
-								24534
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Verilog/Verilog.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 10936.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 38,
-					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 20984,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1801,
-								1801
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Verilog/Verilog.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1385.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 39,
-					"file": "/home/jorge/Documents/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sources_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 948,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								562,
-								562
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Verilog/Verilog.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 40,
-					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/shift_reg.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 952,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								815,
-								815
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/Verilog/Verilog.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 41,
-					"file": "/home/jorge/Documents/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/b_shifter_1.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1774,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								539,
-								539
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Verilog/Verilog.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 252.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 25,
-					"type": "text"
-				},
-				{
-					"buffer": 42,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 844,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								844,
-								844
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 42,
-					"type": "text"
-				},
-				{
-					"buffer": 43,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 364,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								364,
-								364
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Verilog/Verilog.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 30,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -2326,7 +2049,7 @@
 		"cols":
 		[
 			0.0,
-			0.513169073916,
+			0.12014740705,
 			1.0
 		],
 		"rows":
@@ -2386,7 +2109,7 @@
 		],
 		"width": 314.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 		"last_automatic_layout":
@@ -2409,7 +2132,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 189.0,
+	"side_bar_width": 314.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

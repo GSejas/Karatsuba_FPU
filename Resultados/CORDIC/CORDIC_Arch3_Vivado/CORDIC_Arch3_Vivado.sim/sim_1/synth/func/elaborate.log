@@ -1,0 +1,84 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 661f593270664d72ac16119d9a408109 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot testbench_CORDIC_Arch2_func_synth xil_defaultlib.testbench_CORDIC_Arch2 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut3_mux4
+Compiling module unisims_ver.x_lut3_mux4_reduced_0
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.ffsrce_fdce
+Compiling module unisims_ver.FDCE
+Compiling module xil_defaultlib.RegisterAdd__parameterized8
+Compiling module xil_defaultlib.RegisterAdd_10
+Compiling module unisims_ver.CARRY4
+Compiling module xil_defaultlib.add_sub_carry_out__parameterized...
+Compiling module xil_defaultlib.Add_Subt
+Compiling module xil_defaultlib.RegisterAdd__parameterized6
+Compiling module xil_defaultlib.Mux_Array
+Compiling module xil_defaultlib.RegisterAdd__parameterized7
+Compiling module xil_defaultlib.Barrel_Shifter
+Compiling module xil_defaultlib.RegisterAdd_8
+Compiling module xil_defaultlib.RegisterAdd_9
+Compiling module xil_defaultlib.add_sub_carry_out
+Compiling module xil_defaultlib.RegisterAdd__parameterized5
+Compiling module xil_defaultlib.Exp_Operation
+Compiling module xil_defaultlib.FSM_Add_Subtract
+Compiling module xil_defaultlib.RegisterAdd__parameterized9
+Compiling module xil_defaultlib.LZD
+Compiling module xil_defaultlib.RegisterAdd_6
+Compiling module xil_defaultlib.RegisterAdd__parameterized3
+Compiling module xil_defaultlib.Comparator
+Compiling module xil_defaultlib.RegisterAdd_7
+Compiling module xil_defaultlib.RegisterAdd__parameterized1
+Compiling module xil_defaultlib.RegisterAdd__parameterized2
+Compiling module xil_defaultlib.RegisterAdd__parameterized4
+Compiling module xil_defaultlib.Oper_Start_In
+Compiling module xil_defaultlib.RegisterAdd__parameterized0
+Compiling module xil_defaultlib.RegisterAdd
+Compiling module xil_defaultlib.RegisterAdd__parameterized10
+Compiling module xil_defaultlib.Tenth_Phase
+Compiling module xil_defaultlib.FPU_Add_Subtract_Function
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module xil_defaultlib.counter_d
+Compiling module xil_defaultlib.counter_up
+Compiling module xil_defaultlib.CORDIC_FSM_v2
+Compiling module xil_defaultlib.d_ff_en__parameterized9
+Compiling module xil_defaultlib.d_ff_en__parameterized10
+Compiling module xil_defaultlib.d_ff_en__parameterized11
+Compiling module xil_defaultlib.d_ff_en__parameterized12
+Compiling module xil_defaultlib.d_ff_en__parameterized13
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Mux_2x1_0
+Compiling module xil_defaultlib.Mux_2x1_1
+Compiling module xil_defaultlib.d_ff_en__parameterized7
+Compiling module xil_defaultlib.d_ff_en__parameterized1
+Compiling module xil_defaultlib.d_ff_en
+Compiling module xil_defaultlib.d_ff_en__parameterized8
+Compiling module xil_defaultlib.d_ff_en_2
+Compiling module xil_defaultlib.d_ff_en_3
+Compiling module xil_defaultlib.d_ff_en__parameterized0
+Compiling module xil_defaultlib.d_ff_en__parameterized5
+Compiling module xil_defaultlib.d_ff_en__parameterized6
+Compiling module xil_defaultlib.d_ff_en_4
+Compiling module xil_defaultlib.d_ff_en__parameterized2
+Compiling module xil_defaultlib.d_ff_en__parameterized3
+Compiling module xil_defaultlib.d_ff_en__parameterized4
+Compiling module xil_defaultlib.Simple_Subt
+Compiling module xil_defaultlib.Simple_Subt_5
+Compiling module xil_defaultlib.CORDIC_Arch2
+Compiling module xil_defaultlib.testbench_CORDIC_Arch2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_CORDIC_Arch2_func_synth

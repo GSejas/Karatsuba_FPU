@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1475032047">
-  <File Type="RDS-PROPCONSTRS" Name="FPU_PIPELINED_FPADDSUB_drc_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="FPU_PIPELINED_FPADDSUB_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="FPU_PIPELINED_FPADDSUB.dcp"/>
   <File Type="RDS-UTIL" Name="FPU_PIPELINED_FPADDSUB_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="FPU_PIPELINED_FPADDSUB_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="FPU_PIPELINED_FPADDSUB.vds"/>
   <File Type="VDS-TIMING-PB" Name="FPU_PIPELINED_FPADDSUB_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="FPU_PIPELINED_FPADDSUB.tcl"/>
   <File Type="VDS-TIMINGSUMMARY" Name="FPU_PIPELINED_FPADDSUB_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="FPU_PIPELINED_FPADDSUB.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="FPU_PIPELINED_FPADDSUB_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FSM_input_enable.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/FSM_input_enable.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/FSM_input_enable.v"/>
         <Attr Name="ImportTime" Val="1474861060"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -21,7 +21,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/shift_reg.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/shift_reg.v"/>
         <Attr Name="ImportTime" Val="1474784785"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -58,7 +58,7 @@
     <File Path="$PSRCDIR/sources_1/imports/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/imports/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/imports/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v"/>
         <Attr Name="ImportTime" Val="1475020806"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -271,7 +271,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v"/>
         <Attr Name="ImportTime" Val="1474850360"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -280,7 +280,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FORMATTER.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/FORMATTER.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/FORMATTER.v"/>
         <Attr Name="ImportTime" Val="1474577598"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -289,7 +289,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v"/>
         <Attr Name="ImportTime" Val="1474525001"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -298,19 +298,19 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Decimal_R.txt">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Decimal_R.txt"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Decimal_R.txt"/>
         <Attr Name="ImportTime" Val="1474863992"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Decimal_A.txt">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Decimal_A.txt"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Decimal_A.txt"/>
         <Attr Name="ImportTime" Val="1474863992"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Decimal_B.txt">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Decimal_B.txt"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Decimal_B.txt"/>
         <Attr Name="ImportTime" Val="1474863992"/>
       </FileInfo>
     </File>
@@ -345,8 +345,8 @@
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design">
-      <Option Id="KeepEquivalentRegisters">1</Option>
       <Option Id="MoreOptsStr"><![CDATA[-generic W=32 -generic SW=23 -generic EW=8 -generic SWR=26 -generic EWR=5]]></Option>
+      <Option Id="KeepEquivalentRegisters">1</Option>
     </Step>
   </Strategy>
 </GenRun>

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="14" Path="/home/jorge/Documents/Karatsuba_FPU/Resultados/FPADDFPSUB_Pipelined/FPADDFPSUB_Pipelined.xpr">
+<Project Version="7" Minor="14" Path="/home/jorge/Documents/Karatsuba_FPU/Resultados/FPSUB/FPADDFPSUB_Pipelined/FPADDFPSUB_Pipelined.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="91ce9baaee964a9ea44bd2007af01730"/>
@@ -46,7 +46,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FSM_input_enable.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/FSM_input_enable.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/FSM_input_enable.v"/>
           <Attr Name="ImportTime" Val="1474861060"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -55,7 +55,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/shift_reg.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/shift_reg.v"/>
           <Attr Name="ImportTime" Val="1474784785"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -92,7 +92,7 @@
       <File Path="$PSRCDIR/sources_1/imports/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/imports/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/imports/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v"/>
           <Attr Name="ImportTime" Val="1475020806"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -299,7 +299,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v"/>
           <Attr Name="ImportTime" Val="1474850360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -308,7 +308,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/FORMATTER.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/FORMATTER.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/FORMATTER.v"/>
           <Attr Name="ImportTime" Val="1474577598"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -317,7 +317,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Karatsuba_FPU/Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v"/>
           <Attr Name="ImportTime" Val="1474525001"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -966,7 +966,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/FPU_ADD_Substract_PIPELINED.v"/>
           <Attr Name="ImportTime" Val="1474850360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -975,7 +975,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/Pipeline_FPADD_sourcefiles/FSM_input_enable.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/FSM_input_enable.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/FSM_input_enable.v"/>
           <Attr Name="ImportTime" Val="1474861060"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -984,7 +984,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/Pipeline_FPADD_sourcefiles/FORMATTER.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/FORMATTER.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/FORMATTER.v"/>
           <Attr Name="ImportTime" Val="1474577598"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -993,7 +993,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/Tenth_Phase_v2.v"/>
           <Attr Name="ImportTime" Val="1474525001"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1002,7 +1002,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
           <Attr Name="ImportTime" Val="1474862713"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1011,7 +1011,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/Pipeline_FPADD_sourcefiles/shift_reg.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/shift_reg.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/shift_reg.v"/>
           <Attr Name="ImportTime" Val="1474784785"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1020,7 +1020,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/new/tb_FPU_PIPELINED_FPADDSUB_behav.wcfg">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/new/tb_FPU_PIPELINED_FPADDSUB_behav.wcfg"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/new/tb_FPU_PIPELINED_FPADDSUB_behav.wcfg"/>
           <Attr Name="ImportTime" Val="1474818975"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -1034,7 +1034,7 @@
         <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val=""/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/../../../../media/francis/Acer/Users/Francis/Documents/GitHub/Proyecto_De_Graduacion/FPU_FLM/FPU_2.0/Testbench_FPU_Add_Subt_behav.wcfg"/>
-        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/new/tb_FPU_PIPELINED_FPADDSUB_behav.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/new/tb_FPU_PIPELINED_FPADDSUB_behav.wcfg"/>
         <Option Name="xsim.simulate.saif_all_signals" Val="true"/>
         <Option Name="NLNetlistMode" Val="funcsim"/>
       </Config>
@@ -1043,7 +1043,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/vector_simulation_add/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
           <Attr Name="ImportTime" Val="1474862713"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1052,14 +1052,14 @@
       </File>
       <File Path="$PSRCDIR/vector_simulation_add/tb_FPU_PIPELINED_FPADDSUB2_vector_testing_behav.wcfg">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/vector_simulation_add/tb_FPU_PIPELINED_FPADDSUB2_vector_testing_behav.wcfg"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/vector_simulation_add/tb_FPU_PIPELINED_FPADDSUB2_vector_testing_behav.wcfg"/>
           <Attr Name="ImportTime" Val="1474864924"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/vector_simulation_add/imports/ADD_SUB_PIPELINED/tb_FPU_PIPELINED_FPADDSUB3_vector_testing_behav.wcfg">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/tb_FPU_PIPELINED_FPADDSUB3_vector_testing_behav.wcfg"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/tb_FPU_PIPELINED_FPADDSUB3_vector_testing_behav.wcfg"/>
           <Attr Name="ImportTime" Val="1474865179"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -1072,8 +1072,8 @@
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
-        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/vector_simulation_add/tb_FPU_PIPELINED_FPADDSUB2_vector_testing_behav.wcfg"/>
-        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/tb_FPU_PIPELINED_FPADDSUB3_vector_testing_behav.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/vector_simulation_add/tb_FPU_PIPELINED_FPADDSUB2_vector_testing_behav.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/tb_FPU_PIPELINED_FPADDSUB3_vector_testing_behav.wcfg"/>
         <Option Name="xsim.simulate.saif_all_signals" Val="true"/>
         <Option Name="NLNetlistMode" Val="funcsim"/>
       </Config>
@@ -1082,7 +1082,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
           <Attr Name="ImportTime" Val="1474862713"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1091,19 +1091,19 @@
       </File>
       <File Path="$PSRCDIR/bloody_simruns/imports/behav/Hexadecimal_B.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Hexadecimal_B.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Hexadecimal_B.txt"/>
           <Attr Name="ImportTime" Val="1474863992"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/bloody_simruns/imports/behav/Hexadecimal_A.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Hexadecimal_A.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Hexadecimal_A.txt"/>
           <Attr Name="ImportTime" Val="1474863992"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/bloody_simruns/imports/behav/Hexadecimal_R.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Hexadecimal_R.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.sim/vector_simulation_add/behav/Hexadecimal_R.txt"/>
           <Attr Name="ImportTime" Val="1474863992"/>
         </FileInfo>
       </File>
@@ -1122,7 +1122,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_double_fpaddsub/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/sim_1/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
           <Attr Name="ImportTime" Val="1475028064"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1131,19 +1131,19 @@
       </File>
       <File Path="$PSRCDIR/sim_double_fpaddsub/imports/TXTVerification_v3/Hexadecimal_A.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../TXTVerification_v3/Hexadecimal_A.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../TXTVerification_v3/Hexadecimal_A.txt"/>
           <Attr Name="ImportTime" Val="1475009697"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_double_fpaddsub/imports/TXTVerification_v3/Hexadecimal_R.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../TXTVerification_v3/Hexadecimal_R.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../TXTVerification_v3/Hexadecimal_R.txt"/>
           <Attr Name="ImportTime" Val="1475009697"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_double_fpaddsub/imports/TXTVerification_v3/Hexadecimal_B.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../TXTVerification_v3/Hexadecimal_B.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../TXTVerification_v3/Hexadecimal_B.txt"/>
           <Attr Name="ImportTime" Val="1475009697"/>
         </FileInfo>
       </File>
@@ -1167,43 +1167,43 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_single_fpsub/imports/singl/Decimal_B.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../FPSUB/singl/Decimal_B.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../singl/Decimal_B.txt"/>
           <Attr Name="ImportTime" Val="1475027128"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_single_fpsub/imports/singl/Decimal_R.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../FPSUB/singl/Decimal_R.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../singl/Decimal_R.txt"/>
           <Attr Name="ImportTime" Val="1475027128"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_single_fpsub/imports/singl/Decimal_A.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../FPSUB/singl/Decimal_A.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../singl/Decimal_A.txt"/>
           <Attr Name="ImportTime" Val="1475027128"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_single_fpsub/imports/singl/Hexadecimal_R.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../FPSUB/singl/Hexadecimal_R.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../singl/Hexadecimal_R.txt"/>
           <Attr Name="ImportTime" Val="1475027128"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_single_fpsub/imports/singl/Hexadecimal_A.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../FPSUB/singl/Hexadecimal_A.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../singl/Hexadecimal_A.txt"/>
           <Attr Name="ImportTime" Val="1475027129"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_single_fpsub/imports/singl/Hexadecimal_B.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../FPSUB/singl/Hexadecimal_B.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../singl/Hexadecimal_B.txt"/>
           <Attr Name="ImportTime" Val="1475027129"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_single_fpsub/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
           <Attr Name="ImportTime" Val="1475028084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1226,43 +1226,43 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_double_fpsub/imports/doubl/Hexadecimal_R.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../FPSUB/doubl/Hexadecimal_R.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../doubl/Hexadecimal_R.txt"/>
           <Attr Name="ImportTime" Val="1475029005"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_double_fpsub/imports/doubl/Hexadecimal_B.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../FPSUB/doubl/Hexadecimal_B.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../doubl/Hexadecimal_B.txt"/>
           <Attr Name="ImportTime" Val="1475029005"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_double_fpsub/imports/doubl/Hexadecimal_A.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../FPSUB/doubl/Hexadecimal_A.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../doubl/Hexadecimal_A.txt"/>
           <Attr Name="ImportTime" Val="1475029005"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_double_fpsub/imports/doubl/Decimal_A.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../FPSUB/doubl/Decimal_A.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../doubl/Decimal_A.txt"/>
           <Attr Name="ImportTime" Val="1475029005"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_double_fpsub/imports/doubl/Decimal_R.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../FPSUB/doubl/Decimal_R.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../doubl/Decimal_R.txt"/>
           <Attr Name="ImportTime" Val="1475029005"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_double_fpsub/imports/doubl/Decimal_B.txt">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../FPSUB/doubl/Decimal_B.txt"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../doubl/Decimal_B.txt"/>
           <Attr Name="ImportTime" Val="1475029005"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_double_fpsub/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Add_Sub/ADD_SUB_PIPELINED/ADD_SUB_FUNCIONAL_v1.srcs/bloody_simruns/imports/Pipeline_FPADD_sourcefiles/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
           <Attr Name="ImportTime" Val="1475028084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
