@@ -32,18 +32,18 @@ output reg enab_reg_sel_mux1,enab_reg_sel_mux2,enab_reg_sel_mux3
 );
 
 //symbolic state declaration
-localparam [3:0]    est0 = 4'b0000,
-                    est1 = 4'b0001,
-                    est2 = 4'b0010,
-                    est3 = 4'b0011,
-                    est4 = 4'b0100,
-                    est5 = 4'b0101,
-                    est6 = 4'b0110,
-                    est7 = 4'b0111,
-                    est8 = 4'b1000,
-                    est9 = 4'b1001,
-                    est10 = 4'b1010,
-                    est11 = 4'b1011,
+localparam [3:0]    est0 = 1,
+                    est1 = 2,
+                    est2 = 3,
+                    est3 = 4,
+                    est4 = 5,
+                    est5 = 6,
+                    est6 = 6,
+                    est7 = 7,
+                    est8 = 8,
+                    est9 = 9,
+                    est10 = 10,
+                    est11 = 11,
 					est12 = 4'b1100,
 					est13 = 4'b1101;
 
@@ -113,41 +113,40 @@ always @*
 
 		est2:
 		begin
-			enab_RB1 = 1'b1;
-			enab_cont_iter = 1'b1;
-			load_cont_iter = 1'b1;
+      enab_RB1 = 1'b1;
+      enab_cont_iter = 1'b1;
+      load_cont_iter = 1'b1;
 			state_next = est3;
 		end
 
-        est3:
-        begin
-            if(min_tick_iter)
-				sel_mux_1 =	1'b0;
-			else
-				sel_mux_1 = 1'b1;
-			enab_reg_sel_mux1 = 1'b1;
-
-			state_next = est4;
-        end
+    est3:
+    begin
+        if(min_tick_iter)
+          sel_mux_1 =	1'b0;
+        else
+        	sel_mux_1 = 1'b1;
+        enab_reg_sel_mux1 = 1'b1;
+			  state_next = est4;
+    end
 
         est4:
         begin
-			if(exception)
-				state_next = est0;
-			else
-				state_next = est5;
+    			if(exception)
+    				state_next = est0;
+    			else
+    				state_next = est5;
             enab_RB2 = 1'b1;
         end
 
         est5:
         begin
-    			enab_RB3 = 1'b1;
-    			enab_cont_var = 1'b1;
-    			load_cont_var = 1'b1;
+          enab_RB3 = 1'b1;
+          enab_cont_var = 1'b1;
+          load_cont_var = 1'b1;
     			state_next = est6;
         end
 
-        est6:
+        est6: //Si nos encontramos en la última iteración, entonces escoger entre seno o coseno.
         begin
 			if(max_tick_iter)
 			begin
@@ -178,11 +177,11 @@ always @*
 				end
 			end
 
-			else
-				sel_mux_2 = cont_var;
+			else //De lo contrario, dejar que el valor del contador sea la entrada al contador
 
-			enab_reg_sel_mux2 = 1'b1;
-			state_next = est7;
+        sel_mux_2 = cont_var;
+  			enab_reg_sel_mux2 = 1'b1;
+  			state_next = est7;
         end
 
         est7:
@@ -196,41 +195,56 @@ always @*
 			if(ready_add_subt)
 			begin
 				if(max_tick_iter)
-				begin
-					if(operation == 1'b0)
-					begin
-						if(shift_region_flag == 2'b00)
-							enab_d_ff_Xn = 1'b1;
-						else if(shift_region_flag == 2'b01)
-							enab_d_ff_Yn = 1'b1;
-						else if(shift_region_flag == 2'b10)
-							enab_d_ff_Yn = 1'b1;
-						else
-							enab_d_ff_Xn = 1'b1;
-					end
+  		  		begin
 
-					else
-					begin
-						if(shift_region_flag == 2'b00)
-							enab_d_ff_Yn = 1'b1;
-						else if(shift_region_flag == 2'b01)
-							enab_d_ff_Xn = 1'b1;
-						else if(shift_region_flag == 2'b10)
-							enab_d_ff_Xn = 1'b1;
-						else
-							enab_d_ff_Yn = 1'b1;
-					end
-				end
-
+             case ({operation,shift_region_flag})
+                3'b000 : begin
+                           enab_d_ff_Xn = 1'b1;
+                           enab_d_ff_Yn = 1'b0;
+                         end
+                3'b001 : begin
+                            enab_d_ff_Yn = 1'b1;
+                            enab_d_ff_Xn = 1'b0;
+                         end
+                3'b010 : begin
+                            enab_d_ff_Yn = 1'b1;
+                            enab_d_ff_Xn = 1'b0;
+                         end
+                3'b011 : begin
+                            enab_d_ff_Xn = 1'b1;
+                            enab_d_ff_Yn = 1'b0;
+                         end
+                3'b100 : begin
+                            enab_d_ff_Yn = 1'b1;
+                            enab_d_ff_Xn = 1'b0;
+                         end
+                3'b101 : begin
+                            enab_d_ff_Xn = 1'b1;
+                            enab_d_ff_Yn = 1'b0;
+                         end
+                3'b110 : begin
+                            enab_d_ff_Xn = 1'b1;
+                            enab_d_ff_Yn = 1'b0;
+                         end
+                3'b111 : begin
+                            enab_d_ff_Yn = 1'b1;
+                            enab_d_ff_Xn = 1'b0;
+                         end
+                default: begin
+                            enab_d_ff_Yn = 1'b0;
+                            enab_d_ff_Xn = 1'b0;
+                         end
+             endcase
+  				end
 				else
-				begin
-					if(min_tick_var)
-						enab_d_ff_Xn = 1'b1;
-					else if(max_tick_var)
-						enab_d_ff_Zn = 1'b1;
-					else
-						enab_d_ff_Yn = 1'b1;
-				end
+  				begin
+  					if(min_tick_var)
+  						enab_d_ff_Xn = 1'b1;
+  					else if(max_tick_var)
+  						enab_d_ff_Zn = 1'b1;
+  					else
+  						enab_d_ff_Yn = 1'b1;
+  				end
 				state_next = est9;
 			end
 
@@ -240,26 +254,26 @@ always @*
 
         est9:
         begin
-			ack_add_subt = 1'b1;
-			if(max_tick_iter)
-			begin
-				state_next = est10;
-			end
-			else
-			begin
-				if(max_tick_var)
-				begin
-					enab_cont_iter = 1'b1;
-					state_next = est3;
-				end
+  			ack_add_subt = 1'b1;
+  			if(max_tick_iter)
+  			begin
+  				state_next = est10;
+  			end
+  			else
+  			begin
+  				if(max_tick_var)
+  				begin
+  					enab_cont_iter = 1'b1;
+  					state_next = est3;
+  				end
 
-				else
-				begin
-					enab_cont_var = 1'b1;
-					state_next = est6;
-				end
-			end
-        end
+  				else
+  				begin
+  					enab_cont_var = 1'b1;
+  					state_next = est6;
+  				end
+  			end
+          end
 
         est10:
         begin
