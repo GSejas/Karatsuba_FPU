@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : CORDIC_FSM_v3.v
 //  Created On    : 2016-10-03 15:59:21
-//  Last Modified : 2016-10-04 11:25:07
+//  Last Modified : 2016-10-04 21:24:46
 //  Revision      :
 //  Author        : Jorge Sequeira Rojas
 //  Company       : Instituto Tecnologico de Costa Rica
@@ -82,6 +82,7 @@ always @*
     est0:
     begin
       reset_reg_cordic = 1'b1;
+      enab_RB1 = 1'b1;
       if(beg_FSM_CORDIC) begin
         state_next = est1;
       end else begin

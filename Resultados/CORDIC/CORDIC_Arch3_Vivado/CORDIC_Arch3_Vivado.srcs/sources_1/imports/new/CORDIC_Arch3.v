@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : CORDIC_Arch3.v
 //  Created On    : 2016-09-28 14:58:46
-//  Last Modified : 2016-10-04 11:20:08
+//  Last Modified : 2016-10-04 21:14:36
 //  Revision      :
 //  Author        : Jorge Sequeira Rojas
 //  Company       : Instituto Tecnologico de Costa Rica
@@ -185,7 +185,7 @@ wire [W-1:0] add_subt_dataB;                                //  Bus de datos hac
         d_ff_en # (.W(1)) reg_operation
         (
         .clk(clk),//system clock
-        .rst(reset_reg_cordic), //system reset
+        .rst(rst), //system reset
         .enable(enab_d_ff_RB1), //load signal
         .D(operation), //input signal
         .Q(d_ff1_operation_out) //output signal
@@ -194,7 +194,7 @@ wire [W-1:0] add_subt_dataB;                                //  Bus de datos hac
         d_ff_en # (.W(2)) reg_region_flag
         (
         .clk(clk),//system clock
-        .rst(reset_reg_cordic), //system reset
+        .rst(rst), //system reset
         .enable(enab_d_ff_RB1), //load signal
         .D(shift_region_flag), //input signal
         .Q(d_ff1_shift_region_flag_out) //output signal
@@ -203,7 +203,7 @@ wire [W-1:0] add_subt_dataB;                                //  Bus de datos hac
         d_ff_en # (.W(W)) reg_Z0
         (
         .clk(clk),//system clock
-        .rst(reset_reg_cordic), //system reset
+        .rst(rst), //system reset
         .enable(enab_d_ff_RB1), //load signal
         .D(data_in), //input signal
         .Q(d_ff1_Z) //output signal

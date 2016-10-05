@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-// Date        : Tue Oct  4 19:47:45 2016
+// Date        : Tue Oct  4 21:22:12 2016
 // Host        : jorge-pc running 64-bit Ubuntu 16.04.1 LTS
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
 //               /home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.sim/tb_CORDIC_Arch3_single/synth/timing/testbench_CORDIC_Arch3_time_synth.v
@@ -1440,9 +1440,9 @@ module FPU_PIPELINED_FPADDSUB
   wire [24:2]DMP_mant_SFG_SWR;
   wire [25:0]\Data_array_SWR[2]_1 ;
   wire [25:18]\Data_array_SWR[3]_0 ;
-  wire [15:14]\Data_array_SWR[4]_5 ;
-  wire [17:2]\Data_array_SWR[5]_3 ;
-  wire [25:1]\Data_array_SWR[6]_4 ;
+  wire [15:14]\Data_array_SWR[4]_4 ;
+  wire [17:2]\Data_array_SWR[5]_2 ;
+  wire [25:1]\Data_array_SWR[6]_3 ;
   wire [0:0]E;
   wire EXP_STAGE_DMP_n_1;
   wire EXP_STAGE_DMP_n_10;
@@ -1471,6 +1471,11 @@ module FPU_PIPELINED_FPADDSUB
   wire EXP_STAGE_DMP_n_31;
   wire EXP_STAGE_DMP_n_32;
   wire EXP_STAGE_DMP_n_4;
+  wire EXP_STAGE_DMP_n_5;
+  wire EXP_STAGE_DMP_n_6;
+  wire EXP_STAGE_DMP_n_7;
+  wire EXP_STAGE_DMP_n_8;
+  wire EXP_STAGE_DMP_n_9;
   wire EXP_STAGE_DmP_n_10;
   wire EXP_STAGE_DmP_n_11;
   wire EXP_STAGE_DmP_n_12;
@@ -1820,6 +1825,7 @@ module FPU_PIPELINED_FPADDSUB
   wire SGF_STAGE_DmP_mant_n_8;
   wire SGF_STAGE_DmP_mant_n_9;
   wire SGF_STAGE_FLAGS_n_0;
+  wire SGF_STAGE_FLAGS_n_1;
   wire SHT1_STAGE_DMP_n_0;
   wire SHT1_STAGE_DMP_n_1;
   wire SHT1_STAGE_DMP_n_10;
@@ -1935,12 +1941,12 @@ module FPU_PIPELINED_FPADDSUB
   wire SHT2_STAGE_SHFTVARS2_n_3;
   wire SHT2_STAGE_SHFTVARS2_n_4;
   wire SHT2_STAGE_SHFTVARS2_n_5;
+  wire SHT2_STAGE_SHFTVARS2_n_7;
   wire SIGN_FLAG_INIT;
   wire [4:1]Shift_amount_EXP_EW;
   wire [2:0]Shift_amount_SHT1_EWR;
   wire [1:1]Shift_reg_FLAGS_7;
   wire UNDRFLW_FLAG_FRMT;
-  wire [2:0]ZERO_FLAG_SFG;
   wire _inferred__1_carry__0_n_0;
   wire _inferred__1_carry__0_n_1;
   wire _inferred__1_carry__0_n_2;
@@ -1950,14 +1956,11 @@ module FPU_PIPELINED_FPADDSUB
   wire _inferred__1_carry_n_2;
   wire _inferred__1_carry_n_3;
   wire bit_shift_SHT1;
-  wire bit_shift_SHT2;
   wire enable_shift_reg;
   wire eqXY;
   wire [8:0]exp_rslt_NRM2_EW1;
   wire [31:31]formatted_number_W;
   wire gtXY;
-  wire inst_FSM_INPUT_ENABLE_n_1;
-  wire inst_FSM_INPUT_ENABLE_n_2;
   wire inst_ShiftRegister_n_1;
   wire inst_ShiftRegister_n_2;
   wire inst_ShiftRegister_n_4;
@@ -1972,8 +1975,8 @@ module FPU_PIPELINED_FPADDSUB
   wire op_add_subt;
   wire [0:0]out;
   wire [2:0]overflow_flag;
-  wire [4:0]p_1_in;
-  wire p_1_in_2;
+  wire [1:0]p_0_in;
+  wire p_2_in;
   wire ready_add_subt;
   wire [25:0]sftr_odat_SHT2_SWR;
   wire [4:2]shft_value_mux_o_EWR;
@@ -1985,7 +1988,7 @@ module FPU_PIPELINED_FPADDSUB
        (.AR({AR[3:2],AR[0]}),
         .CLK(CLK),
         .D({Shift_amount_EXP_EW[2],EXP_STAGE_DMP_n_1}),
-        .Q({EXP_STAGE_DMP_n_2,EXP_STAGE_DMP_n_3,EXP_STAGE_DMP_n_4,p_1_in,EXP_STAGE_DMP_n_10,EXP_STAGE_DMP_n_11,EXP_STAGE_DMP_n_12,EXP_STAGE_DMP_n_13,EXP_STAGE_DMP_n_14,EXP_STAGE_DMP_n_15,EXP_STAGE_DMP_n_16,EXP_STAGE_DMP_n_17,EXP_STAGE_DMP_n_18,EXP_STAGE_DMP_n_19,EXP_STAGE_DMP_n_20,EXP_STAGE_DMP_n_21,EXP_STAGE_DMP_n_22,EXP_STAGE_DMP_n_23,EXP_STAGE_DMP_n_24,EXP_STAGE_DMP_n_25,EXP_STAGE_DMP_n_26,EXP_STAGE_DMP_n_27,EXP_STAGE_DMP_n_28,EXP_STAGE_DMP_n_29,EXP_STAGE_DMP_n_30,EXP_STAGE_DMP_n_31,EXP_STAGE_DMP_n_32}),
+        .Q({EXP_STAGE_DMP_n_2,EXP_STAGE_DMP_n_3,EXP_STAGE_DMP_n_4,EXP_STAGE_DMP_n_5,EXP_STAGE_DMP_n_6,EXP_STAGE_DMP_n_7,EXP_STAGE_DMP_n_8,EXP_STAGE_DMP_n_9,EXP_STAGE_DMP_n_10,EXP_STAGE_DMP_n_11,EXP_STAGE_DMP_n_12,EXP_STAGE_DMP_n_13,EXP_STAGE_DMP_n_14,EXP_STAGE_DMP_n_15,EXP_STAGE_DMP_n_16,EXP_STAGE_DMP_n_17,EXP_STAGE_DMP_n_18,EXP_STAGE_DMP_n_19,EXP_STAGE_DMP_n_20,EXP_STAGE_DMP_n_21,EXP_STAGE_DMP_n_22,EXP_STAGE_DMP_n_23,EXP_STAGE_DMP_n_24,EXP_STAGE_DMP_n_25,EXP_STAGE_DMP_n_26,EXP_STAGE_DMP_n_27,EXP_STAGE_DMP_n_28,EXP_STAGE_DMP_n_29,EXP_STAGE_DMP_n_30,EXP_STAGE_DMP_n_31,EXP_STAGE_DMP_n_32}),
         .\Q_reg[25]_0 ({EXP_STAGE_DmP_n_3,EXP_STAGE_DmP_n_4,EXP_STAGE_DmP_n_5}),
         .\Q_reg[30]_0 ({MuxXY_n_0,MuxXY_n_1,MuxXY_n_2,MuxXY_n_3,MuxXY_n_4,MuxXY_n_5,MuxXY_n_6,MuxXY_n_7,MuxXY_n_8,MuxXY_n_9,MuxXY_n_10,MuxXY_n_11,MuxXY_n_12,MuxXY_n_13,MuxXY_n_14,MuxXY_n_15,MuxXY_n_16,MuxXY_n_17,MuxXY_n_18,MuxXY_n_19,MuxXY_n_20,MuxXY_n_21,MuxXY_n_22,MuxXY_n_23,MuxXY_n_24,MuxXY_n_25,MuxXY_n_26,MuxXY_n_27,MuxXY_n_28,MuxXY_n_29,MuxXY_n_30}),
         .\Q_reg[6]_0 (inst_ShiftRegister_n_1));
@@ -1994,7 +1997,7 @@ module FPU_PIPELINED_FPADDSUB
         .CLK(CLK),
         .D({Shift_amount_EXP_EW[4:3],Shift_amount_EXP_EW[1]}),
         .Q({EXP_STAGE_DmP_n_3,EXP_STAGE_DmP_n_4,EXP_STAGE_DmP_n_5,EXP_STAGE_DmP_n_6,EXP_STAGE_DmP_n_7,EXP_STAGE_DmP_n_8,EXP_STAGE_DmP_n_9,EXP_STAGE_DmP_n_10,EXP_STAGE_DmP_n_11,EXP_STAGE_DmP_n_12,EXP_STAGE_DmP_n_13,EXP_STAGE_DmP_n_14,EXP_STAGE_DmP_n_15,EXP_STAGE_DmP_n_16,EXP_STAGE_DmP_n_17,EXP_STAGE_DmP_n_18,EXP_STAGE_DmP_n_19,EXP_STAGE_DmP_n_20,EXP_STAGE_DmP_n_21,EXP_STAGE_DmP_n_22,EXP_STAGE_DmP_n_23,EXP_STAGE_DmP_n_24,EXP_STAGE_DmP_n_25,EXP_STAGE_DmP_n_26,EXP_STAGE_DmP_n_27,EXP_STAGE_DmP_n_28}),
-        .\Q_reg[27]_0 (p_1_in),
+        .\Q_reg[27]_0 ({EXP_STAGE_DMP_n_5,EXP_STAGE_DMP_n_6,EXP_STAGE_DMP_n_7,EXP_STAGE_DMP_n_8,EXP_STAGE_DMP_n_9}),
         .\Q_reg[27]_1 ({MuxXY_n_31,MuxXY_n_32,MuxXY_n_33,MuxXY_n_34,MuxXY_n_35,MuxXY_n_36,MuxXY_n_37,MuxXY_n_38,MuxXY_n_39,MuxXY_n_40,MuxXY_n_41,MuxXY_n_42,MuxXY_n_43,MuxXY_n_44,MuxXY_n_45,MuxXY_n_46,MuxXY_n_47,MuxXY_n_48,MuxXY_n_49,MuxXY_n_50,MuxXY_n_51,MuxXY_n_52,MuxXY_n_53,MuxXY_n_54,MuxXY_n_55,MuxXY_n_56,MuxXY_n_57,MuxXY_n_58}),
         .\Q_reg[6]_0 (inst_ShiftRegister_n_1));
   RegisterAdd__parameterized3 EXP_STAGE_FLAGS
@@ -2093,7 +2096,7 @@ module FPU_PIPELINED_FPADDSUB
         .Q({ADD_OVRFLW_NRM,NRM_STAGE_FLAGS_n_2,NRM_STAGE_FLAGS_n_3}),
         .\Q_reg[0]_0 (NRM_STAGE_Raw_mant_n_30),
         .\Q_reg[1]_0 (SHT1_STAGE_sft_amount_n_0),
-        .\Q_reg[1]_1 ({SGF_STAGE_FLAGS_n_0,ZERO_FLAG_SFG[2],ZERO_FLAG_SFG[0]}),
+        .\Q_reg[1]_1 ({SGF_STAGE_FLAGS_n_0,SGF_STAGE_FLAGS_n_1,p_0_in[0]}),
         .\Q_reg[22] ({LZD_raw_out_EWR[2],LZD_raw_out_EWR[0]}),
         .\Q_reg[25] (NRM_STAGE_FLAGS_n_4),
         .\Q_reg[25]_0 (\Data_array_SWR[2]_1 [25]),
@@ -2112,29 +2115,29 @@ module FPU_PIPELINED_FPADDSUB
         .\Q_reg[22]_0 ({SHT1_STAGE_DmP_mant_n_0,SHT1_STAGE_DmP_mant_n_1,SHT1_STAGE_DmP_mant_n_2,SHT1_STAGE_DmP_mant_n_3,SHT1_STAGE_DmP_mant_n_4,SHT1_STAGE_DmP_mant_n_5,SHT1_STAGE_DmP_mant_n_6,SHT1_STAGE_DmP_mant_n_7,SHT1_STAGE_DmP_mant_n_8,SHT1_STAGE_DmP_mant_n_9,SHT1_STAGE_DmP_mant_n_10,SHT1_STAGE_DmP_mant_n_11,SHT1_STAGE_DmP_mant_n_12,SHT1_STAGE_DmP_mant_n_13,SHT1_STAGE_DmP_mant_n_14,SHT1_STAGE_DmP_mant_n_15,SHT1_STAGE_DmP_mant_n_16,SHT1_STAGE_DmP_mant_n_17,SHT1_STAGE_DmP_mant_n_18,SHT1_STAGE_DmP_mant_n_19,SHT1_STAGE_DmP_mant_n_20,SHT1_STAGE_DmP_mant_n_21,SHT1_STAGE_DmP_mant_n_22}),
         .\Q_reg[2]_0 (NRM_STAGE_FLAGS_n_4),
         .\Q_reg[2]_1 (ADD_OVRFLW_NRM));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[10]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_35),
         .I1(SGF_STAGE_DMP_n_41),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[10]));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[11]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_34),
         .I1(SGF_STAGE_DMP_n_40),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[11]));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[12]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_33),
         .I1(SGF_STAGE_DMP_n_39),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[12]));
   LUT2 #(
     .INIT(4'h6)) 
@@ -2166,31 +2169,31 @@ module FPU_PIPELINED_FPADDSUB
     \Q[13]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_40),
         .I1(SGF_STAGE_DMP_n_46),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[13]));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[14]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_39),
         .I1(SGF_STAGE_DMP_n_45),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[14]));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[15]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_38),
         .I1(SGF_STAGE_DMP_n_44),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[15]));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[16]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_37),
         .I1(SGF_STAGE_DMP_n_43),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[16]));
   LUT2 #(
     .INIT(4'h6)) 
@@ -2216,45 +2219,44 @@ module FPU_PIPELINED_FPADDSUB
        (.I0(DMP_mant_SFG_SWR[15]),
         .I1(SGF_STAGE_DmP_mant_n_9),
         .O(\Q[16]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[17]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_44),
         .I1(SGF_STAGE_DMP_n_50),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[17]));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[18]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_43),
         .I1(SGF_STAGE_DMP_n_49),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[18]));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[19]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_42),
         .I1(SGF_STAGE_DMP_n_48),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[19]));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[1]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_28),
         .I1(SGF_STAGE_DMP_n_3),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[1]));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[20]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_41),
         .I1(SGF_STAGE_DMP_n_47),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[20]));
   LUT2 #(
     .INIT(4'h6)) 
@@ -2280,37 +2282,37 @@ module FPU_PIPELINED_FPADDSUB
        (.I0(DMP_mant_SFG_SWR[19]),
         .I1(SGF_STAGE_DmP_mant_n_5),
         .O(\Q[20]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[21]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_48),
         .I1(SGF_STAGE_DMP_n_55),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[21]));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[22]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_47),
         .I1(SGF_STAGE_DMP_n_54),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[22]));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[23]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_46),
         .I1(SGF_STAGE_DMP_n_53),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[23]));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[24]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_45),
         .I1(SGF_STAGE_DMP_n_52),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[24]));
   LUT2 #(
     .INIT(4'h6)) 
@@ -2336,36 +2338,37 @@ module FPU_PIPELINED_FPADDSUB
        (.I0(DMP_mant_SFG_SWR[23]),
         .I1(SGF_STAGE_DmP_mant_n_1),
         .O(\Q[24]_i_9_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[25]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_49),
         .I1(SGF_STAGE_DmP_mant_n_51),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[25]));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[2]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_27),
         .I1(SGF_STAGE_DMP_n_2),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[2]));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[3]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_26),
         .I1(SGF_STAGE_DMP_n_1),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[3]));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[4]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_25),
         .I1(SGF_STAGE_DMP_n_0),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[4]));
   LUT2 #(
     .INIT(4'h6)) 
@@ -2385,37 +2388,37 @@ module FPU_PIPELINED_FPADDSUB
        (.I0(DMP_mant_SFG_SWR[4]),
         .I1(SGF_STAGE_DmP_mant_n_20),
         .O(\Q[4]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[5]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_32),
         .I1(SGF_STAGE_DMP_n_38),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[5]));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[6]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_31),
         .I1(SGF_STAGE_DMP_n_37),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[6]));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[7]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_30),
         .I1(SGF_STAGE_DMP_n_36),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[7]));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[8]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_29),
         .I1(SGF_STAGE_DMP_n_35),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[8]));
   LUT2 #(
     .INIT(4'h6)) 
@@ -2441,13 +2444,13 @@ module FPU_PIPELINED_FPADDSUB
        (.I0(DMP_mant_SFG_SWR[7]),
         .I1(SGF_STAGE_DmP_mant_n_17),
         .O(\Q[8]_i_9__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \Q[9]_i_1 
        (.I0(SGF_STAGE_DmP_mant_n_36),
         .I1(SGF_STAGE_DMP_n_42),
-        .I2(ZERO_FLAG_SFG[1]),
+        .I2(p_0_in[1]),
         .O(Raw_mant_SGF[9]));
   RegisterAdd__parameterized22 Ready_reg
        (.AR(AR[1]),
@@ -2500,7 +2503,7 @@ module FPU_PIPELINED_FPADDSUB
   RegisterAdd__parameterized16 SGF_STAGE_DmP_mant
        (.AR(AR),
         .CLK(CLK),
-        .CO(p_1_in_2),
+        .CO(p_2_in),
         .D(sftr_odat_SHT2_SWR),
         .E(load0),
         .O({SGF_STAGE_DmP_mant_n_25,SGF_STAGE_DmP_mant_n_26,SGF_STAGE_DmP_mant_n_27,SGF_STAGE_DmP_mant_n_28}),
@@ -2518,15 +2521,15 @@ module FPU_PIPELINED_FPADDSUB
   RegisterAdd__parameterized17 SGF_STAGE_FLAGS
        (.AR({AR[2],AR[0]}),
         .CLK(CLK),
-        .CO(p_1_in_2),
+        .CO(p_2_in),
         .E(load0),
-        .Q(ZERO_FLAG_SFG[1]),
-        .\Q_reg[2]_0 ({SGF_STAGE_FLAGS_n_0,ZERO_FLAG_SFG[2],ZERO_FLAG_SFG[0]}),
+        .Q(p_0_in[1]),
+        .\Q_reg[2]_0 ({SGF_STAGE_FLAGS_n_0,SGF_STAGE_FLAGS_n_1,p_0_in[0]}),
         .\Q_reg[2]_1 ({SHT2_STAGE_FLAGS_n_0,SHT2_STAGE_FLAGS_n_1,SHT2_STAGE_FLAGS_n_2}));
   RegisterAdd__parameterized4 SHT1_STAGE_DMP
        (.AR({AR[3:2],AR[0]}),
         .CLK(CLK),
-        .D({EXP_STAGE_DMP_n_2,EXP_STAGE_DMP_n_3,EXP_STAGE_DMP_n_4,p_1_in,EXP_STAGE_DMP_n_10,EXP_STAGE_DMP_n_11,EXP_STAGE_DMP_n_12,EXP_STAGE_DMP_n_13,EXP_STAGE_DMP_n_14,EXP_STAGE_DMP_n_15,EXP_STAGE_DMP_n_16,EXP_STAGE_DMP_n_17,EXP_STAGE_DMP_n_18,EXP_STAGE_DMP_n_19,EXP_STAGE_DMP_n_20,EXP_STAGE_DMP_n_21,EXP_STAGE_DMP_n_22,EXP_STAGE_DMP_n_23,EXP_STAGE_DMP_n_24,EXP_STAGE_DMP_n_25,EXP_STAGE_DMP_n_26,EXP_STAGE_DMP_n_27,EXP_STAGE_DMP_n_28,EXP_STAGE_DMP_n_29,EXP_STAGE_DMP_n_30,EXP_STAGE_DMP_n_31,EXP_STAGE_DMP_n_32}),
+        .D({EXP_STAGE_DMP_n_2,EXP_STAGE_DMP_n_3,EXP_STAGE_DMP_n_4,EXP_STAGE_DMP_n_5,EXP_STAGE_DMP_n_6,EXP_STAGE_DMP_n_7,EXP_STAGE_DMP_n_8,EXP_STAGE_DMP_n_9,EXP_STAGE_DMP_n_10,EXP_STAGE_DMP_n_11,EXP_STAGE_DMP_n_12,EXP_STAGE_DMP_n_13,EXP_STAGE_DMP_n_14,EXP_STAGE_DMP_n_15,EXP_STAGE_DMP_n_16,EXP_STAGE_DMP_n_17,EXP_STAGE_DMP_n_18,EXP_STAGE_DMP_n_19,EXP_STAGE_DMP_n_20,EXP_STAGE_DMP_n_21,EXP_STAGE_DMP_n_22,EXP_STAGE_DMP_n_23,EXP_STAGE_DMP_n_24,EXP_STAGE_DMP_n_25,EXP_STAGE_DMP_n_26,EXP_STAGE_DMP_n_27,EXP_STAGE_DMP_n_28,EXP_STAGE_DMP_n_29,EXP_STAGE_DMP_n_30,EXP_STAGE_DMP_n_31,EXP_STAGE_DMP_n_32}),
         .Q({SHT1_STAGE_DMP_n_0,SHT1_STAGE_DMP_n_1,SHT1_STAGE_DMP_n_2,SHT1_STAGE_DMP_n_3,SHT1_STAGE_DMP_n_4,SHT1_STAGE_DMP_n_5,SHT1_STAGE_DMP_n_6,SHT1_STAGE_DMP_n_7,SHT1_STAGE_DMP_n_8,SHT1_STAGE_DMP_n_9,SHT1_STAGE_DMP_n_10,SHT1_STAGE_DMP_n_11,SHT1_STAGE_DMP_n_12,SHT1_STAGE_DMP_n_13,SHT1_STAGE_DMP_n_14,SHT1_STAGE_DMP_n_15,SHT1_STAGE_DMP_n_16,SHT1_STAGE_DMP_n_17,SHT1_STAGE_DMP_n_18,SHT1_STAGE_DMP_n_19,SHT1_STAGE_DMP_n_20,SHT1_STAGE_DMP_n_21,SHT1_STAGE_DMP_n_22,SHT1_STAGE_DMP_n_23,SHT1_STAGE_DMP_n_24,SHT1_STAGE_DMP_n_25,SHT1_STAGE_DMP_n_26,SHT1_STAGE_DMP_n_27,SHT1_STAGE_DMP_n_28,SHT1_STAGE_DMP_n_29,SHT1_STAGE_DMP_n_30}),
         .\Q_reg[5]_0 (inst_ShiftRegister_n_2));
   RegisterAdd__parameterized5 SHT1_STAGE_DmP_mant
@@ -2554,18 +2557,18 @@ module FPU_PIPELINED_FPADDSUB
   RegisterAdd__parameterized9 SHT2_SHIFT_DATA
        (.CLK(CLK),
         .D({SHT2_SHIFT_DATA_n_0,SHT2_SHIFT_DATA_n_1,SHT2_SHIFT_DATA_n_2}),
-        .\Data_array_SWR[4]_5 (\Data_array_SWR[4]_5 ),
-        .\Data_array_SWR[6]_4 (\Data_array_SWR[6]_4 [1]),
+        .\Data_array_SWR[4]_4 (\Data_array_SWR[4]_4 ),
+        .\Data_array_SWR[6]_3 (\Data_array_SWR[6]_3 [1]),
         .E(inst_ShiftRegister_n_7),
         .\FSM_sequential_state_reg_reg[1] (\FSM_sequential_state_reg_reg[1] ),
         .OVRFLW_FLAG_FRMT(OVRFLW_FLAG_FRMT),
-        .Q({left_right_SHT2,bit_shift_SHT2}),
+        .Q({left_right_SHT2,SHT2_STAGE_SHFTVARS2_n_7}),
         .\Q_reg[13]_0 (\Data_array_SWR[3]_0 ),
         .\Q_reg[25]_0 ({sftr_odat_SHT2_SWR[25:24],sftr_odat_SHT2_SWR[13:12],sftr_odat_SHT2_SWR[0]}),
         .\Q_reg[2]_0 (\Data_array_SWR[2]_1 ),
-        .\Q_reg[4]_0 (\Data_array_SWR[6]_4 [25:24]),
+        .\Q_reg[4]_0 (\Data_array_SWR[6]_3 [25:24]),
         .\Q_reg[4]_1 (shift_value_SHT2_EWR),
-        .\Q_reg[8]_0 ({\Data_array_SWR[5]_3 [17:16],\Data_array_SWR[5]_3 [11:2]}),
+        .\Q_reg[8]_0 ({\Data_array_SWR[5]_2 [17:16],\Data_array_SWR[5]_2 [11:2]}),
         .UNDRFLW_FLAG_FRMT(UNDRFLW_FLAG_FRMT));
   RegisterAdd__parameterized8 SHT2_STAGE_DMP
        (.AR({AR[3:2],AR[0]}),
@@ -2582,17 +2585,17 @@ module FPU_PIPELINED_FPADDSUB
   RegisterAdd__parameterized10 SHT2_STAGE_SHFTVARS1
        (.CLK(CLK),
         .D({SHT2_STAGE_SHFTVARS1_n_0,SHT2_STAGE_SHFTVARS1_n_1,SHT2_STAGE_SHFTVARS1_n_2,SHT2_STAGE_SHFTVARS1_n_3,SHT2_STAGE_SHFTVARS1_n_4,SHT2_STAGE_SHFTVARS1_n_5,SHT2_STAGE_SHFTVARS1_n_6,SHT2_STAGE_SHFTVARS1_n_7,SHT2_STAGE_SHFTVARS1_n_8,SHT2_STAGE_SHFTVARS1_n_9,SHT2_STAGE_SHFTVARS1_n_10,SHT2_STAGE_SHFTVARS1_n_11,SHT2_STAGE_SHFTVARS1_n_12,SHT2_STAGE_SHFTVARS1_n_13}),
-        .\Data_array_SWR[4]_5 (\Data_array_SWR[4]_5 ),
+        .\Data_array_SWR[4]_4 (\Data_array_SWR[4]_4 ),
         .E(inst_ShiftRegister_n_7),
         .\FSM_sequential_state_reg_reg[1] (\FSM_sequential_state_reg_reg[1] ),
         .OVRFLW_FLAG_FRMT(OVRFLW_FLAG_FRMT),
-        .Q({left_right_SHT2,bit_shift_SHT2}),
-        .\Q_reg[0] ({\Data_array_SWR[5]_3 [17:16],\Data_array_SWR[5]_3 [9:2]}),
+        .Q({left_right_SHT2,SHT2_STAGE_SHFTVARS2_n_7}),
+        .\Q_reg[0] ({\Data_array_SWR[5]_2 [17:16],\Data_array_SWR[5]_2 [9:2]}),
         .\Q_reg[16] (shift_value_SHT2_EWR),
         .\Q_reg[23] ({sftr_odat_SHT2_SWR[23:16],sftr_odat_SHT2_SWR[7:1]}),
-        .\Q_reg[25] ({\Data_array_SWR[6]_4 [25:24],\Data_array_SWR[6]_4 [15:14],\Data_array_SWR[6]_4 [9:8]}),
+        .\Q_reg[25] ({\Data_array_SWR[6]_3 [25:24],\Data_array_SWR[6]_3 [15:14],\Data_array_SWR[6]_3 [9:8]}),
         .\Q_reg[25]_0 (\Data_array_SWR[3]_0 ),
-        .\Q_reg[4]_0 (\Data_array_SWR[6]_4 [1]),
+        .\Q_reg[4]_0 (\Data_array_SWR[6]_3 [1]),
         .\Q_reg[4]_1 (shft_value_mux_o_EWR),
         .UNDRFLW_FLAG_FRMT(UNDRFLW_FLAG_FRMT));
   RegisterAdd__parameterized11 SHT2_STAGE_SHFTVARS2
@@ -2601,11 +2604,11 @@ module FPU_PIPELINED_FPADDSUB
         .E(inst_ShiftRegister_n_7),
         .\FSM_sequential_state_reg_reg[1] (\FSM_sequential_state_reg_reg[1] ),
         .OVRFLW_FLAG_FRMT(OVRFLW_FLAG_FRMT),
-        .Q({left_right_SHT2,bit_shift_SHT2}),
-        .\Q_reg[0]_0 ({\Data_array_SWR[5]_3 [17:16],\Data_array_SWR[5]_3 [11:10]}),
+        .Q({left_right_SHT2,SHT2_STAGE_SHFTVARS2_n_7}),
+        .\Q_reg[0]_0 ({\Data_array_SWR[5]_2 [17:16],\Data_array_SWR[5]_2 [11:10]}),
         .\Q_reg[15] ({sftr_odat_SHT2_SWR[15:14],sftr_odat_SHT2_SWR[11:8]}),
         .\Q_reg[1]_0 ({left_right_SHT1,bit_shift_SHT1}),
-        .\Q_reg[4] ({\Data_array_SWR[6]_4 [15:14],\Data_array_SWR[6]_4 [9:8]}),
+        .\Q_reg[4] ({\Data_array_SWR[6]_3 [15:14],\Data_array_SWR[6]_3 [9:8]}),
         .\Q_reg[4]_0 (shift_value_SHT2_EWR[4]),
         .UNDRFLW_FLAG_FRMT(UNDRFLW_FLAG_FRMT));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
@@ -2635,16 +2638,10 @@ module FPU_PIPELINED_FPADDSUB
   FSM_INPUT_ENABLE inst_FSM_INPUT_ENABLE
        (.CLK(CLK),
         .D(FSM_enable_input_internal),
+        .E(enable_shift_reg),
         .\FSM_sequential_state_reg_reg[1]_0 (\FSM_sequential_state_reg_reg[1] ),
         .\FSM_sequential_state_reg_reg[2]_0 (\FSM_sequential_state_reg_reg[2] ),
-        .out({out,inst_FSM_INPUT_ENABLE_n_1,inst_FSM_INPUT_ENABLE_n_2}));
-  LUT3 #(
-    .INIT(8'h7E)) 
-    \inst_FSM_INPUT_ENABLE/ 
-       (.I0(inst_FSM_INPUT_ENABLE_n_2),
-        .I1(out),
-        .I2(inst_FSM_INPUT_ENABLE_n_1),
-        .O(enable_shift_reg));
+        .out(out));
   ShiftRegister inst_ShiftRegister
        (.AR({AR[2],AR[0]}),
         .CLK(CLK),
@@ -2666,11 +2663,13 @@ endmodule
 
 module FSM_INPUT_ENABLE
    (out,
+    E,
     D,
     CLK,
     \FSM_sequential_state_reg_reg[1]_0 ,
     \FSM_sequential_state_reg_reg[2]_0 );
-  output [2:0]out;
+  output [0:0]out;
+  output [0:0]E;
   output [0:0]D;
   input CLK;
   input [0:0]\FSM_sequential_state_reg_reg[1]_0 ;
@@ -2678,35 +2677,37 @@ module FSM_INPUT_ENABLE
 
   wire CLK;
   wire [0:0]D;
+  wire [0:0]E;
   wire \FSM_sequential_state_reg[0]_i_1_n_0 ;
   wire \FSM_sequential_state_reg[1]_i_1_n_0 ;
   wire \FSM_sequential_state_reg[2]_i_1_n_0 ;
   wire [0:0]\FSM_sequential_state_reg_reg[1]_0 ;
   wire [1:0]\FSM_sequential_state_reg_reg[2]_0 ;
-  (* RTL_KEEP = "yes" *) wire [2:0]out;
+  (* RTL_KEEP = "yes" *) wire [0:0]out;
+  (* RTL_KEEP = "yes" *) wire [1:0]state_reg;
 
   LUT5 #(
     .INIT(32'h14145514)) 
     \FSM_sequential_state_reg[0]_i_1 
-       (.I0(out[0]),
-        .I1(out[1]),
-        .I2(out[2]),
+       (.I0(state_reg[0]),
+        .I1(state_reg[1]),
+        .I2(out),
         .I3(\FSM_sequential_state_reg_reg[2]_0 [1]),
         .I4(\FSM_sequential_state_reg_reg[2]_0 [0]),
         .O(\FSM_sequential_state_reg[0]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h26)) 
     \FSM_sequential_state_reg[1]_i_1 
-       (.I0(out[0]),
-        .I1(out[1]),
-        .I2(out[2]),
+       (.I0(state_reg[0]),
+        .I1(state_reg[1]),
+        .I2(out),
         .O(\FSM_sequential_state_reg[1]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h38)) 
     \FSM_sequential_state_reg[2]_i_1 
-       (.I0(out[0]),
-        .I1(out[1]),
-        .I2(out[2]),
+       (.I0(state_reg[0]),
+        .I1(state_reg[1]),
+        .I2(out),
         .O(\FSM_sequential_state_reg[2]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   FDCE #(
@@ -2716,7 +2717,7 @@ module FSM_INPUT_ENABLE
         .CE(1'b1),
         .CLR(\FSM_sequential_state_reg_reg[1]_0 ),
         .D(\FSM_sequential_state_reg[0]_i_1_n_0 ),
-        .Q(out[0]));
+        .Q(state_reg[0]));
   (* KEEP = "yes" *) 
   FDCE #(
     .INIT(1'b0)) 
@@ -2725,7 +2726,7 @@ module FSM_INPUT_ENABLE
         .CE(1'b1),
         .CLR(\FSM_sequential_state_reg_reg[1]_0 ),
         .D(\FSM_sequential_state_reg[1]_i_1_n_0 ),
-        .Q(out[1]));
+        .Q(state_reg[1]));
   (* KEEP = "yes" *) 
   FDCE #(
     .INIT(1'b0)) 
@@ -2734,12 +2735,19 @@ module FSM_INPUT_ENABLE
         .CE(1'b1),
         .CLR(\FSM_sequential_state_reg_reg[1]_0 ),
         .D(\FSM_sequential_state_reg[2]_i_1_n_0 ),
-        .Q(out[2]));
+        .Q(out));
   LUT1 #(
     .INIT(2'h1)) 
     \Q[6]_i_1__0 
-       (.I0(out[2]),
+       (.I0(out),
         .O(D));
+  LUT3 #(
+    .INIT(8'h7E)) 
+    __0
+       (.I0(state_reg[0]),
+        .I1(out),
+        .I2(state_reg[1]),
+        .O(E));
 endmodule
 
 module MultiplexTxT
@@ -4881,7 +4889,7 @@ module RegisterAdd__parameterized10
     OVRFLW_FLAG_FRMT,
     \Q_reg[0] ,
     \Q_reg[25]_0 ,
-    \Data_array_SWR[4]_5 ,
+    \Data_array_SWR[4]_4 ,
     E,
     \Q_reg[4]_1 ,
     CLK,
@@ -4896,7 +4904,7 @@ module RegisterAdd__parameterized10
   input OVRFLW_FLAG_FRMT;
   input [9:0]\Q_reg[0] ;
   input [7:0]\Q_reg[25]_0 ;
-  input [1:0]\Data_array_SWR[4]_5 ;
+  input [1:0]\Data_array_SWR[4]_4 ;
   input [0:0]E;
   input [2:0]\Q_reg[4]_1 ;
   input CLK;
@@ -4904,9 +4912,9 @@ module RegisterAdd__parameterized10
 
   wire CLK;
   wire [13:0]D;
-  wire [1:0]\Data_array_SWR[4]_5 ;
-  wire [21:18]\Data_array_SWR[5]_3 ;
-  wire [23:2]\Data_array_SWR[6]_4 ;
+  wire [1:0]\Data_array_SWR[4]_4 ;
+  wire [21:18]\Data_array_SWR[5]_2 ;
+  wire [23:2]\Data_array_SWR[6]_3 ;
   wire [0:0]E;
   wire [0:0]\FSM_sequential_state_reg_reg[1] ;
   wire OVRFLW_FLAG_FRMT;
@@ -4920,13 +4928,13 @@ module RegisterAdd__parameterized10
   wire [2:0]\Q_reg[4]_1 ;
   wire UNDRFLW_FLAG_FRMT;
 
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT5 #(
     .INIT(32'h000000B8)) 
     \Q[0]_i_1__12 
-       (.I0(\Data_array_SWR[6]_4 [23]),
+       (.I0(\Data_array_SWR[6]_3 [23]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [2]),
+        .I2(\Data_array_SWR[6]_3 [2]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
         .O(D[0]));
@@ -4938,7 +4946,7 @@ module RegisterAdd__parameterized10
         .I2(\Q_reg[16] [0]),
         .I3(\Q_reg[25]_0 [4]),
         .I4(\Q_reg[16] [1]),
-        .I5(\Data_array_SWR[4]_5 [0]),
+        .I5(\Data_array_SWR[4]_4 [0]),
         .O(\Q_reg[25] [2]));
   LUT6 #(
     .INIT(64'hCDC8DDDDCDC88888)) 
@@ -4948,7 +4956,7 @@ module RegisterAdd__parameterized10
         .I2(\Q_reg[16] [0]),
         .I3(\Q_reg[25]_0 [5]),
         .I4(\Q_reg[16] [1]),
-        .I5(\Data_array_SWR[4]_5 [1]),
+        .I5(\Data_array_SWR[4]_4 [1]),
         .O(\Q_reg[25] [3]));
   (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT3 #(
@@ -4975,13 +4983,13 @@ module RegisterAdd__parameterized10
         .I3(\Q_reg[16] [2]),
         .I4(\Q_reg[0] [8]),
         .O(\Q_reg[23] [7]));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT5 #(
     .INIT(32'h000000B8)) 
     \Q[16]_i_1__8 
-       (.I0(\Data_array_SWR[6]_4 [7]),
+       (.I0(\Data_array_SWR[6]_3 [7]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [18]),
+        .I2(\Data_array_SWR[6]_3 [18]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
         .O(D[8]));
@@ -4994,7 +5002,7 @@ module RegisterAdd__parameterized10
         .I3(\Q_reg[25]_0 [5]),
         .I4(\Q_reg[16] [2]),
         .I5(\Q_reg[0] [5]),
-        .O(\Data_array_SWR[6]_4 [7]));
+        .O(\Data_array_SWR[6]_3 [7]));
   LUT6 #(
     .INIT(64'hCDC8FFFFCDC80000)) 
     \Q[16]_i_2__1 
@@ -5014,7 +5022,7 @@ module RegisterAdd__parameterized10
         .I3(\Q_reg[25]_0 [4]),
         .I4(\Q_reg[16] [0]),
         .I5(\Q_reg[25]_0 [0]),
-        .O(\Data_array_SWR[6]_4 [18]));
+        .O(\Data_array_SWR[6]_3 [18]));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \Q[17]_i_1__6 
@@ -5024,13 +5032,13 @@ module RegisterAdd__parameterized10
         .I3(\Q_reg[16] [2]),
         .I4(\Q_reg[0] [9]),
         .O(\Q_reg[23] [8]));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT5 #(
     .INIT(32'h000000B8)) 
     \Q[17]_i_1__7 
-       (.I0(\Data_array_SWR[6]_4 [6]),
+       (.I0(\Data_array_SWR[6]_3 [6]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [19]),
+        .I2(\Data_array_SWR[6]_3 [19]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
         .O(D[9]));
@@ -5043,7 +5051,7 @@ module RegisterAdd__parameterized10
         .I3(\Q_reg[25]_0 [4]),
         .I4(\Q_reg[16] [2]),
         .I5(\Q_reg[0] [4]),
-        .O(\Data_array_SWR[6]_4 [6]));
+        .O(\Data_array_SWR[6]_3 [6]));
   LUT6 #(
     .INIT(64'hCDC8FFFFCDC80000)) 
     \Q[17]_i_2__1 
@@ -5063,33 +5071,33 @@ module RegisterAdd__parameterized10
         .I3(\Q_reg[25]_0 [5]),
         .I4(\Q_reg[16] [0]),
         .I5(\Q_reg[25]_0 [1]),
-        .O(\Data_array_SWR[6]_4 [19]));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+        .O(\Data_array_SWR[6]_3 [19]));
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[18]_i_1__6 
-       (.I0(\Data_array_SWR[6]_4 [7]),
+       (.I0(\Data_array_SWR[6]_3 [7]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [18]),
+        .I2(\Data_array_SWR[6]_3 [18]),
         .O(\Q_reg[23] [9]));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT5 #(
     .INIT(32'h000000B8)) 
     \Q[18]_i_1__8 
-       (.I0(\Data_array_SWR[6]_4 [5]),
+       (.I0(\Data_array_SWR[6]_3 [5]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [20]),
+        .I2(\Data_array_SWR[6]_3 [20]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
         .O(D[10]));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[18]_i_2__0 
-       (.I0(\Data_array_SWR[5]_3 [21]),
+       (.I0(\Data_array_SWR[5]_2 [21]),
         .I1(\Q_reg[16] [2]),
         .I2(\Q_reg[0] [3]),
-        .O(\Data_array_SWR[6]_4 [5]));
+        .O(\Data_array_SWR[6]_3 [5]));
   LUT6 #(
     .INIT(64'hCDC8CDCDCDC8C8C8)) 
     \Q[18]_i_3 
@@ -5099,7 +5107,7 @@ module RegisterAdd__parameterized10
         .I3(\Q_reg[25]_0 [6]),
         .I4(\Q_reg[16] [0]),
         .I5(\Q_reg[25]_0 [2]),
-        .O(\Data_array_SWR[6]_4 [20]));
+        .O(\Data_array_SWR[6]_3 [20]));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \Q[18]_i_4 
@@ -5108,33 +5116,32 @@ module RegisterAdd__parameterized10
         .I2(\Q_reg[25]_0 [7]),
         .I3(\Q_reg[16] [0]),
         .I4(\Q_reg[25]_0 [3]),
-        .O(\Data_array_SWR[5]_3 [21]));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+        .O(\Data_array_SWR[5]_2 [21]));
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[19]_i_1__6 
-       (.I0(\Data_array_SWR[6]_4 [6]),
+       (.I0(\Data_array_SWR[6]_3 [6]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [19]),
+        .I2(\Data_array_SWR[6]_3 [19]),
         .O(\Q_reg[23] [10]));
   (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT5 #(
     .INIT(32'h000000B8)) 
     \Q[19]_i_1__7 
-       (.I0(\Data_array_SWR[6]_4 [4]),
+       (.I0(\Data_array_SWR[6]_3 [4]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [21]),
+        .I2(\Data_array_SWR[6]_3 [21]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
         .O(D[11]));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[19]_i_2__0 
-       (.I0(\Data_array_SWR[5]_3 [20]),
+       (.I0(\Data_array_SWR[5]_2 [20]),
         .I1(\Q_reg[16] [2]),
         .I2(\Q_reg[0] [2]),
-        .O(\Data_array_SWR[6]_4 [4]));
+        .O(\Data_array_SWR[6]_3 [4]));
   LUT6 #(
     .INIT(64'hCDC8CDCDCDC8C8C8)) 
     \Q[19]_i_3 
@@ -5144,7 +5151,7 @@ module RegisterAdd__parameterized10
         .I3(\Q_reg[25]_0 [7]),
         .I4(\Q_reg[16] [0]),
         .I5(\Q_reg[25]_0 [3]),
-        .O(\Data_array_SWR[6]_4 [21]));
+        .O(\Data_array_SWR[6]_3 [21]));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \Q[19]_i_4 
@@ -5153,8 +5160,8 @@ module RegisterAdd__parameterized10
         .I2(\Q_reg[25]_0 [6]),
         .I3(\Q_reg[16] [0]),
         .I4(\Q_reg[25]_0 [2]),
-        .O(\Data_array_SWR[5]_3 [20]));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+        .O(\Data_array_SWR[5]_2 [20]));
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[1]_i_1__10 
@@ -5166,38 +5173,38 @@ module RegisterAdd__parameterized10
   LUT5 #(
     .INIT(32'h000000B8)) 
     \Q[1]_i_1__13 
-       (.I0(\Data_array_SWR[6]_4 [22]),
+       (.I0(\Data_array_SWR[6]_3 [22]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [3]),
+        .I2(\Data_array_SWR[6]_3 [3]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[20]_i_1__6 
-       (.I0(\Data_array_SWR[6]_4 [5]),
+       (.I0(\Data_array_SWR[6]_3 [5]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [20]),
+        .I2(\Data_array_SWR[6]_3 [20]),
         .O(\Q_reg[23] [11]));
   (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT5 #(
     .INIT(32'h000000B8)) 
     \Q[20]_i_1__8 
-       (.I0(\Data_array_SWR[6]_4 [3]),
+       (.I0(\Data_array_SWR[6]_3 [3]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [22]),
+        .I2(\Data_array_SWR[6]_3 [22]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
         .O(D[12]));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[20]_i_2__0 
-       (.I0(\Data_array_SWR[5]_3 [19]),
+       (.I0(\Data_array_SWR[5]_2 [19]),
         .I1(\Q_reg[16] [2]),
         .I2(\Q_reg[0] [1]),
-        .O(\Data_array_SWR[6]_4 [3]));
+        .O(\Data_array_SWR[6]_3 [3]));
   LUT5 #(
     .INIT(32'hF0F1F0E0)) 
     \Q[20]_i_3 
@@ -5206,7 +5213,7 @@ module RegisterAdd__parameterized10
         .I2(Q[0]),
         .I3(\Q_reg[16] [0]),
         .I4(\Q_reg[25]_0 [4]),
-        .O(\Data_array_SWR[6]_4 [22]));
+        .O(\Data_array_SWR[6]_3 [22]));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \Q[20]_i_4 
@@ -5215,22 +5222,22 @@ module RegisterAdd__parameterized10
         .I2(\Q_reg[25]_0 [5]),
         .I3(\Q_reg[16] [0]),
         .I4(\Q_reg[25]_0 [1]),
-        .O(\Data_array_SWR[5]_3 [19]));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+        .O(\Data_array_SWR[5]_2 [19]));
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[21]_i_1__7 
-       (.I0(\Data_array_SWR[6]_4 [4]),
+       (.I0(\Data_array_SWR[6]_3 [4]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [21]),
+        .I2(\Data_array_SWR[6]_3 [21]),
         .O(\Q_reg[23] [12]));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT5 #(
     .INIT(32'h000000B8)) 
     \Q[21]_i_1__8 
-       (.I0(\Data_array_SWR[6]_4 [2]),
+       (.I0(\Data_array_SWR[6]_3 [2]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [23]),
+        .I2(\Data_array_SWR[6]_3 [23]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
         .O(D[13]));
@@ -5238,10 +5245,10 @@ module RegisterAdd__parameterized10
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[21]_i_2__0 
-       (.I0(\Data_array_SWR[5]_3 [18]),
+       (.I0(\Data_array_SWR[5]_2 [18]),
         .I1(\Q_reg[16] [2]),
         .I2(\Q_reg[0] [0]),
-        .O(\Data_array_SWR[6]_4 [2]));
+        .O(\Data_array_SWR[6]_3 [2]));
   LUT5 #(
     .INIT(32'hF0F1F0E0)) 
     \Q[21]_i_3 
@@ -5250,7 +5257,7 @@ module RegisterAdd__parameterized10
         .I2(Q[0]),
         .I3(\Q_reg[16] [0]),
         .I4(\Q_reg[25]_0 [5]),
-        .O(\Data_array_SWR[6]_4 [23]));
+        .O(\Data_array_SWR[6]_3 [23]));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \Q[21]_i_4 
@@ -5259,13 +5266,14 @@ module RegisterAdd__parameterized10
         .I2(\Q_reg[25]_0 [4]),
         .I3(\Q_reg[16] [0]),
         .I4(\Q_reg[25]_0 [0]),
-        .O(\Data_array_SWR[5]_3 [18]));
+        .O(\Data_array_SWR[5]_2 [18]));
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[22]_i_1__7 
-       (.I0(\Data_array_SWR[6]_4 [3]),
+       (.I0(\Data_array_SWR[6]_3 [3]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [22]),
+        .I2(\Data_array_SWR[6]_3 [22]),
         .O(\Q_reg[23] [13]));
   LUT5 #(
     .INIT(32'hF0F1F0E0)) 
@@ -5276,13 +5284,13 @@ module RegisterAdd__parameterized10
         .I3(\Q_reg[16] [0]),
         .I4(\Q_reg[25]_0 [6]),
         .O(\Q_reg[25] [4]));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[23]_i_1__7 
-       (.I0(\Data_array_SWR[6]_4 [2]),
+       (.I0(\Data_array_SWR[6]_3 [2]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [23]),
+        .I2(\Data_array_SWR[6]_3 [23]),
         .O(\Q_reg[23] [14]));
   LUT5 #(
     .INIT(32'hF0F1F0E0)) 
@@ -5297,89 +5305,89 @@ module RegisterAdd__parameterized10
   LUT5 #(
     .INIT(32'h000000B8)) 
     \Q[2]_i_1__12 
-       (.I0(\Data_array_SWR[6]_4 [21]),
+       (.I0(\Data_array_SWR[6]_3 [21]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [4]),
+        .I2(\Data_array_SWR[6]_3 [4]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
         .O(D[2]));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[2]_i_1__8 
-       (.I0(\Data_array_SWR[6]_4 [23]),
+       (.I0(\Data_array_SWR[6]_3 [23]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [2]),
+        .I2(\Data_array_SWR[6]_3 [2]),
         .O(\Q_reg[23] [1]));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[3]_i_1__7 
-       (.I0(\Data_array_SWR[6]_4 [22]),
+       (.I0(\Data_array_SWR[6]_3 [22]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [3]),
+        .I2(\Data_array_SWR[6]_3 [3]),
         .O(\Q_reg[23] [2]));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
-  LUT5 #(
-    .INIT(32'h000000B8)) 
-    \Q[3]_i_1__9 
-       (.I0(\Data_array_SWR[6]_4 [20]),
-        .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [5]),
-        .I3(UNDRFLW_FLAG_FRMT),
-        .I4(OVRFLW_FLAG_FRMT),
-        .O(D[3]));
   (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT5 #(
     .INIT(32'h000000B8)) 
-    \Q[4]_i_1__10 
-       (.I0(\Data_array_SWR[6]_4 [19]),
+    \Q[3]_i_1__9 
+       (.I0(\Data_array_SWR[6]_3 [20]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [6]),
+        .I2(\Data_array_SWR[6]_3 [5]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
-        .O(D[4]));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \Q[4]_i_1__8 
-       (.I0(\Data_array_SWR[6]_4 [21]),
-        .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [4]),
-        .O(\Q_reg[23] [3]));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \Q[5]_i_1__6 
-       (.I0(\Data_array_SWR[6]_4 [20]),
-        .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [5]),
-        .O(\Q_reg[23] [4]));
+        .O(D[3]));
   (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT5 #(
     .INIT(32'h000000B8)) 
-    \Q[5]_i_1__7 
-       (.I0(\Data_array_SWR[6]_4 [18]),
+    \Q[4]_i_1__10 
+       (.I0(\Data_array_SWR[6]_3 [19]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [7]),
+        .I2(\Data_array_SWR[6]_3 [6]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
-        .O(D[5]));
+        .O(D[4]));
   (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \Q[6]_i_1__9 
-       (.I0(\Data_array_SWR[6]_4 [19]),
+    \Q[4]_i_1__8 
+       (.I0(\Data_array_SWR[6]_3 [21]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [6]),
+        .I2(\Data_array_SWR[6]_3 [4]),
+        .O(\Q_reg[23] [3]));
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \Q[5]_i_1__6 
+       (.I0(\Data_array_SWR[6]_3 [20]),
+        .I1(Q[1]),
+        .I2(\Data_array_SWR[6]_3 [5]),
+        .O(\Q_reg[23] [4]));
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  LUT5 #(
+    .INIT(32'h000000B8)) 
+    \Q[5]_i_1__7 
+       (.I0(\Data_array_SWR[6]_3 [18]),
+        .I1(Q[1]),
+        .I2(\Data_array_SWR[6]_3 [7]),
+        .I3(UNDRFLW_FLAG_FRMT),
+        .I4(OVRFLW_FLAG_FRMT),
+        .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \Q[6]_i_1__9 
+       (.I0(\Data_array_SWR[6]_3 [19]),
+        .I1(Q[1]),
+        .I2(\Data_array_SWR[6]_3 [6]),
         .O(\Q_reg[23] [5]));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[7]_i_1__7 
-       (.I0(\Data_array_SWR[6]_4 [18]),
+       (.I0(\Data_array_SWR[6]_3 [18]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [7]),
+        .I2(\Data_array_SWR[6]_3 [7]),
         .O(\Q_reg[23] [6]));
   FDCE #(
     .INIT(1'b0)) 
@@ -5436,7 +5444,7 @@ module RegisterAdd__parameterized11
 
   wire CLK;
   wire [5:0]D;
-  wire [11:10]\Data_array_SWR[6]_4 ;
+  wire [11:10]\Data_array_SWR[6]_3 ;
   wire [0:0]E;
   wire [0:0]\FSM_sequential_state_reg_reg[1] ;
   wire OVRFLW_FLAG_FRMT;
@@ -5454,7 +5462,7 @@ module RegisterAdd__parameterized11
     \Q[10]_i_1__9 
        (.I0(\Q_reg[4] [3]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [10]),
+        .I2(\Data_array_SWR[6]_3 [10]),
         .O(\Q_reg[15] [2]));
   (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
@@ -5462,13 +5470,13 @@ module RegisterAdd__parameterized11
     \Q[11]_i_1__9 
        (.I0(\Q_reg[4] [2]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [11]),
+        .I2(\Data_array_SWR[6]_3 [11]),
         .O(\Q_reg[15] [3]));
   (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT5 #(
     .INIT(32'h000000B8)) 
     \Q[12]_i_1__9 
-       (.I0(\Data_array_SWR[6]_4 [11]),
+       (.I0(\Data_array_SWR[6]_3 [11]),
         .I1(Q[1]),
         .I2(\Q_reg[4] [2]),
         .I3(UNDRFLW_FLAG_FRMT),
@@ -5481,12 +5489,12 @@ module RegisterAdd__parameterized11
        (.I0(Q[0]),
         .I1(\Q_reg[4]_0 ),
         .I2(\Q_reg[0]_0 [1]),
-        .O(\Data_array_SWR[6]_4 [11]));
+        .O(\Data_array_SWR[6]_3 [11]));
   (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT5 #(
     .INIT(32'h000000B8)) 
     \Q[13]_i_1__7 
-       (.I0(\Data_array_SWR[6]_4 [10]),
+       (.I0(\Data_array_SWR[6]_3 [10]),
         .I1(Q[1]),
         .I2(\Q_reg[4] [3]),
         .I3(UNDRFLW_FLAG_FRMT),
@@ -5499,12 +5507,12 @@ module RegisterAdd__parameterized11
        (.I0(Q[0]),
         .I1(\Q_reg[4]_0 ),
         .I2(\Q_reg[0]_0 [0]),
-        .O(\Data_array_SWR[6]_4 [10]));
+        .O(\Data_array_SWR[6]_3 [10]));
   (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[14]_i_1__8 
-       (.I0(\Data_array_SWR[6]_4 [11]),
+       (.I0(\Data_array_SWR[6]_3 [11]),
         .I1(Q[1]),
         .I2(\Q_reg[4] [2]),
         .O(\Q_reg[15] [4]));
@@ -5512,7 +5520,7 @@ module RegisterAdd__parameterized11
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[15]_i_1__7 
-       (.I0(\Data_array_SWR[6]_4 [10]),
+       (.I0(\Data_array_SWR[6]_3 [10]),
         .I1(Q[1]),
         .I2(\Q_reg[4] [3]),
         .O(\Q_reg[15] [5]));
@@ -5547,7 +5555,7 @@ module RegisterAdd__parameterized11
     \Q[8]_i_1__9 
        (.I0(\Q_reg[4] [3]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [10]),
+        .I2(\Data_array_SWR[6]_3 [10]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
         .O(D[2]));
@@ -5566,7 +5574,7 @@ module RegisterAdd__parameterized11
     \Q[9]_i_1__9 
        (.I0(\Q_reg[4] [2]),
         .I1(Q[1]),
-        .I2(\Data_array_SWR[6]_4 [11]),
+        .I2(\Data_array_SWR[6]_3 [11]),
         .I3(UNDRFLW_FLAG_FRMT),
         .I4(OVRFLW_FLAG_FRMT),
         .O(D[3]));
@@ -7067,7 +7075,7 @@ module RegisterAdd__parameterized18
         .I4(\Q_reg[2]_0 ),
         .I5(\Q[1]_i_2__0_n_0 ),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT3 #(
     .INIT(8'h20)) 
     \Q[0]_i_2 
@@ -7114,7 +7122,7 @@ module RegisterAdd__parameterized18
         .I3(\Q_reg_n_0_[10] ),
         .I4(\Q_reg[22]_0 [8]),
         .O(\Q[10]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \Q[10]_i_3 
@@ -7123,7 +7131,7 @@ module RegisterAdd__parameterized18
         .I2(\Q_reg_n_0_[19] ),
         .I3(\Q_reg_n_0_[18] ),
         .O(\Q[10]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \Q[10]_i_4 
@@ -7188,6 +7196,7 @@ module RegisterAdd__parameterized18
         .I2(\Q_reg_n_0_[5] ),
         .I3(\Q_reg_n_0_[4] ),
         .O(\Q[12]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT5 #(
     .INIT(32'hFB3BC808)) 
     \Q[12]_i_2__0 
@@ -7197,7 +7206,7 @@ module RegisterAdd__parameterized18
         .I3(\Q_reg_n_0_[12] ),
         .I4(\Q_reg[22]_0 [10]),
         .O(\Q[12]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \Q[12]_i_3 
@@ -7206,7 +7215,7 @@ module RegisterAdd__parameterized18
         .I2(\Q_reg_n_0_[6] ),
         .I3(\Q_reg_n_0_[7] ),
         .O(\Q[12]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT5 #(
     .INIT(32'h00010000)) 
     \Q[12]_i_4 
@@ -7216,7 +7225,7 @@ module RegisterAdd__parameterized18
         .I3(\Q_reg_n_0_[11] ),
         .I4(\Q[12]_i_6_n_0 ),
         .O(\Q[12]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT5 #(
     .INIT(32'h00010000)) 
     \Q[12]_i_5 
@@ -7226,7 +7235,7 @@ module RegisterAdd__parameterized18
         .I3(\Q_reg_n_0_[21] ),
         .I4(\Q[12]_i_7_n_0 ),
         .O(\Q[12]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \Q[12]_i_6 
@@ -7253,7 +7262,6 @@ module RegisterAdd__parameterized18
         .I4(\Q_reg[2]_0 ),
         .I5(\Q[13]_i_2_n_0 ),
         .O(D[13]));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT5 #(
     .INIT(32'hFB3BC808)) 
     \Q[13]_i_2 
@@ -7387,7 +7395,7 @@ module RegisterAdd__parameterized18
         .I4(\Q_reg[2]_0 ),
         .I5(\Q[1]_i_2__0_n_0 ),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT4 #(
     .INIT(16'h8C80)) 
     \Q[1]_i_2__0 
@@ -7480,7 +7488,7 @@ module RegisterAdd__parameterized18
         .I2(\Q[24]_i_3_n_0 ),
         .I3(\Q_reg[1]_1 ),
         .O(D[24]));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT5 #(
     .INIT(32'hFB3BC808)) 
     \Q[24]_i_2 
@@ -7490,7 +7498,7 @@ module RegisterAdd__parameterized18
         .I3(\Q_reg_n_0_[24] ),
         .I4(\Q_reg[22]_0 [22]),
         .O(\Q[24]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT4 #(
     .INIT(16'hFB3B)) 
     \Q[24]_i_3 
@@ -7633,7 +7641,7 @@ module RegisterAdd__parameterized18
         .I4(\Q_reg_n_0_[24] ),
         .I5(\Q_reg_n_0_[25] ),
         .O(\Q_reg[12]_0 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \Q[8]_i_2 
@@ -7661,7 +7669,7 @@ module RegisterAdd__parameterized18
         .I4(\Q[8]_i_7_n_0 ),
         .I5(\Q[8]_i_8_n_0 ),
         .O(\Q[8]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT4 #(
     .INIT(16'hFEFF)) 
     \Q[8]_i_4 
@@ -7670,7 +7678,7 @@ module RegisterAdd__parameterized18
         .I2(\Q_reg_n_0_[13] ),
         .I3(\Q[8]_i_9_n_0 ),
         .O(\Q[8]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT5 #(
     .INIT(32'hBABBBABA)) 
     \Q[8]_i_5 
@@ -7680,7 +7688,7 @@ module RegisterAdd__parameterized18
         .I3(\Q_reg_n_0_[20] ),
         .I4(\Q_reg_n_0_[19] ),
         .O(\Q[8]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT4 #(
     .INIT(16'h00F2)) 
     \Q[8]_i_6 
@@ -7698,7 +7706,7 @@ module RegisterAdd__parameterized18
         .I3(\Q_reg[12]_1 ),
         .I4(\Q_reg_n_0_[3] ),
         .O(\Q[8]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT4 #(
     .INIT(16'hEFEE)) 
     \Q[8]_i_8 
@@ -7707,7 +7715,7 @@ module RegisterAdd__parameterized18
         .I2(\Q_reg_n_0_[11] ),
         .I3(\Q_reg_n_0_[10] ),
         .O(\Q[8]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT4 #(
     .INIT(16'hFF0B)) 
     \Q[8]_i_9 
@@ -7722,7 +7730,7 @@ module RegisterAdd__parameterized18
        (.I0(\Q_reg_n_0_[10] ),
         .I1(\Q_reg_n_0_[11] ),
         .O(\Q[9]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \Q[9]_i_11 
@@ -7749,7 +7757,7 @@ module RegisterAdd__parameterized18
         .I4(\Q[9]_i_4_n_0 ),
         .I5(\Q[9]_i_5_n_0 ),
         .O(\Q_reg[12]_0 [1]));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \Q[9]_i_2 
@@ -7781,7 +7789,7 @@ module RegisterAdd__parameterized18
        (.I0(\Q_reg_n_0_[18] ),
         .I1(\Q_reg_n_0_[19] ),
         .O(\Q[9]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \Q[9]_i_5 
@@ -7794,14 +7802,14 @@ module RegisterAdd__parameterized18
        (.I0(\Q_reg_n_0_[16] ),
         .I1(\Q_reg_n_0_[17] ),
         .O(\Q[9]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \Q[9]_i_7 
        (.I0(\Q_reg_n_0_[12] ),
         .I1(\Q_reg_n_0_[13] ),
         .O(\Q[9]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \Q[9]_i_8 
@@ -9505,11 +9513,11 @@ endmodule
 (* ORIG_REF_NAME = "RegisterAdd" *) 
 module RegisterAdd__parameterized9
    (D,
-    \Data_array_SWR[6]_4 ,
+    \Data_array_SWR[6]_3 ,
     \Q_reg[25]_0 ,
     \Q_reg[8]_0 ,
     \Q_reg[13]_0 ,
-    \Data_array_SWR[4]_5 ,
+    \Data_array_SWR[4]_4 ,
     Q,
     \Q_reg[4]_0 ,
     UNDRFLW_FLAG_FRMT,
@@ -9520,11 +9528,11 @@ module RegisterAdd__parameterized9
     CLK,
     \FSM_sequential_state_reg_reg[1] );
   output [2:0]D;
-  output [0:0]\Data_array_SWR[6]_4 ;
+  output [0:0]\Data_array_SWR[6]_3 ;
   output [4:0]\Q_reg[25]_0 ;
   output [11:0]\Q_reg[8]_0 ;
   output [7:0]\Q_reg[13]_0 ;
-  output [1:0]\Data_array_SWR[4]_5 ;
+  output [1:0]\Data_array_SWR[4]_4 ;
   input [1:0]Q;
   input [1:0]\Q_reg[4]_0 ;
   input UNDRFLW_FLAG_FRMT;
@@ -9538,9 +9546,9 @@ module RegisterAdd__parameterized9
   wire CLK;
   wire [2:0]D;
   wire [17:0]\Data_array_SWR[3]_0 ;
-  wire [1:0]\Data_array_SWR[4]_5 ;
-  wire [13:0]\Data_array_SWR[5]_3 ;
-  wire [0:0]\Data_array_SWR[6]_4 ;
+  wire [1:0]\Data_array_SWR[4]_4 ;
+  wire [13:0]\Data_array_SWR[5]_2 ;
+  wire [0:0]\Data_array_SWR[6]_3 ;
   wire [0:0]E;
   wire [0:0]\FSM_sequential_state_reg_reg[1] ;
   wire OVRFLW_FLAG_FRMT;
@@ -9553,13 +9561,13 @@ module RegisterAdd__parameterized9
   wire [11:0]\Q_reg[8]_0 ;
   wire UNDRFLW_FLAG_FRMT;
 
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT5 #(
     .INIT(32'hFF00B8B8)) 
     \Q[0]_i_1__13 
        (.I0(\Q_reg[8]_0 [10]),
         .I1(\Q_reg[4]_1 [2]),
-        .I2(\Data_array_SWR[5]_3 [0]),
+        .I2(\Data_array_SWR[5]_2 [0]),
         .I3(\Q_reg[4]_0 [1]),
         .I4(Q[1]),
         .O(\Q_reg[25]_0 [0]));
@@ -9579,15 +9587,15 @@ module RegisterAdd__parameterized9
         .I1(UNDRFLW_FLAG_FRMT),
         .I2(OVRFLW_FLAG_FRMT),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT5 #(
     .INIT(32'hF0BBF088)) 
     \Q[12]_i_1__8 
-       (.I0(\Data_array_SWR[5]_3 [13]),
+       (.I0(\Data_array_SWR[5]_2 [13]),
         .I1(Q[1]),
         .I2(Q[0]),
         .I3(\Q_reg[4]_1 [2]),
-        .I4(\Data_array_SWR[5]_3 [12]),
+        .I4(\Data_array_SWR[5]_2 [12]),
         .O(\Q_reg[25]_0 [1]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -9606,16 +9614,16 @@ module RegisterAdd__parameterized9
        (.I0(\Q_reg[13]_0 [0]),
         .I1(\Q_reg[4]_1 [0]),
         .I2(\Data_array_SWR[3]_0 [14]),
-        .O(\Data_array_SWR[4]_5 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+        .O(\Data_array_SWR[4]_4 [0]));
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT5 #(
     .INIT(32'hF0BBF088)) 
     \Q[13]_i_1__6 
-       (.I0(\Data_array_SWR[5]_3 [12]),
+       (.I0(\Data_array_SWR[5]_2 [12]),
         .I1(Q[1]),
         .I2(Q[0]),
         .I3(\Q_reg[4]_1 [2]),
-        .I4(\Data_array_SWR[5]_3 [13]),
+        .I4(\Data_array_SWR[5]_2 [13]),
         .O(\Q_reg[25]_0 [2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -9626,7 +9634,7 @@ module RegisterAdd__parameterized9
         .I3(\Data_array_SWR[3]_0 [16]),
         .I4(\Q_reg[4]_1 [0]),
         .I5(\Data_array_SWR[3]_0 [12]),
-        .O(\Data_array_SWR[5]_3 [12]));
+        .O(\Data_array_SWR[5]_2 [12]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \Q[13]_i_3 
@@ -9636,7 +9644,7 @@ module RegisterAdd__parameterized9
         .I3(\Data_array_SWR[3]_0 [17]),
         .I4(\Q_reg[4]_1 [0]),
         .I5(\Data_array_SWR[3]_0 [13]),
-        .O(\Data_array_SWR[5]_3 [13]));
+        .O(\Data_array_SWR[5]_2 [13]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \Q[13]_i_4 
@@ -9654,7 +9662,7 @@ module RegisterAdd__parameterized9
        (.I0(\Q_reg[13]_0 [1]),
         .I1(\Q_reg[4]_1 [0]),
         .I2(\Data_array_SWR[3]_0 [15]),
-        .O(\Data_array_SWR[4]_5 [1]));
+        .O(\Data_array_SWR[4]_4 [1]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \Q[16]_i_3 
@@ -9745,11 +9753,11 @@ module RegisterAdd__parameterized9
         .I4(\Q_reg[4]_1 [0]),
         .I5(\Data_array_SWR[3]_0 [2]),
         .O(\Q_reg[8]_0 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT5 #(
     .INIT(32'h000000B8)) 
     \Q[22]_i_1__8 
-       (.I0(\Data_array_SWR[6]_4 ),
+       (.I0(\Data_array_SWR[6]_3 ),
         .I1(Q[1]),
         .I2(\Q_reg[4]_0 [0]),
         .I3(UNDRFLW_FLAG_FRMT),
@@ -9760,8 +9768,8 @@ module RegisterAdd__parameterized9
     \Q[22]_i_2__0 
        (.I0(\Q_reg[8]_0 [11]),
         .I1(\Q_reg[4]_1 [2]),
-        .I2(\Data_array_SWR[5]_3 [1]),
-        .O(\Data_array_SWR[6]_4 ));
+        .I2(\Data_array_SWR[5]_2 [1]),
+        .O(\Data_array_SWR[6]_3 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \Q[22]_i_4 
@@ -9771,22 +9779,22 @@ module RegisterAdd__parameterized9
         .I3(\Data_array_SWR[3]_0 [5]),
         .I4(\Q_reg[4]_1 [0]),
         .I5(\Data_array_SWR[3]_0 [1]),
-        .O(\Data_array_SWR[5]_3 [1]));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+        .O(\Data_array_SWR[5]_2 [1]));
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Q[24]_i_1__8 
-       (.I0(\Data_array_SWR[6]_4 ),
+       (.I0(\Data_array_SWR[6]_3 ),
         .I1(Q[1]),
         .I2(\Q_reg[4]_0 [0]),
         .O(\Q_reg[25]_0 [3]));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \Q[25]_i_1__8 
        (.I0(\Q_reg[8]_0 [10]),
         .I1(\Q_reg[4]_1 [2]),
-        .I2(\Data_array_SWR[5]_3 [0]),
+        .I2(\Data_array_SWR[5]_2 [0]),
         .I3(Q[1]),
         .I4(\Q_reg[4]_0 [1]),
         .O(\Q_reg[25]_0 [4]));
@@ -9809,7 +9817,7 @@ module RegisterAdd__parameterized9
         .I3(\Data_array_SWR[3]_0 [4]),
         .I4(\Q_reg[4]_1 [0]),
         .I5(\Data_array_SWR[3]_0 [0]),
-        .O(\Data_array_SWR[5]_3 [0]));
+        .O(\Data_array_SWR[5]_2 [0]));
   FDCE #(
     .INIT(1'b0)) 
     \Q_reg[0] 
@@ -10217,7 +10225,7 @@ module Up_counter
   wire max_tick_iter;
   wire [3:0]p_0_in;
 
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \FSM_sequential_state_reg[2]_i_2 
@@ -10292,7 +10300,6 @@ module Up_counter
         .I3(Q[1]),
         .I4(\Q_reg[31]_3 [10]),
         .O(\Q_reg[31] [10]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
     .INIT(32'hFFFE0000)) 
     \Q[10]_i_1__2 
@@ -10584,7 +10591,7 @@ module Up_counter
         .I4(Q[1]),
         .I5(\Q_reg[31]_2 [19]),
         .O(D[19]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'hFFFF0001)) 
     \Q[19]_i_1__0 
@@ -10651,7 +10658,7 @@ module Up_counter
         .I4(Q[1]),
         .I5(\Q_reg[31]_2 [20]),
         .O(D[20]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
     .INIT(32'hFFFF0001)) 
     \Q[20]_i_1__0 
@@ -11044,6 +11051,7 @@ module Up_counter
         .I3(Q[1]),
         .I4(\Q_reg[31]_4 [30]),
         .O(\Q_reg[31]_0 [30]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hFFFE0000)) 
     \Q[30]_i_1__1 
@@ -11073,7 +11081,7 @@ module Up_counter
         .I3(Q[2]),
         .I4(\Q_reg[31]_4 [31]),
         .O(\Q_reg[31]_0 [31]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'hFFFE0000)) 
     \Q[31]_i_2__0 
@@ -11103,7 +11111,7 @@ module Up_counter
         .I3(Q[1]),
         .I4(\Q_reg[31]_3 [3]),
         .O(\Q_reg[31] [3]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'hFFFE0000)) 
     \Q[3]_i_1__1 
@@ -11299,7 +11307,7 @@ module Up_counter
         .I4(Q[1]),
         .I5(\Q_reg[31]_2 [9]),
         .O(D[9]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
     .INIT(32'hFFFE0000)) 
     \Q[9]_i_1__1 
@@ -11339,7 +11347,7 @@ module Up_counter
         .I1(Q[1]),
         .I2(Q[2]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \temp[3]_i_2 

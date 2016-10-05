@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_CORDIC_Arch3_time_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench_CORDIC_Arch3" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="2222750000fs"></ZoomStartTime>
+      <ZoomEndTime time="3171750001fs"></ZoomEndTime>
+      <Cursor1Time time="2670312000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="27" />
+   <wvobject type="logic" fp_name="/testbench_CORDIC_Arch3/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench_CORDIC_Arch3/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench_CORDIC_Arch3/beg_fsm_cordic">
+      <obj_property name="ElementShortName">beg_fsm_cordic</obj_property>
+      <obj_property name="ObjectShortName">beg_fsm_cordic</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench_CORDIC_Arch3/ack_cordic">
+      <obj_property name="ElementShortName">ack_cordic</obj_property>
+      <obj_property name="ObjectShortName">ack_cordic</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench_CORDIC_Arch3/operation">
+      <obj_property name="ElementShortName">operation</obj_property>
+      <obj_property name="ObjectShortName">operation</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/data_in">
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/data_in">
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+      <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/shift_region_flag">
+      <obj_property name="ElementShortName">shift_region_flag[1:0]</obj_property>
+      <obj_property name="ObjectShortName">shift_region_flag[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench_CORDIC_Arch3/ready_cordic">
+      <obj_property name="ElementShortName">ready_cordic</obj_property>
+      <obj_property name="ObjectShortName">ready_cordic</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/data_output">
+      <obj_property name="ElementShortName">data_output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_output[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench_CORDIC_Arch3/overflow_flag">
+      <obj_property name="ElementShortName">overflow_flag</obj_property>
+      <obj_property name="ObjectShortName">overflow_flag</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench_CORDIC_Arch3/underflow_flag">
+      <obj_property name="ElementShortName">underflow_flag</obj_property>
+      <obj_property name="ObjectShortName">underflow_flag</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench_CORDIC_Arch3/zero_flag">
+      <obj_property name="ElementShortName">zero_flag</obj_property>
+      <obj_property name="ObjectShortName">zero_flag</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench_CORDIC_Arch3/busy">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/Cont_CLK">
+      <obj_property name="ElementShortName">Cont_CLK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Cont_CLK[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/Recept">
+      <obj_property name="ElementShortName">Recept[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Recept[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/ITER_CONT/Q">
+      <obj_property name="ElementShortName">Q[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/VAR_CONT/cont_var_out">
+      <obj_property name="ElementShortName">cont_var_out[1:0]</obj_property>
+      <obj_property name="ObjectShortName">cont_var_out[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/ITER_CONT/max_tick_iter">
+      <obj_property name="ElementShortName">max_tick_iter</obj_property>
+      <obj_property name="ObjectShortName">max_tick_iter</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group246">
+      <obj_property name="label">X, Y y Z</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/d_ff4_Yn/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/d_ff4_Xn/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/d_ff4_Zn/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/d_ff4_Yn/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/d_ff4_Xn/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/d_ff4_Zn/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group248">
+      <obj_property name="label">Data_in</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_Z0/\FSM_sequential_state_reg_reg[1] ">
+         <obj_property name="ElementShortName">\FSM_sequential_state_reg_reg[1] [0:0]</obj_property>
+         <obj_property name="ObjectShortName">\FSM_sequential_state_reg_reg[1] [0:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_Z0/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+         <obj_property name="CustomSignalColor">#D2691E</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_Z0/D">
+         <obj_property name="ElementShortName">D[31:0]</obj_property>
+         <obj_property name="ObjectShortName">D[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group250">
+      <obj_property name="label">muxX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_val_muxX_2stage/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+         <obj_property name="CustomSignalColor">#D2691E</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_val_muxX_2stage/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group250">
+      <obj_property name="label">muxY</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_val_muxY_2stage/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+         <obj_property name="CustomSignalColor">#D2691E</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_val_muxY_2stage/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group250">
+      <obj_property name="label">muxZ</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_val_muxZ_2stage/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+         <obj_property name="CustomSignalColor">#D2691E</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_val_muxZ_2stage/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider258" type="divider">
+   </wvobject>
+   <wvobject type="group" fp_name="group261">
+      <obj_property name="label">shiftX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_shift_x/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+         <obj_property name="CustomSignalColor">#D2691E</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_shift_x/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group262">
+      <obj_property name="label">shiftY</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_shift_y/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+         <obj_property name="CustomSignalColor">#D2691E</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench_CORDIC_Arch3/inst_CORDIC_Arch3/reg_shift_y/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

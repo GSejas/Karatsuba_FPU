@@ -1,5 +1,0 @@
-Vivado Simulator 2016.2
-Time resolution is 1 ps
-WARNING: Too many words specified in data file LUT_sincos_32.txt
-WARNING: Too many words specified in data file LUT_sincos_32.txt
-$finish called at time : 2639565 ns : File "/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/tb_CORDIC_Arch3_single/imports/cordic_jorge/tb_CORDIC_Arch3.v" Line 154
