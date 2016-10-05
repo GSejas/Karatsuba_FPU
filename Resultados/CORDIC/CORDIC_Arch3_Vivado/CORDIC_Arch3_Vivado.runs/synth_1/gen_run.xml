@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1475614289">
-  <File Type="VDS-TIMING-PB" Name="CORDIC_Arch3_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="CORDIC_Arch3.tcl"/>
+  <File Type="RDS-RDS" Name="CORDIC_Arch3.vds"/>
   <File Type="VDS-TIMINGSUMMARY" Name="CORDIC_Arch3_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="CORDIC_Arch3_timing_summary_synth.pb"/>
   <File Type="RDS-DCP" Name="CORDIC_Arch3.dcp"/>
   <File Type="RDS-UTIL-PB" Name="CORDIC_Arch3_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="CORDIC_Arch3_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="CORDIC_Arch3_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="CORDIC_Arch3.vds"/>
-  <File Type="PA-TCL" Name="CORDIC_Arch3.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v">

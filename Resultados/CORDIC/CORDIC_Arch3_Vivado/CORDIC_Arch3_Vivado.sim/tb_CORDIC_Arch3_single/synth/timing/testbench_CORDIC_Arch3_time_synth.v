@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-// Date        : Tue Oct  4 14:59:00 2016
+// Date        : Tue Oct  4 19:47:45 2016
 // Host        : jorge-pc running 64-bit Ubuntu 16.04.1 LTS
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
 //               /home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.sim/tb_CORDIC_Arch3_single/synth/timing/testbench_CORDIC_Arch3_time_synth.v
