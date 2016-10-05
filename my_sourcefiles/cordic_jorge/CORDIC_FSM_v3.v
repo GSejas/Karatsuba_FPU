@@ -1,51 +1,50 @@
+//==================================================================================================
+//  Filename      : CORDIC_FSM_v3.v
+//  Created On    : 2016-10-03 15:59:21
+//  Last Modified : 2016-10-04 11:23:26
+//  Revision      :
+//  Author        : Jorge Sequeira Rojas
+//  Company       : Instituto Tecnologico de Costa Rica
+//  Email         : jsequeira@gmail.com
+//
+//  Description   : CORDIC's FSM Unit
+//
+//
+//==================================================================================================
 `timescale 1ns / 1ps
 
-module CORDIC_FSM_v2
+module CORDIC_FSM_v3
 (
-//Input Signals
-input wire clk,											//	Reloj del sitema.
-input wire reset,										//	Reset del sitema.
-input wire beg_FSM_CORDIC,								//	Señal de inicio de la maquina de estados.
-input wire ACK_FSM_CORDIC,								//	Señal proveniente del modulo que recibe el resultado, indicado que el dato ha sido recibido.
-input wire operation,									//	Señal que determina si lo que se requiere es realizar un coseno(1´b0) o seno (1'b1).
-input wire exception,
-input wire [1:0] shift_region_flag,						//	Señal que indica si el angulo a calcular se encuentra fuera del rango de calculo del algoritmo CORDIC.
-input wire [1:0] cont_var,								//	Señal que indica cual varible se va a calcular. Proveniente del contador de variables.
-input wire ready_add_subt,								//	Señal proveniente del módulo de suma/resta, indica que se ha terminado la operacion y que se puede disponer del resultado de dicho modulo.
-input wire max_tick_iter, min_tick_iter,				//	Señales que indican la maxima y minima cuenta, respectivamente, en el contador de iteraciones.
-input wire max_tick_var, min_tick_var,					//	Señales que indican la maxima y minima cuenta, respectivamente, en el contador de variables.
+  //Input Signals
+  input wire clk,											//	Reloj del sitema.
+  input wire reset,										//	Reset del sitema.
+  input wire beg_FSM_CORDIC,								//	Señal de inicio de la maquina de estados.
+  input wire ACK_FSM_CORDIC,								//	Señal proveniente del modulo que recibe el resultado, indicado que el dato ha sido recibido.
+  input wire exception,
+  input wire max_tick_iter, 			//	Señales que indican la maxima y minima cuenta, respectivamente, en el contador de iteraciones.
+  input wire max_tick_var, 				//	Señales que indican la maxima y minima cuenta, respectivamente, en el contador de variables.
+  input wire enab_dff_z,
 
-//Output Signals
-output reg reset_reg_cordic,
-output reg ready_CORDIC,								//	Señal que indica que el calculo CORDIC se ha terminado.
-output reg beg_add_subt,								//	Señal que indica al modulo de suma/resta que inicie su operacion.
-output reg ack_add_subt,								//	Señal que le indica al modulo de suma/resta que se ha recibido exitosamente el resultado que este entrega.
-output reg sel_mux_1, sel_mux_3,						//	Señales de seleccion de mux, la primera escoge el canal 0 si es la primera iteracion, en otro caso escoge el canal 1, y la segunda escoge cual variable (X o Y) debe aparecer a la salida.
-output reg [1:0] sel_mux_2,								//	Señal de seleccion de mux, que escoge entre X, Y o Z dependiendo de cual variable se deba calcular en ese momento.
-output reg enab_cont_iter, load_cont_iter,				//	Señales de habilitacion y carga, respectivamente, en el contador de iteraciones.
-output reg enab_cont_var,  load_cont_var,				//	Señales de habilitacion y carga, respectivamente, en el contador de variables.
-output reg enab_RB1, enab_RB2,							//	Señales de habilitacion para los registros de variables de entrada y para los valores de las variables despues de los primeros mux, respectivamente.
-output reg enab_d_ff_Xn, enab_d_ff_Yn, enab_d_ff_Zn,	//	Señales de habilitacion para los registros que guardan los resultados de cada variable en cada iteracion provenientes del modulo de suma/resta.
-output reg enab_d_ff_out,enab_dff_5,					//	Señales de habilitacion para los registros en la salida, el primero antes del cambio de signo y el segundo es el que se encuentra en la salida.
-output reg enab_RB3,
-output reg enab_reg_sel_mux1,enab_reg_sel_mux2,enab_reg_sel_mux3
+  //Output Signals
+
+  output reg reset_reg_cordic,
+  output reg ready_CORDIC,								//	Señal que indica que el calculo CORDIC se ha terminado.
+  output reg beg_add_subt,								//	Señal que indica al modulo de suma/resta que inicie su operacion.
+  output reg enab_cont_iter,				//	Señales de habilitacion y carga, respectivamente, en el contador de iteraciones.
+  output reg enab_cont_var,				//	Señales de habilitacion y carga, respectivamente, en el contador de variables.
+  output reg enab_RB1, enab_RB2, enab_RB3,
+  output reg enab_d_ff5_data_out
 );
 
 //symbolic state declaration
-localparam [3:0]    est0 = 1,
-                    est1 = 2,
-                    est2 = 3,
-                    est3 = 4,
-                    est4 = 5,
-                    est5 = 6,
+localparam [3:0]    est0 = 0,
+                    est1 = 1,
+                    est2 = 2,
+                    est3 = 3,
+                    est4 = 4,
+                    est5 = 5,
                     est6 = 6,
-                    est7 = 7,
-                    est8 = 8,
-                    est9 = 9,
-                    est10 = 10,
-                    est11 = 11,
-					est12 = 4'b1100,
-					est13 = 4'b1101;
+                    est7 = 7;
 
 
 //signal declaration
@@ -68,267 +67,100 @@ always @*
     state_next = state_reg; // default state : the same
 
     //declaration of default outputs.
-    ready_CORDIC = 1'b0;
-    beg_add_subt = 1'b0;
-    ack_add_subt = 1'b0;
-    sel_mux_1 = 1'b0;
-    sel_mux_2 = 2'b00;
-    sel_mux_3 = 1'b0;
-    enab_cont_iter = 1'b0;
-    load_cont_iter = 1'b0;
-    enab_cont_var = 1'b0;
-    load_cont_var = 1'b0;
-    enab_RB1 = 1'b0;
-    enab_RB2 = 1'b0;
-    enab_RB3 = 1'b0;
-    enab_d_ff_Xn = 1'b0;
-    enab_d_ff_Yn = 1'b0;
-    enab_d_ff_Zn = 1'b0;
-    enab_d_ff_out = 1'b0;
-    reset_reg_cordic = 1'b0;
-    enab_dff_5 = 1'b0;
-    enab_reg_sel_mux1 = 1'b0;
-    enab_reg_sel_mux2 = 1'b0;
-    enab_reg_sel_mux3 = 1'b0;
+    reset_reg_cordic = 0;
+    enab_RB1 = 0;
+    enab_RB2 = 0;
+    enab_RB3 = 0;
+    enab_cont_var  = 0;
+    enab_cont_iter = 0;
+    enab_d_ff5_data_out = 0;
+    ready_CORDIC = 0;
+    beg_add_subt = 0;
 
     case(state_reg)
+
     est0:
     begin
-			reset_reg_cordic = 1'b1;
-			enab_reg_sel_mux1 = 1'b1;
-      enab_reg_sel_mux2 = 1'b1;
-      enab_reg_sel_mux3 = 1'b1;
-      state_next = est1;
+      reset_reg_cordic = 1'b1;
+      if(beg_FSM_CORDIC) begin
+        state_next = est1;
+      end else begin
+        state_next = est0;
+      end
     end
 
 		est1:
-    begin
-			if(beg_FSM_CORDIC)
-			begin
-				state_next = est2;
-			end
-			else
-				state_next = est1;
-		end
-
-		est2:
 		begin
       enab_RB1 = 1'b1;
-      enab_cont_iter = 1'b1;
-      load_cont_iter = 1'b1;
-			state_next = est3;
+			state_next = est2;
 		end
+
+    est2:
+    begin
+      enab_RB2 = 1'b1;
+			if(exception) begin
+				state_next = est0;
+			end else begin
+				state_next = est3;
+      end
+    end
 
     est3:
     begin
-        if(min_tick_iter)
-          sel_mux_1 =	1'b0;
-        else
-        	sel_mux_1 = 1'b1;
-        enab_reg_sel_mux1 = 1'b1;
-			  state_next = est4;
+      enab_RB3 = 1'b1;
+			state_next = est4;
     end
 
-        est4:
-        begin
-    			if(exception)
-    				state_next = est0;
-    			else
-    				state_next = est5;
-            enab_RB2 = 1'b1;
-        end
-
-        est5:
-        begin
-          enab_RB3 = 1'b1;
-          enab_cont_var = 1'b1;
-          load_cont_var = 1'b1;
-    			state_next = est6;
-        end
-
-        est6: //Si nos encontramos en la última iteración, entonces escoger entre seno o coseno.
-        begin
-			if(max_tick_iter)
-			begin
-				if(operation == 1'b0)
-				begin
-					if(shift_region_flag == 2'b00)
-						sel_mux_2 = 2'b00;
-					else if(shift_region_flag == 2'b01)
-						sel_mux_2 = 2'b01;
-					else if(shift_region_flag == 2'b10)
-						sel_mux_2 = 2'b01;
-					else
-						sel_mux_2 = 2'b00;
-					enab_reg_sel_mux2 = 1'b1;
-				end
-
-				else
-				begin
-					if(shift_region_flag == 2'b00)
-						sel_mux_2 = 2'b01;
-					else if(shift_region_flag == 2'b01)
-						sel_mux_2 = 2'b00;
-					else if(shift_region_flag == 2'b10)
-						sel_mux_2 = 2'b00;
-					else
-						sel_mux_2 = 2'b01;
-					enab_reg_sel_mux2 = 1'b1;
-				end
-			end
-
-			else //De lo contrario, dejar que el valor del contador sea la entrada al contador
-
-        sel_mux_2 = cont_var;
-  			enab_reg_sel_mux2 = 1'b1;
-  			state_next = est7;
-        end
-
-        est7:
-        begin
-			beg_add_subt = 1'b1;
-			state_next = est8;
-        end
-
-        est8:
-        begin
-			if(ready_add_subt)
-			begin
-				if(max_tick_iter)
-  		  		begin
-
-             case ({operation,shift_region_flag})
-                3'b000 : begin
-                           enab_d_ff_Xn = 1'b1;
-                           enab_d_ff_Yn = 1'b0;
-                         end
-                3'b001 : begin
-                            enab_d_ff_Yn = 1'b1;
-                            enab_d_ff_Xn = 1'b0;
-                         end
-                3'b010 : begin
-                            enab_d_ff_Yn = 1'b1;
-                            enab_d_ff_Xn = 1'b0;
-                         end
-                3'b011 : begin
-                            enab_d_ff_Xn = 1'b1;
-                            enab_d_ff_Yn = 1'b0;
-                         end
-                3'b100 : begin
-                            enab_d_ff_Yn = 1'b1;
-                            enab_d_ff_Xn = 1'b0;
-                         end
-                3'b101 : begin
-                            enab_d_ff_Xn = 1'b1;
-                            enab_d_ff_Yn = 1'b0;
-                         end
-                3'b110 : begin
-                            enab_d_ff_Xn = 1'b1;
-                            enab_d_ff_Yn = 1'b0;
-                         end
-                3'b111 : begin
-                            enab_d_ff_Yn = 1'b1;
-                            enab_d_ff_Xn = 1'b0;
-                         end
-                default: begin
-                            enab_d_ff_Yn = 1'b0;
-                            enab_d_ff_Xn = 1'b0;
-                         end
-             endcase
-  				end
-				else
-  				begin
-  					if(min_tick_var)
-  						enab_d_ff_Xn = 1'b1;
-  					else if(max_tick_var)
-  						enab_d_ff_Zn = 1'b1;
-  					else
-  						enab_d_ff_Yn = 1'b1;
-  				end
-				state_next = est9;
-			end
-
-			else
-				state_next = est8;
-        end
-
-        est9:
-        begin
-  			ack_add_subt = 1'b1;
-  			if(max_tick_iter)
-  			begin
-  				state_next = est10;
-  			end
-  			else
-  			begin
-  				if(max_tick_var)
-  				begin
-  					enab_cont_iter = 1'b1;
-  					state_next = est3;
-  				end
-
-  				else
-  				begin
-  					enab_cont_var = 1'b1;
-  					state_next = est6;
-  				end
-  			end
-          end
-
-        est10:
-        begin
-			if(operation == 1'b0)
-			begin
-				if(shift_region_flag == 2'b00)
-					sel_mux_3 = 1'b0;
-				else if(shift_region_flag == 2'b01)
-					sel_mux_3 = 1'b1;
-				else if(shift_region_flag == 2'b10)
-					sel_mux_3 = 1'b1;
-				else
-					sel_mux_3 = 1'b0;
-				enab_reg_sel_mux3 = 1'b1;
-			end
-
-			else
-			begin
-				if(shift_region_flag == 2'b00)
-					sel_mux_3 = 1'b1;
-				else if(shift_region_flag == 2'b01)
-					sel_mux_3 = 1'b0;
-				else if(shift_region_flag == 2'b10)
-					sel_mux_3 = 1'b0;
-				else
-					sel_mux_3 = 1'b1;
-				enab_reg_sel_mux3 = 1'b1;
-			end
-
-			enab_reg_sel_mux3 = 1'b1;
-			state_next = est11;
-		end
-
-		est11:
-		begin
-			enab_dff_5 = 1'b1;
-			state_next = est12;
-		end
-
-		est12:
-		begin
-			enab_d_ff_out = 1'b1;
-			state_next = est13;
-		end
-
-		est13:
-		begin
-			ready_CORDIC = 1'b1;
-			if(ACK_FSM_CORDIC)
-				state_next = est0;
-			else
-				state_next = est13;
-		end
-
-        default : state_next = est0;
-        endcase
+    est4:
+    begin
+      enab_cont_var = 1'b1; //cont_var++
+      beg_add_subt = 1'b1;
+      if (max_tick_var) begin
+        state_next = est5;
+      end else begin
+        state_next = est4;
+      end
     end
+
+    est5:
+    begin
+      beg_add_subt = 1'b1;
+      if (enab_dff_z) begin
+        state_next = est6;
+      end else begin
+        state_next = est5;
+      end
+    end
+
+    est6:
+    begin
+      enab_cont_iter = 1'b1; //cont_iter++
+      enab_cont_var = 1'b1;  //Reset cont
+      if (max_tick_iter) begin
+        state_next = est7; //Es la ultima iteracion, por lo tanto, seguimos a la siguiente etapa
+        enab_d_ff5_data_out = 1;
+      end else begin
+        state_next = est2; //Seguir las iteraciones
+        //
+      end
+    end
+
+    est7:
+    begin
+      ready_CORDIC = 1'b1;
+      enab_d_ff5_data_out = 1'b1;
+      if(ACK_FSM_CORDIC) begin
+        state_next = est0;
+      end else begin
+        state_next = est7;
+      end
+    end
+
+    default :
+      begin
+        state_next = est0;
+      end
+
+    endcase
+  end
 endmodule

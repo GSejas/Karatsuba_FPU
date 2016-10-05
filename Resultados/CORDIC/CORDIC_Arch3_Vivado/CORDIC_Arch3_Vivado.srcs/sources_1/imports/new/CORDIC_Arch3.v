@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : CORDIC_Arch3.v
 //  Created On    : 2016-09-28 14:58:46
-//  Last Modified : 2016-09-28 15:00:17
+//  Last Modified : 2016-10-04 11:20:08
 //  Revision      :
 //  Author        : Jorge Sequeira Rojas
 //  Company       : Instituto Tecnologico de Costa Rica
@@ -29,18 +29,21 @@ input wire operation,                   //  Señal que indica si se realiza la o
 
 input wire [W-1:0] data_in,             //  Dato de entrada, contiene el angulo que se desea calcular en radianes.
 input wire [1:0] shift_region_flag,     //  Señal que indica si el ángulo a calcular esta fuera del rango de calculo del algoritmo CORDIC.
-input wire [1:0] r_mode,
+//input wire [1:0] r_mode,
 
 //Output Signals
 output wire ready_cordic,                // Señal de salida que indica que se ha completado el calculo del seno/coseno.
 output wire overflow_flag,                  //  Bandera de overflow de la operacion.
-output wire underflow_flag,                 //  Bandera de underflow de la operacion.
+output wire underflow_flag,
+output wire zero_flag,
+output wire busy,
 output wire [W-1:0] data_output          // Bus de datos con el valor final del angulo calculado.
+
 );
 
-localparam d_var = 0;                      //   Valor por defecto que se le carga al contador de variables.
-localparam d_iter = 0;                  //  Valor por defecto que se le carga al contador de iteraciones.
-//localparam mode = 1'b0;
+//localparam d_var = 0;                      //   Valor por defecto que se le carga al contador de variables.
+//localparam d_iter = 0;                  //  Valor por defecto que se le carga al contador de iteraciones.
+localparam mode = 1'b0;
 localparam iter_bits = 4;                  //Modificar valor para obtener diferente cantidad de iteraciones; ejem= 3=8iter, 4=16iter. etc
 
 wire [W-1:0] x0,y0;
@@ -84,13 +87,13 @@ wire enab_RB3;                                              //  Enable del regis
 wire enab_d_ff4_Xn, enab_d_ff4_Yn, enab_d_ff4_Zn;           //  Enable de los registros que guardan los datos provenientes del modulo de suma/resta.
 wire enab_d_ff5_data_out;                                   //  Enable del registo que guarda el valor de salida final, listo para enviarse al procesador.
 wire enab_cont_iter, enab_cont_var;                         //  Enable de los contadores de variable e iteracion
-wire load_cont_iter, load_cont_var;                         //  Señal de carga de un valor en los contadores de variable e iteraciones.
+//wire load_cont_iter, load_cont_var;                         //  Señal de carga de un valor en los contadores de variable e iteraciones.
 wire enab_dff_5;
 
 
 
 //SELECTION
-wire sel_mux_1, sel_mux_3;                                  //  Señales de seleccion provenientes de la maquina de estados.
+wire sel_mux_3;                                  //  Señales de seleccion provenientes de la maquina de estados.
 wire [1:0] sel_mux_2;                                       //  Señal de seleccion que se activa dependiendo de la variable que se este calculando.
 
 wire sel_mux_1_reg, sel_mux_3_reg;                          //  Señales de seleccion provenientes de la maquina de estados.
@@ -113,10 +116,10 @@ wire d_ff3_sign_out;                                        //  Salida del regis
 wire [1:0] cont_var_out;                                    //  Salida del contador que cuenta las variables calculadas.
 wire [W-1:0] mux_sal;                                       //  Salida del mux final para colocar en la salida el valor deseado.
 wire [W-1:0] data_output2;                                  //  Salida del registro antes del cambio de signo.
-wire [W-1:0] sign_inv_out;                                  //  Salida del modulo de inversion de signo, dependiendo de si se el angulo de entrada estaba fuera del rango de calculo del algoritmo CORDIC.
+wire [W-1:0] fmtted_Result;                                  //  Salida del modulo de inversion de signo, dependiendo de si se el angulo de entrada estaba fuera del rango de calculo del algoritmo CORDIC.
 wire min_tick_iter,max_tick_iter;                           //  Señales que indican cuando se ha alcanzado el valor mas bajo y masalto de cuenta, correspondientemente en el contador de iteraciones.
 wire min_tick_var,max_tick_var;                             //  Señales que indican cuando se ha alcanzado el valor mas bajo y masalto de cuenta, correspondientemente en el contador de variables.
-wire enab_reg_sel_mux1,enab_reg_sel_mux2,enab_reg_sel_mux3;
+//wire enab_reg_sel_mux1,enab_reg_sel_mux2,enab_reg_sel_mux3;
 wire ready_add_subt;                                        //  Señal que indica que se ha realizado la operacion de suma/resta en punto flotante.
 wire [W-1:0] result_add_subt;                               //  Dato de entrada, contiene el resultado del módulo de suma/resta.
 wire beg_add_subt;                                          //  Señal de salida que indica que se debe de iniciar el modulo de suma/resta.
@@ -129,183 +132,157 @@ wire [W-1:0] add_subt_dataB;                                //  Bus de datos hac
 //------------------------------------------------------------------------------------------------------------------------
 //FSM
 
-CORDIC_FSM_v2 cordic_FSM
-(
-.clk(clk),                                          //  Reloj del sitema.
-.reset(rst),                                        //  Reset del sitema.
-.beg_FSM_CORDIC(beg_fsm_cordic),                                //  Señal de inicio de la maquina de estados.
-.ACK_FSM_CORDIC(ack_cordic),                                //  Señal proveniente del modulo que recibe el resultado, indicado que el dato ha sido recibido.
-.operation(d_ff1_operation_out),                                    //  Señal que determina si lo que se requiere es realizar un coseno(1´b0) o seno (1'b1).
-.exception(1'b0),
-.shift_region_flag(d_ff1_shift_region_flag_out),                        //  Señal que indica si el angulo a calcular se encuentra fuera del rango de calculo del algoritmo CORDIC.
-.cont_var(cont_var_out),                                //  Señal que indica cual varible se va a calcular. Proveniente del contador de variables.
-.ready_add_subt(ready_add_subt),                                //  Señal proveniente del módulo de suma/resta, indica que se ha terminado la operacion y que se puede disponer del resultado de dicho modulo.
-.max_tick_iter(max_tick_iter),
-.min_tick_iter(min_tick_iter),              //  Señales que indican la maxima y minima cuenta, respectivamente, en el contador de iteraciones.
-.max_tick_var(max_tick_var),
-.min_tick_var(min_tick_var),                    //  Señales que indican la maxima y minima cuenta, respectivamente, en el contador de variables.
 
-//Output Signals
-.reset_reg_cordic(reset_reg_cordic),
-.ready_CORDIC(ready_cordic),                                //  Señal que indica que el calculo CORDIC se ha terminado.
-.beg_add_subt(beg_add_subt),                                //  Señal que indica al modulo de suma/resta que inicie su operacion.
-.ack_add_subt(ack_add_subt),                                //  Señal que le indica al modulo de suma/resta que se ha recibido exitosamente el resultado que este entrega.
-.sel_mux_1(sel_mux_1),
-.sel_mux_3(sel_mux_3),                      //  Señales de seleccion de mux, la primera escoge el canal 0 si es la primera iteracion, en otro caso escoge el canal 1, y la segunda escoge cual variable (X o Y) debe aparecer a la salida.
-.sel_mux_2(sel_mux_2),                              //  Señal de seleccion de mux, que escoge entre X, Y o Z dependiendo de cual variable se deba calcular en ese momento.
-.enab_cont_iter(enab_cont_iter),
-.load_cont_iter(load_cont_iter),                //  Señales de habilitacion y carga, respectivamente, en el contador de iteraciones.
-.enab_cont_var(enab_cont_var),
-.load_cont_var(load_cont_var),              //  Señales de habilitacion y carga, respectivamente, en el contador de variables.
-.enab_RB1(enab_d_ff_RB1),
-.enab_RB2(enab_d_ff2_RB2),                          //  Señales de habilitacion para los registros de variables de entrada y para los valores de las variables despues de los primeros mux, respectivamente.
-.enab_d_ff_Xn(enab_d_ff4_Xn),
-.enab_d_ff_Yn(enab_d_ff4_Yn),
-.enab_d_ff_Zn(enab_d_ff4_Zn),   //  Señales de habilitacion para los registros que guardan los resultados de cada variable en cada iteracion provenientes del modulo de suma/resta.
-.enab_d_ff_out(enab_d_ff5_data_out),
-.enab_dff_5(enab_dff_5),                    //  Señales de habilitacion para los registros en la salida, el primero antes del cambio de signo y el segundo es el que se encuentra en la salida.
-.enab_RB3(enab_RB3),                    //  Señales de habilitacion para los registros  que guardan los valores provenientes de la look-up table y del signo, respectivamente.
-.enab_reg_sel_mux1(enab_reg_sel_mux1),
-.enab_reg_sel_mux2(enab_reg_sel_mux2),
-.enab_reg_sel_mux3(enab_reg_sel_mux3)
-);
+    CORDIC_FSM_v3 inst_CORDIC_FSM_v3
+        (
+            .clk                 (clk),
+            .reset               (rst),
+            .beg_FSM_CORDIC      (beg_fsm_cordic),
+            .ACK_FSM_CORDIC      (ack_cordic),
+            .exception           (1'b0),
+            .max_tick_iter       (max_tick_iter),
+            .max_tick_var        (max_tick_var),
+            .enab_dff_z          (enab_d_ff4_Zn),
+            .reset_reg_cordic    (reset_reg_cordic),
+            .ready_CORDIC        (ready_cordic),
+            .beg_add_subt        (beg_add_subt),
+            .enab_cont_iter      (enab_cont_iter),
+            .enab_cont_var       (enab_cont_var),
+            .enab_RB1            (enab_d_ff_RB1),
+            .enab_RB2            (enab_d_ff2_RB2),
+            .enab_RB3            (enab_RB3),
+            .enab_d_ff5_data_out (enab_d_ff5_data_out)
+        );
 
-counter_d #(.W(iter_bits)) cont_iter
-(
-.clk(clk),
-.rst(reset_reg_cordic),
-.load(load_cont_iter),
-.enable(enab_cont_iter),
-.d(d_iter),
-.max_tick(max_tick_iter),
-.min_tick(min_tick_iter),
-.q(cont_iter_out)
-);
 
-counter_up #(.W(2)) cont_var
-(
-.clk(clk),
-.rst(reset_reg_cordic),
-.load(load_cont_var),
-.enable(enab_cont_var),
-.d(d_var),
-.max_tick(max_tick_var),
-.min_tick(min_tick_var),
-.q(cont_var_out)
-);
+  Up_counter #(.COUNTER_WIDTH(iter_bits)
+    ) ITER_CONT (
+      .clk        (clk),
+      .rst        (reset_reg_cordic),
+      .enable     (enab_cont_iter),
+      .c_output_W (cont_iter_out)
+    );
+
+    assign max_tick_iter = (cont_iter_out == ((2**iter_bits)-1)) ? 1'b1 : 1'b0;
+    assign min_tick_iter = (cont_iter_out == 0) ? 1'b1 : 1'b0;
+
+//Son dos, ya que son 3 variables a ser operadas por el FPADD
+
+  Up_counter #(.COUNTER_WIDTH(2)
+    ) VAR_CONT (
+      .clk        (clk),
+      .rst        (rst),
+      .enable     (ready_add_subt|enab_cont_var),
+      .c_output_W (cont_var_out)
+    );
+
+    assign max_tick_var = (cont_var_out == 2**2-1) ? 1'b1 : 1'b0;
+
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 //Primera Etapa:  Registros que guardan los valores iniciales.
 
-d_ff_en # (.W(1)) reg_operation
-(
-.clk(clk),//system clock
-.rst(reset_reg_cordic), //system reset
-.enable(enab_d_ff_RB1), //load signal
-.D(operation), //input signal
-.Q(d_ff1_operation_out) //output signal
-);
+        d_ff_en # (.W(1)) reg_operation
+        (
+        .clk(clk),//system clock
+        .rst(reset_reg_cordic), //system reset
+        .enable(enab_d_ff_RB1), //load signal
+        .D(operation), //input signal
+        .Q(d_ff1_operation_out) //output signal
+        );
 
-d_ff_en # (.W(2)) reg_region_flag
-(
-.clk(clk),//system clock
-.rst(reset_reg_cordic), //system reset
-.enable(enab_d_ff_RB1), //load signal
-.D(shift_region_flag), //input signal
-.Q(d_ff1_shift_region_flag_out) //output signal
-);
+        d_ff_en # (.W(2)) reg_region_flag
+        (
+        .clk(clk),//system clock
+        .rst(reset_reg_cordic), //system reset
+        .enable(enab_d_ff_RB1), //load signal
+        .D(shift_region_flag), //input signal
+        .Q(d_ff1_shift_region_flag_out) //output signal
+        );
 
-d_ff_en # (.W(W)) reg_Z0
-(
-.clk(clk),//system clock
-.rst(reset_reg_cordic), //system reset
-.enable(enab_d_ff_RB1), //load signal
-.D(data_in), //input signal
-.Q(d_ff1_Z) //output signal
-);
+        d_ff_en # (.W(W)) reg_Z0
+        (
+        .clk(clk),//system clock
+        .rst(reset_reg_cordic), //system reset
+        .enable(enab_d_ff_RB1), //load signal
+        .D(data_in), //input signal
+        .Q(d_ff1_Z) //output signal
+        );
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 //Segunda Etapa : Registros que guardan el canal elegido para el mux, asi como los mux.
 
-d_ff_en # (.W(1)) reg_ch_mux_1
-(
-.clk(clk),//system clock
-.rst(reset_reg_cordic), //system reset
-.enable(enab_reg_sel_mux1), //load signal
-.D(sel_mux_1), //input signal
-.Q(sel_mux_1_reg) //output signal
-);
 
-Mux_2x1 #(.W(W)) mux1_x0
-(
-.select(sel_mux_1_reg),
-.ch_0(x0),
-.ch_1(d_ff_Xn),
-.data_out(first_mux_X)
-);
+        Mux_2x1 #(.W(W)) mux1_x0
+        (
+        .select(~min_tick_iter),
+        .ch_0(x0),
+        .ch_1(d_ff_Xn),
+        .data_out(first_mux_X)
+        );
 
-Mux_2x1 #(.W(W)) mux1_y0
-(
-.select(sel_mux_1_reg),
-.ch_0(y0),
-.ch_1(d_ff_Yn),
-.data_out(first_mux_Y)
-);
+        Mux_2x1 #(.W(W)) mux1_y0
+        (
+        .select(~min_tick_iter),
+        .ch_0(y0),
+        .ch_1(d_ff_Yn),
+        .data_out(first_mux_Y)
+        );
 
-Mux_2x1 #(.W(W)) mux1_z0
-(
-.select(sel_mux_1_reg),
-.ch_0(d_ff1_Z),
-.ch_1(d_ff_Zn),
-.data_out(first_mux_Z)
-);
+        Mux_2x1 #(.W(W)) mux1_z0
+        (
+        .select(~min_tick_iter),
+        .ch_0(d_ff1_Z),
+        .ch_1(d_ff_Zn),
+        .data_out(first_mux_Z)
+        );
 
 //----------------------------------------------------------------------------------------------------------------------
 //Tercera Etapa: Registros que guardan los datos provenientes de los mux.
 
-d_ff_en # (.W(W)) reg_val_muxX_2stage
-(
-.clk(clk),//system clock
-.rst(reset_reg_cordic), //system reset
-.enable(enab_d_ff2_RB2), //load signal
-.D(first_mux_X), //input signal
-.Q(d_ff2_X) //output signal
-);
+        d_ff_en # (.W(W)) reg_val_muxX_2stage
+        (
+        .clk(clk),//system clock
+        .rst(reset_reg_cordic), //system reset
+        .enable(enab_d_ff2_RB2), //load signal
+        .D(first_mux_X), //input signal
+        .Q(d_ff2_X) //output signal
+        );
 
-d_ff_en # (.W(W)) reg_val_muxY_2stage
-(
-.clk(clk),//system clock
-.rst(reset_reg_cordic), //system reset
-.enable(enab_d_ff2_RB2), //load signal
-.D(first_mux_Y), //input signal
-.Q(d_ff2_Y) //output signal
-);
+        d_ff_en # (.W(W)) reg_val_muxY_2stage
+        (
+        .clk(clk),//system clock
+        .rst(reset_reg_cordic), //system reset
+        .enable(enab_d_ff2_RB2), //load signal
+        .D(first_mux_Y), //input signal
+        .Q(d_ff2_Y) //output signal
+        );
 
-d_ff_en # (.W(W)) reg_val_muxZ_2stage
-(
-.clk(clk),//system clock
-.rst(reset_reg_cordic), //system reset
-.enable(enab_d_ff2_RB2), //load signal
-.D(first_mux_Z), //input signal
-.Q(d_ff2_Z) //output signal
-);
+        d_ff_en # (.W(W)) reg_val_muxZ_2stage
+        (
+        .clk(clk),//system clock
+        .rst(reset_reg_cordic), //system reset
+        .enable(enab_d_ff2_RB2), //load signal
+        .D(first_mux_Z), //input signal
+        .Q(d_ff2_Z) //output signal
+        );
 
 //----------------------------------------------------------------------------------------------------------------------
 //Cuarta Etapa : Restadores para el corrimiento del exponente de X y Y, Lookup-Table y mux de signo dependiendo del modo.
 
-Simple_Subt #(.W(EW),.N(iter_bits)) shift_x
-(
-.A(d_ff2_X[W-2:SW]),
-.B(cont_iter_out),
-.Y(sh_exp_x)
-);
+        Simple_Subt #(.W(EW),.N(iter_bits)) shift_x
+        (
+        .A(d_ff2_X[W-2:SW]),
+        .B(cont_iter_out),
+        .Y(sh_exp_x)
+        );
 
-Simple_Subt #(.W(EW),.N(iter_bits)) shift_y
-(
-.A(d_ff2_Y[W-2:SW]),
-.B(cont_iter_out),
-.Y(sh_exp_y)
-);
+        Simple_Subt #(.W(EW),.N(iter_bits)) shift_y
+        (
+        .A(d_ff2_Y[W-2:SW]),
+        .B(cont_iter_out),
+        .Y(sh_exp_y)
+        );
 
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -340,184 +317,178 @@ endgenerate
 
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Mux_2x1 #(.W(1)) mux_sign
-(
-.select(mode),
-.ch_0(d_ff2_Z[W-1]),
-.ch_1(d_ff2_Y[W-1]),
-.data_out(sign)
-);
+        Mux_2x1 #(.W(1)) mux_sign
+        (
+        .select(mode),
+        .ch_0(d_ff2_Z[W-1]),
+        .ch_1(d_ff2_Y[W-1]),
+        .data_out(sign)
+        );
 
 //-------------------------------------------------------------------------------------------------------------------------
 //Quinta Etapa : Registros que guardan los datos provenientes de la etapa anterior.
 
-d_ff_en # (.W(W)) reg_shift_x
-(
-.clk(clk),//system clock
-.rst(reset_reg_cordic), //system reset
-.enable(enab_RB3), //load signal
-.D({d_ff2_X[W-1],sh_exp_x,d_ff2_X[SW-1:0]}), //input signal
-.Q(d_ff3_sh_x_out) //output signal
-);
+        d_ff_en # (.W(W)) reg_shift_x
+        (
+        .clk(clk),//system clock
+        .rst(reset_reg_cordic), //system reset
+        .enable(enab_RB3), //load signal
+        .D({d_ff2_X[W-1],sh_exp_x,d_ff2_X[SW-1:0]}), //input signal
+        .Q(d_ff3_sh_x_out) //output signal
+        );
 
-d_ff_en # (.W(W)) reg_shift_y
-(
-.clk(clk),//system clock
-.rst(reset_reg_cordic), //system reset
-.enable(enab_RB3), //load signal
-.D({d_ff2_Y[W-1],sh_exp_y,d_ff2_Y[SW-1:0]}), //input signal
-.Q(d_ff3_sh_y_out) //output signal
-);
+        d_ff_en # (.W(W)) reg_shift_y
+        (
+        .clk(clk),//system clock
+        .rst(reset_reg_cordic), //system reset
+        .enable(enab_RB3), //load signal
+        .D({d_ff2_Y[W-1],sh_exp_y,d_ff2_Y[SW-1:0]}), //input signal
+        .Q(d_ff3_sh_y_out) //output signal
+        );
 
-d_ff_en # (.W(W)) reg_LUT
-(
-.clk(clk),//system clock
-.rst(reset_reg_cordic), //system reset
-.enable(enab_RB3), //load signal
-.D(data_out_LUT), //input signal
-.Q(d_ff3_LUT_out) //output signal
-);
+        d_ff_en # (.W(W)) reg_LUT
+        (
+        .clk(clk),//system clock
+        .rst(reset_reg_cordic), //system reset
+        .enable(enab_RB3), //load signal
+        .D(data_out_LUT), //input signal
+        .Q(d_ff3_LUT_out) //output signal
+        );
 
-d_ff_en # (.W(1)) reg_sign
-(
-.clk(clk),//system clock
-.rst(reset_reg_cordic), //system reset
-.enable(enab_RB3), //load signal
-.D(sign), //input signal
-.Q(d_ff3_sign_out) //output signal
-);
+        d_ff_en # (.W(1)) reg_sign
+        (
+        .clk(clk),//system clock
+        .rst(reset_reg_cordic), //system reset
+        .enable(enab_RB3), //load signal
+        .D(sign), //input signal
+        .Q(d_ff3_sign_out) //output signal
+        );
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 //Sexta Etapa : Mux de 3 canales que se activan dependiendo de la variable a calcular.
 
-d_ff_en # (.W(2)) reg_ch_mux_2
-(
-.clk(clk),//system clock
-.rst(reset_reg_cordic), //system reset
-.enable(enab_reg_sel_mux2), //load signal
-.D(sel_mux_2), //input signal
-.Q(sel_mux_2_reg) //output signal
-);
 
-Mux_3x1_b #(.W(W)) mux_3x1_var1
-(
-.select(sel_mux_2_reg),
-.ch_0(d_ff2_X),
-.ch_1(d_ff2_Y),
-.ch_2(d_ff2_Z),
-.data_out(add_subt_dataA)
-);
+    Mux_3x1_bv2 #(.W(W)) mux_3x1_var1
+    (
+        .select(cont_var_out),
+        .ch_0(d_ff2_X),
+        .ch_1(d_ff2_Y),
+        .ch_2(d_ff2_Z),
+        .data_out(add_subt_dataA)
+    );
 
-Mux_3x1_b #(.W(W)) mux_3x1_var2
-(
-.select(sel_mux_2_reg),
-.ch_0(d_ff3_sh_y_out),
-.ch_1(d_ff3_sh_x_out),
-.ch_2(d_ff3_LUT_out),
-.data_out(add_subt_dataB)
-);
+    Mux_3x1_bv2 #(.W(W)) mux_3x1_var2
+    (
+        .select(cont_var_out),
+        .ch_0(d_ff3_sh_y_out),
+        .ch_1(d_ff3_sh_x_out),
+        .ch_2(d_ff3_LUT_out),
+        .data_out(add_subt_dataB)
+    );
 
-Op_Select   op_select_mod
-(
-.variable(cont_var_out[0]),
-.sign(d_ff3_sign_out),
-.operation(op_add_subt)
-);
+    PriorityEncoder_CORDIC inst_PriorityEncoder_CORDIC (
+        .enable(ready_add_subt),
+        .Data_i(cont_var_out),
+        .Data_o({enab_d_ff4_Zn,enab_d_ff4_Yn,enab_d_ff4_Xn})
+        );
+
+    Op_Select   op_select_mod
+    (
+        .variable(~cont_var_out[0]),
+        .sign(d_ff3_sign_out),
+        .operation(op_add_subt)
+    );
 
 //--------------------------------------------------------------------------------------------------------------------------------
 //Septima Etapa : Instanciamiento del módulo de suma y resta.
 
-FPU_Add_Subtract_Function   #(.W(W),.EW(EW),.SW(SW),.SWR(SWR),.EWR(EWR)) add_subt_module
-(
-.clk(clk),
-.rst(rst),
-.beg_FSM(beg_add_subt),
-.ack_FSM(ack_add_subt),
-.Data_X(add_subt_dataA),
-.Data_Y(add_subt_dataB),
-.add_subt(op_add_subt),
-.r_mode(r_mode),
-.overflow_flag(overflow_flag),
-.underflow_flag(underflow_flag),
-.ready(ready_add_subt),
-.final_result_ieee(result_add_subt)
-);
+
+    FPU_PIPELINED_FPADDSUB #(
+            .W(W),
+            .EW(EW),
+            .SW(SW),
+            .SWR(SWR),
+            .EWR(EWR)
+        ) inst_FPU_PIPELINED_FPADDSUB (
+            .clk               (clk),
+            .rst               (rst|enab_cont_iter),
+           // .beg_OP            (enab_cont_var),
+            .beg_OP            (beg_add_subt),
+            .Data_X            (add_subt_dataA),
+            .Data_Y            (add_subt_dataB),
+            .add_subt          (op_add_subt),
+            .busy              (busy),
+            .overflow_flag     (overflow_flag),
+            .underflow_flag    (underflow_flag),
+            .zero_flag         (zero_flag),
+            .ready             (ready_add_subt),
+            .final_result_ieee (result_add_subt)
+        );
+
 
 //-------------------------------------------------------------------------------------------------------------------------------
 //Octava Etapa: Registros que guardan los valores de calculo del modulo de suma y resta.
 
-d_ff_en #(.W(W)) d_ff4_Xn
-(
-.clk(clk),
-.rst(reset_reg_cordic),
-.enable(enab_d_ff4_Xn),
-.D(result_add_subt),
-.Q(d_ff_Xn)
-);
+    d_ff_en #(.W(W)) d_ff4_Xn
+    (
+    .clk(clk),
+    .rst(reset_reg_cordic),
+    .enable(enab_d_ff4_Xn),
+    .D(result_add_subt),
+    .Q(d_ff_Xn)
+    );
 
-d_ff_en #(.W(W)) d_ff4_Yn
-(
-.clk(clk),
-.rst(reset_reg_cordic),
-.enable(enab_d_ff4_Yn),
-.D(result_add_subt),
-.Q(d_ff_Yn)
-);
+    d_ff_en #(.W(W)) d_ff4_Yn
+    (
+    .clk(clk),
+    .rst(reset_reg_cordic),
+    .enable(enab_d_ff4_Yn),
+    .D(result_add_subt),
+    .Q(d_ff_Yn)
+    );
 
-d_ff_en #(.W(W)) d_ff4_Zn
-(
-.clk(clk),
-.rst(reset_reg_cordic),
-.enable(enab_d_ff4_Zn),
-.D(result_add_subt),
-.Q(d_ff_Zn)
-);
+    d_ff_en #(.W(W)) d_ff4_Zn
+    (
+    .clk(clk),
+    .rst(reset_reg_cordic),
+    .enable(enab_d_ff4_Zn),
+    .D(result_add_subt),
+    .Q(d_ff_Zn)
+    );
 
 //--------------------------------------------------------------------------------------------------------------------------------
 //Novena Etapa: Mux de selección del valor de salida, así como el modulo de correccion de signo y los registros intermedios que
 //guardan los datos de salida.
 
-d_ff_en #(.W(1)) reg_ch_mux_3
-(
-.clk(clk),
-.rst(reset_reg_cordic),
-.enable(enab_reg_sel_mux3),
-.D(sel_mux_3),
-.Q(sel_mux_3_reg)
-);
+//Aca se decodifica el signo del resultado final
+//y ademas se decodifica cual resultado vamos a escoger.
 
-Mux_2x1 #(.W(W)) mux_2x1_sal
-(
-.select(sel_mux_3_reg),
-.ch_0(d_ff_Xn),
-.ch_1(d_ff_Yn),
-.data_out(mux_sal)
-);
+    Mux_2x1     #(
+        .W(W)
+        ) mux_2x1_sal (
+            .select   (sel_mux_3),
+            .ch_0     (d_ff_Xn),
+            .ch_1     (d_ff_Yn),
+            .data_out (mux_sal)
+        );
 
-d_ff_en #(.W(W)) d_ff5
-(
-.clk(clk),
-.rst(reset_reg_cordic),
-.enable(enab_dff_5),
-.D(mux_sal),
-.Q(data_output2)
-);
+    DECO_CORDIC_EXT #(
+            .W(W)
+        ) inst_DECO_CORDIC_EXT (
+            .data_i            (mux_sal),
+            .operation         (d_ff1_operation_out),
+            .shift_region_flag (d_ff1_shift_region_flag_out),
+            .sel_mux_3         (sel_mux_3),
+            .data_out          (fmtted_Result)
+        );
 
-sign_inverter #(.W(W)) sign_inverter_mod
-(
-.data(data_output2),
-.shift_region_flag(d_ff1_shift_region_flag_out),
-.operation(d_ff1_operation_out),
-.data_out(sign_inv_out)
-);
-
-d_ff_en #(.W(W)) d_ff5_data_out
-(
-.clk(clk),
-.rst(reset_reg_cordic),
-.enable(enab_d_ff5_data_out),
-.D(sign_inv_out),
-.Q(data_output)
-);
+    d_ff_en #(.W(W)) d_ff5_data_out
+    (
+    .clk(clk),
+    .rst(reset_reg_cordic),
+    .enable(enab_d_ff5_data_out),
+    .D(fmtted_Result),
+    .Q(data_output)
+    );
 
 endmodule

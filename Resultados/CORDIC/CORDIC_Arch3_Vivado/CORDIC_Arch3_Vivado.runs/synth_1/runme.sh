@@ -7,9 +7,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/opt/Xilinx/SDK/2016.2/bin:/opt/Xilinx/Vivado/2016.2/ids_lite/ISE/bin/lin64:/opt/Xilinx/Vivado/2016.2/bin
+  PATH=/opt/Xilinx/Vivado/2016.2/ids_lite/ISE/bin/lin64:/opt/Xilinx/Vivado/2016.2/bin
 else
-  PATH=/opt/Xilinx/SDK/2016.2/bin:/opt/Xilinx/Vivado/2016.2/ids_lite/ISE/bin/lin64:/opt/Xilinx/Vivado/2016.2/bin:$PATH
+  PATH=/opt/Xilinx/Vivado/2016.2/ids_lite/ISE/bin/lin64:/opt/Xilinx/Vivado/2016.2/bin:$PATH
 fi
 export PATH
 
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log CORDIC_Arch2.vds -m64 -mode batch -messageDb vivado.pb -notrace -source CORDIC_Arch2.tcl
+EAStep vivado -log CORDIC_Arch3.vds -m64 -mode batch -messageDb vivado.pb -notrace -source CORDIC_Arch3.tcl

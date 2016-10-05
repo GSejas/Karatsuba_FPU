@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : CORDIC_Arch3.v
 //  Created On    : 2016-09-28 14:58:46
-//  Last Modified : 2016-10-02 00:12:49
+//  Last Modified : 2016-10-02 10:25:58
 //  Revision      :
 //  Author        : Jorge Sequeira Rojas
 //  Company       : Instituto Tecnologico de Costa Rica
@@ -193,6 +193,8 @@ counter_d #(.W(iter_bits)) cont_iter
     );
 
     max_tick_var = (c_output_W == 3);
+
+
 
 // counter_up #(.W(2)) cont_var
 // (

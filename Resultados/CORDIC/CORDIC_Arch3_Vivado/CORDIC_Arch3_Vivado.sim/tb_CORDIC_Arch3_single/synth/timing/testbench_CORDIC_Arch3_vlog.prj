@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "testbench_CORDIC_Arch3_time_synth.v" -d "SINGLE=1"
+verilog xil_defaultlib  "../../../../CORDIC_Arch3_Vivado.srcs/tb_CORDIC_Arch3_single/imports/new/Testbench_FPU_Add_Subt.v" -d "SINGLE=1"
+verilog xil_defaultlib  "../../../../CORDIC_Arch3_Vivado.srcs/tb_CORDIC_Arch3_single/imports/cordic_jorge/tb_CORDIC_Arch3.v" -d "SINGLE=1"
+
+# Do not sort compile order
+nosort

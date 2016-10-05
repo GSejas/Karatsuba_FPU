@@ -1,3 +1,16 @@
+//==================================================================================================
+//  Filename      : testbench_CORDICArch2.v
+//  Created On    : 2016-10-03 23:33:09
+//  Last Modified : 2016-10-03 23:33:26
+//  Revision      :
+//  Author        : Jorge Sequeira Rojas
+//  Company       : Instituto Tecnologico de Costa Rica
+//  Email         : jsequeira@gmail.com
+//
+//  Description   :
+//
+//
+//==================================================================================================
 
 `timescale 1ns/1ps
 
@@ -5,7 +18,7 @@ module testbench_CORDIC_Arch2 (); /* this is automatically generated */
 
 parameter PERIOD = 10;
 
-//ESTAS SON DEFINICIONES QUE SE REALIZAN EN LOS COMANDOS O CONFIGURACIONES 
+//ESTAS SON DEFINICIONES QUE SE REALIZAN EN LOS COMANDOS O CONFIGURACIONES
 //DEL SIMULADOR O EL SINTETIZADOR
 
 `ifdef SINGLE
@@ -58,7 +71,7 @@ wire underflow_flag;									//	Bandera de underflow de la operacion.
 			.data_output       (data_output)
 		);
 
-		
+
 
 	reg [W-1:0] Array_IN [0:((2**PERIOD)-1)];
     //reg [W-1:0] Array_IN_2 [0:((2**PERIOD)-1)];
@@ -78,9 +91,9 @@ wire underflow_flag;									//	Bandera de underflow de la operacion.
 		rst = 1;
 
 		//Depending upong the sumulator, this directive will
-		//understand that if the macro is defined (e.g. RMODE00) 
+		//understand that if the macro is defined (e.g. RMODE00)
 		//then the following code will be added to the compilation
-		//simulation or sinthesis. 
+		//simulation or sinthesis.
 
 //This is added in order to simulate the accuracy change of the system.
 
@@ -98,21 +111,21 @@ wire underflow_flag;									//	Bandera de underflow de la operacion.
 `endif
         //Abre el archivo testbench
         FileSaveData = $fopen("ResultadoXilinxFLM.txt","w");
-        
+
         //Inicializa las variables del testbench
         contador = 0;
         Cont_CLK = 0;
-        Recept = 1;		
-		
+        Recept = 1;
+
 
 		#100 rst = 0;
 		// #15
 		// data_in = 32'h3f25514d; //37 grados
 		// shift_region_flag = 2'b00;
-		
+
 		// #5
 		// beg_fsm_cordic = 1;
-		
+
 		// #10
 		// beg_fsm_cordic = 0;
  	end
@@ -128,7 +141,7 @@ wire underflow_flag;									//	Bandera de underflow de la operacion.
     always @(posedge clk) begin
     if(rst) begin
         contador = 0;
-        Cont_CLK = 0; 
+        Cont_CLK = 0;
     end
     else begin
         if (contador == (2**PERIOD)) begin
@@ -145,25 +158,25 @@ wire underflow_flag;									//	Bandera de underflow de la operacion.
                 ack_cordic = 0;
                 #40;
             end
-            else if(Cont_CLK ==2) begin                         
+            else if(Cont_CLK ==2) begin
                 ack_cordic = 0;
                 beg_fsm_cordic = 1;
                 Cont_CLK = Cont_CLK +1 ;
                 #40;
-            end 
+            end
             else begin
                 ack_cordic = 0;
                 Cont_CLK = Cont_CLK + 1;
                 beg_fsm_cordic = 0;
                 #40;
             end
-            if(ready_cordic==1) begin      
-                ack_cordic = 1;    
+            if(ready_cordic==1) begin
+                ack_cordic = 1;
                 Cont_CLK = 0;
                 #15;
             end
-            
-            if(ready_cordic==1 && ack_cordic) begin                        
+
+            if(ready_cordic==1 && ack_cordic) begin
                 Cont_CLK = 0;
                 #15;
             end
@@ -180,8 +193,8 @@ end
             end
         end
         else begin
-            Recept = 1; 
-        end    
-    end 
+            Recept = 1;
+        end
+    end
 
 endmodule

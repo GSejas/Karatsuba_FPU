@@ -1,0 +1,915 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Oct  4 14:51:31 2016
+# Process ID: 16983
+# Current directory: /home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.runs/synth_1
+# Command line: vivado -log CORDIC_Arch3.vds -mode batch -messageDb vivado.pb -notrace -source CORDIC_Arch3.tcl
+# Log file: /home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.runs/synth_1/CORDIC_Arch3.vds
+# Journal file: /home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source CORDIC_Arch3.tcl -notrace
+Command: synth_design -top CORDIC_Arch3 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16995 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 1017.113 ; gain = 125.137 ; free physical = 137 ; free virtual = 6226
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'CORDIC_Arch3' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/new/CORDIC_Arch3.v:20]
+	Parameter W bound to: 32 - type: integer 
+	Parameter EW bound to: 8 - type: integer 
+	Parameter SW bound to: 23 - type: integer 
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter EWR bound to: 5 - type: integer 
+	Parameter mode bound to: 1'b0 
+	Parameter iter_bits bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'LUT_ROM_32bits' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_32bits.v:3]
+	Parameter W bound to: 32 - type: integer 
+	Parameter N bound to: 4 - type: integer 
+	Parameter ROM_FILE bound to: LUT_sincos_32.txt - type: string 
+INFO: [Synth 8-3876] $readmem data file 'LUT_sincos_32.txt' is read successfully [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_32bits.v:15]
+INFO: [Synth 8-256] done synthesizing module 'LUT_ROM_32bits' (1#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_ROM_32bits.v:3]
+INFO: [Synth 8-638] synthesizing module 'CORDIC_FSM_v3' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/CORDIC_FSM_v3.v:16]
+	Parameter est0 bound to: 4'b0000 
+	Parameter est1 bound to: 4'b0001 
+	Parameter est2 bound to: 4'b0010 
+	Parameter est3 bound to: 4'b0011 
+	Parameter est4 bound to: 4'b0100 
+	Parameter est5 bound to: 4'b0101 
+	Parameter est6 bound to: 4'b0110 
+	Parameter est7 bound to: 4'b0111 
+INFO: [Synth 8-256] done synthesizing module 'CORDIC_FSM_v3' (2#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/CORDIC_FSM_v3.v:16]
+INFO: [Synth 8-638] synthesizing module 'Up_counter' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/Up_Counter.v:16]
+	Parameter COUNTER_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Up_counter' (3#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/Up_Counter.v:16]
+INFO: [Synth 8-638] synthesizing module 'Up_counter__parameterized0' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/Up_Counter.v:16]
+	Parameter COUNTER_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Up_counter__parameterized0' (3#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/Up_Counter.v:16]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en' (4#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en__parameterized0' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en__parameterized0' (4#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en__parameterized1' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en__parameterized1' (4#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-638] synthesizing module 'Mux_2x1' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_2x1.v:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_2x1.v:14]
+INFO: [Synth 8-256] done synthesizing module 'Mux_2x1' (5#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_2x1.v:3]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en__parameterized2' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en__parameterized2' (5#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en__parameterized3' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en__parameterized3' (5#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en__parameterized4' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en__parameterized4' (5#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-638] synthesizing module 'Simple_Subt' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Simple_Subt.v:3]
+	Parameter W bound to: 8 - type: integer 
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Simple_Subt' (6#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Simple_Subt.v:3]
+INFO: [Synth 8-638] synthesizing module 'Mux_2x1__parameterized0' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_2x1.v:3]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_2x1.v:14]
+INFO: [Synth 8-256] done synthesizing module 'Mux_2x1__parameterized0' (6#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_2x1.v:3]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en__parameterized5' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en__parameterized5' (6#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en__parameterized6' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en__parameterized6' (6#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en__parameterized7' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en__parameterized7' (6#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-638] synthesizing module 'Mux_3x1_bv2' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/cordic_jorge/Mux_3x1_b_v2.v:16]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/cordic_jorge/Mux_3x1_b_v2.v:28]
+INFO: [Synth 8-256] done synthesizing module 'Mux_3x1_bv2' (7#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/cordic_jorge/Mux_3x1_b_v2.v:16]
+INFO: [Synth 8-638] synthesizing module 'PriorityEncoder_CORDIC' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/PriorityEncoder_ExtCORDIC.v:16]
+INFO: [Synth 8-226] default block is never used [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/PriorityEncoder_ExtCORDIC.v:27]
+INFO: [Synth 8-256] done synthesizing module 'PriorityEncoder_CORDIC' (8#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/PriorityEncoder_ExtCORDIC.v:16]
+INFO: [Synth 8-638] synthesizing module 'Op_Select' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Op_Select.v:16]
+INFO: [Synth 8-256] done synthesizing module 'Op_Select' (9#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Op_Select.v:16]
+INFO: [Synth 8-638] synthesizing module 'FPU_PIPELINED_FPADDSUB' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/addsub/FPU_ADD_Substract_PIPELINED.v:47]
+	Parameter W bound to: 32 - type: integer 
+	Parameter EW bound to: 8 - type: integer 
+	Parameter SW bound to: 23 - type: integer 
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter EWR bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'shift_mux_array' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter LEVEL bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC' (10#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+INFO: [Synth 8-256] done synthesizing module 'shift_mux_array' (11#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+INFO: [Synth 8-638] synthesizing module 'shift_mux_array__parameterized0' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter LEVEL bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift_mux_array__parameterized0' (11#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+INFO: [Synth 8-638] synthesizing module 'shift_mux_array__parameterized1' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter LEVEL bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift_mux_array__parameterized1' (11#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+INFO: [Synth 8-638] synthesizing module 'shift_mux_array__parameterized2' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter LEVEL bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift_mux_array__parameterized2' (11#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+INFO: [Synth 8-638] synthesizing module 'shift_mux_array__parameterized3' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+	Parameter SWR bound to: 26 - type: integer 
+	Parameter LEVEL bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift_mux_array__parameterized3' (11#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/shift_mux.v:23]
+INFO: [Synth 8-638] synthesizing module 'Priority_Codec_32' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Priority_Codec_32.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Priority_Codec_32' (12#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Priority_Codec_32.v:23]
+INFO: [Synth 8-638] synthesizing module 'FSM_INPUT_ENABLE' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/addsub/FSM_input_enable.v:32]
+	Parameter State0 bound to: 4'b0000 
+	Parameter State1 bound to: 4'b0001 
+	Parameter State2 bound to: 4'b0010 
+	Parameter State3 bound to: 4'b0011 
+	Parameter State4 bound to: 4'b0100 
+	Parameter State5 bound to: 4'b0101 
+	Parameter State6 bound to: 4'b0110 
+	Parameter State7 bound to: 4'b0111 
+INFO: [Synth 8-256] done synthesizing module 'FSM_INPUT_ENABLE' (13#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/addsub/FSM_input_enable.v:32]
+INFO: [Synth 8-638] synthesizing module 'ShiftRegister' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/addsub/shift_reg.v:16]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ShiftRegister' (14#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/addsub/shift_reg.v:16]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd' (15#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized0' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized0' (15#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'Comparator' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator.v:23]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Comparator' (16#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator.v:23]
+INFO: [Synth 8-638] synthesizing module 'MultiplexTxT' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/MultiplexTxT.v:23]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MultiplexTxT' (17#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/MultiplexTxT.v:23]
+INFO: [Synth 8-638] synthesizing module 'xor_tri' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/xor_tri.v:23]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xor_tri' (18#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/xor_tri.v:23]
+INFO: [Synth 8-638] synthesizing module 'sgn_result' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v:23]
+INFO: [Synth 8-256] done synthesizing module 'sgn_result' (19#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/sgn_result.v:23]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized1' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized1' (19#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized2' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized2' (19#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized3' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized3' (19#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized4' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized4' (19#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized5' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 23 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized5' (19#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized6' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized6' (19#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized7' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized7' (19#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized0' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+	Parameter W bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized0' (19#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Rotate_Mux_Array' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Rotate_Mux_Array.v:23]
+	Parameter SWR bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Rotate_Mux_Array' (20#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Rotate_Mux_Array.v:23]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized8' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized8' (20#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized9' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized9' (20#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized10' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized10' (20#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized11' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized11' (20#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized12' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized12' (20#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized13' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 13 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized13' (20#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized14' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized14' (20#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'FORMATTER' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/addsub/FORMATTER.v:37]
+	Parameter EW bound to: 9 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Greater_Comparator' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Greater_Comparator.v:21]
+	Parameter W bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Greater_Comparator' (21#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Greater_Comparator.v:21]
+INFO: [Synth 8-638] synthesizing module 'Comparator_Less' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator_Less.v:21]
+	Parameter W bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Comparator_Less' (22#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Comparator_Less.v:21]
+INFO: [Synth 8-256] done synthesizing module 'FORMATTER' (23#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/addsub/FORMATTER.v:37]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized15' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 31 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized15' (23#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized16' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized16' (23#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized17' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized17' (23#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-226] default block is never used [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/addsub/FPU_ADD_Substract_PIPELINED.v:685]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized18' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized18' (23#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized19' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized19' (23#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized20' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized20' (23#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'FRMT_STAGE' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/addsub/Tenth_Phase_v2.v:41]
+	Parameter W bound to: 32 - type: integer 
+	Parameter EW bound to: 8 - type: integer 
+	Parameter SW bound to: 23 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Mux_3x1' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_3x1.v:23]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Mux_3x1' (24#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Mux_3x1.v:23]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized1' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized1' (24#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_AC__parameterized2' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+	Parameter W bound to: 23 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_AC__parameterized2' (24#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/Multiplexer_AC.v:21]
+INFO: [Synth 8-256] done synthesizing module 'FRMT_STAGE' (25#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/addsub/Tenth_Phase_v2.v:41]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized21' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized21' (25#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-638] synthesizing module 'RegisterAdd__parameterized22' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+	Parameter W bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterAdd__parameterized22' (25#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/FPU_Add_subt_Mult/project_1/project_1.srcs/sources_1/imports/Proyecto_De_Graduacion/FPU_FLM/RTL/Add-Subt/RegisterAdd.v:21]
+INFO: [Synth 8-256] done synthesizing module 'FPU_PIPELINED_FPADDSUB' (26#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/addsub/FPU_ADD_Substract_PIPELINED.v:47]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en__parameterized8' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en__parameterized8' (26#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en__parameterized9' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en__parameterized9' (26#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en__parameterized10' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en__parameterized10' (26#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-638] synthesizing module 'DECO_CORDIC_EXT' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/DECO_CORDIC_OP.v:17]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/DECO_CORDIC_OP.v:29]
+INFO: [Synth 8-226] default block is never used [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/DECO_CORDIC_OP.v:53]
+INFO: [Synth 8-256] done synthesizing module 'DECO_CORDIC_EXT' (27#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/my_sourcefiles/cordic_jorge/DECO_CORDIC_OP.v:17]
+INFO: [Synth 8-638] synthesizing module 'd_ff_en__parameterized11' [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_ff_en__parameterized11' (27#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/d_ff_en.v:3]
+INFO: [Synth 8-256] done synthesizing module 'CORDIC_Arch3' (28#1) [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/new/CORDIC_Arch3.v:20]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1056.551 ; gain = 164.574 ; free physical = 127 ; free virtual = 6197
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1056.551 ; gain = 164.574 ; free physical = 128 ; free virtual = 6196
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1064.555 ; gain = 172.578 ; free physical = 127 ; free virtual = 6196
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "rom_test" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'CORDIC_FSM_v3'
+INFO: [Synth 8-5544] ROM "enab_RB3" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enab_RB2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enab_RB1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enab_cont_var" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enab_cont_iter" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "beg_add_subt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ready_CORDIC" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "reset_reg_cordic" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'FSM_INPUT_ENABLE'
+INFO: [Synth 8-5544] ROM "enable_shift_reg" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enable_input_internal" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/jorge/Documents/Karatsuba_FPU/Resultados/CORDIC/CORDIC_Arch3_Vivado/CORDIC_Arch3_Vivado.srcs/sources_1/imports/addsub/FPU_ADD_Substract_PIPELINED.v:615]
+INFO: [Synth 8-5544] ROM "max_tick_iter" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "max_tick_var" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "min_tick_iter" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    est0 |                              000 |                             0000
+                    est1 |                              001 |                             0001
+                    est2 |                              010 |                             0010
+                    est3 |                              011 |                             0011
+                    est4 |                              100 |                             0100
+                    est5 |                              101 |                             0101
+                    est6 |                              110 |                             0110
+                    est7 |                              111 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'CORDIC_FSM_v3'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  State0 |                              000 |                              000
+                  State1 |                              001 |                              001
+                  State6 |                              010 |                              110
+                  State2 |                              011 |                              010
+                  State3 |                              100 |                              011
+                  State4 |                              101 |                              100
+                  State5 |                              110 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'FSM_INPUT_ENABLE'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1072.562 ; gain = 180.586 ; free physical = 135 ; free virtual = 6154
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     27 Bit       Adders := 1     
+	   2 Input     27 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+	   3 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 14    
+	               31 Bit    Registers := 5     
+	               26 Bit    Registers := 3     
+	               23 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 7     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	  17 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input     26 Bit        Muxes := 2     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 22    
+	  15 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 187   
+	   7 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module CORDIC_Arch3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module LUT_ROM_32bits 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input     32 Bit        Muxes := 1     
+Module CORDIC_FSM_v3 
+Detailed RTL Component Info : 
++---Muxes : 
+	  15 Input      3 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 9     
+Module Up_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+Module Up_counter__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+Module d_ff_en 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module d_ff_en__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module d_ff_en__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module Mux_2x1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module d_ff_en__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module d_ff_en__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module d_ff_en__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module Simple_Subt 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 1     
+Module Mux_2x1__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module d_ff_en__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module d_ff_en__parameterized6 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module d_ff_en__parameterized7 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module Mux_3x1_bv2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module PriorityEncoder_CORDIC 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      3 Bit        Muxes := 1     
+Module Op_Select 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module Priority_Codec_32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 19    
+Module FSM_INPUT_ENABLE 
+Detailed RTL Component Info : 
++---Muxes : 
+	  10 Input      3 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+Module ShiftRegister 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
+Module RegisterAdd 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module RegisterAdd__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module MultiplexTxT 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 2     
+Module xor_tri 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module RegisterAdd__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+Module RegisterAdd__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+Module RegisterAdd__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module RegisterAdd__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+Module RegisterAdd__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	               23 Bit    Registers := 1     
+Module RegisterAdd__parameterized6 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+Module RegisterAdd__parameterized7 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module Multiplexer_AC__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+Module Multiplexer_AC 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module RegisterAdd__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+Module RegisterAdd__parameterized9 
+Detailed RTL Component Info : 
++---Registers : 
+	               26 Bit    Registers := 1     
+Module RegisterAdd__parameterized10 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+Module RegisterAdd__parameterized11 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module RegisterAdd__parameterized12 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module RegisterAdd__parameterized13 
+Detailed RTL Component Info : 
++---Registers : 
+	               13 Bit    Registers := 1     
+Module RegisterAdd__parameterized14 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module RegisterAdd__parameterized15 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+Module RegisterAdd__parameterized16 
+Detailed RTL Component Info : 
++---Registers : 
+	               26 Bit    Registers := 1     
+Module RegisterAdd__parameterized17 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module RegisterAdd__parameterized18 
+Detailed RTL Component Info : 
++---Registers : 
+	               26 Bit    Registers := 1     
+Module RegisterAdd__parameterized19 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module RegisterAdd__parameterized20 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module Mux_3x1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module Multiplexer_AC__parameterized2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+Module RegisterAdd__parameterized21 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module RegisterAdd__parameterized22 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module FPU_PIPELINED_FPADDSUB 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     27 Bit       Adders := 1     
+	   2 Input     27 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+Module d_ff_en__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module d_ff_en__parameterized9 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module d_ff_en__parameterized10 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module DECO_CORDIC_EXT 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+Module d_ff_en__parameterized11 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 1155.570 ; gain = 263.594 ; free physical = 172 ; free virtual = 6089
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 1163.578 ; gain = 271.602 ; free physical = 160 ; free virtual = 6078
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 1163.578 ; gain = 271.602 ; free physical = 160 ; free virtual = 6078
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'reg_LUT/Q_reg[31]' (FDCE) to 'reg_LUT/Q_reg[30]'
+INFO: [Synth 8-3886] merging instance 'reg_LUT/Q_reg[3]' (FDCE) to 'reg_LUT/Q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_LUT/Q_reg[5]' (FDCE) to 'reg_LUT/Q_reg[14]'
+INFO: [Synth 8-3886] merging instance 'reg_LUT/Q_reg[7]' (FDCE) to 'reg_LUT/Q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'reg_LUT/Q_reg[13]' (FDCE) to 'reg_LUT/Q_reg[18]'
+INFO: [Synth 8-3886] merging instance 'reg_LUT/Q_reg[15]' (FDCE) to 'reg_LUT/Q_reg[17]'
+INFO: [Synth 8-3886] merging instance 'reg_LUT/Q_reg[17]' (FDCE) to 'reg_LUT/Q_reg[20]'
+INFO: [Synth 8-3886] merging instance 'reg_LUT/Q_reg[19]' (FDCE) to 'reg_LUT/Q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'reg_LUT/Q_reg[27]' (FDCE) to 'reg_LUT/Q_reg[28]'
+INFO: [Synth 8-3886] merging instance 'reg_LUT/Q_reg[28]' (FDCE) to 'reg_LUT/Q_reg[29]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_LUT/Q_reg[30] )
+WARNING: [Synth 8-3332] Sequential element (reg_LUT/Q_reg[31]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (reg_LUT/Q_reg[30]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (reg_LUT/Q_reg[28]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (reg_LUT/Q_reg[27]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (reg_LUT/Q_reg[19]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (reg_LUT/Q_reg[17]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (reg_LUT/Q_reg[15]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (reg_LUT/Q_reg[13]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (reg_LUT/Q_reg[7]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (reg_LUT/Q_reg[5]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (reg_LUT/Q_reg[3]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (inst_FPU_PIPELINED_FPADDSUB/EXP_STAGE_DmP/Q_reg[30]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (inst_FPU_PIPELINED_FPADDSUB/EXP_STAGE_DmP/Q_reg[29]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (inst_FPU_PIPELINED_FPADDSUB/EXP_STAGE_DmP/Q_reg[28]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (inst_FPU_PIPELINED_FPADDSUB/SHT2_STAGE_SHFTVARS1/Q_reg[1]) is unused and will be removed from module CORDIC_Arch3.
+WARNING: [Synth 8-3332] Sequential element (inst_FPU_PIPELINED_FPADDSUB/SHT2_STAGE_SHFTVARS1/Q_reg[0]) is unused and will be removed from module CORDIC_Arch3.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1188.609 ; gain = 296.633 ; free physical = 453 ; free virtual = 6371
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1188.609 ; gain = 296.633 ; free physical = 453 ; free virtual = 6371
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1188.609 ; gain = 296.633 ; free physical = 453 ; free virtual = 6371
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 1196.617 ; gain = 304.641 ; free physical = 445 ; free virtual = 6363
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 1196.617 ; gain = 304.641 ; free physical = 445 ; free virtual = 6363
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 1196.617 ; gain = 304.641 ; free physical = 445 ; free virtual = 6363
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 1196.617 ; gain = 304.641 ; free physical = 445 ; free virtual = 6363
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 1196.617 ; gain = 304.641 ; free physical = 445 ; free virtual = 6363
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 1196.617 ; gain = 304.641 ; free physical = 445 ; free virtual = 6363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 1196.617 ; gain = 304.641 ; free physical = 445 ; free virtual = 6363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 1196.617 ; gain = 304.641 ; free physical = 445 ; free virtual = 6363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 1196.617 ; gain = 304.641 ; free physical = 445 ; free virtual = 6363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    28|
+|3     |LUT1   |    18|
+|4     |LUT2   |    78|
+|5     |LUT3   |   151|
+|6     |LUT4   |    76|
+|7     |LUT5   |   228|
+|8     |LUT6   |   106|
+|9     |FDCE   |   761|
+|10    |FDRE   |     6|
+|11    |IBUF   |    39|
+|12    |OBUF   |    37|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------------+-----------------------------+------+
+|      |Instance                      |Module                       |Cells |
++------+------------------------------+-----------------------------+------+
+|1     |top                           |                             |  1529|
+|2     |  ITER_CONT                   |Up_counter                   |   125|
+|3     |  VAR_CONT                    |Up_counter__parameterized0   |    72|
+|4     |  d_ff4_Xn                    |d_ff_en__parameterized8      |    32|
+|5     |  d_ff4_Yn                    |d_ff_en__parameterized9      |    32|
+|6     |  d_ff4_Zn                    |d_ff_en__parameterized10     |    32|
+|7     |  d_ff5_data_out              |d_ff_en__parameterized11     |    32|
+|8     |  inst_CORDIC_FSM_v3          |CORDIC_FSM_v3                |    20|
+|9     |  inst_FPU_PIPELINED_FPADDSUB |FPU_PIPELINED_FPADDSUB       |   838|
+|10    |    inst_FSM_INPUT_ENABLE     |FSM_INPUT_ENABLE             |     7|
+|11    |    EXP_STAGE_DMP             |RegisterAdd__parameterized1  |    33|
+|12    |    EXP_STAGE_DmP             |RegisterAdd__parameterized2  |    32|
+|13    |    EXP_STAGE_FLAGS           |RegisterAdd__parameterized3  |     3|
+|14    |    FRMT_STAGE_DATAOUT        |RegisterAdd                  |    36|
+|15    |    FRMT_STAGE_FLAGS          |RegisterAdd__parameterized21 |     3|
+|16    |    INPUT_STAGE_FLAGS         |RegisterAdd__parameterized0  |     2|
+|17    |    INPUT_STAGE_OPERANDX      |RegisterAdd_1                |    74|
+|18    |    INPUT_STAGE_OPERANDY      |RegisterAdd_2                |    34|
+|19    |    Magnitude_Comparator      |Comparator                   |     7|
+|20    |    MuxXY                     |MultiplexTxT                 |    59|
+|21    |    NRM_STAGE_DMP_exp         |RegisterAdd__parameterized19 |     8|
+|22    |    NRM_STAGE_FLAGS           |RegisterAdd__parameterized20 |     6|
+|23    |    NRM_STAGE_Raw_mant        |RegisterAdd__parameterized18 |   109|
+|24    |    Ready_reg                 |RegisterAdd__parameterized22 |     1|
+|25    |    SFT2FRMT_STAGE_FLAGS      |RegisterAdd__parameterized14 |     5|
+|26    |    SFT2FRMT_STAGE_VARS       |RegisterAdd__parameterized13 |    30|
+|27    |    SGF_STAGE_DMP             |RegisterAdd__parameterized15 |    37|
+|28    |    SGF_STAGE_DmP_mant        |RegisterAdd__parameterized16 |    62|
+|29    |    SGF_STAGE_FLAGS           |RegisterAdd__parameterized17 |     4|
+|30    |    SHT1_STAGE_DMP            |RegisterAdd__parameterized4  |    31|
+|31    |    SHT1_STAGE_DmP_mant       |RegisterAdd__parameterized5  |    23|
+|32    |    SHT1_STAGE_FLAGS          |RegisterAdd__parameterized7  |     3|
+|33    |    SHT1_STAGE_sft_amount     |RegisterAdd__parameterized6  |     8|
+|34    |    SHT2_SHIFT_DATA           |RegisterAdd__parameterized9  |    53|
+|35    |    SHT2_STAGE_DMP            |RegisterAdd__parameterized8  |    31|
+|36    |    SHT2_STAGE_FLAGS          |RegisterAdd__parameterized12 |     3|
+|37    |    SHT2_STAGE_SHFTVARS1      |RegisterAdd__parameterized10 |    54|
+|38    |    SHT2_STAGE_SHFTVARS2      |RegisterAdd__parameterized11 |    16|
+|39    |    inst_ShiftRegister        |ShiftRegister                |    11|
+|40    |    result_sign_bit           |sgn_result                   |     1|
+|41    |  reg_LUT                     |d_ff_en__parameterized7      |    21|
+|42    |  reg_Z0                      |d_ff_en__parameterized1      |    32|
+|43    |  reg_operation               |d_ff_en                      |     1|
+|44    |  reg_region_flag             |d_ff_en__parameterized0      |    34|
+|45    |  reg_shift_x                 |d_ff_en__parameterized5      |    32|
+|46    |  reg_shift_y                 |d_ff_en__parameterized6      |    32|
+|47    |  reg_sign                    |d_ff_en_0                    |     1|
+|48    |  reg_val_muxX_2stage         |d_ff_en__parameterized2      |    40|
+|49    |  reg_val_muxY_2stage         |d_ff_en__parameterized3      |    42|
+|50    |  reg_val_muxZ_2stage         |d_ff_en__parameterized4      |    32|
+|51    |  shift_x                     |Simple_Subt                  |     2|
++------+------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 1196.617 ; gain = 304.641 ; free physical = 445 ; free virtual = 6363
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1196.617 ; gain = 217.500 ; free physical = 445 ; free virtual = 6363
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 1196.625 ; gain = 304.648 ; free physical = 445 ; free virtual = 6363
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 67 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+196 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:35 . Memory (MB): peak = 1284.629 ; gain = 318.098 ; free physical = 331 ; free virtual = 6289
+report_utilization: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.84 . Memory (MB): peak = 1316.645 ; gain = 0.000 ; free physical = 304 ; free virtual = 6269
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  4 14:52:37 2016...

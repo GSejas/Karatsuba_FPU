@@ -18,14 +18,14 @@
     <Option Name="CompiledLibDirActivehdl" Val="/../../../../../../../../../../../../../../../../Users/jsequeira/Proyectos/CORDICO/CORDICO.cache/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
-    <Option Name="ActiveSimSet" Val="CORDIC_COS_32bits_round00"/>
+    <Option Name="ActiveSimSet" Val="tb_CORDIC_Arch3_single"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PPRDIR/CORDIC_Arch3_Vivado.ip_user_files"/>
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/CORDIC_Arch3_Vivado.ip_user_files/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="59"/>
+    <Option Name="WTXSimLaunchSim" Val="99"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -288,8 +288,8 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_3x1_b.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Documents/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_3x1_b.v"/>
-          <Attr Name="ImportTime" Val="1473670134"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/Mux_3x1_b.v"/>
+          <Attr Name="ImportTime" Val="1475598425"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -454,49 +454,60 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../my_sourcefiles/cordic_jorge/Up_Counter.v">
+      <File Path="$PSRCDIR/sources_1/imports/my_sourcefiles/cordic_jorge/Up_Counter.v">
         <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../my_sourcefiles/cordic_jorge/Up_Counter.v"/>
+          <Attr Name="ImportTime" Val="1475533790"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../my_sourcefiles/addsub/FORMATTER.v">
+      <File Path="$PSRCDIR/sources_1/imports/my_sourcefiles/addsub/FORMATTER.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../my_sourcefiles/addsub/FORMATTER.v"/>
+          <Attr Name="ImportTime" Val="1474577598"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../my_sourcefiles/addsub/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v">
+      <File Path="$PSRCDIR/sources_1/imports/my_sourcefiles/addsub/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../my_sourcefiles/addsub/tb_FPU_PIPELINED_FPADDSUB2_vector_testing.v"/>
+          <Attr Name="ImportTime" Val="1475028084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../my_sourcefiles/addsub/FSM_input_enable.v">
+      <File Path="$PSRCDIR/sources_1/imports/my_sourcefiles/addsub/FSM_input_enable.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../my_sourcefiles/addsub/FSM_input_enable.v"/>
+          <Attr Name="ImportTime" Val="1474861060"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../my_sourcefiles/addsub/Tenth_Phase_v2.v">
+      <File Path="$PSRCDIR/sources_1/imports/my_sourcefiles/addsub/Tenth_Phase_v2.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../my_sourcefiles/addsub/Tenth_Phase_v2.v"/>
+          <Attr Name="ImportTime" Val="1474525001"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../my_sourcefiles/addsub/FPU_ADD_Substract_PIPELINED.v">
+      <File Path="$PSRCDIR/sources_1/imports/my_sourcefiles/addsub/FPU_ADD_Substract_PIPELINED.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../my_sourcefiles/addsub/FPU_ADD_Substract_PIPELINED.v"/>
+          <Attr Name="ImportTime" Val="1475085385"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -531,6 +542,42 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_sincos_64.txt"/>
       <File Path="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/LUT_sincos_32.txt"/>
+      <File Path="$PSRCDIR/sources_1/imports/my_sourcefiles/cordic_jorge/DECO_CORDIC_OP.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../my_sourcefiles/cordic_jorge/DECO_CORDIC_OP.v"/>
+          <Attr Name="ImportTime" Val="1475527493"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/my_sourcefiles/cordic_jorge/PriorityEncoder_ExtCORDIC.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../my_sourcefiles/cordic_jorge/PriorityEncoder_ExtCORDIC.v"/>
+          <Attr Name="ImportTime" Val="1475534669"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/my_sourcefiles/cordic_jorge/CORDIC_FSM_v3.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../my_sourcefiles/cordic_jorge/CORDIC_FSM_v3.v"/>
+          <Attr Name="ImportTime" Val="1475564060"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cordic_jorge/Mux_3x1_b_v2.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../my_sourcefiles/cordic_jorge/Mux_3x1_b_v2.v"/>
+          <Attr Name="ImportTime" Val="1475598378"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="CORDIC_Arch3"/>
@@ -660,6 +707,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/sine_cosine_CORDIC/CORDIC_Arch2.v">
         <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/imports/Floating-Point-Unit-master/Coprocesador_CORDIC_RTL/sine_cosine_CORDIC/CORDIC_Arch2.v"/>
           <Attr Name="ImportTime" Val="1474225902"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -740,6 +788,7 @@
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Define Name="RMODE00" Val="1"/>
         <Define Name="SINGLE" Val="1"/>
@@ -756,11 +805,19 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/tb_CORDIC_Arch3_double/imports/cordic_jorge/tb_CORDIC_Arch3.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../my_sourcefiles/cordic_jorge/tb_CORDIC_Arch3.v"/>
+          <Attr Name="ImportTime" Val="1475559867"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="CORDIC_Arch2"/>
+        <Option Name="TopModule" Val="testbench_CORDIC_Arch3"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SimMode" Val="post-implementation"/>
@@ -784,13 +841,64 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/tb_CORDIC_Arch3_single/imports/cordic_jorge/tb_CORDIC_Arch3.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../my_sourcefiles/cordic_jorge/tb_CORDIC_Arch3.v"/>
+          <Attr Name="ImportTime" Val="1475559867"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/tb_CORDIC_Arch3_single/imports/behav/CORDIC32_input_angles_hex.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../FPGA_FLOW/Proyectos Funcionales Francis Jeffrey/CORDICO/CORDICO.sim/CORDIC_COS_32bits_round00/behav/CORDIC32_input_angles_hex.txt"/>
+          <Attr Name="ImportTime" Val="1474176962"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/tb_CORDIC_Arch3_single/imports/behav/LUT_sincos_32.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../FPGA_FLOW/Proyectos Funcionales Francis Jeffrey/CORDICO/CORDICO.sim/CORDIC_COS_32bits_round00/behav/LUT_sincos_32.txt"/>
+          <Attr Name="ImportTime" Val="1474176962"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/tb_CORDIC_Arch3_single/imports/behav/CORDIC32_resultado_hex.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../FPGA_FLOW/Proyectos Funcionales Francis Jeffrey/CORDICO/CORDICO.sim/CORDIC_COS_32bits_round00/behav/CORDIC32_resultado_hex.txt"/>
+          <Attr Name="ImportTime" Val="1474177140"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/tb_CORDIC_Arch3_single/imports/behav/CORDIC32_input_angles_dec.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../FPGA_FLOW/Proyectos Funcionales Francis Jeffrey/CORDICO/CORDICO.sim/CORDIC_COS_32bits_round00/behav/CORDIC32_input_angles_dec.txt"/>
+          <Attr Name="ImportTime" Val="1474176962"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/tb_CORDIC_Arch3_single/imports/behav/CORDIC32_resultado_dec.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../FPGA_FLOW/Proyectos Funcionales Francis Jeffrey/CORDICO/CORDICO.sim/CORDIC_COS_32bits_round00/behav/CORDIC32_resultado_dec.txt"/>
+          <Attr Name="ImportTime" Val="1474176962"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/tb_CORDIC_Arch3_single/imports/behav/LUT_sincos_64.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../FPGA_FLOW/Proyectos Funcionales Francis Jeffrey/CORDICO/CORDICO.sim/CORDIC_COS_32bits_round00/behav/LUT_sincos_64.txt"/>
+          <Attr Name="ImportTime" Val="1474176962"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/tb_CORDIC_Arch3_single/imports/behav/testbench_CORDIC_Arch2_behav.wdb">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../FPGA_FLOW/Proyectos Funcionales Francis Jeffrey/CORDICO/CORDICO.sim/CORDIC_COS_32bits_round00/behav/testbench_CORDIC_Arch2_behav.wdb"/>
+          <Attr Name="ImportTime" Val="1474178854"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="FPADD_vector_test_SINGLE"/>
+        <Option Name="TopModule" Val="testbench_CORDIC_Arch3"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
-        <Option Name="SimMode" Val="post-implementation"/>
+        <Option Name="SimMode" Val="post-synthesis"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Define Name="SINGLE" Val="1"/>
         <Generic Name="W" Val="32"/>
@@ -820,6 +928,7 @@
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Define Name="DOUBLE" Val="1"/>
         <Generic Name="W" Val="64"/>
         <Generic Name="SW" Val="52"/>
         <Generic Name="EW" Val="11"/>
@@ -838,6 +947,45 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/FPADD_vector_test_SINGLE/imports/behav/Hexadecimal_A.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/tb_CORDIC_Arch3_single/imports/behav/Hexadecimal_A.txt"/>
+          <Attr Name="ImportTime" Val="1475024705"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/FPADD_vector_test_SINGLE/imports/behav/Hexadecimal_B.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/tb_CORDIC_Arch3_single/imports/behav/Hexadecimal_B.txt"/>
+          <Attr Name="ImportTime" Val="1475024705"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/FPADD_vector_test_SINGLE/imports/behav/Hexadecimal_R.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/tb_CORDIC_Arch3_single/imports/behav/Hexadecimal_R.txt"/>
+          <Attr Name="ImportTime" Val="1475024705"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/FPADD_vector_test_SINGLE/imports/ADD_SUB_PIPELINED/tb_FPU_PIPELINED_FPADDSUB5_vector_testing_behav_formatted.wcfg">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../FPGA_FLOW/Add_Sub/ADD_SUB_PIPELINED/tb_FPU_PIPELINED_FPADDSUB5_vector_testing_behav_formatted.wcfg"/>
+          <Attr Name="ImportTime" Val="1474918811"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/FPADD_vector_test_SINGLE/imports/ADD_SUB_PIPELINED/tb_FPU_PIPELINED_FPADDSUB4_vector_testing_behav.wcfg">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../FPGA_FLOW/Add_Sub/ADD_SUB_PIPELINED/tb_FPU_PIPELINED_FPADDSUB4_vector_testing_behav.wcfg"/>
+          <Attr Name="ImportTime" Val="1474876022"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/FPADD_vector_test_SINGLE/imports/ADD_SUB_PIPELINED/tb_FPU_PIPELINED_FPADDSUB6_vector_testing_behav_formatted.wcfg">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../FPGA_FLOW/Add_Sub/ADD_SUB_PIPELINED/tb_FPU_PIPELINED_FPADDSUB6_vector_testing_behav_formatted.wcfg"/>
+          <Attr Name="ImportTime" Val="1475027051"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="tb_FPU_PIPELINED_FPADDSUB2_vector_testing"/>
@@ -845,11 +993,12 @@
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
-        <Generic Name="W" Val="64"/>
-        <Generic Name="SW" Val="52"/>
-        <Generic Name="EW" Val="11"/>
-        <Generic Name="EWR" Val="6"/>
-        <Generic Name="SWR" Val="55"/>
+        <Define Name="SINGLE" Val="1"/>
+        <Generic Name="W" Val="32"/>
+        <Generic Name="SW" Val="23"/>
+        <Generic Name="EW" Val="8"/>
+        <Generic Name="EWR" Val="5"/>
+        <Generic Name="SWR" Val="26"/>
       </Config>
     </FileSet>
   </FileSets>

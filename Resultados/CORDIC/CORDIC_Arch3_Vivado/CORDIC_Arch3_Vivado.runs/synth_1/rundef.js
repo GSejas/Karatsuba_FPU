@@ -12,9 +12,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "/opt/Xilinx/SDK/2016.2/bin:/opt/Xilinx/Vivado/2016.2/ids_lite/ISE/bin/lin64;/opt/Xilinx/Vivado/2016.2/ids_lite/ISE/lib/lin64;/opt/Xilinx/Vivado/2016.2/bin;";
+  PathVal = "/opt/Xilinx/Vivado/2016.2/ids_lite/ISE/bin/lin64;/opt/Xilinx/Vivado/2016.2/ids_lite/ISE/lib/lin64;/opt/Xilinx/Vivado/2016.2/bin;";
 } else {
-  PathVal = "/opt/Xilinx/SDK/2016.2/bin:/opt/Xilinx/Vivado/2016.2/ids_lite/ISE/bin/lin64;/opt/Xilinx/Vivado/2016.2/ids_lite/ISE/lib/lin64;/opt/Xilinx/Vivado/2016.2/bin;" + PathVal;
+  PathVal = "/opt/Xilinx/Vivado/2016.2/ids_lite/ISE/bin/lin64;/opt/Xilinx/Vivado/2016.2/ids_lite/ISE/lib/lin64;/opt/Xilinx/Vivado/2016.2/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log CORDIC_Arch2.vds -m64 -mode batch -messageDb vivado.pb -notrace -source CORDIC_Arch2.tcl" );
+         "-log CORDIC_Arch3.vds -m64 -mode batch -messageDb vivado.pb -notrace -source CORDIC_Arch3.tcl" );
 
 
 

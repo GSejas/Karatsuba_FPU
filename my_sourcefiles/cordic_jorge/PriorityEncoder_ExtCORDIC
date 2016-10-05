@@ -1,0 +1,27 @@
+module Up_counter #(parameter COUNTER_WIDTH = 3) (
+   input wire clk,
+   input wire rst,
+   input wire enable,
+   output [COUNTER_WIDTH-1:0] c_output_W
+      );
+   reg [7:0] <output> = 8'h00;
+
+   <reg_or_wire> [2:0] <input>;
+
+   always @(posedge <clock>)
+      if (<reset>)
+         <output> <= 8'h00;
+      else
+         case (<input>)
+            3'b000  : <output> <= 8'b00000001;
+            3'b001  : <output> <= 8'b00000010;
+            3'b010  : <output> <= 8'b00000100;
+            3'b011  : <output> <= 8'b00001000;
+            3'b100  : <output> <= 8'b00010000;
+            3'b101  : <output> <= 8'b00100000;
+            3'b110  : <output> <= 8'b01000000;
+            3'b111  : <output> <= 8'b10000000;
+            default : <output> <= 8'b00000000;
+         endcase
+
+endmodule

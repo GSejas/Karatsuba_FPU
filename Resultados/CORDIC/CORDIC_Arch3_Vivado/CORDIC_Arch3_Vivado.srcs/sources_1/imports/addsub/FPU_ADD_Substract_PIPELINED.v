@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : FPU_ADD_Substract_PIPELINED.v
 //  Created On    : 2016-09-27 20:11:48
-//  Last Modified : 2016-09-27 20:12:02
+//  Last Modified : 2016-10-04 09:20:37
 //  Revision      :
 //  Author        : Jorge Sequeira Rojas
 //  Company       : Instituto Tecnologico de Costa Rica
@@ -99,11 +99,10 @@ FSM_INPUT_ENABLE inst_FSM_INPUT_ENABLE (
 
 
 
-
   ShiftRegister #(.W(7)) inst_ShiftRegister (
       .clk(clk),
       .rst(rst),
-      .load  (enable_shift_reg|enable_Pipeline_input),
+      .load  (enable_shift_reg),
       .in_bit (FSM_enable_input_internal),
       .Q(Shift_reg_FLAGS_7));
 

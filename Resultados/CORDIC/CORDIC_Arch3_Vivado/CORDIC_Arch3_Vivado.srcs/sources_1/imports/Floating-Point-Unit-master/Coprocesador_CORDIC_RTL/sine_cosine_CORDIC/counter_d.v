@@ -1,3 +1,16 @@
+//==================================================================================================
+//  Filename      : counter_d.v
+//  Created On    : 2016-6-03 14:44:51
+//  Last Modified : 2016-10-03 16:31:57
+//  Revision      :
+//  Author        :
+//  Company       : Instituto Tecnologico de Costa Rica
+//  Email         :
+//
+//  Description   :
+//
+//
+//==================================================================================================
 `timescale 1ns / 1ps
 
 module counter_d #(parameter W=4)
